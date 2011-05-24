@@ -18,25 +18,25 @@ Recommended way:
 
 	var curry = require('es5-ext/lib/Function/curry');
 
-	curry(...)
+	curry(...);
 
 or less specific:
 
 	var objExt = require('es5-ext/lib/Object');
 
-	objExt.merge(...)
+	objExt.merge(...);
 
-and if you want to take them all:
+if you want to take them all:
 
 	var ext = require('es5-ext');
 
-	ext.Object.merge(...)
-	ext.Function.curry(...)
+	ext.Object.merge(...);
+	ext.Function.curry(...);
 
 
 ### Extensions
 
-For descriptions look into source files.
+_For descriptions look into source files._
 
 * `global`
 * `reserved`
