@@ -22,16 +22,16 @@ Recommended way:
 
 or less specific:
 
-	var objExt = require('es5-ext/lib/Object');
+	var fnExt = require('es5-ext/lib/Function');
 
-	objExt.merge(...);
+	fnExt.curry(...);
 
 if you want to take them all:
 
 	var ext = require('es5-ext');
 
-	ext.Object.merge(...);
 	ext.Function.curry(...);
+	ext.Object.merge(...);
 
 
 ### Extensions
