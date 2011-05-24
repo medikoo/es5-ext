@@ -6,7 +6,7 @@ It's work in progress, new methods are added when needed.
 ## Installation
 
 Can be used in any environment that implements ES5.  
-In ES3 most of it will work with shim (e.g. [es5-shim](https://github.com/kriskowal/es5-shim)) introduced.
+In ES3 most of it will work when shim (e.g. [es5-shim](https://github.com/kriskowal/es5-shim)) is introduced.
 
 To use it with node:
 
@@ -14,20 +14,25 @@ To use it with node:
 
 ## Usage
 
+Take them all:
+
 	var ext = require('es5-ext');
 	ext.Object.merge(...)
 	ext.Function.curry(...)
 
-or more specific:
+more specific:
 
-	var objectExt = require('es5-ext/lib/Object');
-	objectExt.merge(...)
+	var objExt = require('es5-ext/lib/Object');
+	objExt.merge(...)
 
-	// most recommended way
+cleaner, recommended way:
+
 	var curry = require('es5-ext/lib/Function/curry');
 	curry(...)
 
 ### Extensions
+
+For descriptions look into source files.
 
 * `global`
 * `reserved`
@@ -67,6 +72,6 @@ http://osteele.com/sources/javascript/functional/
 
 ## Tests
 
-Using node &amp; npm:
+When using node &amp; npm
 
 	$ npm test
