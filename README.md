@@ -1,15 +1,15 @@
-# es5-ext - ECMAScript5  extensions.
+# es5-ext - ECMAScript5 extensions
 
 Useful functions and objects that are not part of the standard.
-
 It's work in progress, new methods are added when needed.
 
 ## Installation
 
-Can be used in any environment that implements ES5. In ES3 most of it will work
-with shim (e.g. [es5-shim by kriskowal](https://github.com/kriskowal/es5-shim)) introduced.
+Can be used in any environment that implements ES5.
+In ES3 most of it will work with shim (e.g. [es5-shim](https://github.com/kriskowal/es5-shim)) introduced.
 
 To use it with node:
+
 	$ npm install es5-ext
 
 ## Usage
@@ -68,4 +68,5 @@ http://osteele.com/sources/javascript/functional/
 ## Tests
 
 Using node &amp; npm:
+
 	$ npm test
