@@ -25,14 +25,15 @@ or less specific:
 	var fnExt = require('es5-ext/lib/Function');
 
 	fnExt.curry(...);
+	fnExt.sequence(...);
 
 if you want to take them all:
 
 	var ext = require('es5-ext');
 
 	ext.Function.curry(...);
+	ext.Function.sequence(...);
 	ext.Object.merge(...);
-
 
 ### Extensions
 
