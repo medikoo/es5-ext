@@ -1,11 +1,11 @@
 # es5-ext - ECMAScript5 extensions
 
-Useful functions and objects that are not part of the standard.
+Useful functions and objects that are not part of the standard.  
 It's work in progress, new methods are added when needed.
 
 ## Installation
 
-Can be used in any environment that implements ES5.
+Can be used in any environment that implements ES5.  
 In ES3 most of it will work with shim (e.g. [es5-shim](https://github.com/kriskowal/es5-shim)) introduced.
 
 To use it with node:
@@ -23,7 +23,7 @@ or more specific:
 	var objectExt = require('es5-ext/lib/Object');
 	objectExt.merge(...)
 
-	// my recommendation:
+	// most recommended way
 	var curry = require('es5-ext/lib/Function/curry');
 	curry(...)
 
