@@ -1,6 +1,6 @@
 'use strict';
 
-['global', 'reserved', 'Array', 'Function', 'Object'].forEach(function (mod) {
+['global', 'reserved',  'Function', 'List', 'Object'].forEach(function (mod) {
 	mod = require('./' + mod);
 	Object.keys(mod).forEach(function (key) {
 		if (exports[key]) {

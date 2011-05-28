@@ -6,7 +6,7 @@ var o = require('global')
 
 Object.keys(t = {
 	"Global is an object": function () {
-		assert.ok(o && typeof o == 'object', this);
+		assert.ok(o && typeof o === 'object', this);
 	}
 }).forEach(function (m) {
 	exports['test ' + m] = t[m].bind(m);

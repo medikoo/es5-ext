@@ -1,8 +1,8 @@
 'use strict';
 
-var f = require('Function/S')
-  , toArray = require('Array/toArray')
-  , slice = require('Array/slice')
+var fn = require('Function/s')
+  , toArray = require('List/toArray').call
+  , slice = require('List/slice').call
 
   , a, b, c, t;
 
@@ -15,7 +15,8 @@ b = function () {
 
 Object.keys(t = {
 	"Function.S": function () {
-		assert.equal(f(a, b)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString(), this);
+		assert.equal(fn(a, b)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString(),
+			this);
 	}
 }).forEach(function (m) {
 	exports['test ' + m] = t[m].bind(m);

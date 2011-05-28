@@ -1,7 +1,8 @@
 'use strict';
 
-['elevate', 'get', 'isObject', 'isPlainObject', 'link', 'merge', 'set',
-	'setTrue', 'setValue', 'values'].forEach(function (mod) {
+['bindMethods', 'elevate', 'extend', 'isObject', 'isPlainObject', 'link',
+	'merge', 'pluck', 'set', 'setTrue', 'setValue', 'values']
+	.forEach(function (mod) {
 	mod = require('./' + mod);
 	Object.keys(mod).forEach(function (key) {
 		if (exports[key]) {
@@ -11,7 +12,3 @@
 		exports[key] = mod[key];
 	});
 });
-
-if (module == require.main) {
-	require('test').run(exports);
-}

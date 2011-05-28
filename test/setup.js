@@ -1,9 +1,10 @@
 'use strict';
 
-var global = ('indirect', eval)('this');
+var indirectEval = eval;
+var global = indirectEval('this');
 
 global.assert = require('assert');
 require.paths.push(__dirname + '/../lib');
 
 // move on expresso
-exports['ignore'] = function () {};
+exports.ignore = function () {};

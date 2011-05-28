@@ -1,12 +1,12 @@
 'use strict';
 
-var f = require('Object/merge')
+var fn = require('Object/merge').call
 
   , a, b, t;
 
 a = { b: 2 };
 b = { a: 1, b: 4, c: 3 };
-f(a, b);
+fn(a, b);
 
 Object.keys(t = {
 	"Object.merge": function () {

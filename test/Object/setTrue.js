@@ -1,11 +1,11 @@
 'use strict';
 
-var f = require('Object/setTrue')
+var fn = require('Object/setTrue').call
 
   , a, t;
 
 a = {};
-f(a)('b');
+fn(a, 'b');
 
 Object.keys(t = {
 	"Object.setTrue": function () {

@@ -1,7 +1,7 @@
 'use strict';
 
-var f = require('Function/flip')
-  , toArray = require('Array/toArray')
+var fn = require('Function/flip')
+  , toArray = require('List/toArray').call
 
   , a, t;
 
@@ -11,7 +11,7 @@ a = function (a, b) {
 
 Object.keys(t = {
 	"Function.flip": function () {
-		assert.equal(f(a)(1, 2, 3).toString(), [2, 1, 3].toString(), this);
+		assert.equal(fn(a)(1, 2, 3).toString(), [2, 1, 3].toString(), this);
 	}
 }).forEach(function (m) {
 	exports['test ' + m] = t[m].bind(m);

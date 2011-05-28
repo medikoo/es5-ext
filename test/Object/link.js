@@ -1,11 +1,13 @@
 'use strict';
 
-var f = require('Object/link')
+var fn = require('Object/link').call
 
   , a, b, t;
 
-a = {}, b = { a: 2 };
-f(a, b)('a');
+a = {};
+b = { a: 2 };
+
+fn(a, b, 'a');
 
 Object.keys(t = {
 	"Object.link": function () {

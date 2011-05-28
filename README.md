@@ -6,7 +6,7 @@ _It's work in progress, new methods are added when needed._
 ## Installation
 
 Can be used in any environment that implements ES5.  
-In implementations that are stuck to ES3 it will work when shim (e.g. [es5-shim](https://github.com/kriskowal/es5-shim)) is introduced.
+In implementations that are stuck to ES3 it will work with [es5-shim](https://github.com/kriskowal/es5-shim).
 
 To use it with node:
 
@@ -14,69 +14,82 @@ To use it with node:
 
 ## Usage
 
-Recommended way:
+Recommended way is to require stuff you need individually:
 
-	var curry = require('es5-ext/lib/Function/curry');
+	var sequence = require('es5-ext/lib/Function/sequence')
+	  , merge = require('es5-ext/lib/Object/merge').call;
 
-	curry(...);
+	sequence(...);
+	merge(...);
 
-or less specific:
+but you can grab whole packs:
 
 	var fnExt = require('es5-ext/lib/Function');
 
 	fnExt.curry(...);
 	fnExt.sequence(...);
 
-if you want to take them all:
+and if you prefer take them all:
 
 	var ext = require('es5-ext');
 
 	ext.Function.curry(...);
 	ext.Function.sequence(...);
-	ext.Object.merge(...);
+	ext.Object.merge.call(...);
 
 ### Extensions
 
-_For descriptions look into source files._
+_For documentation look into source files._
 
 * `global`
 * `reserved`
-
-#### Array
-
-* `Array.slice(obj[, begin[, end]])`
-* `Array.toArray(obj)`
 
 #### Function
 
 Many of the following are inspired by
 http://osteele.com/sources/javascript/functional/
 
-* `Function.K(obj)`
-* `Function.S(f, g)`
-* `Function.bindMethods(obj[, scope])`
+* `Function.bind(f)`
 * `Function.call(f)`
 * `Function.curry(f[, ...])`
+* `Function.dscope(f, scope)`
 * `Function.flip(f)`
+* `Function.functionalize(f)`
+* `Function.inherit(f, g)`
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
+* `Function.k(x)`
+* `Function.s(f, g)`
 * `Function.sequence(f[, ...])`
+
+#### List
+
+Extensions for Array-like objects
+
+* `List.slice([begin[, end]])`
+* `List.toArray()`
 
 #### Object
 
-* `Object.elevate(obj[, res])`
-* `Object.get(obj)`
+* `Object.bindMethods([p])`
+* `Object.elevate([p])`
+* `Object.extend(o)`
 * `Object.isObject(x)`
-* `Object.isPlainObject(x)`
-* `Object.link(obja, objb)`
-* `Object.merge(target, source)`
-* `Object.set(obj)`
-* `Object.setTrue(obj)`
-* `Object.setValue(obj, value)`
-* `Object.values(obj)`
+* `Object.isPlainObject()`
+* `Object.link(p)`
+* `Object.merge(p)`
+* `Object.pluck(name)`
+* `Object.set()`
+* `Object.setTrue()`
+* `Object.setValue(value)`
+* `Object.values()`
 
 ## Tests
 
 When using node &amp; npm
 
-	$ npm test
+	$ make test
+
+Tests with coverage report:
+
+	$ make test-cov

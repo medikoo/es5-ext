@@ -1,10 +1,10 @@
 'use strict';
 
-var f = require('Object/elevate')
+var fn = require('Object/elevate').call
 
   , o, t;
 
-o = f({ a: { aa: 1, ab: 2 }, b: { ba: 3, bb: 4 } });
+o = fn({ a: { aa: 1, ab: 2 }, b: { ba: 3, bb: 4 } });
 
 Object.keys(t = {
 	"Object.elevate": function () {
