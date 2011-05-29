@@ -86,7 +86,7 @@ Extensions for Array-like objects
 
 ## Tests
 
-When using node &amp; npm
+When installed for node with npm (do _make install_ first)
 
 	$ make test
 
