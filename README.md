@@ -5,8 +5,8 @@ _It's work in progress, new methods are added when needed._
 
 ## Installation
 
-Can be used in any environment that implements ES5.  
-In implementations that are stuck to ES3 it will work with [es5-shim](https://github.com/kriskowal/es5-shim).
+Can be used in any environment that implements EcmaScript 5th edition.  
+To make it work with EcmaScript 3, apply [es5-shim](https://github.com/kriskowal/es5-shim).
 
 To use it with node:
 
