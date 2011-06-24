@@ -39,7 +39,7 @@ and if you prefer take them all:
 
 ### Extensions
 
-_For documentation look into source files._
+_Each extension is documented at begin of its source file._
 
 * `global`
 * `reserved`
@@ -49,8 +49,10 @@ _For documentation look into source files._
 Many of the following are inspired by
 http://osteele.com/sources/javascript/functional/
 
-* `Function.bind(f)`
-* `Function.call(f)`
+* `Function.aritize(f, n)`
+* `Function.bindApply(f)`
+* `Function.bindBind(f)`
+* `Function.bindCall(f)`
 * `Function.curry(f[, ...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`
@@ -59,38 +61,65 @@ http://osteele.com/sources/javascript/functional/
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
 * `Function.k(x)`
+* `Function.noop()`
+* `Function.pluck(name)`
 * `Function.s(f, g)`
+* `Function.saturate(f)`
 * `Function.sequence(f[, ...])`
 
 #### List
 
-Extensions for Array-like objects
+Extensions for Array-like objects.
 
-* `List.slice([begin[, end]])`
+* `List.compact()`
+* `List.concat([...])`
+* `List.every(f[, o])`
+* `List.filter(f[, o])`
+* `List.flatten()`
+* `List.forEach(f[, o])`
+* `List.isList(x)`
+* `List.map(f[, o])`
+* `List.reduce(f[, x])`
+* `List.slice([start[, end]])`
+* `List.some(f[, o])`
 * `List.toArray()`
 
 #### Object
 
-* `Object.bindMethods([p])`
+* `Object.bindMethods([p[, q]])`
+* `Object.clone()`
+* `Object.compare(p)`
 * `Object.elevate([p])`
+* `Object.every(f[, p])`
 * `Object.extend(o)`
+* `Object.filter(f[, p])`
+* `Object.forEach(f[, p])`
+* `Object.isEmpty()`
 * `Object.isObject(x)`
 * `Object.isPlainObject()`
 * `Object.link(p)`
+* `Object.map(f[, p])`
 * `Object.merge(p)`
 * `Object.pluck(name)`
-* `Object.set()`
+* `Object.same()`
 * `Object.setTrue()`
 * `Object.setValue(value)`
+* `Object.set()`
 * `Object.values()`
 
-## Tests
+#### String
 
-Before running tests make sure you have node and npm installed and you've run
-_make install_ first.
+##### Convertion methods
 
-	$ make test
+* `String.convert.dashToCamelCase(str)`
 
-Tests with coverage report:
+<!-- ## Tests -->
 
-	$ make test-cov
+<!-- Before running tests make sure you have node and npm installed and you've run -->
+<!-- _make install_ first. -->
+
+<!-- 	$ make test -->
+
+<!-- Tests with coverage report: -->
+
+<!-- 	$ make test-cov -->

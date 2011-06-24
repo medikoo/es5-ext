@@ -1,17 +1,20 @@
 'use strict';
 
-var fn = require('Object/merge').call
+module.exports = function (t, a) {
+	var o1 = { a: 1, b: 2 }
+	  , o2 = { b: 3, c: 4 };
 
-  , a, b, t;
+	t.call(o1, o2);
 
-a = { b: 2 };
-b = { a: 1, b: 4, c: 3 };
-fn(a, b);
-
-Object.keys(t = {
-	"Object.merge": function () {
-		assert.equal([a.a, a.b, a.c].toString(), [1,4,3].toString(), this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+	return {
+		"Keep": function (t, a) {
+			a.equal(o1.a, 1);
+		},
+		"Overwrite": function (t, a) {
+			a.equal(o1.b, 3);
+		},
+		"Add": function (t, a) {
+			a.equal(o1.c, 4);
+		}
+	};
+};

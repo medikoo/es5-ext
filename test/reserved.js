@@ -1,51 +1,40 @@
 'use strict';
 
-var o = require('reserved')
-
-  , t;
-
-Object.keys(t = {
-	"Reserved: keywords hash has reserved keyword": function () {
-		assert.equal(o.keywords['break'], true, this);
+module.exports = {
+	"Keywords hash has reserved keyword": function (t, a) {
+		a.equal(t.keywords['break'], true);
 	},
-	"Reserved: keywords hash has not future reserved word": function () {
-		assert.equal(o.keywords['class'], undefined, this);
+	"Keywords hash has not future reserved word": function (t, a) {
+		a.equal(t.keywords['class'], undefined);
 	},
-	"Reserved: keywords hash has not future strict reserved word": function () {
-		assert.equal(o.keywords['let'], undefined, this);
+	"Keywords hash has not future strict reserved word": function (t, a) {
+		a.equal(t.keywords['let'], undefined);
 	},
-	"Reserved: future reserved hash has not reserved keyword": function () {
-		assert.equal(o.future['break'], undefined, this);
+	"Future reserved hash has not reserved keyword": function (t, a) {
+		a.equal(t.future['break'], undefined);
 	},
-	"Reserved: future reserved hash has future reserved word": function () {
-		assert.equal(o.future['class'], true, this);
+	"Future reserved hash has future reserved word": function (t, a) {
+		a.equal(t.future['class'], true);
 	},
-	"Reserved: future reserved hash has not future strict reserved word":
-	function () {
-		assert.equal(o.future['let'], undefined, this);
+	"Future reserved hash has not future strict reserved word": function (t, a) {
+		a.equal(t.future['let'], undefined);
 	},
-	"Reserved: future strict reserved hash has not reserved keyword":
-	function () {
-		assert.equal(o.futureStrict['break'], undefined, this);
+	"Future strict reserved hash has not reserved keyword": function (t, a) {
+		a.equal(t.futureStrict['break'], undefined);
 	},
-	"Reserved: future strict reserved hash has not future reserved word":
-	function () {
-		assert.equal(o.futureStrict['class'], undefined, this);
+	"Future strict reserved hash has not future reserved word": function (t, a) {
+		a.equal(t.futureStrict['class'], undefined);
 	},
-	"Reserved: future reserved hash has future strict reserved word":
-	function () {
-		assert.equal(o.futureStrict['let'], true, this);
+	"Future reserved hash has future strict reserved word": function (t, a) {
+		a.equal(t.futureStrict['let'], true);
 	},
-	"Reserved: all reserved keywords hash has reserved keyword": function () {
-		assert.equal(o.all['break'], true, this);
+	"All reserved keywords hash has reserved keyword": function (t, a) {
+		a.equal(t.all['break'], true);
 	},
-	"Reserved: all reserved keywords hash has future reserved word": function () {
-		assert.equal(o.all['class'], true, this);
+	"All reserved keywords hash has future reserved word": function (t, a) {
+		a.equal(t.all['class'], true);
 	},
-	"Reserved: all reserved keywords hash has future strict reserved word":
-	function () {
-		assert.equal(o.all['let'], true, this);
+	"All reserved keywords hash has future strict reserved word": function (t, a) {
+		a.equal(t.all['let'], true);
 	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+};

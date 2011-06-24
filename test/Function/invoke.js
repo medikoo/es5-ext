@@ -1,16 +1,11 @@
 'use strict';
 
-var fn = require('Function/invoke')
-  , k  = require('Function/k')
+var k  = require('../../lib/Function/k')
 
-  , a, b, t;
+  , o;
 
-a = { b: k('c')};
+o = { b: k('c')};
 
-Object.keys(t = {
-	"Function.invoke": function () {
-		assert.equal(fn('b')(a), 'c', this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+module.exports = function (t, a) {
+	a.equal(t('b')(o), 'c');
+};

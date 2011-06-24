@@ -1,15 +1,7 @@
 'use strict';
 
-var fn = require('Function/k')
+var o = {};
 
-  , a, t;
-
-a = {};
-
-Object.keys(t = {
-	"Function.k": function () {
-		assert.equal(fn(a)(), a, this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+module.exports = function (t, a) {
+	a.equal(t(o)(), o);
+};

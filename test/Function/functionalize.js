@@ -1,23 +1,18 @@
 'use strict';
 
-var fn = require('Function/functionalize')
+var o = {};
 
-  , f, a, t;
-
-f = fn(function () {
-	return this;
-});
-a = {};
-
-Object.keys(t = {
-	"Function.functionalize: bind": function () {
-		var bind = f.bind;
-		assert.equal(bind(a)(), a, this);
+module.exports = {
+	"Bind": function (t, a) {
+		var bind = t(function () { return this; }).bind;
+		a.equal(bind(o)(), o);
 	},
-	"Function.functionalize: call": function () {
-		var call = f.call;
-		assert.equal(call(a), a, this);
+	"Call": function (t, a) {
+		var call = t(function () { return this; }).call;
+		a.equal(call(a), a);
+	},
+	"Apply": function (t, a) {
+		var apply = t(function () { return this; }).apply;
+		a.equal(apply(a), a);
 	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+};

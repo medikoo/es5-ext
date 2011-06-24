@@ -1,23 +1,17 @@
 'use strict';
 
-var fn = require('Function/s')
-  , toArray = require('List/toArray').call
-  , slice = require('List/slice').call
+var concat = require('../../lib/List/concat').call
+  , slice = require('../../lib/List/slice').call
 
-  , a, b, c, t;
+  , f, g;
 
-a = function (b) {
-	return ["A"].concat(b).concat(slice(arguments, 1));
+f = function (b) {
+	return ["A"].concat(b, slice(arguments, 1));
 };
-b = function () {
-	return ["B"].concat(toArray(arguments));
+g = function () {
+	return concat(["B"], arguments);
 };
 
-Object.keys(t = {
-	"Function.S": function () {
-		assert.equal(fn(a, b)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString(),
-			this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+module.exports = function (t, a) {
+	a.equal(t(f, g)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString());
+};

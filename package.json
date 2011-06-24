@@ -1,6 +1,6 @@
 {
 	"name": "es5-ext",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "ECMAScript5 extensions",
 	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "addons", "extras", "javascript"],
 	"author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
@@ -12,11 +12,5 @@
 	"bugs": {
 		"mail": "medikoo+es5-ext@medikoo.com",
 		"web": "https://github.com/medikoo/es5-ext/issues"
-	},
-	"scripts": { "test": "node test/run" },
-	"devDependencies": {
-		"test": "0.1.x",
-		"expresso": "0.7.x",
-		"jslint": "0.1.x"
 	}
 }

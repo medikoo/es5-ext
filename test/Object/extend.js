@@ -1,27 +1,24 @@
 'use strict';
 
-var fn = require('Object/extend').call
+module.exports = function (t, a)  {
+	var o1 = { a: function (x) { return x + 1; }, b: function () { }, d: {} }
+	  , o2 = { a: function (parent, x) { return parent(this, x); }
+			  , c: function () { }, d: {} }
 
-  , a, b, o, t;
+	  , r = t.call(o1, o2);
 
-a = { a: function (x) { return x + 1; }, b: function () { }, d: {} };
-b = { a: function (parent, x) { return parent(this, x); }, c: function () { }
-	  , d: {} };
-o = fn(a, b);
-
-Object.keys(t = {
-	"Object.extend: inheritance": function () {
-		assert.equal(o.a(2), 3, this);
-	},
-	"Object.extend: ancestor methods": function () {
-		assert.equal(o.b, a.b, this);
-	},
-	"Object.extend: descendant methods": function () {
-		assert.equal(o.c, b.c, this);
-	},
-	"Object.extend: non function property override": function () {
-		assert.equal(o.d, b.d, this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+	return {
+		"Inheritance": function (t, a) {
+			a.equal(r.a(2), 3);
+		},
+		"Ancestor methods": function (t, a) {
+			a.equal(r.b, o1.b);
+		},
+		"Descendant methods": function (t, a) {
+			a.equal(r.c, o2.c);
+		},
+		"Non function property override": function (t, a) {
+			a.equal(r.d, o2.d);
+		}
+	};
+};

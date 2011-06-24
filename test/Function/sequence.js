@@ -1,24 +1,17 @@
 'use strict';
 
-var fn = require('Function/sequence')
+var f, g, h;
 
-  , a, b, c, t;
-
-a = function (a, b) {
+f = function (a, b) {
 	return ['a', arguments.length, a, b];
 };
-b = function (a) {
+g = function (a) {
 	return ['b', arguments.length].concat(a);
 };
-c = function (a) {
+h = function (a) {
 	return ['c', arguments.length].concat(a);
 };
 
-Object.keys(t = {
-	"Function.sequence": function () {
-		assert.equal(fn(a, b, c)(1, 2).toString(),
-			['c', 1, 'b', 1, 'a', 2, 1, 2], this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+module.exports = function (t, a) {
+	a.equal(t(f, g, h)(1, 2).toString(), ['c', 1, 'b', 1, 'a', 2, 1, 2]);
+};

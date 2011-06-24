@@ -1,17 +1,10 @@
 'use strict';
 
-var fn = require('Function/inherit')
+var f, g;
 
-  , a, b, f, t;
+f = function (x) { return x + 1; };
+g = function (parent, x) { return parent(this, x); };
 
-a = function (x) { return x + 1; };
-b = function (parent, x) { return parent(this, x); };
-f = fn(b, a);
-
-Object.keys(t = {
-	"Function.inherit": function () {
-		assert.equal(f(2), 3, this);
-	}
-}).forEach(function (m) {
-	exports['test ' + m] = t[m].bind(m);
-});
+module.exports = function (t, a) {
+	a.equal(t(g, f)(2), 3);
+};
