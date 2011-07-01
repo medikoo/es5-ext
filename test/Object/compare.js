@@ -1,10 +1,11 @@
 'use strict';
 
 module.exports = function (t, a) {
+	t = t.call;
 	var o1 = { a: 'raz', b: {}, c: 'trzy',  d: {}}
 	  , o2 = { a: 'raz', b: {}, d: o1.d, e: 'cztery' }
 
-	  , c = t.call(o1, o2);
+	  , c = t(o1, o2);
 
 	return {
 		"Expected keys length": function (t, a) {

@@ -4,7 +4,8 @@ module.exports = function (t, a) {
 	var o1 = { a: 1, b: 2 }
 	  , o2 = { b: 3, c: 4 };
 
-	t.call(o1, o2);
+	t = t.call;
+	t(o1, o2);
 
 	return {
 		"Keep": function (t, a) {

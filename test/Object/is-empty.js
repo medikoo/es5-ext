@@ -2,9 +2,10 @@
 
 module.exports = {
 	"Empty": function (t, a) {
-		a.equal(t.call({}), true);
+		t = t.call;
+		a.equal(t({}), true);
 	},
 	"Not empty": function (t, a) {
-		a.equal(t.call({1:1}), false);
+		a.equal(t({1:1}), false);
 	}
 };

@@ -2,6 +2,7 @@
 
 module.exports = function (t, a) {
 	var o = {};
-	t.call(o, 'b');
+	t = t.call;
+	t(o, 'b');
 	a.equal(o.b, true);
 };

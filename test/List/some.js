@@ -2,7 +2,8 @@
 
 exports.__generic = function (t, a) {
 	var count = 0;
-	t.call(this, function () {
+	t = t.call;
+	t(this, function () {
 		if (++count === 2) {
 			return true;
 		} else {

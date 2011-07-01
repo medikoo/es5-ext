@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = function (t, a)  {
+	t = t.call;
 	var o1 = { a: function (x) { return x + 1; }, b: function () { }, d: {} }
 	  , o2 = { a: function (parent, x) { return parent(this, x); }
 			  , c: function () { }, d: {} }
 
-	  , r = t.call(o1, o2);
+	  , r = t(o1, o2);
 
 	return {
 		"Inheritance": function (t, a) {

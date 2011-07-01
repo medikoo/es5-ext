@@ -6,8 +6,9 @@ var noop = require('../../lib/Function/noop')
 
 module.exports = {
 	"": function (t, a) {
+		t = t.call;
 		var x = {}
-		  , o = t.call({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn });
+		  , o = t({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn });
 
 		return {
 			"Bind method": function (t, a) {
@@ -34,12 +35,14 @@ module.exports = {
 		};
 	},
 	"Custom scope": function (t, a) {
+		t = t.call;
 		var scope = {}
-		  , f = t.call({a: fn}, scope).a;
+		  , f = t({a: fn}, scope).a;
 		a.equal(f(), scope);
 	},
 	"Custom source": function (t, a) {
-		var o = t.call({ a: noop, c: fn }, null, { a: fn, b: fn});
+		t = t.call;
+		var o = t({ a: noop, c: fn }, null, { a: fn, b: fn});
 		return {
 			"Overwrite": function (t, a) {
 				var f = o.a;
