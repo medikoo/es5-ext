@@ -14,7 +14,7 @@ module.exports = function (t, a) {
 		"Different object": function (t, a) {
 			a.notEqual(clone, org);
 		},
-		"Same content": function (t, a) {
+		"Same result": function (t, a) {
 			a.equal(clone(), org());
 		},
 		"Same prototype": function (t, a) {
