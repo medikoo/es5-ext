@@ -6,6 +6,7 @@ module.exports = {
 		a.equal(t({}), true);
 	},
 	"Not empty": function (t, a) {
+		t = t.call;
 		a.equal(t({1:1}), false);
 	}
 };

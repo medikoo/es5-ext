@@ -3,7 +3,7 @@
 module.exports = function (t, a)  {
 	t = t.call;
 	var o1 = { a: function (x) { return x + 1; }, b: function () { }, d: {} }
-	  , o2 = { a: function (parent, x) { return parent(this, x); }
+	  , o2 = { a: function (_super, x) { return _super(this, x); }
 			  , c: function () { }, d: {} }
 
 	  , r = t(o1, o2);

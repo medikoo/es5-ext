@@ -7,10 +7,10 @@ module.exports = function (t, a) {
 
 	return {
 		"Return different object": function (t, a) {
-			a.notEqual(o, no);
+			a.notEqual(no, o);
 		},
 		"Match properties and values": function (t, a) {
-			a.equal(JSON.stringify(o), JSON.stringify(no));
+			a.equal(JSON.stringify(no), JSON.stringify(o));
 		}
 	};
 };

@@ -11,8 +11,7 @@ module.exports = {
 	},
 	"{} with any property keys is plain object": function (t, a) {
 		t = t.call;
-		a.equal(t({ 'prototype': 1, 'constructor': 2, '__proto__':  3 }),
-			true);
+		a.equal(t({ 'prototype': 1, 'constructor': 2, '__proto__':  3 }), true);
 	},
 	"Null is not plain object": function (t, a) {
 		t = t.call;
