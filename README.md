@@ -53,6 +53,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.bindApply(f)`
 * `Function.bindBind(f)`
 * `Function.bindCall(f)`
+* `Function.clone(f)`
 * `Function.curry(f[, ...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`
@@ -86,16 +87,26 @@ Extensions for Array-like objects.
 
 #### Object
 
+Following takes into account all es5-ext goodies (not enumerable properties, descriptors). For more tradtional ES3 like stuff see Object.plain below
+
 * `Object.bindMethods([p[, q]])`
+* `Object.every(f[, p])`
+* `Object.extend(o)`
+* `Object.merge(p)`
+* `Object.pluck(name)`
+* `Object.same()`
+
+##### Object.plain
+
+Following are about hash'es (simple enumerable key value pairs)
+
 * `Object.clone()`
 * `Object.compare(p)`
 * `Object.elevate([p])`
 * `Object.every(f[, p])`
-* `Object.extend(o)`
 * `Object.filter(f[, p])`
 * `Object.forEach(f[, p])`
 * `Object.isEmpty()`
-* `Object.isObject(x)`
 * `Object.isPlainObject()`
 * `Object.link(p)`
 * `Object.map(f[, p])`
