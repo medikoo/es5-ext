@@ -96,31 +96,31 @@ Following takes into account all es5-ext goodies (not enumerable properties, des
 * `Object.pluck(name)`
 * `Object.same()`
 
-##### Object.plain
+#### Object.plain
 
 Following are about hash'es (simple enumerable key value pairs)
 
-* `Object.clone()`
-* `Object.compare(p)`
-* `Object.elevate([p])`
-* `Object.every(f[, p])`
-* `Object.filter(f[, p])`
-* `Object.forEach(f[, p])`
-* `Object.isEmpty()`
-* `Object.isPlainObject()`
-* `Object.link(p)`
-* `Object.map(f[, p])`
-* `Object.merge(p)`
-* `Object.pluck(name)`
-* `Object.same()`
-* `Object.setTrue()`
-* `Object.setValue(value)`
-* `Object.set()`
-* `Object.values()`
+* `Object.plain.clone()`
+* `Object.plain.compare(p)`
+* `Object.plain.elevate([p])`
+* `Object.plain.every(f[, p])`
+* `Object.plain.filter(f[, p])`
+* `Object.plain.forEach(f[, p])`
+* `Object.plain.isEmpty()`
+* `Object.plain.isPlainObject()`
+* `Object.plain.link(p)`
+* `Object.plain.map(f[, p])`
+* `Object.plain.merge(p)`
+* `Object.plain.pluck(name)`
+* `Object.plain.same()`
+* `Object.plain.setTrue()`
+* `Object.plain.setValue(value)`
+* `Object.plain.set()`
+* `Object.plain.values()`
 
 #### String
-
-##### Convertion methods
+  
+##### Convertion methods:
 
 * `String.convert.dashToCamelCase(str)`
 
