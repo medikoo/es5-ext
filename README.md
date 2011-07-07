@@ -87,7 +87,7 @@ Extensions for Array-like objects.
 
 #### Object
 
-Following takes into account all es5-ext goodies (not enumerable properties, descriptors). For more tradtional ES3 like stuff see Object.plain below
+Following takes into account all ES5 goodies (not enumerable properties, descriptors). For more tradtional ES3 like stuff see Object.plain below
 
 * `Object.bindMethods([p[, q]])`
 * `Object.every(f[, p])`
