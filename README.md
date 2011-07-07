@@ -118,8 +118,7 @@ Following are about hash'es (simple enumerable key value pairs)
 * `Object.plain.set()`
 * `Object.plain.values()`
 
-#### String  
-  
+#### String
 
 ##### Convertion methods:
 
