@@ -12,5 +12,8 @@
 	"bugs": {
 		"mail": "medikoo+es5-ext@medikoo.com",
 		"web": "https://github.com/medikoo/es5-ext/issues"
+	},
+	"engines": {
+		"node": ">=0.1.103"
 	}
 }
