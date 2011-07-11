@@ -7,6 +7,20 @@ f = function (a) {
 };
 o = {};
 
-module.exports = function (t, a) {
-	a.equal(t(f)(o)(), o);
+module.exports = {
+	"Function": function (t, a) {
+		a.equal(t(f)(o)(), o);
+	},
+	"Function + argument": function (t, a) {
+		var fn = function (a, b) {
+			return this + a + b;
+		};
+		a.equal(t(fn, 1)(2, 4)(), 7);
+	},
+	"Function + arguments + arguments": function (t, a) {
+		var fn = function (a, b) {
+			return this + a + b;
+		};
+		a.equal(t(fn, 1)(2)(4), 7);
+	}
 };

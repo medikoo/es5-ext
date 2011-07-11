@@ -7,6 +7,11 @@ f = function (a, b) {
 };
 o = { a: 3, b: 4 };
 
-module.exports = function (t, a) {
-	a.equal(t(f)(o, 'a', 'b'), 7);
+module.exports = {
+	"Function": function (t, a) {
+		a.equal(t(f)(o, 'a', 'b'), 7);
+	},
+	"Function + argument": function (t, a) {
+		a.equal(t(f, o)('a', 'b'), 7);
+	}
 };
