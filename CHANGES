@@ -21,3 +21,6 @@ v0.2.0  --  2011.05.28
 * Renamed Array folder to List (as its generic functions for array-like objects)
 * Added Makefile
 * Added various functions
+
+v0.1.0  --  2011.05.24
+* Initial version
