@@ -1,7 +1,7 @@
 'use strict';
 
-var concat = require('../../lib/List/concat').call
-  , slice = require('../../lib/List/slice').call
+var toArray = require('../../lib/List/to-array').call
+  , slice   = require('../../lib/List/slice').call
 
   , f, g;
 
@@ -9,7 +9,7 @@ f = function (b) {
 	return ["A"].concat(b, slice(arguments, 1));
 };
 g = function () {
-	return concat(["B"], arguments);
+	return ["B"].concat(toArray(arguments));
 };
 
 module.exports = function (t, a) {
