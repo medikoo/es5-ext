@@ -6,5 +6,5 @@ module.exports = function (t, a) {
 	  , o2 = t(o, function (value, name) {
 			return value;
 		});
-	a.equal(JSON.stringify(o2), JSON.stringify(o));
+	a.deepEqual(o2, o);
 };
