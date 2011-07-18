@@ -15,6 +15,9 @@ module.exports = function (t, a)  {
 		"Ancestor methods": function (t, a) {
 			a.equal(r.b, o1.b);
 		},
+		"Ancestor properties are not own properties": function (t, a) {
+			a.ok(!r.hasOwnProperty('b'));
+		},
 		"Descendant methods": function (t, a) {
 			a.equal(r.c, o2.c);
 		},
