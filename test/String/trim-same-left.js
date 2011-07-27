@@ -1,20 +1,11 @@
 'use strict';
 
-module.exports = {
-	"Empty string": function (t, a) {
-		a.equal(t('abc', ''), 'abc');
-	},
-	"Whole same": function (t, a) {
-		a.equal(t('abc', 'abc'), '');
-	},
-	"Same start": function (t, a) {
-		a.equal(t('abcd', 'ab'), 'cd');
-	},
-	"Same part contained": function (t, a) {
-		a.equal(t('abcd', 'bc'), 'abcd');
-	},
-	"Not matched": function (t, a) {
-		a.equal(t('abcd', 'xyz'), 'abcd');
-	}
+module.exports = function (t, a) {
+	t = t.call;
+	a(t('abc', ''), 'abc', "Empty string");
+	a(t('abc', 'abc'), '', "Whole same");
+	a(t('abcd', 'ab'), 'cd', "Same start");
+	a(t('abcd', 'bc'), 'abcd', "Same part contained");
+	a(t('abcd', 'xyz'), 'abcd', "Not matched");
 };
 
