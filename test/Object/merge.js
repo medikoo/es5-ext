@@ -34,7 +34,6 @@ module.exports = function (t, a) {
 	a.ok(!x.hasOwnProperty('visible'), "Configurable is configurable");
 
 	x = {};
-	t = t.call;
 	t(x, o1);
 	a.throws(function () {
 		delete x.hidden;
