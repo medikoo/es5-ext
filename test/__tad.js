@@ -1,3 +1,3 @@
 'use strict';
 
-exports.context = global;
+exports.context = {};
