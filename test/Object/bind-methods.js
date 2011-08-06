@@ -8,54 +8,34 @@ module.exports = {
 	"": function (t, a) {
 		t = t.call;
 		var x = {}
-		  , o = t({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn });
+		  , o = t({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn })
+		  , f;
 
-		return {
-			"Bind method": function (t, a) {
-				var f = o.a;
-				a.equal(f(), o);
-			},
-			"Do not change null": function (t, a) {
-				a.equal(o.b, null);
-			},
-			"Bind other method": function (t, a) {
-				var f = o.c;
-				a.equal(f(), o);
-			},
-			"Do not change primitive": function (t, a) {
-				a.equal(o.d, 'raz');
-			},
-			"Do not change objects": function (t, a) {
-				a.equal(o.e, x);
-			},
-			"Bind all methods": function (t, a) {
-				var f = o.f;
-				a.equal(f(), o);
-			}
-		};
+		f = o.a;
+		a(f(), o, "Bind method");
+		a(o.b, null, "Do not change null");
+		f = o.c;
+		a(f(), o, "Bind other method");
+		a(o.d, 'raz', "Do not change primitive");
+		a(o.e, x, "Do not change objects");
+		f = o.f;
+		a(f(), o, "Bind all methods");
 	},
 	"Custom scope": function (t, a) {
 		t = t.call;
 		var scope = {}
 		  , f = t({a: fn}, scope).a;
-		a.equal(f(), scope);
+		a(f(), scope);
 	},
 	"Custom source": function (t, a) {
 		t = t.call;
-		var o = t({ a: noop, c: fn }, null, { a: fn, b: fn});
-		return {
-			"Overwrite": function (t, a) {
-				var f = o.a;
-				a.equal(f(), o);
-			},
-			"Add from source": function (t, a) {
-				var f = o.b;
-				a.equal(f(), o);
-			},
-			"Do not bind own methods not found in source": function (t, a) {
-				var f = o.c;
-				a.notEqual(f(), o);
-			}
-		};
+		var o = t({ a: noop, c: fn }, null, { a: fn, b: fn})
+		  , f;
+		f = o.a;
+		a(f(), o, "Overwrite");
+		f = o.b;
+		a(f(), o, "Add from source");
+		f = o.c;
+		a.not(f(), o, "Do not bind own methods not found in source");
 	}
 };

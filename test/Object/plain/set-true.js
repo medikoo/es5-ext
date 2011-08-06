@@ -4,5 +4,5 @@ module.exports = function (t, a) {
 	var o = {};
 	t = t.call;
 	t(o, 'b');
-	a.equal(o.b, true);
+	a(o.b, true);
 };

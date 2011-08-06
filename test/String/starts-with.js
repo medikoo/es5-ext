@@ -3,17 +3,9 @@
 
 'use strict';
 
-module.exports = {
-	"Empty needle": function (t, a) {
-		a.ok(t('abc', ''));
-	},
-	"Starts with needle": function (t, a) {
-		a.ok(t('abcd', 'ab'));
-	},
-	"Needle equals haystack": function (t, a) {
-		a.ok(t('abcd', 'abcd'));
-	},
-	"Doesn't start with needle": function (t, a) {
-		a.ok(!t('abcd', 'cd'));
-	}
+module.exports = function (t, a) {
+	a.ok(t('abc', ''), "Empty needle");
+	a.ok(t('abcd', 'ab'), "Starts with needle");
+	a.ok(t('abcd', 'abcd'), "Needle equals haystack");
+	a.ok(!t('abcd', 'cd'), "Doesn't start with needle");
 };

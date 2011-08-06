@@ -8,12 +8,9 @@ f = function () {
 };
 o = { c: {}, decodeURI: true };
 
-module.exports = {
-	"Dynamic scope": function (t, a) {
-		a.equal(t(f, o), o.c);
-	},
-	"Reverts global properties": function (t, a) {
-		t(f, o);
-		a.equal(decodeURI, org);
-	}
+module.exports = function (t, a) {
+	a(t(f, o), o.c, "Dynamic scope");
+
+	t(f, o);
+	a(decodeURI, org, "Reverts global properties");
 };

@@ -1,20 +1,10 @@
 'use strict';
 
-module.exports = {
-	"Same": function (t, a) {
-		t = t.call;
-		a.equal(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }), true);
-	},
-	"Different property value": function (t, a) {
-		t = t.call;
-		a.equal(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 4 }), false);
-	},
-	"Property only in source": function (t, a) {
-		t = t.call;
-		a.equal(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2 }), false);
-	},
-	"Property only in target": function (t, a) {
-		t = t.call;
-		a.equal(t({ 1: 1, 2: 2 }, { 1: 1, 2: 2, 3: 4 }), false);
-	}
+module.exports = function (t, a) {
+	t = t.call;
+	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }), true, "Same");
+	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 4 }), false,
+		"Different property value");
+	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2 }), false, "Property only in source");
+	a(t({ 1: 1, 2: 2 }, { 1: 1, 2: 2, 3: 4 }), false, "Property only in target");
 };

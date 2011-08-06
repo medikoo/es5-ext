@@ -10,18 +10,8 @@ module.exports = function (t, a) {
 
 	clone = t(org);
 
-	return {
-		"Different object": function (t, a) {
-			a.notEqual(clone, org);
-		},
-		"Same result": function (t, a) {
-			a.equal(clone(), org());
-		},
-		"Same prototype": function (t, a) {
-			a.equal(clone.prototype, org.prototype);
-		},
-		"Same properties": function (t, a) {
-			a.ok(same(org, clone));
-		}
-	};
+	a.not(clone, org, "Different object");
+	a(clone(), org(), "Same result");
+	a(clone.prototype, org.prototype, "Same prototype");
+	a.ok(same(org, clone), "Same properties");
 };

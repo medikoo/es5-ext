@@ -1,16 +1,8 @@
 'use strict';
 
-module.exports = {
-	"Empty": function (t, a) {
-		return a.strictEqual(t('a', 0), '');
-	},
-	"1": function (t, a) {
-		return a.equal(t('a', 1), 'a');
-	},
-	"Whitespace": function (t, a) {
-		return a.equal(t('\t', 5), '\t\t\t\t\t');
-	},
-	"Many chars": function (t, a) {
-		return a.equal(t('raz', 3), 'razrazraz');
-	}
+module.exports = function (t, a) {
+	a(t('a', 0), '', "Empty");
+	a(t('a', 1), 'a', "1");
+	a(t('\t', 5), '\t\t\t\t\t', "Whitespace");
+	a(t('raz', 3), 'razrazraz', "Many chars");
 };

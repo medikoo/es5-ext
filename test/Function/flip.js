@@ -9,5 +9,5 @@ f = function (a, b) {
 };
 
 module.exports = function (t, a) {
-	a.equal(t(f)(1, 2, 3).toString(), [2, 1, 3].toString());
+	a.deep(t(f)(1, 2, 3), [2, 1, 3]);
 };

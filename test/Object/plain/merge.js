@@ -7,15 +7,7 @@ module.exports = function (t, a) {
 	t = t.call;
 	t(o1, o2);
 
-	return {
-		"Keep": function (t, a) {
-			a.equal(o1.a, 1);
-		},
-		"Overwrite": function (t, a) {
-			a.equal(o1.b, 3);
-		},
-		"Add": function (t, a) {
-			a.equal(o1.c, 4);
-		}
-	};
+	a(o1.a, 1, "Keep");
+	a(o1.b, 3, "Overwrite");
+	a(o1.c, 4, "Add");
 };

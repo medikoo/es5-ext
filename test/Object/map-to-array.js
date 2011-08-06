@@ -6,5 +6,5 @@ module.exports = function (t, a) {
 	  , o2 = t(o, function (value, name) {
 			return value + Number(name);
 		});
-	a.deepEqual(o2, [2, 4, 6]);
+	a.deep(o2, [2, 4, 6]);
 };

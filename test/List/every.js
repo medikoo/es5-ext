@@ -7,5 +7,5 @@ exports.__generic = function (t, a) {
 		++count;
 		return true;
 	});
-	a.equal(count, 3);
+	a(count, 3);
 };

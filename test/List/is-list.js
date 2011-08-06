@@ -3,15 +3,11 @@
 var noop    = require('../../lib/Function/noop');
 
 module.exports = {
-	__generic: {
-		"is list": function (t, a) {
-			a.equal(t(this), true);
-		}
+	__generic: function (t, a) {
+		a(t(this), true, "is list");
 	},
-	"Empty object is not list": function (t, a) {
-		a.equal(t({}), false);
-	},
-	"Function is not list": function (t, a) {
-		a.equal(t(noop), false);
+	"": function (t, a) {
+		a(t({}), false, "Empty object is not list");
+		a(t(noop), false, "Function is not list");
 	}
 };

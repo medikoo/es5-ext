@@ -1,26 +1,17 @@
 'use strict';
 
-var f, o;
+var f, fn, o;
 
 f = function (a) {
 	return this;
 };
+fn = function (a, b) {
+	return this + a + b;
+};
 o = {};
 
-module.exports = {
-	"Function": function (t, a) {
-		a.equal(t(f)(o)(), o);
-	},
-	"Function + argument": function (t, a) {
-		var fn = function (a, b) {
-			return this + a + b;
-		};
-		a.equal(t(fn, 1)(2, 4)(), 7);
-	},
-	"Function + arguments + arguments": function (t, a) {
-		var fn = function (a, b) {
-			return this + a + b;
-		};
-		a.equal(t(fn, 1)(2)(4), 7);
-	}
+module.exports = function (t, a) {
+	a(t(f)(o)(), o, "Function");
+	a(t(fn, 1)(2, 4)(), 7, "Function + argument");
+	a(t(fn, 1)(2)(4), 7, "Function + arguments + arguments");
 };

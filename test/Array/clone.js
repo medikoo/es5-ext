@@ -5,6 +5,6 @@ module.exports = function (t, a) {
 	t = t.call;
 	o2 = t(o1);
 
-	a.notEqual(o1, o2);
-	a.deepEqual(o1, o2);
+	a.not(o1, o2);
+	a.deep(o1, o2);
 };

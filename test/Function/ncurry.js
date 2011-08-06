@@ -6,11 +6,7 @@ var f = function () {
 	return toArray(arguments);
 };
 
-module.exports = {
-	"0 arguments": function (t, a) {
-		a.deepEqual(t(f, 0, 1, 2)(), []);
-	},
-	"Many arguments": function (t, a) {
-		a.deepEqual(t(f, 5, 1, 2)(3, 4)(5, 6), [1, 2, 3, 4, 5]);
-	}
+module.exports = function (t, a) {
+	a.deep(t(f, 0, 1, 2)(), [], "0 arguments");
+	a.deep(t(f, 5, 1, 2)(3, 4)(5, 6), [1, 2, 3, 4, 5], "Many arguments");
 };

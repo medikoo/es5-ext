@@ -8,7 +8,7 @@ module.exports = function (t, a) {
 	y.trzy = 3;
 	y.cztery = 4;
 	z = t({}, y);
-	a.deepEqual(z, { raz: 1, dwa: 2, trzy: 3, cztery: 4 });
+	a.deep(z, { raz: 1, dwa: 2, trzy: 3, cztery: 4 });
 	a.ok(z.hasOwnProperty('raz'));
 	a.ok(z.hasOwnProperty('trzy'));
 };

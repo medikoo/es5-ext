@@ -10,5 +10,5 @@ exports.__generic = function (t, a) {
 			return false;
 		}
 	});
-	a.equal(count, 2);
+	a(count, 2);
 };

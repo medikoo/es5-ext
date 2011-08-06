@@ -6,5 +6,5 @@ exports.__generic = function (t, a) {
 	t(this, function () {
 		++count;
 	});
-	a.equal(count, 3);
+	a(count, 3);
 };

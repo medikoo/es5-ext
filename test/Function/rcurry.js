@@ -9,5 +9,5 @@ f = function (a, b, c) {
 };
 
 module.exports = function (t, a) {
-	a.deepEqual(t(f, 1, 2)(3, 4), [3, 4, 1, 2]);
+	a.deep(t(f, 1, 2)(3, 4), [3, 4, 1, 2]);
 };

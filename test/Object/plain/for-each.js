@@ -7,5 +7,5 @@ module.exports = function (t, a) {
 	t(o, function (value, name) {
 		o2[name] = value;
 	});
-	a.equal(JSON.stringify(o2), JSON.stringify(o));
+	a(JSON.stringify(o2), JSON.stringify(o));
 };

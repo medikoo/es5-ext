@@ -8,21 +8,9 @@ module.exports = function (t, a)  {
 
 	  , r = t(o1, o2);
 
-	return {
-		"Inheritance": function (t, a) {
-			a.equal(r.a(2), 3);
-		},
-		"Ancestor methods": function (t, a) {
-			a.equal(r.b, o1.b);
-		},
-		"Ancestor properties are not own properties": function (t, a) {
-			a.ok(!r.hasOwnProperty('b'));
-		},
-		"Descendant methods": function (t, a) {
-			a.equal(r.c, o2.c);
-		},
-		"Non function property override": function (t, a) {
-			a.equal(r.d, o2.d);
-		}
-	};
+	a(r.a(2), 3, "Inheritance");
+	a(r.b, o1.b, "Ancestor methods");
+	a.ok(!r.hasOwnProperty('b'), "Ancestor properties are not own properties");
+	a(r.c, o2.c, "Descendant methods");
+	a(r.d, o2.d, "Non function property override");
 };
