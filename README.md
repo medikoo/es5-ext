@@ -44,26 +44,59 @@ _Each extension is documented at begin of its source file._
 * `global`
 * `reserved`
 
+#### Array
+
+Extensions for Array that can be used only on Array instances, these are mainly extensions that modify Array object in-place. For more generic extensions see List section.
+
+* `Array.clone()`
+* `Array.compact()`
+
+#### Date
+
+* `Date.clone()`
+* `Date.duration(to)`
+* `Date.format()`
+* `Date.monthDaysCount()`
+
+##### Day
+
+* `Date.day.floor()`
+
+##### Month
+
+* `Date.month.floor()`
+
+##### Year
+
+* `Date.year.floor()`
+
 #### Function
 
 Many of the following are inspired by
 http://osteele.com/sources/javascript/functional/
 
 * `Function.aritize(f, n)`
+* `Function.bindApplyArgs(f)`
 * `Function.bindApply(f)`
 * `Function.bindBind(f)`
 * `Function.bindCall(f)`
+* `Function.cache(f)`
 * `Function.clone(f)`
 * `Function.curry(f[, ...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`
 * `Function.functionalize(f)`
+* `Function.hold(f[, n, ...])`
+* `Function.i(f)`
 * `Function.inherit(f, g)`
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
 * `Function.k(x)`
+* `Function.log(f)`
+* `Function.ncurry(f, n[, ...])`
 * `Function.noop()`
 * `Function.pluck(name)`
+* `Function.rcurry(f[, ...])`
 * `Function.s(f, g)`
 * `Function.saturate(f)`
 * `Function.sequence(f[, ...])`
@@ -76,25 +109,46 @@ Extensions for Array-like objects.
 * `List.concat([...])`
 * `List.every(f[, o])`
 * `List.filter(f[, o])`
+* `List.findSameStartLength(l[, ...])`
 * `List.flatten()`
 * `List.forEach(f[, o])`
+* `List.isListObject(x)`
 * `List.isList(x)`
 * `List.map(f[, o])`
+* `List.peek()`
 * `List.reduce(f[, x])`
+* `List.shiftSame(l[, ...])`
 * `List.slice([start[, end]])`
 * `List.some(f[, o])`
 * `List.toArray()`
+
+##### List.sort
+
+Functions for sorting list objects
+
+* `List.sort.length(l1, l2)`
+
+#### Number
+
+* `Number.pad(precision)`
 
 #### Object
 
 Following takes into account all ES5 goodies (not enumerable properties, descriptors). For more tradtional ES3 like stuff see Object.plain below
 
 * `Object.bindMethods([p[, q]])`
+* `Object.desribe()`
+* `Object.describeAll()`
 * `Object.every(f[, p])`
 * `Object.extend(o)`
+* `Object.invoke(args)`
+* `Object.mapToArray(cb[, scope])`
+* `Object.mergeDeep(o)`
 * `Object.merge(p)`
 * `Object.pluck(name)`
+* `Object.sameType(x)`
 * `Object.same()`
+* `Object.toString()`
 
 #### Object.plain
 
@@ -119,6 +173,15 @@ Following are about hash'es (simple enumerable key value pairs)
 * `Object.plain.values()`
 
 #### String
+
+* `String.endsWith(s)`
+* `String.format(map)`
+* `String.indent()`
+* `String.pad(n)`
+* `String.repeat(n)`
+* `String.startsWith(s)`
+* `String.trimLeftStr(s)`
+* `String.trimRightStr(s)`
 
 ##### Convertion methods:
 
