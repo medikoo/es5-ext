@@ -16,7 +16,6 @@ module.exports = function (t, a) {
 		configurable: false
 	});
 
-
 	o.dwa(5); o.dwa(5); o.dwa(5);
 	a(i, 2, "Works redefined with decriptor");
 
