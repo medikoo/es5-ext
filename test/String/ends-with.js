@@ -4,6 +4,7 @@
 'use strict';
 
 module.exports = function (t, a) {
+	t = t.call;
 	a.ok(t('abc', ''), "Empty needle");
 	a.ok(t('abcd', 'cd'), "Ends with needle");
 	a.ok(t('abcd', 'abcd'), "Needle equals haystack");
