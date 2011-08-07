@@ -80,7 +80,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.bindBind(f)`
 * `Function.cache()`
 * `Function.callBind(f)`
-* `Function.clone(f)`
+* `Function.clone()`
 * `Function.curry(f[, ...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`

@@ -4,6 +4,7 @@ var same = require('../../lib/Object/plain/same').call;
 
 module.exports = function (t, a) {
 	var org, clone, x = {'raz': 'dwa3'}, y = { 'dwa': 'sdfs'};
+	t = t.call;
 	org = function () { return x; };
 	org.prototype = x;
 	org.test = x;
