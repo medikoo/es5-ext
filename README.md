@@ -78,7 +78,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.applyBind(f)`
 * `Function.aritize(n)`
 * `Function.bindBind(f)`
-* `Function.cache(f)`
+* `Function.cache()`
 * `Function.callBind(f)`
 * `Function.clone(f)`
 * `Function.curry(f[, ...])`

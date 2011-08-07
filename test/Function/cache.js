@@ -2,6 +2,7 @@
 
 module.exports = function (t, a) {
 	var o = {}, i = 0,  fn = function (x) { ++i; return x*2; };
+	t = t.call;
 
 	o.raz = t(fn);
 
