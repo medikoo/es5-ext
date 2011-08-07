@@ -91,7 +91,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
 * `Function.k(x)`
-* `Function.log(f)`
+* `Function.log(log)`
 * `Function.ncurry(f, n[, ...])`
 * `Function.noop()`
 * `Function.pluck(name)`

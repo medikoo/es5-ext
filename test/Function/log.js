@@ -5,6 +5,7 @@ var noop    = require('../../lib/Function/noop')
 
 module.exports = function (t, a) {
 	var log = [], fn, o = {};
+	t = t.call;
 	fn = t(noop, log);
 
 	fn(1, 'raz', o);
