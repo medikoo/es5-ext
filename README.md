@@ -137,8 +137,6 @@ Functions for sorting list objects
 Following takes into account all ES5 goodies (not enumerable properties, descriptors). For more tradtional ES3 like stuff see Object.plain below
 
 * `Object.bindMethods([p[, q]])`
-* `Object.desribe()`
-* `Object.describeAll()`
 * `Object.every(f[, p])`
 * `Object.extend(o)`
 * `Object.invoke(args)`
@@ -148,6 +146,8 @@ Following takes into account all ES5 goodies (not enumerable properties, descrip
 * `Object.pluck(name)`
 * `Object.sameType(x)`
 * `Object.same()`
+* `Object.toDescriptor()`
+* `Object.toDescriptors()`
 * `Object.toString()`
 
 #### Object.plain
