@@ -75,17 +75,17 @@ Extensions for Array that can be used only on Array instances, these are mainly 
 Many of the following are inspired by
 http://osteele.com/sources/javascript/functional/
 
-* `Function.aritize(f, n)`
-* `Function.bindApplyArgs(f)`
-* `Function.bindApply(f)`
+* `Function.applyBind(f)`
+* `Function.aritize(n)`
 * `Function.bindBind(f)`
-* `Function.bindCall(f)`
 * `Function.cache(f)`
+* `Function.callBind(f)`
 * `Function.clone(f)`
 * `Function.curry(f[, ...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`
 * `Function.functionalize(f)`
+* `Function.getApplyArg(f)`
 * `Function.hold(f[, n, ...])`
 * `Function.i(f)`
 * `Function.inherit(f, g)`
