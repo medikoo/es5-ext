@@ -2,12 +2,12 @@ v0.6.0  --  2011.08.07
 New methods:
 * Array: clone, compact (in place)
 * Date: format, duration, clone, monthDaysCount, day.floor, month.floor,
-	year.floor
+  year.floor
 * Function: getApplyArg, , ncurry, rncurry, hold, cache, log
 * List: findSameStartLength, shiftSame, peek, isListObject
 * Number: pad
 * Object: sameType, toString, mapToArray, mergeDeep, toDescriptor,
-	toDescriptors, invoke
+  toDescriptors, invoke
 * String: startsWith, endsWith, indent, trimLeftStr, trimRightStr, pad, format
 
 Fixed:
@@ -41,7 +41,7 @@ v0.5.0  --  2011.07.07
 
 v0.4.0  --  2011.07.05
 * Take most functions on Object to Object.plain to keep them away from object
-	descriptors
+  descriptors
 * Object functions with ES5 standard in mind (object descriptors)
 
 v0.3.0  --  2011.06.24
@@ -50,7 +50,7 @@ v0.3.0  --  2011.06.24
 
 v0.2.1  --  2011.05.28
 * Renamed Functions.K and Function.S to to lowercase versions (use consistent
-	naming)
+  naming)
 
 v0.2.0  --  2011.05.28
 * Renamed Array folder to List (as its generic functions for array-like objects)
