@@ -99,7 +99,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.rcurry([...])`
 * `Function.rncurry(n[, ...])`
 * `Function.s(f)`
-* `Function.sequence(f[, ...])`
+* `Function.sequence([...])`
 
 #### List
 
