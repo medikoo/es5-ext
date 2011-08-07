@@ -9,5 +9,6 @@ f = function (a, b) {
 };
 
 module.exports = function (t, a) {
+	t = t.call;
 	a.deep(t(f)(1, 2, 3), [2, 1, 3]);
 };

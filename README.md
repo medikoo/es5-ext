@@ -83,7 +83,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.clone()`
 * `Function.curry([...])`
 * `Function.dscope(scope)`
-* `Function.flip(f)`
+* `Function.flip()`
 * `Function.functionalize(f)`
 * `Function.getApplyArg(f)`
 * `Function.hold(f[, n, ...])`
