@@ -81,7 +81,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.cache()`
 * `Function.callBind(f)`
 * `Function.clone()`
-* `Function.curry(f[, ...])`
+* `Function.curry([...])`
 * `Function.dscope(f, scope)`
 * `Function.flip(f)`
 * `Function.functionalize(f)`
