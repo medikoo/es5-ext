@@ -82,7 +82,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.callBind(f)`
 * `Function.clone()`
 * `Function.curry([...])`
-* `Function.dscope(f, scope)`
+* `Function.dscope(scope)`
 * `Function.flip(f)`
 * `Function.functionalize(f)`
 * `Function.getApplyArg(f)`
