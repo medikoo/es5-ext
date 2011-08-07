@@ -36,7 +36,7 @@ v0.5.1  --  2011.07.11
 v0.5.0  --  2011.07.07
 * Removed Object.is and List.apply
 * Renamed Object.plain.is to Object.plain.isPlainObject (keep name convention
-	consistent)
+  consistent)
 * Improved documentation
 
 v0.4.0  --  2011.07.05
