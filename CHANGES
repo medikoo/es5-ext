@@ -1,3 +1,36 @@
+v0.6.0  --  2011.08.07
+New methods:
+* For functions: getApplyArg, , ncurry, rncurry, hold, cache, log
+* For objects: sameType, toString, mapToArray, mergeDeep, toDescriptor,
+	toDescriptors, invoke
+* For strings: startsWith, endsWith, indent, trimLeftStr, trimRightStr, pad,
+	format
+* For numbers: pad
+* For dates: format, duration, clone, monthDaysCount, day.floor, month.floor,
+	year.floor
+* For lists: findSameStartLength, shiftSame, peek, isListObject
+* For arrays: clone, compact (in place)
+
+Fixed:
+* Object.extend does now prototypal extend as exptected
+* Object.merge now tries to overwrite only configurable properties
+* Function.flip
+
+Improved:
+* Faster List.toArray
+* Better global retrieval
+* Functionalized all Function methods
+* Renamed bindApply and bindCall to applyBind and callBind
+* Removed Function.inherit (as it's unintuitive curry clone)
+* Straightforward logic in Function.k
+* Fixed naming of some tests files (letter case issue)
+* Renamed Function.saturate into Function.lock
+* String.dashToCamelCase digits support
+* Strings now considered as List objects
+* Improved List.compact
+* Concise logic for List.concat
+* Test wit TAD in clean ES5 context
+
 v0.5.1  --  2011.07.11
 * Function's bindBind, bindCall and bindApply now more versatile
 
