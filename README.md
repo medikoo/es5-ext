@@ -91,6 +91,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
 * `Function.k(x)`
+* `Function.lock([...])`
 * `Function.log(log)`
 * `Function.ncurry(n[, ...])`
 * `Function.noop()`
@@ -98,7 +99,6 @@ http://osteele.com/sources/javascript/functional/
 * `Function.rcurry([...])`
 * `Function.rncurry(n[, ...])`
 * `Function.s(f)`
-* `Function.saturate(f)`
 * `Function.sequence(f[, ...])`
 
 #### List
