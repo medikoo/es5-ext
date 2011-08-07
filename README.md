@@ -97,7 +97,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.pluck(name)`
 * `Function.rcurry([...])`
 * `Function.rncurry(n[, ...])`
-* `Function.s(f, g)`
+* `Function.s(f)`
 * `Function.saturate(f)`
 * `Function.sequence(f[, ...])`
 
