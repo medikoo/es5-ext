@@ -1,15 +1,14 @@
 v0.6.0  --  2011.08.07
 New methods:
-* For functions: getApplyArg, , ncurry, rncurry, hold, cache, log
-* For objects: sameType, toString, mapToArray, mergeDeep, toDescriptor,
-	toDescriptors, invoke
-* For strings: startsWith, endsWith, indent, trimLeftStr, trimRightStr, pad,
-	format
-* For numbers: pad
-* For dates: format, duration, clone, monthDaysCount, day.floor, month.floor,
+* Array: clone, compact (in place)
+* Date: format, duration, clone, monthDaysCount, day.floor, month.floor,
 	year.floor
-* For lists: findSameStartLength, shiftSame, peek, isListObject
-* For arrays: clone, compact (in place)
+* Function: getApplyArg, , ncurry, rncurry, hold, cache, log
+* List: findSameStartLength, shiftSame, peek, isListObject
+* Number: pad
+* Object: sameType, toString, mapToArray, mergeDeep, toDescriptor,
+	toDescriptors, invoke
+* String: startsWith, endsWith, indent, trimLeftStr, trimRightStr, pad, format
 
 Fixed:
 * Object.extend does now prototypal extend as exptected
