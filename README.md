@@ -87,8 +87,7 @@ http://osteele.com/sources/javascript/functional/
 * `Function.functionalize(f)`
 * `Function.getApplyArg(f)`
 * `Function.hold([n, ...])`
-* `Function.i(f)`
-* `Function.inherit(f, g)`
+* `Function.i(x)`
 * `Function.invoke(methodName[, ...])`
 * `Function.isFunction(x)`
 * `Function.k(x)`
