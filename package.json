@@ -1,6 +1,6 @@
 {
 	"name": "es5-ext",
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"description": "ECMAScript5 extensions",
 	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "addons", "extras", "javascript"],
 	"author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
@@ -15,5 +15,9 @@
 	},
 	"engines": {
 		"node": ">=0.1.103"
+	},
+	"scripts": { "test": "./node_modules/tad/bin/tad lib" },
+	"devDependencies": {
+		"tad": "0.1.x"
 	}
 }
