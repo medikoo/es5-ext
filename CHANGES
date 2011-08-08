@@ -1,3 +1,7 @@
+v0.6.1  --  2011.08.08
+* Added TAD test suite to devDependencies, configured test commands.
+  Tests can be run with 'make test' or 'npm test'
+
 v0.6.0  --  2011.08.07
 New methods:
 * Array: clone, compact (in place)
