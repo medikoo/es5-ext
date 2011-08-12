@@ -1,3 +1,8 @@
+v0.6.2  --  2011.08.12
+* Calling String.indent without scope (global scope then) now treated as calling
+  it with null scope, it allows more direct invocations when using default nest
+  string: indent().call(str, nest)
+
 v0.6.1  --  2011.08.08
 * Added TAD test suite to devDependencies, configured test commands.
   Tests can be run with 'make test' or 'npm test'
