@@ -8,4 +8,5 @@ module.exports = function (t, a) {
 	a.deep(t('str'), ['str'], "String");
 	a.deep(t(args), [args], "Arguments");
 	a(t(arr), arr, "Array");
+	a.deep(t(undefined), [], "Undefined");
 };
