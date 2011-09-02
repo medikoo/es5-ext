@@ -1,7 +1,7 @@
 'use strict';
 
 var toArray = require('../../lib/List/to-array').call
-  , slice   = require('../../lib/Array/slice/call')
+  , slice   = require('../../lib/List/slice/call')
 
   , f, g;
 
