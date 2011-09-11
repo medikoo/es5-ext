@@ -3,10 +3,13 @@
 var o = {};
 
 module.exports = function (t, a) {
-	var bind = t(function () { return this; }).bind;
+	var bind, call, apply, curry;
+	bind = t(function () { return this; }).bind;
 	a(bind(o)(), o, "Bind");
-	var call = t(function () { return this; }).call;
+	call = t(function () { return this; }).call;
 	a(call(a), a, "Call");
-	var apply = t(function () { return this; }).apply;
+	apply = t(function () { return this; }).apply;
 	a(apply(a), a, "Apply");
+	curry = t(function (a) { return this + a; }).curry;
+	a(curry('raz').call('dwa'), 'dwaraz', "Curry");
 };
