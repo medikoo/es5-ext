@@ -9,4 +9,5 @@ module.exports = function (t, a) {
 	a.ok(t('abcd', 'cd'), "Ends with needle");
 	a.ok(t('abcd', 'abcd'), "Needle equals haystack");
 	a.ok(!t('abcd', 'ab'), "Doesn't end with needle");
+	a.ok(!t('abc', 'defg'), "Length trick");
 };
