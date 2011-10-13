@@ -2,36 +2,10 @@
 
 module.exports = function (t, a) {
 	var o = { raz: 1, dwa: 2, trzy: 3 }
-	  , o2 = {}, o3 = {}, arr;
+	  , o2 = {};
 	t = t.call;
-	t(o, function (value, name, self) {
+	a(t(o, function (value, name) {
 		o2[name] = value;
-		a(self, o, "Self");
-		a(this, o3, "Scope");
-	}, o3);
+	}), undefined, "Return");
 	a.deep(o2, o);
-
-	arr = [], o2 = {};
-	t(o, function (value, name, self) {
-		arr.push(value);
-		o2[name] = value;
-		a(self, o, "Self");
-		a(this, o3, "Scope");
-	}, o3, function (a, b) {
-		return b - a;
-	});
-	a.deep(o2, o, "Sort by Values: Content");
-	a.deep(arr, [3, 2, 1], "Sort by Values: Order");
-
-	arr = [], o2 = {};
-	t(o, function (value, name, self) {
-		arr.push(value);
-		o2[name] = value;
-		a(self, o, "Self");
-		a(this, o3, "Scope");
-	}, o3, function (a, b) {
-		return a.localeCompare(b);
-	}, true);
-	a.deep(o2, o, "Sort by Keys: Content");
-	a.deep(arr, [2, 1, 3], "Sort by Keys: Order");
 };
