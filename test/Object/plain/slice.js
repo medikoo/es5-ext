@@ -43,8 +43,6 @@ module.exports = function (t, a) {
 
 	fn = function (a, b) { return a.localeCompare(b); };
 
-	// o = { cztery: 4, dwa: 2, pięć: 5, raz: 1, trzy: 3 };
-
 	a.deep(t(o, 1, null, fn, true), { dwa: 2, trzy: 3, raz: 1, pięć: 5 },
 		"Sliced output, start provided, ordered by keys");
 	a.deep(t(o, 1, 3, fn, true), { dwa: 2, pięć: 5 },
