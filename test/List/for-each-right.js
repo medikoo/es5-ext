@@ -2,7 +2,7 @@
 
 module.exports = {
 	__generic: function (t, a) {
-		var count = 0, first, last, x;
+		var count = 0, first, last, x, icount = this.length;
 		t = t.call;
 		t(this, function (item, index, col) {
 			++count;
@@ -11,6 +11,7 @@ module.exports = {
 			}
 			last = item;
 			x = col;
+			a(index, --icount, "Index");
 		});
 		a(count, this.length, "Iterated");
 		a(first, this[this.length - 1], "First is last");
