@@ -90,7 +90,7 @@ module.exports = function (t, a) {
 		"Dynamic": function () {
 			var i = 0, fn = function () { ++i; return arguments; }, r;
 
-			fn = t(fn, true);
+			fn = t(fn, false);
 			return {
 				"No args": function () {
 					i = 0;
