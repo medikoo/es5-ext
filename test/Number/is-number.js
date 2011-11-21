@@ -2,7 +2,7 @@
 
 module.exports = function (t, a) {
 	a(t(0), true, "Zero");
-	a(t(NaN), false, "NaN");
+	a(t(NaN), true, "NaN");
 	a(t(Infinity), true, "Infinity");
 	a(t(12), true, "Number");
 	a(t(false), false, "Boolean");
