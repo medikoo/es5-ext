@@ -1,6 +1,6 @@
 'use strict';
 
-var compare  = require('../../../lib/Numeric/prototype/compare')
+var compare  = require('../../../lib/Number/prototype/compare')
   , get      = require('../../../lib/Object/plain/get').bind
   , sequence = require('../../../lib/Function/sequence').bind;
 
