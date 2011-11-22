@@ -5,4 +5,3 @@ module.exports = function (t, a) {
 	a.ok(t(2, 1) > 0, "Greater");
 	a.ok(t(-2, -1) < 0, "Less");
 };
-
