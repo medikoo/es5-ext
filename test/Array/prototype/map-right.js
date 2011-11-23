@@ -3,8 +3,7 @@
 module.exports = {
 	__generic: function (t, a) {
 		var count = 0, first, last, x, icount = this.length;
-		t = t.call;
-		t(this, function (item, index, col) {
+		t.call(this, function (item, index, col) {
 			++count;
 			if (!first) {
 				first = item;
@@ -16,7 +15,7 @@ module.exports = {
 		a(count, this.length, "Iterated");
 		a(first, this[this.length - 1], "First is last");
 		a(last, this[0], "Last is first");
-		a(x, this, "Collection as third argument");
+		a.deep(x, Object(this), "Collection as third argument");
 	},
 	"": function (t, a) {
 		var x = {}, y, count;
@@ -24,9 +23,8 @@ module.exports = {
 		var start = [
 			1,2,3,4,5
 		], result, first, last;
-		t = t.call;
 
-		result = t(start, function(element, index, arr){
+		result = t.call(start, function(element, index, arr){
 			if(!first)	{
 				first = element;
 			}
@@ -38,7 +36,7 @@ module.exports = {
 		a(last, 1, "Last is first");
 		a(result.length, 5, "Array has proper length");
 
-		result = t([1], function(element, index, arr){
+		result = t.call([1], function(element, index, arr){
 			return element + 4;
 		});
 		a(result[0], 5, "Array element is eq 5");
@@ -46,7 +44,7 @@ module.exports = {
 		start = new Array(10);
 		start[3] = 666;
 
-		result = t(start, function(element, index, arr){
+		result = t.call(start, function(element, index, arr){
 			return element/6;
 		});
 
