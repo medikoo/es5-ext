@@ -3,9 +3,8 @@
 module.exports = {
 	__generic: function (t, a) {
 		var count = 0;
-		t = t.call;
 
-		a.deep(t(this, function (v, i, scope) {
+		a.deep(t.call(this, function (v, i, scope) {
 			a(v, this[i], "Value");
 			a(i, count++, "Index");
 			a(scope, this, "Scope");
@@ -14,8 +13,7 @@ module.exports = {
 	},
 	"": function (t, a) {
 		var r;
-		t = t.call
-		r = t([2,3,3,4,5,6,7,7,23,45,34,56], function (v, i, scope) {
+		r = t.call([2,3,3,4,5,6,7,7,23,45,34,56], function (v, i, scope) {
 			return v%2 ? 'odd' : 'even';
 		});
 		a.deep(r.odd, [3,3,5,7,7,23,45]);
