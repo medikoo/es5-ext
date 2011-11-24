@@ -1,12 +1,12 @@
 'use strict';
 
-var toArray = require('../../lib/List/to-array').call
-  , slice   = require('../../lib/List/slice/call')
+var slice   = Array.prototype.slice
+  , toArray = require('../../lib/List/to-array').call
 
   , f, g;
 
 f = function (b) {
-	return ["A"].concat(b, slice(arguments, 1));
+	return ["A"].concat(b, slice.call(arguments, 1));
 };
 g = function () {
 	return ["B"].concat(toArray(arguments));
