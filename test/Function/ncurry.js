@@ -1,6 +1,6 @@
 'use strict';
 
-var toArray = require('../../lib/List/to-array').call;
+var toArray = require('../../lib/Array/to-array');
 
 var f = function () {
 	return toArray(arguments);

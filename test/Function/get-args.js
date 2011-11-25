@@ -1,6 +1,6 @@
 'use strict';
 
-var toArray = require('../../lib/List/to-array').call;
+var toArray = require('../../lib/Array/to-array');
 
 module.exports = function (t, a) {
 	var x = {}, args = t(1, x, 'raz');

@@ -1,7 +1,7 @@
 'use strict';
 
 var slice   = Array.prototype.slice
-  , toArray = require('../../lib/List/to-array').call
+  , toArray = require('../../lib/Array/to-array')
 
   , f, g;
 
