@@ -1,6 +1,6 @@
 'use strict';
 
-var clone = require('../../lib/Date/clone').call;
+var copy = require('../../lib/Date/prototype/copy');
 
 module.exports = function (t, a) {
 	var d1 = new Date(Date.UTC(2001, 1, 2, 1, 1, 1, 1)), d, d2;
@@ -9,7 +9,7 @@ module.exports = function (t, a) {
 	return {
 		"Milliseconds": function (t, a) {
 			// 11 milliseconds
-			d2 = clone(d1);
+			d2 = copy.call(d1);
 			d2.setMilliseconds(d2.getMilliseconds() + 11);
 			d = d1.duration(d2);
 
@@ -37,7 +37,7 @@ module.exports = function (t, a) {
 		},
 		"Seconds": function (t, a) {
 			// 7 seconds 123 milliseconds
-			d2 = clone(d1);
+			d2 = copy.call(d1);
 			d2.setMilliseconds(d2.getMilliseconds() + 123);
 			d2.setSeconds(d2.getSeconds() + 7);
 			d = d1.duration(d2);
@@ -67,7 +67,7 @@ module.exports = function (t, a) {
 		},
 		"Minutes": function (t, a) {
 			// 7 minutes 12 seconds 123 milliseconds
-			d2 = clone(d1);
+			d2 = copy.call(d1);
 			d2.setMilliseconds(d2.getMilliseconds() + 123);
 			d2.setSeconds(d2.getSeconds() + 12);
 			d2.setMinutes(d2.getMinutes() + 7);
@@ -98,7 +98,7 @@ module.exports = function (t, a) {
 		},
 		"Hours": function (t, a) {
 			// 4 hours 7 minutes 12 seconds 123 milliseconds
-			d2 = clone(d1);
+			d2 = copy.call(d1);
 			d2.setMilliseconds(d2.getMilliseconds() + 123);
 			d2.setSeconds(d2.getSeconds() + 12);
 			d2.setMinutes(d2.getMinutes() + 7);
@@ -131,7 +131,7 @@ module.exports = function (t, a) {
 		},
 		"Days": function (t, a) {
 			// 2 days 14 hours 7 minutes 12 seconds 123 milliseconds
-			d2 = clone(d1);
+			d2 = copy.call(d1);
 			d2.setMilliseconds(d2.getMilliseconds() + 123);
 			d2.setSeconds(d2.getSeconds() + 12);
 			d2.setMinutes(d2.getMinutes() + 7);
