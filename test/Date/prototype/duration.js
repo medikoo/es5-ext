@@ -1,6 +1,6 @@
 'use strict';
 
-var copy = require('../../lib/Date/prototype/copy');
+var copy = require('../../../lib/Date/prototype/copy');
 
 module.exports = function (t, a) {
 	var d1 = new Date(Date.UTC(2001, 1, 2, 1, 1, 1, 1)), d, d2;
