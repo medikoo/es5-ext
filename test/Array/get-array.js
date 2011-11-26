@@ -1,6 +1,6 @@
 'use strict';
 
-var getArgs = require('../../lib/Function/get-args');
+var getArgs = require('../../lib/Function/arguments');
 
 module.exports = function (t, a) {
 	var args = getArgs(1, 2), arr = [1,2,3];
