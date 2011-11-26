@@ -9,9 +9,8 @@ f = function () {
 o = { c: {}, decodeURI: true };
 
 module.exports = function (t, a) {
-	t = t.call;
-	a(t(f, o), o.c, "Dynamic scope");
+	a(t.call(f, o), o.c, "Dynamic scope");
 
-	t(f, o);
+	t.call(f, o);
 	a(decodeURI, org, "Reverts global properties");
 };
