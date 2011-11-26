@@ -2,7 +2,6 @@
 
 module.exports = function (t, a) {
 	var o1, o2, o3;
-	t = t.call;
 	o1 = {};
 	o2 = Object.create(o1, {
 		raz: {
@@ -14,7 +13,7 @@ module.exports = function (t, a) {
 		}
 	});
 
-	o3 = t(o2);
+	o3 = t.call(o2);
 
 	a(Object.getPrototypeOf(o3), o1, "Prototype");
 	a.deep(Object.keys(o3), [], "Keys");
