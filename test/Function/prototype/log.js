@@ -1,12 +1,11 @@
 'use strict';
 
-var noop    = require('../../lib/Function/noop')
-  , toArray = require('../../lib/Array/to-array');
+var noop    = require('../../../lib/Function/noop')
+  , toArray = require('../../../lib/Array/to-array');
 
 module.exports = function (t, a) {
 	var log = [], fn, o = {};
-	t = t.call;
-	fn = t(noop, log);
+	fn = t.call(noop, log);
 
 	fn(1, 'raz', o);
 	fn(2, o, 'dwa');
