@@ -13,7 +13,5 @@ h = function (a) {
 };
 
 module.exports = function (t, a) {
-	t = t.call;
-	a(t(f, g, h)(1, 2).toString(),
-		['c', 1, 'b', 1, 'a', 2, 1, 2].toString());
+	a.deep(t.call(f, g, h)(1, 2), ['c', 1, 'b', 1, 'a', 2, 1, 2]);
 };
