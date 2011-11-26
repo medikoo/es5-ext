@@ -1,7 +1,7 @@
 'use strict';
 
 var slice   = Array.prototype.slice
-  , toArray = require('../../lib/Array/to-array')
+  , toArray = require('../../../lib/Array/to-array')
 
   , f, g;
 
@@ -13,6 +13,5 @@ g = function () {
 };
 
 module.exports = function (t, a) {
-	t = t.call;
-	a(t(f, g)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString());
+	a(t.call(f, g)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString());
 };
