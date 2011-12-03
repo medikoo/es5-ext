@@ -2,7 +2,6 @@
 
 module.exports = function (t, a) {
 	var o = {};
-	t = t.call;
-	t(o, 'b', 2);
+	t.call(o, 'b', 2);
 	a(o.b, 2);
 };
