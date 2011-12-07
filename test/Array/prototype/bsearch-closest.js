@@ -1,6 +1,6 @@
 'use strict';
 
-var compare  = require('../../../lib/Number/prototype/compare');
+var compare  = require('../../../lib/Number/prototype/subtract');
 
 module.exports = function (t, a) {
 	var arr, fn, search;
