@@ -1,6 +1,6 @@
 {
 	"name": "es5-ext",
-	"version": "0.6.2",
+	"version": "0.6.3",
 	"description": "ECMAScript5 extensions",
 	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "addons", "extras", "javascript"],
 	"author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
@@ -11,7 +11,7 @@
 	},
 	"bugs": {
 		"mail": "medikoo+es5-ext@medikoo.com",
-		"web": "https://github.com/medikoo/es5-ext/issues"
+		"url": "https://github.com/medikoo/es5-ext/issues"
 	},
 	"engines": {
 		"node": ">=0.1.103"

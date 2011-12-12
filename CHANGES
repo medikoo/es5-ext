@@ -1,3 +1,6 @@
+v0.6.3  --  2011.12.12
+* Cleared npm warning for misnamed property in package.json
+
 v0.6.2  --  2011.08.12
 * Calling String.indent without scope (global scope then) now treated as calling
   it with null scope, it allows more direct invocations when using default nest
