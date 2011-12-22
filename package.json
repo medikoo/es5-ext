@@ -2,8 +2,10 @@
 	"name": "es5-ext",
 	"version": "0.6.3",
 	"description": "ECMAScript5 extensions",
-	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "addons", "extras", "javascript"],
-	"author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
+	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "ext",
+		"addons", "extras", "javascript"],
+	"author":
+	"Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
 	"main": "lib",
 	"repository": {
 		"type": "git",
@@ -21,5 +23,6 @@
 	},
 	"devDependencies": {
 		"tad": "0.1.x"
-	}
+	},
+	"licence": "MIT"
 }
