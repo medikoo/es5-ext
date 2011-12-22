@@ -16,7 +16,9 @@
 	"engines": {
 		"node": ">=0.1.103"
 	},
-	"scripts": { "test": "./node_modules/tad/bin/tad lib" },
+	"scripts": {
+		"test": "node ./node_modules/tad/bin/tad lib"
+	},
 	"devDependencies": {
 		"tad": "0.1.x"
 	}
