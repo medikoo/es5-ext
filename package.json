@@ -4,7 +4,7 @@
 	"description": "ECMAScript5 extensions",
 	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "addons", "extras", "javascript"],
 	"author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
-	"main": "lib/index",
+	"main": "lib",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/medikoo/es5-ext.git"
