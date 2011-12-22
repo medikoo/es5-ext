@@ -229,8 +229,4 @@ called on any object.
 Before running tests make sure you've installed project with dev dependiencies
 `npm install --dev`
 
-	$ make test
-
-<!-- tests with coverage report: -->
-
-<!-- 	$ make test-cov -->
+	$ npm test
