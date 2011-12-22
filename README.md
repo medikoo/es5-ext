@@ -59,7 +59,7 @@ _Each extension is documented at begin of its source file._
 Same as with standarized ES methods, following methods are generic and can be
 called on any object.
 
-* `Array.prototype.bsearchClosest(compareFn)`
+* `Array.prototype.binarySearch(compareFn)`
 * `Array.prototype.clear()`
 * `Array.prototype.commonLeft(list0[, list1[, ...]])`
 * `Array.prototype.compact()`
