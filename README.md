@@ -21,20 +21,25 @@ es5-ext mostly offer methods (not functions) which can directly be
 assigned to any ES native object's prototype, e.g.:
 
 	Function.prototype.curry = require('es5-ext/lib/Function/prototype/curry');
+
 	Array.prototype.flatten = require('es5-ext/lib/Array/prototype/flatten');
+
 	String.prototype.startsWith = require('es5-ext/lib/String/prototype/starts-with');
 
 However, extending native prototypes is controversial and in general discouraged,
 most will agree that __it's ok only if we own the context__ (see
 [extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
-for more views on that matter). So when you don't want to extend native
-prototypes you can use methods as functions:
+for more views on that matter).  
+So when you don't want to extend native prototypes you can use methods as
+functions:
 
 	var util = {};
 	var call = Function.prototype.call;
 
 	util.curry = call.bind(require('es5-ext/lib/Function/prototype/curry'));
+
 	util.flatten = call.bind(require('es5-ext/lib/Array/prototype/flatten'));
+
 	util.startsWith = call.bind(require('es5-ext/lib/String/prototype/starts-with'));
 
 ### API
