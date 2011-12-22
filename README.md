@@ -8,7 +8,7 @@ EcmaScript conventions in mind.
 Can be used in any environment that implements EcmaScript 5th edition.  
 Many extensions will also work with ECMAScript 3rd edition, if they're not let [es5-shim](https://github.com/kriskowal/es5-shim) be your aid.
 
-To use it with node:
+To use it with node.js:
 
 	$ npm install es5-ext
 
@@ -17,7 +17,7 @@ For browser, you can easily create custom toolset with help of
 
 ## Usage
 
-es5-ext mostly offer methods (not functions) which can directly be
+__es5-ext__ mostly offer methods (not functions) which can directly be
 assigned to any ES native object's prototype, e.g.:
 
 	Function.prototype.curry = require('es5-ext/lib/Function/prototype/curry');
