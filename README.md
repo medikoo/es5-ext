@@ -224,13 +224,13 @@ called on any object.
 * `String.prototype.startsWith()`
 * `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
 
-<!-- ## Tests -->
+## Tests
 
-<!-- Before running tests make sure you have node and npm installed and you've run -->
-<!-- _make install_ first. -->
+Before running tests make sure you've installed project with dev dependiencies
+`npm install --dev`
 
-<!-- 	$ make test -->
+	$ make test
 
-<!-- Tests with coverage report: -->
+<!-- tests with coverage report: -->
 
 <!-- 	$ make test-cov -->
