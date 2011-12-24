@@ -1,3 +1,137 @@
+v0.7.0  --  2011.12.24
+Major update.
+Stepped back from experimental ideas and introduced more standard approach
+taking example from how ES5 methods and functions are designed. One exceptions
+is that, we don’t refrain from declaring methods for Object.prototype - it’s up
+to developer whether he decide to declare it in his context (as function or as
+method).
+
+In general:
+* Removed any method 'functionalization' and functionalize method itself.
+	es5-ext declares plain methods, which can be configured to work as functions
+	with call.bind(method) - see documentation.
+* Removed separation of Object methods for ES5 (with descriptors) and
+	ES3 (plain) - we're following ES5 idea on that, some methods are intended just
+	for visible properties and some are for all properties all are declared for
+	Object.prototype
+* Removed separation of Array generic (collected in List folder) and not generic
+	methods (collected in Array folder). Now all methods are generic and are in
+	Array.prototype folder. This separation also meant, that methods in Array are
+	usually destructive. We don’t do that separation now, there’s generally no use
+	case for destructive iterators, we should be fine with one version of each
+	method, (same as ES5 is fine with  e.g. one, non destructive  ‘filter’ method)
+* Folder structurer resembles tree of native ES5 Objects
+* All methods are written with ES5 conventions in mind, it means that most
+	methods are generic and can be run on any object. In more detail:
+	** Array.prototype and Object.prototype method can be run on any object (any
+		not null or undefined value),
+	** Date.prototype methods should be called only on Date instances.
+	** Function.prototype can be called on any callable objects (not necessarily
+		functions)
+	** Number.prototype & String.prototype methods can be called on any value, in
+		case of Number it it’ll be degraded to number, in case of string it’ll be
+		degraded to string.
+* Travis CI support (only for Node v0.6 branch, as v0.4 has buggy V8 version)
+
+Improvements in existing methods:
+* Function.memoize (was Function.cache) now fully generic, can operate on any
+	type of arguments and it’s NaN safe (all NaN objects are considered equal)
+* Optionally prototype object can be provided (via _proto argument) to methods
+	that are extended with Object.prototype.extend or Object.prototype.override
+* Object iterators: forEach, mapToArray and every can now iterate in specified
+	order
+* Memoize different variants of pluck, invoke and other functions that return
+	reusable functions or methods.
+
+New methods:
+* Global: assertNotNull, getNextIdGenerator, guid, isEqual, isPrimitive,
+	toObject
+* Array: generate
+* Array.prototype: binarySearch, clear, contains, diff, exclusion, find, first,
+	forEachRight, group, indexesOf, intersection, remove, someRight, someValue
+* Boolean: isBoolean
+* Date: isDate
+* Function: arguments, context, insert, isArguments, remove
+* Function.prototype: not, silent
+* Number: getAutoincrement, isNumber
+* Number.prototype: isLessOrEqual, isLess, subtract
+* Object: assertCallable, descriptor (functions for clean descriptors),
+	getCompareBy, isCallable, isObject
+* Object.prototype: clone (real clone), compact, count, diff, empty,
+	getPropertyNames, get, keyOf, mapKeys, override, plainCreate, plainExtend,
+	slice, some, unset
+* RegExp: isRegExp
+* String: getPrefixWith, isString
+* String.prototype: caseInsensitiveCompare, contains, isNumeric
+
+Renamed methods:
+* Date.clone -> Date.prototype.copy
+* Date.format -> Date.getFormat
+* Date/day/floor -> Date.prototype.floorDay
+* Date/month/floor -> Date.prototype.floorMonth
+* Date/month/year -> Date.prototype.floorYear
+* Function.cache -> Function.memoize
+* Function.getApplyArg -> Function.prototype.match
+* Function.sequence -> Function.prototype.chain
+* List.findSameStartLength -> Array.prototype.commonLeft
+* Number.pad -> Number.getPad
+* Object/plain/clone -> Object.prototype.copy
+* Object/plain/elevate -> Object.prototype.flatten
+* Object/plain/same -> Object.prototype.isDuplicate
+* Object/plain/setValue -> Object.getSet
+* String.format -> String.getFormat
+* String.indent -> String.getIndent
+* String.pad -> String.getPad
+* String.trimLeftStr -> String.prototype.trimCommonLeft
+* Object.merge -> Object.prototype.mergeProperties
+* Object/plain/pluck -> Object.prototype.get
+* Array.clone is now Array.prototype.copy and can be used also on any array-like
+	objects
+* List.isList -> Object.isList
+* List.toArray -> Object.prototype.toArray
+* String/convert/dashToCamelCase -> String.prototype.dashToCamelCase
+
+Removed methods:
+* Array.compact - removed destructive version (that operated on same array), we
+	have now non destructive version as Array.prototype.compact.
+* Function.applyBind -> use apply.bind directly
+* Function.bindBind -> use bind.bind directly
+* Function.callBind -> use call.bind directly
+* Fuction.clone -> no valid use case
+* Function.dscope -> controversial approach, shouldn’t be considered seriously
+* Function.functionalize -> It was experimental but standards are standards
+* List/sort/length -> It can be easy obtained by Object.getCompareBy(‘length’)
+* List.concat -> Concat’s for array-like’s makes no sense, just convert to array
+	first
+* List.every -> Use Array.prototype.every directly
+* List.filter -> Use Array.prototype.filter directly
+* List.forEach -> User Array.prototype.forEach directly
+* List.isListObject -> No valid use case, do: isList(list) && (typeof list ===
+	'object’)
+* List.map -> Use Array.prototype.map directly
+* List.reduce -> Use Array.prototype.reduce directly
+* List.shiftSame -> Use Array.prototype.commonLeft and do slice
+* List.slice -> Use Array.prototype.slice directly
+* List.some -> Use Array.prototype.some directly
+* Object.bindMethods -> it was version that considered descriptors, we have now
+	Object.prototype.bindMethods which operates only on enumerable properties
+* Object.every -> version that considered all properties, we have now
+	Object.prototype.every which iterates only enumerables
+* Object.invoke -> no use case
+* Object.mergeDeep -> no use case
+* Object.pluck -> no use case
+* Object.same -> it considered descriptors, now there’s only Object.isDuplicate
+	which compares only enumerable properties
+* Object.sameType -> no use case
+* Object.toDescriptor and Object.toDescriptors -> replaced by much nicer
+	Object.descriptor functions
+* Object/plain/link -> no use case (it was used internally only by
+	Object/plain/merge)
+* Object/plain/setTrue -> now easily configurable by more universal
+	Object.getSet(true)
+* String.trimRightStr -> Eventually String.prototype.trimCommonRight will be
+	added
+
 v0.6.3  --  2011.12.12
 * Cleared npm warning for misnamed property in package.json
 
