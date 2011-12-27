@@ -47,11 +47,11 @@ functions:
 As with native ones most methods are generic and can be run on any object.
 In more detail:
 
-* `Array.prototype` and `Object.prototype` methods can be run on any object (any not
-null or undefined value),
+* `Array.prototype` and `Object.prototype` methods can be run on any object (any
+value that's neither null nor undefined),
 * `Date.prototype` methods should be called only on `Date` instances.
-* `Function.prototype` methods can be called on any callable objects (not necessarily
-functions)
+* `Function.prototype` methods can be called on any callable objects (not
+necessarily functions)
 * `Number.prototype` & `String.prototype` methods can be called on any value, in
 case of Number it it’ll be degraded to number, in case of string it’ll be
 degraded to string.
