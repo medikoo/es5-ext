@@ -18,7 +18,7 @@ For browser, you can easily create custom toolset with help of
 ## Usage
 
 __es5-ext__ mostly offer methods (not functions) which can directly be
-assigned to any native object's prototype:
+assigned to native object's prototype:
 
 	Function.prototype.curry = require('es5-ext/lib/Function/prototype/curry');
 
@@ -46,12 +46,13 @@ functions:
 
 As with native ones most methods are generic and can be run on any object.
 In more detail:
-* Array.prototype and Object.prototype method can be run on any object (any not
+
+* `Array.prototype` and `Object.prototype` methods can be run on any object (any not
 null or undefined value),
-* Date.prototype methods should be called only on Date instances.
-* Function.prototype can be called on any callable objects (not necessarily
+* `Date.prototype` methods should be called only on `Date` instances.
+* `Function.prototype` methods can be called on any callable objects (not necessarily
 functions)
-* Number.prototype & String.prototype methods can be called on any value, in
+* `Number.prototype` & `String.prototype` methods can be called on any value, in
 case of Number it it’ll be degraded to number, in case of string it’ll be
 degraded to string.
 
