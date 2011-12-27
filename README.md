@@ -48,7 +48,7 @@ As with native ones most methods are generic and can be run on any object.
 In more detail:
 
 * `Array.prototype` and `Object.prototype` methods can be run on any object (any
-value that's neither null nor undefined),
+value that's neither _null_ nor _undefined_),
 * `Date.prototype` methods should be called only on `Date` instances.
 * `Function.prototype` methods can be called on any callable objects (not
 necessarily functions)
