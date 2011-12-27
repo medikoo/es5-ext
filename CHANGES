@@ -1,9 +1,9 @@
-v0.7.0  --  2011.12.24
+v0.7.0  --  2011.12.27
 Major update.
 Stepped back from experimental ideas and introduced more standard approach
 taking example from how ES5 methods and functions are designed. One exceptions
 is that, we don’t refrain from declaring methods for Object.prototype - it’s up
-to developer whether he decide to declare it in his context (as function or as
+to developer whether how he decides to use it in his context (as function or as
 method).
 
 In general:
@@ -12,15 +12,15 @@ In general:
 	with call.bind(method) - see documentation.
 * Removed separation of Object methods for ES5 (with descriptors) and
 	ES3 (plain) - we're following ES5 idea on that, some methods are intended just
-	for visible properties and some are for all properties all are declared for
-	Object.prototype
+	for enumerable properties and some are for all properties, all are declared
+	for Object.prototype
 * Removed separation of Array generic (collected in List folder) and not generic
 	methods (collected in Array folder). Now all methods are generic and are in
-	Array.prototype folder. This separation also meant, that methods in Array are
+	Array/prototype folder. This separation also meant, that methods in Array are
 	usually destructive. We don’t do that separation now, there’s generally no use
 	case for destructive iterators, we should be fine with one version of each
-	method, (same as ES5 is fine with  e.g. one, non destructive  ‘filter’ method)
-* Folder structurer resembles tree of native ES5 Objects
+	method, (same as ES5 is fine with  e.g. one, non destructive 'filter' method)
+* Folder structure resembles tree of native ES5 Objects
 * All methods are written with ES5 conventions in mind, it means that most
 	methods are generic and can be run on any object. In more detail:
 	** Array.prototype and Object.prototype method can be run on any object (any
@@ -33,15 +33,16 @@ In general:
 		degraded to string.
 * Travis CI support (only for Node v0.6 branch, as v0.4 has buggy V8 version)
 
-Improvements in existing methods:
-* Function.memoize (was Function.cache) now fully generic, can operate on any
+Improvements for existing functions and methods:
+* Function.memoize (was Function.cache) is now fully generic, can operate on any
 	type of arguments and it’s NaN safe (all NaN objects are considered equal)
-* Optionally prototype object can be provided (via _proto argument) to methods
-	that are extended with Object.prototype.extend or Object.prototype.override
+* Method properties passed to Object.prototype.extend or
+	Object.prototype.override can aside of _super optionally take prototype object
+	via _proto argument
 * Object iterators: forEach, mapToArray and every can now iterate in specified
 	order
-* Memoize different variants of pluck, invoke and other functions that return
-	reusable functions or methods.
+* pluck, invoke and other functions that return reusable functions or methods
+	have now their results memoized.
 
 New methods:
 * Global: assertNotNull, getNextIdGenerator, guid, isEqual, isPrimitive,
