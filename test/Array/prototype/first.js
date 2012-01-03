@@ -3,3 +3,10 @@
 exports.__generic = function (t, a) {
 	a(t.call(this), this[0]);
 };
+exports[''] = function (t, a) {
+	var x;
+	a(t.call([]), undefined, "Empty");
+	a(t.call(Array(234), undefined, "Sparse empty"))
+	x = Array(2342); x[434] = {};
+	a(t.call(x), x[434], "Sparse");
+};
