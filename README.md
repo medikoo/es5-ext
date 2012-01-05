@@ -83,6 +83,7 @@ _Each extension is documented at begin of its source file._
 * `Array.prototype.exclusion(list0[, list1[, ...]])`
 * `Array.prototype.find(query[, thisArg])`
 * `Array.prototype.first()`
+* `Array.prototype.firstIndex()`
 * `Array.prototype.flatten()`
 * `Array.prototype.forEachRight(cb[, thisArg])`
 * `Array.prototype.group(cb[, thisArg])`
@@ -197,7 +198,7 @@ _Each extension is documented at begin of its source file._
 * `Object.prototype.keyOf(searchValue)`
 * `Object.prototype.map(cb[, thisArg])`
 * `Object.prototype.mapKeys(cb[, thisArg[, compareFn[, byKeys]]])`
-* `Object.prototype.mapToArray(cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.prototype.mapToArray([cb[, thisArg[, compareFn[, byKeys]]]])`
 * `Object.prototype.merge(arg)`
 * `Object.prototype.mergeProperties(arg)`
 * `Object.prototype.override(properties)`
