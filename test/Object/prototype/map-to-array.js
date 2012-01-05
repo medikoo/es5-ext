@@ -8,4 +8,8 @@ module.exports = function (t, a) {
 			return value + Number(name);
 		}, o1);
 	a.deep(o2, [2, 4, 6]);
+
+	t.call(o).sort().forEach(function (item, index) {
+		a.deep(item, [item[0], o[item[0]]], "Default");
+	});
 };
