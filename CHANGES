@@ -1,3 +1,16 @@
+v0.7.1  --  2012.01.05
+New methods:
+* Array.prototype.firstIndex - returns first valid index of array (for
+	sparse arrays it may not be '0'
+
+Improvements:
+* Array.prototype.first - now returns value for index returned by firstIndex
+* Object.prototype.mapToArray - can be called without callback, then array of
+	key-value pairs is returned
+
+Fixes
+* Array.prototype.forEachRight, object's length read through UInt32 conversion
+
 v0.7.0  --  2011.12.27
 Major update.
 Stepped back from experimental ideas and introduced more standard approach
