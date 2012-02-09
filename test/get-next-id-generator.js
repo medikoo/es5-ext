@@ -6,7 +6,9 @@ module.exports = {
 		t(fn(), "0", "First");
 		t(fn(), "1", "Second");
 		i = 10;
-		while (i--) fn();
+		while (i--) {
+			fn();
+		}
 		t(fn(), "c", "12th");
 	},
 	"Prefixed": function (t, a) {
@@ -14,7 +16,9 @@ module.exports = {
 		t(fn(), "pre0", "First");
 		t(fn(), "pre1", "Second");
 		i = 40;
-		while (i--) fn();
+		while (i--) {
+			fn();
+		}
 		t(fn(), "pre16", "42th");
 	},
 	"Postfixed": function (t, a) {
@@ -22,7 +26,9 @@ module.exports = {
 		t(fn(), "0post", "First");
 		t(fn(), "1post", "Second");
 		i = 40;
-		while (i--) fn();
+		while (i--) {
+			fn();
+		}
 		t(fn(), "16post", "42th");
 	},
 	"Prefixed & Postfixed": function (t, a) {
@@ -30,7 +36,9 @@ module.exports = {
 		t(fn(), "pre0post", "First");
 		t(fn(), "pre1post", "Second");
 		i = 40;
-		while (i--) fn();
+		while (i--) {
+			fn();
+		}
 		t(fn(), "pre16post", "42th");
 	}
 };
