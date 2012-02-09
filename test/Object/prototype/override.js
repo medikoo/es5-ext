@@ -1,8 +1,6 @@
 'use strict';
 
-'use strict';
-
-module.exports = function (t, a)  {
+module.exports = function (t, a) {
 	var o1 = { a: function (x) { return x + 1; }, b: function () { }, d: {} }
 	  , o2 = { a: { value: function (_super, x) { return _super(this, x); } },
 			c: { value: function () { } }, d: { value: {} } }

@@ -9,7 +9,7 @@ exports.__generic = function (t, a) {
 	}, this), null, "Falsy result");
 	a(count, 3);
 
-	count = -1
+	count = -1;
 	a(t.call(this, function (value, i, scope) {
 		return ++count ? o : null;
 	}, this), this[1], "Truthy result");

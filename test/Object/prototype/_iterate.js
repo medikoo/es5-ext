@@ -13,7 +13,9 @@ module.exports = function (t, a) {
 	}, o3);
 	a.deep(o2, o);
 
-	arr = [], o2 = {}, i = -1;
+	arr = [];
+	o2 = {};
+	i = -1;
 	t.call(o, function (value, name, self, index) {
 		arr.push(value);
 		o2[name] = value;
@@ -26,7 +28,9 @@ module.exports = function (t, a) {
 	a.deep(o2, o, "Sort by Values: Content");
 	a.deep(arr, [3, 2, 1], "Sort by Values: Order");
 
-	arr = [], o2 = {}, i = -1;
+	arr = [];
+	o2 = {};
+	i = -1;
 	t.call(o, function (value, name, self, index) {
 		arr.push(value);
 		o2[name] = value;

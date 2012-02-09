@@ -14,7 +14,8 @@ module.exports = function (t, a) {
 	a(o1.visible, o2.visible, "Enumerable");
 	a(o1.hidden, o2.hidden, "Not Enumerable");
 	a.ok(o2.propertyIsEnumerable('visible'), "Enumerable is enumerable");
-	a.ok(o2.propertyIsEnumerable('hidden') === false, "Not enumerable is not enumerable");
+	a.ok(o2.propertyIsEnumerable('hidden') === false,
+		"Not enumerable is not enumerable");
 
 	x = {};
 	t.call(x, o1);

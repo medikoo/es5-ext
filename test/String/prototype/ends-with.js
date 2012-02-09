@@ -1,5 +1,6 @@
 // In some parts copied from:
-// http://closure-library.googlecode.com/svn/trunk/closure/goog/string/string_test.html
+// http://closure-library.googlecode.com/svn/trunk/closure/goog/
+// string/string_test.html
 
 'use strict';
 

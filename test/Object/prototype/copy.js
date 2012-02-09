@@ -4,16 +4,17 @@ var stringify = JSON.stringify;
 
 module.exports = function (t, a) {
 	var o = { 1: 'raz', 2: 'dwa', 3: 'trzy' }
-	  , no = t.call(o)
+	  , no = t.call(o);
 
 	a.not(no, o, "Return different object");
 	a(stringify(no), stringify(o), "Match properties and values");
 
-	o = { foo: 'bar', raz: { dwa: 'dwa', trzy: { cztery: 'pięć', sześć: 'siedem' }
-		  , osiem: {}, dziewięć: function () { } }, dziesięć: 10 };
+	o = { foo: 'bar', raz: { dwa: 'dwa',
+		trzy: { cztery: 'pięć', 'sześć': 'siedem' }, osiem: {},
+		'dziewięć': function () { } }, 'dziesięć': 10 };
 	o.raz.rec = o;
 
-	no = t.call(o)
+	no = t.call(o);
 	a(o.raz, no.raz, "Shallow");
 	no = t.call(o, true);
 	a.not(o.raz, no.raz, "Deep");
@@ -21,5 +22,5 @@ module.exports = function (t, a) {
 	a(stringify(o.raz.trzy), stringify(no.raz.trzy), "Deep content");
 	a(no.raz.rec, no, "Recursive");
 	a.not(o.raz.osiem, no.raz.osiem, "Empty object");
-	a(o.raz.dziewięć, no.raz.dziewięć, "Function");
+	a(o.raz['dziewięć'], no.raz['dziewięć'], "Function");
 };

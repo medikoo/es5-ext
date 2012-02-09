@@ -13,5 +13,5 @@ g = function () {
 };
 
 module.exports = function (t, a) {
-	a(t.call(f, g)(1,2).toString(), ["A", "B", 1, 2, 1, 2].toString());
+	a(t.call(f, g)(1, 2).toString(), ["A", "B", 1, 2, 1, 2].toString());
 };

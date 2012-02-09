@@ -41,7 +41,7 @@ module.exports = function (t, a) {
 					a(fn(x, 3), x, "Third");
 					a(i, 1, "Called once");
 				}
-			}
+			};
 		},
 		"3": function () {
 			var i = 0, fn = function (x, y, z) { ++i; return [x, y, z]; }, r;
@@ -85,7 +85,7 @@ module.exports = function (t, a) {
 						}
 					};
 				}
-			}
+			};
 		},
 		"Dynamic": function () {
 			var i = 0, fn = function () { ++i; return arguments; }, r;
@@ -115,7 +115,7 @@ module.exports = function (t, a) {
 					a(fn(x, 8, 23, 98), r, "Third");
 					a(i, 1, "Called once");
 				}
-			}
+			};
 		},
 		"Resolvers": function () {
 			var i = 0, fn = function () { ++i; return arguments; }, r;
@@ -132,7 +132,8 @@ module.exports = function (t, a) {
 				"Some Args": function () {
 					var x = {};
 					i = 0;
-					a.deep(toArray.call(r = fn(0, 34, x, 45)), [false, '34', x, 45], "First");
+					a.deep(toArray.call(r = fn(0, 34, x, 45)), [false, '34', x, 45],
+						"First");
 					a(fn(0, 34, x, 22), r, "Second");
 					a(fn(0, 34, x, false), r, "Third");
 					a(i, 1, "Called once");
@@ -149,4 +150,3 @@ module.exports = function (t, a) {
 		}
 	};
 };
-

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var d = new Date;
+	var d = new Date();
 
 	a.ok(t.call(12, 3) > 0, "Numbers");
 	a.ok(t.call(2, 13) < 0, "Numbers #2");

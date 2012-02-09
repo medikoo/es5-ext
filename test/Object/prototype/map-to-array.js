@@ -3,10 +3,10 @@
 module.exports = function (t, a) {
 	var o = { 1: 1, 2: 2, 3: 3 }, o1 = {}
 	  , o2 = t.call(o, function (value, name, self) {
-			a(self, o, "Self");
-			a(this, o1, "Scope");
-			return value + Number(name);
-		}, o1);
+		a(self, o, "Self");
+		a(this, o1, "Scope");
+		return value + Number(name);
+	}, o1);
 	a.deep(o2, [2, 4, 6]);
 
 	t.call(o).sort().forEach(function (item, index) {

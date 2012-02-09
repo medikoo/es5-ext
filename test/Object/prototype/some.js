@@ -10,7 +10,6 @@ module.exports = function (t, a) {
 	});
 	a(JSON.stringify(o2), JSON.stringify(o), "Iterates");
 
-
 	a(t.call(o, function () {
 		++i;
 		return true;
