@@ -41,7 +41,7 @@ module.exports = function (t, a) {
 		"Sliced output, negative start, ordered by values");
 	a.deep(t.call(o, -1, 10, fn), { 'pięć': 5 },
 		"Sliced output, negative start, positive end, ordered by values");
-	a.deep(t.call(o, -3, -1, fn), { trzy: 3, cztery: 4},
+	a.deep(t.call(o, -3, -1, fn), { trzy: 3, cztery: 4 },
 		"Sliced output, negative start, negative end, ordered by values");
 
 	fn = function (a, b) { return a.localeCompare(b); };

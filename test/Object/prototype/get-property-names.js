@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var o = {'first': 1, second: 4}, r1, r2;
+	var o = { first: 1, second: 4 }, r1, r2;
 	o = Object.create(o, {
 		third: { value: null }
 	});

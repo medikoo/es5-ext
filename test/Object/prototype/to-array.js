@@ -10,5 +10,5 @@ module.exports = function (t, a) {
 		"Arguments with one numeric value");
 	a(t.call("12345", 2, 3).length, 5, "Extra arguments does not affect result");
 
-	a.deep(t.call({'0': 'raz', '1': 'dwa', length: 2 }), ['raz', 'dwa'], "Other");
+	a.deep(t.call({ 0: 'raz', 1: 'dwa', length: 2 }), ['raz', 'dwa'], "Other");
 };
