@@ -182,6 +182,7 @@ _Each extension is documented at begin of its source file._
 * `Object.filter(obj, cb[, thisArg])`
 * `Object.flatten(obj)`
 * `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.get(obj, key)`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
@@ -193,7 +194,6 @@ _Each extension is documented at begin of its source file._
 #### Object.prototype
 
 * `Object.prototype.getPropertyNames()`
-* `Object.prototype.get(key)`
 * `Object.prototype.isDuplicate(arg)`
 * `Object.prototype.isEmpty()`
 * `Object.prototype.keyOf(searchValue)`
