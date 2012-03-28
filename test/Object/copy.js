@@ -4,7 +4,7 @@ var stringify = JSON.stringify;
 
 module.exports = function (t, a) {
 	var o = { 1: 'raz', 2: 'dwa', 3: 'trzy' }
-	  , no = t.call(o);
+	  , no = t(o);
 
 	a.not(no, o, "Return different object");
 	a(stringify(no), stringify(o), "Match properties and values");
@@ -14,9 +14,9 @@ module.exports = function (t, a) {
 		'dziewięć': function () { } }, 'dziesięć': 10 };
 	o.raz.rec = o;
 
-	no = t.call(o);
+	no = t(o);
 	a(o.raz, no.raz, "Shallow");
-	no = t.call(o, true);
+	no = t(o, true);
 	a.not(o.raz, no.raz, "Deep");
 	a.not(o.raz.trzy, no.raz.trzy, "Deep #2");
 	a(stringify(o.raz.trzy), stringify(no.raz.trzy), "Deep content");

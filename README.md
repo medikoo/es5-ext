@@ -169,9 +169,10 @@ _Each extension is documented at begin of its source file._
 
 * `Object.assertCallable(arg)`
 * `Object.bindMethods(obj[, context[, source]])`
-* `Object.prototype.compact(obj)`
+* `Object.compact(obj)`
 * `Object.clone(obj)`
-* `Object.prototype.compare(arg1, arg2)`
+* `Object.compare(arg1, arg2)`
+* `Object.copy(obj[, deep])`
 * `Object.descriptor`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
@@ -182,7 +183,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.copy([deep])`
 * `Object.prototype.count()`
 * `Object.prototype.diff(arg)`
 * `Object.prototype.empty()`
