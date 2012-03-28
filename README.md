@@ -170,6 +170,7 @@ _Each extension is documented at begin of its source file._
 * `Object.assertCallable(arg)`
 * `Object.bindMethods(obj[, context[, source]])`
 * `Object.compact(obj)`
+* `Object.clear(obj)`
 * `Object.clone(obj)`
 * `Object.compare(arg1, arg2)`
 * `Object.copy(obj[, deep])`
@@ -185,7 +186,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.empty()`
 * `Object.prototype.every(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.extend([properties])`
 * `Object.prototype.filter(cb[, thisArg])`
