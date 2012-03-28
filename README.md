@@ -188,6 +188,7 @@ _Each extension is documented at begin of its source file._
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
 * `Object.isDuplicate(obj1, obj2)`
+* `Object.isEmpty(obj)`
 * `Object.isList(arg)`
 * `Object.isObject(arg)`
 * `Object.isPlainObject(arg)`
@@ -195,7 +196,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.isEmpty()`
 * `Object.prototype.keyOf(searchValue)`
 * `Object.prototype.map(cb[, thisArg])`
 * `Object.prototype.mapKeys(cb[, thisArg[, compareFn[, byKeys]]])`
