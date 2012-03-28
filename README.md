@@ -192,11 +192,11 @@ _Each extension is documented at begin of its source file._
 * `Object.isList(arg)`
 * `Object.isObject(arg)`
 * `Object.isPlainObject(arg)`
+* `Object.keyOf(obj, searchValue)`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
-* `Object.prototype.keyOf(searchValue)`
 * `Object.prototype.map(cb[, thisArg])`
 * `Object.prototype.mapKeys(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.mapToArray([cb[, thisArg[, compareFn[, byKeys]]]])`
