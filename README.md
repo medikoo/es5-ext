@@ -175,6 +175,7 @@ _Each extension is documented at begin of its source file._
 * `Object.copy(obj[, deep])`
 * `Object.count(obj)`
 * `Object.descriptor`
+* `Object.diff(obj1, obj2)`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
@@ -184,7 +185,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.diff(arg)`
 * `Object.prototype.empty()`
 * `Object.prototype.every(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.extend([properties])`
