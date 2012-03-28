@@ -200,11 +200,11 @@ _Each extension is documented at begin of its source file._
 * `Object.mergeProperties(obj, arg)`
 * `Object.override(obj, properties)`
 * `Object.plainCreate(obj[, properties])`
+* `Object.plainExtend(obj[, properties])`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
-* `Object.prototype.plainExtend([properties])`
 * `Object.prototype.set(key, value)`
 * `Object.prototype.toArray()`
 * `Object.prototype.unset(key)`

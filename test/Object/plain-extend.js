@@ -5,7 +5,7 @@ module.exports = function (t, a) {
 	  , o2 = { a: function (_super, x) { return _super(this, x); },
 			c: function () { }, d: {} }
 
-	  , r = t.call(o1, o2);
+	  , r = t(o1, o2);
 
 	a(r.a(2), 3, "Inheritance");
 	a(r.b, o1.b, "Ancestor methods");
