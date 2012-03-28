@@ -184,6 +184,7 @@ _Each extension is documented at begin of its source file._
 * `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.get(obj, key)`
 * `Object.getCompareBy(name)`
+* `Object.getPropertyNames()`
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
 * `Object.isList(arg)`
@@ -193,7 +194,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.getPropertyNames()`
 * `Object.prototype.isDuplicate(arg)`
 * `Object.prototype.isEmpty()`
 * `Object.prototype.keyOf(searchValue)`

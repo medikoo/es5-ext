@@ -9,7 +9,7 @@ module.exports = function (t, a) {
 	o = Object.create(o);
 	o.fourth = 3;
 
-	r1 = t.call(o);
+	r1 = t(o);
 	r1.sort();
 	r2 = ['first', 'second', 'third', 'fourth']
 		.concat(Object.getOwnPropertyNames(Object.prototype));
