@@ -196,12 +196,12 @@ _Each extension is documented at begin of its source file._
 * `Object.map(obj, cb[, thisArg])`
 * `Object.mapKeys(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.mapToArray(obj[, cb[, thisArg[, compareFn[, byKeys]]]])`
+* `Object.mergeProperties(obj, arg)`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
 * `Object.prototype.merge(arg)`
-* `Object.prototype.mergeProperties(arg)`
 * `Object.prototype.override(properties)`
 * `Object.prototype.plainCreate([properties])`
 * `Object.prototype.plainExtend([properties])`
