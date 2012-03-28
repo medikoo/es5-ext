@@ -168,6 +168,7 @@ _Each extension is documented at begin of its source file._
 #### Object
 
 * `Object.assertCallable(arg)`
+* `Object.bindMethods(obj[, context[, source]])`
 * `Object.descriptor`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
@@ -178,7 +179,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.bindMethods([context[, source]])`
 * `Object.prototype.clone()`
 * `Object.prototype.compact()`
 * `Object.prototype.compare(arg)`

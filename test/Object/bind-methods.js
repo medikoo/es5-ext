@@ -1,13 +1,13 @@
 'use strict';
 
-var noop = require('../../../lib/Function/noop')
+var noop = require('../../lib/Function/noop')
 
   , fn   = function () { return this; };
 
 module.exports = {
 	"": function (t, a) {
 		var x = {}
-		  , o = t.call({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn })
+		  , o = t({ a: fn, b: null, c: fn, d: 'raz', e: x, f: fn })
 		  , f;
 
 		f = o.a;
@@ -22,11 +22,11 @@ module.exports = {
 	},
 	"Custom scope": function (t, a) {
 		var scope = {}
-		  , f = t.call({ a: fn }, scope).a;
+		  , f = t({ a: fn }, scope).a;
 		a(f(), scope);
 	},
 	"Custom source": function (t, a) {
-		var o = t.call({ a: noop, c: fn }, null, { a: fn, b: fn })
+		var o = t({ a: noop, c: fn }, null, { a: fn, b: fn })
 		  , f;
 		f = o.a;
 		a(f(), o, "Overwrite");
