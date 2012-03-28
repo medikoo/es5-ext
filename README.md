@@ -193,13 +193,13 @@ _Each extension is documented at begin of its source file._
 * `Object.isObject(arg)`
 * `Object.isPlainObject(arg)`
 * `Object.keyOf(obj, searchValue)`
+* `Object.map(obj, cb[, thisArg])`
 * `Object.mapKeys(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.mapToArray(obj[, cb[, thisArg[, compareFn[, byKeys]]]])`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
-* `Object.prototype.map(cb[, thisArg])`
 * `Object.prototype.merge(arg)`
 * `Object.prototype.mergeProperties(arg)`
 * `Object.prototype.override(properties)`
