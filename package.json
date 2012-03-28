@@ -1,6 +1,6 @@
 {
 	"name": "es5-ext",
-	"version": "0.7.1",
+	"version": "0.8.0",
 	"description": "ECMAScript5 extensions",
 	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "ext",
 		"addons", "extras", "javascript"],
