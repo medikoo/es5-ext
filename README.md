@@ -180,6 +180,7 @@ _Each extension is documented at begin of its source file._
 * `Object.extend(obj, [properties])`
 * `Object.every(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.filter(obj, cb[, thisArg])`
+* `Object.flatten(obj)`
 * `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
@@ -191,7 +192,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.flatten()`
 * `Object.prototype.getPropertyNames()`
 * `Object.prototype.get(key)`
 * `Object.prototype.isDuplicate(arg)`
