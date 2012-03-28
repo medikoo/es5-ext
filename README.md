@@ -173,6 +173,7 @@ _Each extension is documented at begin of its source file._
 * `Object.clone(obj)`
 * `Object.compare(arg1, arg2)`
 * `Object.copy(obj[, deep])`
+* `Object.count(obj)`
 * `Object.descriptor`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
@@ -183,7 +184,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.count()`
 * `Object.prototype.diff(arg)`
 * `Object.prototype.empty()`
 * `Object.prototype.every(cb[, thisArg[, compareFn[, byKeys]]])`
