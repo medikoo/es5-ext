@@ -206,7 +206,6 @@ _Each extension is documented at begin of its source file._
 * `Object.prototype.plainCreate([properties])`
 * `Object.prototype.plainExtend([properties])`
 * `Object.prototype.set(key, value)`
-* `Object.prototype.slice(start[, end[, compareFn[, byKeys]]])`
 * `Object.prototype.toArray()`
 * `Object.prototype.unset(key)`
 * `Object.prototype.values()`
