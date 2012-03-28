@@ -5,7 +5,7 @@ module.exports = function (t, a) {
 	var o = { raz: 1, dwa: 2, trzy: 3 }
 	  , o2 = {}, o3 = {}, arr, i = -1;
 
-	t.call(o, function (value, name, self, index) {
+	t(o, function (value, name, self, index) {
 		o2[name] = value;
 		a(index, ++i, "Index");
 		a(self, o, "Self");
@@ -16,7 +16,7 @@ module.exports = function (t, a) {
 	arr = [];
 	o2 = {};
 	i = -1;
-	t.call(o, function (value, name, self, index) {
+	t(o, function (value, name, self, index) {
 		arr.push(value);
 		o2[name] = value;
 		a(index, ++i, "Index");
@@ -31,7 +31,7 @@ module.exports = function (t, a) {
 	arr = [];
 	o2 = {};
 	i = -1;
-	t.call(o, function (value, name, self, index) {
+	t(o, function (value, name, self, index) {
 		arr.push(value);
 		o2[name] = value;
 		a(index, ++i, "Index");

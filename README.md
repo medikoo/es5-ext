@@ -177,20 +177,21 @@ _Each extension is documented at begin of its source file._
 * `Object.count(obj)`
 * `Object.descriptor`
 * `Object.diff(obj1, obj2)`
+* `Object.every(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.getCompareBy(name)`
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
 * `Object.isList(arg)`
 * `Object.isObject(arg)`
 * `Object.isPlainObject(arg)`
+* `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
-* `Object.prototype.every(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.extend([properties])`
 * `Object.prototype.filter(cb[, thisArg])`
 * `Object.prototype.flatten()`
-* `Object.prototype.forEach(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.getPropertyNames()`
 * `Object.prototype.get(key)`
 * `Object.prototype.isDuplicate(arg)`
@@ -206,7 +207,6 @@ _Each extension is documented at begin of its source file._
 * `Object.prototype.plainExtend([properties])`
 * `Object.prototype.set(key, value)`
 * `Object.prototype.slice(start[, end[, compareFn[, byKeys]]])`
-* `Object.prototype.some(cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.prototype.toArray()`
 * `Object.prototype.unset(key)`
 * `Object.prototype.values()`
