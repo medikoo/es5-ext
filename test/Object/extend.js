@@ -8,7 +8,7 @@ module.exports = function (t, a) {
 		d: { value: {} }
 	}
 
-	  , r = t.call(o1, o2);
+	  , r = t(o1, o2);
 
 	a(r.a(2), 3, "Inheritance");
 	a(r.b, o1.b, "Ancestor methods");

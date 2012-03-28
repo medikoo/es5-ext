@@ -177,6 +177,7 @@ _Each extension is documented at begin of its source file._
 * `Object.count(obj)`
 * `Object.descriptor`
 * `Object.diff(obj1, obj2)`
+* `Object.extend(obj, [properties])`
 * `Object.every(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.getCompareBy(name)`
@@ -189,7 +190,6 @@ _Each extension is documented at begin of its source file._
 
 #### Object.prototype
 
-* `Object.prototype.extend([properties])`
 * `Object.prototype.filter(cb[, thisArg])`
 * `Object.prototype.flatten()`
 * `Object.prototype.getPropertyNames()`
