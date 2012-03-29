@@ -205,10 +205,7 @@ _Each extension is documented at begin of its source file._
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 * `Object.toArray(obj)`
 * `Object.unset(obj, key)`
-
-#### Object.prototype
-
-* `Object.prototype.values()`
+* `Object.values(obj)`
 
 #### RegExp
 
