@@ -140,7 +140,6 @@ _Each extension is documented at begin of its source file._
 
 * `Function.prototype.aritize(n)`
 * `Function.prototype.chain(fn0[, fn1[, ...]])`
-* `Function.prototype.curry([arg0[, arg1[, ...])`
 * `Function.prototype.flip()`
 * `Function.prototype.hold([n[, arg0[, arg1[, ...]]]])`
 * `Function.prototype.lock([arg0[, arg1[, ...])`
@@ -148,6 +147,7 @@ _Each extension is documented at begin of its source file._
 * `Function.prototype.match()`
 * `Function.prototype.ncurry([n[, arg0[, arg1[, ...]])`
 * `Function.prototype.not()`
+* `Function.prototype.partial([arg0[, arg1[, ...])`
 * `Function.prototype.rcurry([arg0[, arg1[, ...])`
 * `Function.prototype.rncurry([n[, arg0[, arg1[, ...]])`
 * `Function.prototype.s(fn)`
