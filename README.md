@@ -201,11 +201,11 @@ _Each extension is documented at begin of its source file._
 * `Object.override(obj, properties)`
 * `Object.plainCreate(obj[, properties])`
 * `Object.plainExtend(obj[, properties])`
+* `Object.set(obj, key, value)`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
 
 #### Object.prototype
 
-* `Object.prototype.set(key, value)`
 * `Object.prototype.toArray()`
 * `Object.prototype.unset(key)`
 * `Object.prototype.values()`
