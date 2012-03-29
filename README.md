@@ -148,8 +148,6 @@ _Each extension is documented at begin of its source file._
 * `Function.prototype.ncurry([n[, arg0[, arg1[, ...]])`
 * `Function.prototype.not()`
 * `Function.prototype.partial([arg0[, arg1[, ...])`
-* `Function.prototype.rcurry([arg0[, arg1[, ...])`
-* `Function.prototype.rncurry([n[, arg0[, arg1[, ...]])`
 * `Function.prototype.s(fn)`
 * `Function.prototype.silent([arg0[, arg1[, ...])`
 
