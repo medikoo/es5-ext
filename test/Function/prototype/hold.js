@@ -1,9 +1,9 @@
 'use strict';
 
-var toArray = require('../../../lib/Object/prototype/to-array');
+var toArray = require('../../../lib/Object/to-array');
 
 var f = function () {
-	return toArray.call(arguments);
+	return toArray(arguments);
 };
 
 module.exports = function (t, a) {

@@ -203,10 +203,10 @@ _Each extension is documented at begin of its source file._
 * `Object.plainExtend(obj[, properties])`
 * `Object.set(obj, key, value)`
 * `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.toArray(obj)`
 
 #### Object.prototype
 
-* `Object.prototype.toArray()`
 * `Object.prototype.unset(key)`
 * `Object.prototype.values()`
 

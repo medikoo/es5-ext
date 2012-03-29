@@ -1,10 +1,10 @@
 'use strict';
 
-var toArray = require('../../../lib/Object/prototype/to-array');
+var toArray = require('../../../lib/Object/to-array');
 
 module.exports = {
 	__generic: function (t, a) {
-		a.deep(t.call(this, this, this), toArray.call(this));
+		a.deep(t.call(this, this, this), toArray(this));
 	},
 	"": function (t, a) {
 		var x = {}, y = {}, p, r;

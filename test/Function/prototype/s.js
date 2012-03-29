@@ -1,7 +1,7 @@
 'use strict';
 
 var slice   = Array.prototype.slice
-  , toArray = require('../../../lib/Object/prototype/to-array')
+  , toArray = require('../../../lib/Object/to-array')
 
   , f, g;
 
@@ -9,7 +9,7 @@ f = function (b) {
 	return ["A"].concat(b, slice.call(arguments, 1));
 };
 g = function () {
-	return ["B"].concat(toArray.call(arguments));
+	return ["B"].concat(toArray(arguments));
 };
 
 module.exports = function (t, a) {
