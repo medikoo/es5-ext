@@ -225,6 +225,7 @@ _Each extension is documented at begin of its source file._
 * `String.prototype.dashToCamelCase()`
 * `String.prototype.endsWith()`
 * `String.prototype.isNumeric()`
+* `String.prototype.last()`
 * `String.prototype.repeat()`
 * `String.prototype.startsWith()`
 * `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
