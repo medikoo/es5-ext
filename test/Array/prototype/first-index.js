@@ -8,8 +8,10 @@ module.exports = function (t, a) {
 	a(t.call(new Array(1000)), null, "Sparse empty");
 	x = [];
 	x[883] = undefined;
+	x[890] = null;
 	a(t.call(x), 883, "Manual sparse, distant value");
 	x = new Array(1000);
 	x[657] = undefined;
+	x[700] = null;
 	a(t.call(x), 657, "Sparse, distant value");
 };
