@@ -47,14 +47,16 @@ functions:
 As with native ones most methods are generic and can be run on any object.
 In more detail:
 
-* `Array.prototype` and `Object.prototype` methods can be run on any object (any
+* `Array.prototype` methods can be run on any object (any
 value that's neither _null_ nor _undefined_),
 * `Date.prototype` methods should be called only on `Date` instances.
 * `Function.prototype` methods can be called on any callable objects (not
 necessarily functions)
 * `Number.prototype` & `String.prototype` methods can be called on any value, in
-case of Number it it’ll be degraded to number, in case of string it’ll be
+case of Number it’ll be degraded to number, in case of string it’ll be
 degraded to string.
+
+API doesn't provide any methods for `Object.prototype` as extending such is in any case very risky and by all means should be avoided. All `Object` utils are provided as fuctions.
 
 _Each extension is documented at begin of its source file._
 
