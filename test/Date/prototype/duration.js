@@ -7,6 +7,14 @@ module.exports = function (t, a) {
 	d1.duration = t;
 
 	return {
+		"Second date is optional": function (t, a) {
+			var d3, dr2, dr3, m;
+			d2 = new Date();
+			d = d1.duration();
+			d3 = new Date();
+			a.ok(((m = d.getMilliseconds()) >= d1.duration(d2).getMilliseconds()) &&
+				(m <= d1.duration(d3).getMilliseconds()));
+		},
 		"Milliseconds": function (t, a) {
 			// 11 milliseconds
 			d2 = copy.call(d1);
