@@ -108,7 +108,7 @@ _Each extension is documented at begin of its source file._
 #### Date.prototype
 
 * `Date.prototype.copy(date)`
-* `Date.prototype.duration(to)`
+* `Date.prototype.duration([to])`
 * `Date.prototype.floorDay()`
 * `Date.prototype.floorMonth()`
 * `Date.prototype.floorYear()`
