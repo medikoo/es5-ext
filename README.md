@@ -231,9 +231,6 @@ _Each extension is documented at begin of its source file._
 * `String.prototype.startsWith()`
 * `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
 
-## Tests
-
-Before running tests make sure you've installed project with dev dependiencies
-`npm install --dev`
+## Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
 
 	$ npm test
