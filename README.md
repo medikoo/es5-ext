@@ -185,7 +185,7 @@ _Each extension is documented at begin of its source file._
 * `Object.getPropertyNames()`
 * `Object.getSet(value)`
 * `Object.isCallable(arg)`
-* `Object.isDuplicate(obj1, obj2)`
+* `Object.isCopy(obj1, obj2)`
 * `Object.isEmpty(obj)`
 * `Object.isList(arg)`
 * `Object.isObject(arg)`
