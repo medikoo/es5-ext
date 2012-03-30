@@ -108,11 +108,11 @@ _Each extension is documented at begin of its source file._
 #### Date.prototype
 
 * `Date.prototype.copy(date)`
+* `Date.prototype.daysInMonth()`
 * `Date.prototype.duration([to])`
 * `Date.prototype.floorDay()`
 * `Date.prototype.floorMonth()`
 * `Date.prototype.floorYear()`
-* `Date.prototype.monthDaysCount()`
 
 #### Error
 
