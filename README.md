@@ -143,7 +143,6 @@ _Each extension is documented at begin of its source file._
 * `Function.prototype.chain(fn0[, fn1[, ...]])`
 * `Function.prototype.curry([n])`
 * `Function.prototype.flip()`
-* `Function.prototype.hold([n[, arg0[, arg1[, ...]]]])`
 * `Function.prototype.lock([arg0[, arg1[, ...])`
 * `Function.prototype.log(log)`
 * `Function.prototype.match()`
