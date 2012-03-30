@@ -176,10 +176,10 @@ _Each extension is documented at begin of its source file._
 * `Object.descriptor`
 * `Object.diff(obj1, obj2)`
 * `Object.extend(obj, [properties])`
-* `Object.every(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.every(obj, cb[, thisArg[, compareFn]])`
 * `Object.filter(obj, cb[, thisArg])`
 * `Object.flatten(obj)`
-* `Object.forEach(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.forEach(obj, cb[, thisArg[, compareFn]])`
 * `Object.get(obj, key)`
 * `Object.getCompareBy(name)`
 * `Object.getPropertyNames()`
@@ -192,15 +192,15 @@ _Each extension is documented at begin of its source file._
 * `Object.isPlainObject(arg)`
 * `Object.keyOf(obj, searchValue)`
 * `Object.map(obj, cb[, thisArg])`
-* `Object.mapKeys(obj, cb[, thisArg[, compareFn[, byKeys]]])`
-* `Object.mapToArray(obj[, cb[, thisArg[, compareFn[, byKeys]]]])`
+* `Object.mapKeys(obj, cb[, thisArg])`
+* `Object.mapToArray(obj[, cb[, thisArg[, compareFn]]])`
 * `Object.merge(obj, arg)`
 * `Object.mergeProperties(obj, arg)`
 * `Object.override(obj, properties)`
 * `Object.plainCreate(obj[, properties])`
 * `Object.plainExtend(obj[, properties])`
 * `Object.set(obj, key, value)`
-* `Object.some(obj, cb[, thisArg[, compareFn[, byKeys]]])`
+* `Object.some(obj, cb[, thisArg[, compareFn]])`
 * `Object.toArray(obj)`
 * `Object.unset(obj, key)`
 * `Object.values(obj)`
