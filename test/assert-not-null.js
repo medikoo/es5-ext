@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = function (t, a) {
-	a(t(0), undefined, "0");
-	a(t(false), undefined, "false");
-	a(t(''), undefined, "''");
-	a(t(NaN), undefined, "NaN");
-	a(t({}), undefined, "{}");
+	a(t(0), true, "0");
+	a(t(false), true, "false");
+	a(t(''), true, "''");
+	a(t(NaN), true, "NaN");
+	a(t({}), true, "{}");
 
 	a.throws(function () {
 		t();
