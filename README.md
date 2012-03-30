@@ -89,6 +89,7 @@ _Each extension is documented at begin of its source file._
 * `Array.prototype.group(cb[, thisArg])`
 * `Array.prototype.indexesOf(searchElement[, fromIndex])`
 * `Array.prototype.intersection(list0[, list1[, ...]])`
+* `Array.prototype.lastIndex()`
 * `Array.prototype.peek()`
 * `Array.prototype.remove(value)`
 * `Array.prototype.someRight(cb[, thisArg])`
