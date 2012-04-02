@@ -1,29 +1,37 @@
 {
-	"name": "es5-ext",
-	"version": "0.8.0",
-	"description": "ECMAScript5 extensions",
-	"keywords": ["ecmascript", "ecmascript5", "es5", "extensions", "ext",
-		"addons", "extras", "javascript"],
-	"author":
-	"Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
-	"main": "lib",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/medikoo/es5-ext.git"
-	},
-	"bugs": {
-		"mail": "medikoo+es5-ext@medikoo.com",
-		"url": "https://github.com/medikoo/es5-ext/issues"
-	},
-	"engines": {
-		"node": ">=0.1.103"
-	},
-	"scripts": {
-		"test": "node ./node_modules/tad/bin/tad lib",
-		"lint": "node ./node_modules/jslint/bin/jslint.js --color --git"
-	},
-	"devDependencies": {
-		"tad": "0.1.x"
-	},
-	"licence": "MIT"
+  "name": "es5-ext",
+  "version": "0.8.0",
+  "description": "ECMAScript5 extensions",
+  "keywords": [
+    "ecmascript",
+    "ecmascript5",
+    "es5",
+    "extensions",
+    "ext",
+    "addons",
+    "extras",
+    "javascript"
+  ],
+  "author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/es5-ext.git"
+  },
+  "bugs": {
+    "mail": "medikoo+es5-ext@medikoo.com",
+    "url": "https://github.com/medikoo/es5-ext/issues"
+  },
+  "engines": {
+    "node": ">=0.1.103"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/tad lib",
+    "lint": "find ./lib -name '*.js' | xargs ./node_modules/.bin/jslint --color --git"
+  },
+  "devDependencies": {
+    "tad": "0.1.x",
+    "jslint": "~0.1.6"
+  },
+  "licence": "MIT"
 }
