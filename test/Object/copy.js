@@ -23,4 +23,6 @@ module.exports = function (t, a) {
 	a(no.raz.rec, no, "Recursive");
 	a.not(o.raz.osiem, no.raz.osiem, "Empty object");
 	a(o.raz['dziewięć'], no.raz['dziewięć'], "Function");
+
+	a.deep(t(), {}, "No arguments")
 };
