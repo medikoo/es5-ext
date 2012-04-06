@@ -147,6 +147,50 @@ module.exports = function (t, a) {
 					};
 				}
 			};
+		},
+		"Clear Cache": {
+			"Specific": function () {
+				var i = 0, fn, r, x = {};
+
+				fn = function (a, b, c) {
+					if (c === 3) {
+						++i;
+					}
+					return arguments;
+				}
+
+				fn = t(fn);
+				fn(1, x, 3);
+				fn(1, x, 4);
+				fn.clearCache(1, x, 4);
+				fn(1, x, 3);
+				fn(1, x, 3);
+				a(i, 1, "Pre clear");
+				fn.clearCache(1, x, 3);
+				fn(1, x, 3);
+				a(i, 2, "After clear");
+			},
+			"All": function () {
+				var i = 0, fn, r, x = {};
+
+				fn = function (a, b, c) {
+					++i;
+					return arguments;
+				}
+
+				fn = t(fn);
+				fn(1, x, 3);
+				fn(1, x, 4);
+				fn(1, x, 3);
+				fn(1, x, 4);
+				a(i, 2, "Pre clear");
+				fn.clearAllCache();
+				fn(1, x, 3);
+				fn(1, x, 4);
+				fn(1, x, 3);
+				fn(1, x, 4);
+				a(i, 4, "After clear");
+			}
 		}
 	};
 };
