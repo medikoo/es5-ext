@@ -150,7 +150,7 @@ module.exports = function (t, a) {
 		},
 		"Clear Cache": {
 			"Specific": function () {
-				var i = 0, fn, r, x = {};
+				var i = 0, fn, mfn, r, x = {};
 
 				fn = function (a, b, c) {
 					if (c === 3) {
@@ -159,16 +159,26 @@ module.exports = function (t, a) {
 					return arguments;
 				}
 
-				fn = t(fn);
-				fn(1, x, 3);
-				fn(1, x, 4);
-				fn.clearCache(1, x, 4);
-				fn(1, x, 3);
-				fn(1, x, 3);
+				mfn = t(fn);
+				mfn(1, x, 3);
+				mfn(1, x, 4);
+				mfn.clearCache(1, x, 4);
+				mfn(1, x, 3);
+				mfn(1, x, 3);
 				a(i, 1, "Pre clear");
-				fn.clearCache(1, x, 3);
-				fn(1, x, 3);
+				mfn.clearCache(1, x, 3);
+				mfn(1, x, 3);
 				a(i, 2, "After clear");
+
+				i = 0;
+				mfn = t(fn, false);
+				mfn(1, x, 3);
+				mfn(1, x, 3);
+				mfn();
+				mfn();
+				mfn.clearCache();
+				mfn(1, x, 3);
+				a(i, 1, "Proper no arguments clear");
 			},
 			"All": function () {
 				var i = 0, fn, r, x = {};
