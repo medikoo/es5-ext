@@ -163,6 +163,7 @@ _Each extension is documented at begin of its source file._
 * `Number.isNaN(arg)`
 * `Number.isNumber(arg)`
 * `Number.toInteger(arg)`
+* `Number.toUint32(arg)`
 
 #### Number.prototype
 
