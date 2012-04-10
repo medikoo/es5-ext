@@ -64,7 +64,6 @@ _Each extension is documented at begin of its source file._
 * `getNextIdGenerator([prefix[, postfix]])`
 * `global`
 * `guid()`
-* `isEqual(arg0, arg1)`
 * `isPrimitive(arg)`
 * `reserved`
 * `toObject(arg)`
@@ -186,6 +185,7 @@ _Each extension is documented at begin of its source file._
 * `Object.getCompareBy(name)`
 * `Object.getPropertyNames()`
 * `Object.getSet(value)`
+* `Object.is(x, y)`
 * `Object.isCallable(arg)`
 * `Object.isCopy(obj1, obj2)`
 * `Object.isEmpty(obj)`
