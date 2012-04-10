@@ -124,7 +124,7 @@ module.exports = function (t, a) {
 			return {
 				"No args": function () {
 					i = 0;
-					a.deep(toArray(r = fn()), [], "First");
+					a.deep(toArray(r = fn()), [false, 'undefined'], "First");
 					a(fn(), r, "Second");
 					a(fn(), r, "Third");
 					a(i, 1, "Called once");
@@ -132,7 +132,7 @@ module.exports = function (t, a) {
 				"Some Args": function () {
 					var x = {};
 					i = 0;
-					a.deep(toArray(r = fn(0, 34, x, 45)), [0, 34, x, 45],
+					a.deep(toArray(r = fn(0, 34, x, 45)), [false, '34', x, 45],
 						"First");
 					a(fn(0, 34, x, 22), r, "Second");
 					a(fn(0, 34, x, false), r, "Third");
@@ -140,7 +140,7 @@ module.exports = function (t, a) {
 					return {
 						"Other": function () {
 							a.deep(toArray(r = fn(1, 34, x, 34)),
-								[1, 34, x, 34], "Second");
+								[true, '34', x, 34], "Second");
 							a(fn(1, 34, x, 89), r, "Third");
 							a(i, 2, "Called once");
 						}
