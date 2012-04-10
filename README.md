@@ -88,6 +88,7 @@ _Each extension is documented at begin of its source file._
 * `Array.prototype.flatten()`
 * `Array.prototype.forEachRight(cb[, thisArg])`
 * `Array.prototype.group(cb[, thisArg])`
+* `Array.prototype.indexOf(searchElement[, fromIndex])`
 * `Array.prototype.indexesOf(searchElement[, fromIndex])`
 * `Array.prototype.intersection(list0[, list1[, ...]])`
 * `Array.prototype.last()`
