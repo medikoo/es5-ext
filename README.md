@@ -160,6 +160,7 @@ _Each extension is documented at begin of its source file._
 
 * `Number.getAutoincrement(start, step)`
 * `Number.getPad(length[, precision])`
+* `Number.isNaN(arg)`
 * `Number.isNumber(arg)`
 * `Number.toInteger(arg)`
 
