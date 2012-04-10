@@ -117,6 +117,13 @@ module.exports = function (t, a) {
 				}
 			};
 		},
+		"Original arguments": function (a) {
+			var fn, mfn, x = {};
+			fn = function (x, y) { return toArray(mfn.args); };
+			mfn = t(fn);
+
+			a.deep(mfn(23, 'raz', x), [23, 'raz', x]);
+		},
 		"Resolvers": function () {
 			var i = 0, fn, fn2, r, j = 0, z;
 			fn2 = function (arg) { ++j; z = arg; };
