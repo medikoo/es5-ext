@@ -152,6 +152,10 @@ _Each extension is documented at begin of its source file._
 * `Function.prototype.silent([arg0[, arg1[, ...])`
 * `Function.prototype.wrap(fn)`
 
+#### Math
+
+* `Math.sign(n)`
+
 #### Number
 
 * `Number.getAutoincrement(start, step)`
