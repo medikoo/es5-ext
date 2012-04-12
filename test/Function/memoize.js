@@ -126,29 +126,24 @@ module.exports = function (t, a) {
 		},
 		"Resolvers": function () {
 			var i = 0, fn, fn2, r, j = 0, z;
-			fn2 = function (arg) { ++j; z = arg; };
 			fn = t(function () { ++i; return arguments; },
-				 3, [Boolean, [fn2, String]]);
+				 3, [Boolean, String]);
 			return {
 				"No args": function () {
-					i = j = 0;
+					i = 0;
 					a.deep(toArray(r = fn()), [false, 'undefined'], "First");
 					a(fn(), r, "Second");
 					a(fn(), r, "Third");
 					a(i, 1, "Called once");
-					a(j, 3, "Resolver called ata all times");
-					a(z, undefined, "Nested resolved argument");
 				},
 				"Some Args": function () {
 					var x = {};
-					i = j = 0;
+					i = 0;
 					a.deep(toArray(r = fn(0, 34, x, 45)), [false, '34', x, 45],
 						"First");
 					a(fn(0, 34, x, 22), r, "Second");
 					a(fn(0, 34, x, false), r, "Third");
 					a(i, 1, "Called once");
-					a(j, 3, "Resolved called at all times");
-					a(z, 34, "Nested resolved argument");
 					return {
 						"Other": function () {
 							a.deep(toArray(r = fn(1, 34, x, 34)),
