@@ -239,6 +239,6 @@ _Each extension is documented at begin of its source file._
 * `String.prototype.startsWith()`
 * `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
 
-## Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
+## Tests
 
 	$ npm test
