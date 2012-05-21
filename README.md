@@ -42,8 +42,6 @@ functions:
 
 	util.startsWith = call.bind(require('es5-ext/lib/String/prototype/starts-with'));
 
-### API
-
 As with native ones most methods are generic and can be run on any object.
 In more detail:
 
@@ -58,9 +56,11 @@ degraded to string.
 
 API doesn't provide any methods for `Object.prototype` as extending such in any case should be avoided. All `Object` utils are provided as fuctions.
 
+## API
+
 _Each extension is documented at begin of its source file._
 
-* `assertNotNull(arg)`
+* `validValue(arg)`
 * `getNextIdGenerator([prefix[, postfix]])`
 * `global`
 * `guid()`
