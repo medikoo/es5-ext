@@ -60,7 +60,7 @@ API doesn't provide any methods for `Object.prototype` as extending such in any 
 
 ## Global extensions
 
-### validValue(arg)
+### validValue(x)
 
 Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
