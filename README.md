@@ -58,186 +58,189 @@ API doesn't provide any methods for `Object.prototype` as extending such in any 
 
 ## API
 
-_Each extension is documented at begin of its source file._
+### Global extensions
 
-* `validValue(arg)`
-* `getNextIdGenerator([prefix[, postfix]])`
-* `global`
-* `guid()`
-* `isPrimitive(arg)`
-* `reserved`
-* `toObject(arg)`
+#### `validValue(arg)`
 
-#### Array
+Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
-* `Array.generate(length, fill0[, fill1[, ...]])`
+#### `getNextIdGenerator([prefix[, postfix]])`
+#### `global`
+#### `guid()`
+#### `isPrimitive(arg)`
+#### `reserved`
+#### `toObject(arg)`
 
-#### Array.prototype
+### Array
 
-* `Array.prototype.binarySearch(compareFn)`
-* `Array.prototype.clear()`
-* `Array.prototype.commonLeft(list0[, list1[, ...]])`
-* `Array.prototype.compact()`
-* `Array.prototype.contains(searchElement)`
-* `Array.prototype.copy()`
-* `Array.prototype.diff(other)`
-* `Array.prototype.exclusion(list0[, list1[, ...]])`
-* `Array.prototype.find(query[, thisArg])`
-* `Array.prototype.first()`
-* `Array.prototype.firstIndex()`
-* `Array.prototype.flatten()`
-* `Array.prototype.forEachRight(cb[, thisArg])`
-* `Array.prototype.group(cb[, thisArg])`
-* `Array.prototype.indexOf(searchElement[, fromIndex])`
-* `Array.prototype.indexesOf(searchElement[, fromIndex])`
-* `Array.prototype.intersection(list0[, list1[, ...]])`
-* `Array.prototype.last()`
-* `Array.prototype.lastIndex()`
-* `Array.prototype.remove(value)`
-* `Array.prototype.someRight(cb[, thisArg])`
-* `Array.prototype.someValue(cb[, thisArg])`
-* `Array.prototype.uniq()`
+#### `Array.generate(length, fill0[, fill1[, ...]])`
 
-#### Boolean
+### Array.prototype
 
-* `Boolean.isBoolean(arg)`
+#### `Array.prototype.binarySearch(compareFn)`
+#### `Array.prototype.clear()`
+#### `Array.prototype.commonLeft(list0[, list1[, ...]])`
+#### `Array.prototype.compact()`
+#### `Array.prototype.contains(searchElement)`
+#### `Array.prototype.copy()`
+#### `Array.prototype.diff(other)`
+#### `Array.prototype.exclusion(list0[, list1[, ...]])`
+#### `Array.prototype.find(query[, thisArg])`
+#### `Array.prototype.first()`
+#### `Array.prototype.firstIndex()`
+#### `Array.prototype.flatten()`
+#### `Array.prototype.forEachRight(cb[, thisArg])`
+#### `Array.prototype.group(cb[, thisArg])`
+#### `Array.prototype.indexOf(searchElement[, fromIndex])`
+#### `Array.prototype.indexesOf(searchElement[, fromIndex])`
+#### `Array.prototype.intersection(list0[, list1[, ...]])`
+#### `Array.prototype.last()`
+#### `Array.prototype.lastIndex()`
+#### `Array.prototype.remove(value)`
+#### `Array.prototype.someRight(cb[, thisArg])`
+#### `Array.prototype.someValue(cb[, thisArg])`
+#### `Array.prototype.uniq()`
 
-#### Date
+### Boolean
 
-* `Date.getFormat(pattern)`
-* `Date.isDate(arg)`
+#### `Boolean.isBoolean(arg)`
 
-#### Date.prototype
+### Date
 
-* `Date.prototype.copy(date)`
-* `Date.prototype.daysInMonth()`
-* `Date.prototype.duration([to])`
-* `Date.prototype.floorDay()`
-* `Date.prototype.floorMonth()`
-* `Date.prototype.floorYear()`
+#### `Date.getFormat(pattern)`
+#### `Date.isDate(arg)`
 
-#### Error
+### Date.prototype
 
-* `Error.isError(arg)`
+#### `Date.prototype.copy(date)`
+#### `Date.prototype.daysInMonth()`
+#### `Date.prototype.duration([to])`
+#### `Date.prototype.floorDay()`
+#### `Date.prototype.floorMonth()`
+#### `Date.prototype.floorYear()`
 
-##### Error.prototype
+### Error
 
-* `Error.prototype.throw()`
+#### `Error.isError(arg)`
 
-#### Function
+### Error.prototype
 
-* `Function.arguments([arg0[, arg1[, ...]])`
-* `Function.context()`
-* `Function.i(arg)`
-* `Function.insert(name, value)`
-* `Function.invoke(name[, arg0[, arg1[, ...]]])`
-* `Function.isArguments(arg)`
-* `Function.isFunction(arg)`
-* `Function.k(arg)`
-* `Function.memoize(fn[, length[, resolvers]])`
-* `Function.noop()`
-* `Function.pluck(name)`
-* `Function.remove(name)`
+#### `Error.prototype.throw()`
 
-#### Function.prototype
+### Function
 
-* `Function.prototype.aritize(n)`
-* `Function.prototype.chain(fn0[, fn1[, ...]])`
-* `Function.prototype.curry([n])`
-* `Function.prototype.flip()`
-* `Function.prototype.lock([arg0[, arg1[, ...])`
-* `Function.prototype.match()`
-* `Function.prototype.not()`
-* `Function.prototype.partial([arg0[, arg1[, ...])`
-* `Function.prototype.s(fn)`
-* `Function.prototype.silent([arg0[, arg1[, ...])`
-* `Function.prototype.wrap(fn)`
+#### `Function.arguments([arg0[, arg1[, ...]])`
+#### `Function.context()`
+#### `Function.i(arg)`
+#### `Function.insert(name, value)`
+#### `Function.invoke(name[, arg0[, arg1[, ...]]])`
+#### `Function.isArguments(arg)`
+#### `Function.isFunction(arg)`
+#### `Function.k(arg)`
+#### `Function.memoize(fn[, length[, resolvers]])`
+#### `Function.noop()`
+#### `Function.pluck(name)`
+#### `Function.remove(name)`
 
-#### Math
+### Function.prototype
 
-* `Math.sign(n)`
+#### `Function.prototype.aritize(n)`
+#### `Function.prototype.chain(fn0[, fn1[, ...]])`
+#### `Function.prototype.curry([n])`
+#### `Function.prototype.flip()`
+#### `Function.prototype.lock([arg0[, arg1[, ...])`
+#### `Function.prototype.match()`
+#### `Function.prototype.not()`
+#### `Function.prototype.partial([arg0[, arg1[, ...])`
+#### `Function.prototype.s(fn)`
+#### `Function.prototype.silent([arg0[, arg1[, ...])`
+#### `Function.prototype.wrap(fn)`
 
-#### Number
+### Math
 
-* `Number.getAutoincrement(start, step)`
-* `Number.getPad(length[, precision])`
-* `Number.isNaN(arg)`
-* `Number.isNumber(arg)`
-* `Number.toInteger(arg)`
-* `Number.toUint32(arg)`
+#### `Math.sign(n)`
 
-#### Number.prototype
+### Number
 
-* `Number.prototype.isLessOrEqual(n)`
-* `Number.prototype.isLess(n)`
-* `Number.prototype.subtract(n)`
+#### `Number.getAutoincrement(start, step)`
+#### `Number.getPad(length[, precision])`
+#### `Number.isNaN(arg)`
+#### `Number.isNumber(arg)`
+#### `Number.toInteger(arg)`
+#### `Number.toUint32(arg)`
 
-#### Object
+### Number.prototype
 
-* `Object.assertCallable(arg)`
-* `Object.bindMethods(obj[, context[, source]])`
-* `Object.compact(obj)`
-* `Object.clear(obj)`
-* `Object.clone(obj)`
-* `Object.compare(arg1, arg2)`
-* `Object.copy(obj[, deep])`
-* `Object.count(obj)`
-* `Object.descriptor`
-* `Object.diff(obj1, obj2)`
-* `Object.extend(obj, [properties])`
-* `Object.every(obj, cb[, thisArg[, compareFn]])`
-* `Object.filter(obj, cb[, thisArg])`
-* `Object.flatten(obj)`
-* `Object.forEach(obj, cb[, thisArg[, compareFn]])`
-* `Object.get(obj, key)`
-* `Object.getCompareBy(name)`
-* `Object.getPropertyNames()`
-* `Object.getSet(value)`
-* `Object.is(x, y)`
-* `Object.isCallable(arg)`
-* `Object.isCopy(obj1, obj2)`
-* `Object.isEmpty(obj)`
-* `Object.isList(arg)`
-* `Object.isObject(arg)`
-* `Object.isPlainObject(arg)`
-* `Object.keyOf(obj, searchValue)`
-* `Object.map(obj, cb[, thisArg])`
-* `Object.mapKeys(obj, cb[, thisArg])`
-* `Object.mapToArray(obj[, cb[, thisArg[, compareFn]]])`
-* `Object.merge(obj, arg)`
-* `Object.mergeProperties(obj, arg)`
-* `Object.override(obj, properties)`
-* `Object.plainCreate(obj[, properties])`
-* `Object.plainExtend(obj[, properties])`
-* `Object.set(obj, key, value)`
-* `Object.some(obj, cb[, thisArg[, compareFn]])`
-* `Object.toArray(obj)`
-* `Object.unset(obj, key)`
-* `Object.values(obj)`
+#### `Number.prototype.isLessOrEqual(n)`
+#### `Number.prototype.isLess(n)`
+#### `Number.prototype.subtract(n)`
 
-#### RegExp
+### Object
 
-* `RegExp.isRegExp(arg)`
+#### `Object.assertCallable(arg)`
+#### `Object.bindMethods(obj[, context[, source]])`
+#### `Object.compact(obj)`
+#### `Object.clear(obj)`
+#### `Object.clone(obj)`
+#### `Object.compare(arg1, arg2)`
+#### `Object.copy(obj[, deep])`
+#### `Object.count(obj)`
+#### `Object.descriptor`
+#### `Object.diff(obj1, obj2)`
+#### `Object.extend(obj, [properties])`
+#### `Object.every(obj, cb[, thisArg[, compareFn]])`
+#### `Object.filter(obj, cb[, thisArg])`
+#### `Object.flatten(obj)`
+#### `Object.forEach(obj, cb[, thisArg[, compareFn]])`
+#### `Object.get(obj, key)`
+#### `Object.getCompareBy(name)`
+#### `Object.getPropertyNames()`
+#### `Object.getSet(value)`
+#### `Object.is(x, y)`
+#### `Object.isCallable(arg)`
+#### `Object.isCopy(obj1, obj2)`
+#### `Object.isEmpty(obj)`
+#### `Object.isList(arg)`
+#### `Object.isObject(arg)`
+#### `Object.isPlainObject(arg)`
+#### `Object.keyOf(obj, searchValue)`
+#### `Object.map(obj, cb[, thisArg])`
+#### `Object.mapKeys(obj, cb[, thisArg])`
+#### `Object.mapToArray(obj[, cb[, thisArg[, compareFn]]])`
+#### `Object.merge(obj, arg)`
+#### `Object.mergeProperties(obj, arg)`
+#### `Object.override(obj, properties)`
+#### `Object.plainCreate(obj[, properties])`
+#### `Object.plainExtend(obj[, properties])`
+#### `Object.set(obj, key, value)`
+#### `Object.some(obj, cb[, thisArg[, compareFn]])`
+#### `Object.toArray(obj)`
+#### `Object.unset(obj, key)`
+#### `Object.values(obj)`
 
-#### String
+### RegExp
 
-* `String.getFormat(map)`
-* `String.getIndent(indentString)`
-* `String.getPad(fill[, n])`
-* `String.getPrefixWith(prefix)`
-* `String.isString(arg)`
+#### `RegExp.isRegExp(arg)`
 
-#### String.prototype
+### String
 
-* `String.prototype.caseInsensitiveCompare(str)`
-* `String.prototype.contains(searchString)`
-* `String.prototype.dashToCamelCase()`
-* `String.prototype.endsWith()`
-* `String.prototype.isNumeric()`
-* `String.prototype.last()`
-* `String.prototype.repeat()`
-* `String.prototype.startsWith()`
-* `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
+#### `String.getFormat(map)`
+#### `String.getIndent(indentString)`
+#### `String.getPad(fill[, n])`
+#### `String.getPrefixWith(prefix)`
+#### `String.isString(arg)`
+
+### String.prototype
+
+#### `String.prototype.caseInsensitiveCompare(str)`
+#### `String.prototype.contains(searchString)`
+#### `String.prototype.dashToCamelCase()`
+#### `String.prototype.endsWith()`
+#### `String.prototype.isNumeric()`
+#### `String.prototype.last()`
+#### `String.prototype.repeat()`
+#### `String.prototype.startsWith()`
+#### `String.prototype.trimCommonLeft(str0[, str1[, ...]])`
 
 ## Tests
 
