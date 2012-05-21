@@ -12,7 +12,7 @@ To use it with node.js:
 
 	$ npm install es5-ext
 
-For browser, you can easily create custom toolset with help of
+For browser, you can create custom toolset with help of
 [modules-webmake](https://github.com/medikoo/modules-webmake)
 
 ## Usage
@@ -56,7 +56,7 @@ necessarily functions)
 case of Number it’ll be degraded to number, in case of string it’ll be
 degraded to string.
 
-API doesn't provide any methods for `Object.prototype` as extending such is in any case very risky and by all means should be avoided. All `Object` utils are provided as fuctions.
+API doesn't provide any methods for `Object.prototype` as extending such in any case should be avoided. All `Object` utils are provided as fuctions.
 
 _Each extension is documented at begin of its source file._
 
