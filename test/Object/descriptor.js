@@ -8,28 +8,25 @@ module.exports = function (t, a) {
 
 	o = Object.create(Object.prototype, {
 		c: t.c(c = {}),
-		cgs: t.c(cg = function () {}, cs = function () {}),
+		cgs: t.c.getSet(cg = function () {}, cs = function () {}),
 		ce: t.ce(ce = {}),
-		cegs: t.ce(ceg = function () {}, ces = function () {}),
+		cegs: t.ce.getSet(ceg = function () {}, ces = function () {}),
 		cew: t.cew(cew = {}),
 		cw: t.cw(cw = {}),
 		e: t.e(e = {}),
-		egs: t.e(eg = function () {}, es = function () {}),
+		egs: t.e.getSet(eg = function () {}, es = function () {}),
 		ew: t.ew(ew = {}),
 		v: t.v(v = {}),
-		vgs: t.v(vg = function () {}, vs = function () {}),
+		vgs: t.v.getSet(vg = function () {}, vs = function () {}),
 		w: t.w(w = {})
 	});
 
 	a.throws(function () {
-		t.c(null, true);
-	}, "Two not callable values");
+		t.c.getSet({});
+	}, "Not callable value");
 	a.throws(function () {
-		t.c(function () {}, true);
+		t.e.getSet(function () {}, true);
 	}, "Two values, second not callable");
-	a.throws(function () {
-		t.c({}, function () {});
-	}, "Two values, first not callable");
 
 	return {
 		c: function (a) {
