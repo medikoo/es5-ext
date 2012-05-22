@@ -68,9 +68,12 @@ Object that represents global scope
 
 Returns globally unique identifier, it is string starting with digit and followed by any charactres from 0-9 and a-z range.  
 Simple and friendly implementation for common web application purpose.  
-It's format is different from [official GUID format][GUID]
+It's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier)
 
-### isPrimitive(arg)
+### isPrimitive(x)
+
+Whether given value is a primitive
+
 ### reserved
 ### toObject(arg)
 ### validValue(x)
@@ -251,6 +254,3 @@ Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 ## Tests
 
 	$ npm test
-
-[GUID]:
-  http://en.wikipedia.org/wiki/Globally_unique_identifier
