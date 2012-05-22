@@ -60,15 +60,21 @@ API doesn't provide any methods for `Object.prototype` as extending such in any 
 
 ## Global extensions
 
-### validValue(x)
-
-Throws error if given value is `null` or `undefined`, otherwise returns `true`.
-
 ### global
+
+Object that represents global scope
+
 ### guid()
+
+Generates globally unique identifier, that is string starting with digit and followed by any charactres from 0-9 and a-z range. Simple and friendly implementation for common web application purpose.  
+It's format is different from [official GUID format][GUID]
+
 ### isPrimitive(arg)
 ### reserved
 ### toObject(arg)
+### validValue(x)
+
+Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
 ## Array
 
@@ -244,3 +250,6 @@ Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 ## Tests
 
 	$ npm test
+
+[GUID]
+	http://en.wikipedia.org/wiki/Globally_unique_identifier
