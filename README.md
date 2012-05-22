@@ -75,7 +75,10 @@ It's format is different from [official GUID format](http://en.wikipedia.org/wik
 Whether given value is a primitive
 
 ### reserved
-### toObject(arg)
+
+List of EcmaScript 5th edition reserved keywords.  
+Additionally under _keywords_, _future_ and _futureStrict_ properties we have lists grouped thematically.
+
 ### validValue(x)
 
 Throws error if given value is `null` or `undefined`, otherwise returns `true`.
