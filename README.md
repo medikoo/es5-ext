@@ -157,10 +157,25 @@ Returns flattened version of array
 Group list elements by value returned by _cb_ function
 
 ### Array.prototype.indexesOf(searchElement[, fromIndex])
+
+Return array of all indexes of given value
+
 ### Array.prototype.intersection(list0[, list1[, ...]])
+
+Computes the array of values that are the intersection of all lists (context list and lists given in arguments)
+
 ### Array.prototype.last()
+
+Returns value for last declared index
+
 ### Array.prototype.lastIndex()
+
+Returns last declared index of array
+
 ### Array.prototype.remove(value)
+
+Remove value from an array
+
 ### Array.prototype.someRight(cb[, thisArg])
 ### Array.prototype.someValue(cb[, thisArg])
 ### Array.prototype.uniq()
