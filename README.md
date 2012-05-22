@@ -186,21 +186,33 @@ Returns duplicate-free version of the array
 
 ## Boolean Constructor extensions
 
-### Boolean.isBoolean(arg)
+### Boolean.isBoolean(x)
+
+Whether value is boolean
 
 ## Date Constructor extensions
 
-### Date.getFormat(pattern)
-### Date.isDate(arg)
+### Date.isDate(x)
+
+Whether value is date instance
 
 ## Date Prototype extensions
 
 ### Date.prototype.copy(date)
+
+Returns a copy of the date object
+
 ### Date.prototype.daysInMonth()
+
+Returns number of days of date's month
+
 ### Date.prototype.duration([to])
+
+
 ### Date.prototype.floorDay()
 ### Date.prototype.floorMonth()
 ### Date.prototype.floorYear()
+### Date.prototype.format(pattern)
 
 ## Error Constructor extensions
 
