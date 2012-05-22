@@ -66,7 +66,7 @@ Object that represents global scope
 
 ### guid()
 
-Returns globally unique identifier, it is string starting with digit and followed by any charactres from 0-9 and a-z range.  
+Returns globally unique identifier, it is string starting with digit and followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase over time.
 Simple and friendly implementation for common web application purpose.  
 It's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier)
 
