@@ -182,6 +182,8 @@ Remove value from the array
 
 ### Array.prototype.uniq()
 
+Returns duplicate-free version of the array
+
 ## Boolean Constructor extensions
 
 ### Boolean.isBoolean(arg)
