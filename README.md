@@ -142,11 +142,11 @@ Returns value for first declared index
 
 ### Array.prototype.firstIndex()
 
-Returns first declared index of array
+Returns first declared index of the array
 
 ### Array.prototype.flatten()
 
-Returns flattened version of array
+Returns flattened version of the array
 
 ### Array.prototype.forEachRight(cb[, thisArg])
 
@@ -158,7 +158,7 @@ Group list elements by value returned by _cb_ function
 
 ### Array.prototype.indexesOf(searchElement[, fromIndex])
 
-Return array of all indexes of given value
+Returns array of all indexes of given value
 
 ### Array.prototype.intersection(list0[, list1[, ...]])
 
@@ -170,13 +170,16 @@ Returns value for last declared index
 
 ### Array.prototype.lastIndex()
 
-Returns last declared index of array
+Returns last declared index of the array
 
 ### Array.prototype.remove(value)
 
-Remove value from an array
+Remove value from the array
 
 ### Array.prototype.someRight(cb[, thisArg])
+
+`some` starting from last element
+
 ### Array.prototype.someValue(cb[, thisArg])
 ### Array.prototype.uniq()
 
