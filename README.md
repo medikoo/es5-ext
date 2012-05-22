@@ -93,7 +93,7 @@ Generate an array of pregiven _length_ built of repeated arguments.
 
 Create an array from given arguments.
 
-## Array.prototype
+## Array Prototype extensions
 
 ### Array.prototype.binarySearch(compareFn)
 ### Array.prototype.clear()
@@ -119,16 +119,16 @@ Create an array from given arguments.
 ### Array.prototype.someValue(cb[, thisArg])
 ### Array.prototype.uniq()
 
-## Boolean
+## Boolean Constructor extensions
 
 ### Boolean.isBoolean(arg)
 
-## Date
+## Date Constructor extensions
 
 ### Date.getFormat(pattern)
 ### Date.isDate(arg)
 
-## Date.prototype
+## Date Prototype extensions
 
 ### Date.prototype.copy(date)
 ### Date.prototype.daysInMonth()
@@ -137,15 +137,15 @@ Create an array from given arguments.
 ### Date.prototype.floorMonth()
 ### Date.prototype.floorYear()
 
-## Error
+## Error Constructor extensions
 
 ### Error.isError(arg)
 
-## Error.prototype
+## Error Prototype extensions
 
 ### Error.prototype.throw()
 
-## Function
+## Function Constructor extensions
 
 ### Function.arguments([arg0[, arg1[, ...]])
 ### Function.context()
@@ -160,7 +160,7 @@ Create an array from given arguments.
 ### Function.pluck(name)
 ### Function.remove(name)
 
-## Function.prototype
+## Function Prototype extensions
 
 ### Function.prototype.aritize(n)
 ### Function.prototype.chain(fn0[, fn1[, ...]])
@@ -174,11 +174,11 @@ Create an array from given arguments.
 ### Function.prototype.silent([arg0[, arg1[, ...])
 ### Function.prototype.wrap(fn)
 
-## Math
+## Math Object extensions
 
 ### Math.sign(n)
 
-## Number
+## Number Constructor extensions
 
 ### Number.getAutoincrement(start, step)
 ### Number.getPad(length[, precision])
@@ -187,13 +187,13 @@ Create an array from given arguments.
 ### Number.toInteger(arg)
 ### Number.toUint32(arg)
 
-## Number.prototype
+## Number Prototype extensions
 
 ### Number.prototype.isLessOrEqual(n)
 ### Number.prototype.isLess(n)
 ### Number.prototype.subtract(n)
 
-## Object
+## Object Constructor extensions
 
 ### Object.assertCallable(arg)
 ### Object.bindMethods(obj[, context[, source]])
@@ -236,11 +236,11 @@ Create an array from given arguments.
 ### Object.unset(obj, key)
 ### Object.values(obj)
 
-## RegExp
+## RegExp Constructor extensions
 
 ### RegExp.isRegExp(arg)
 
-## String
+## String Constructor extensions
 
 ### String.getFormat(map)
 ### String.getIndent(indentString)
@@ -248,7 +248,7 @@ Create an array from given arguments.
 ### String.getPrefixWith(prefix)
 ### String.isString(arg)
 
-## String.prototype
+## String Prototype extensions
 
 ### String.prototype.caseInsensitiveCompare(str)
 ### String.prototype.contains(searchString)
