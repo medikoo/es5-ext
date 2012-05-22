@@ -252,4 +252,4 @@ Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 	$ npm test
 
 [GUID]:
-	http://en.wikipedia.org/wiki/Globally_unique_identifier
+  http://en.wikipedia.org/wiki/Globally_unique_identifier
