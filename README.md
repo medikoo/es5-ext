@@ -83,9 +83,15 @@ Additionally under _keywords_, _future_ and _futureStrict_ properties we have li
 
 Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
-## Array
+## Array Constructor extensions
 
-### Array.generate(length, fill0[, fill1[, ...]])
+### Array.generate([length[, fill0[, fill1[, ...]]]])
+
+Generate an array of pregiven _length_ built of repeated arguments.
+
+### Array.of([item0[, item1[, ...]]]) _(ES 6th Edition draft)_
+
+Create an array from given arguments.
 
 ## Array.prototype
 
