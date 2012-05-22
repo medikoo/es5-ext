@@ -96,10 +96,26 @@ Create an array from given arguments.
 ## Array Prototype extensions
 
 ### Array.prototype.binarySearch(compareFn)
+
+In __sorted__ list search for index of item for which _compareFn_ returns value closest to _0_.  
+It's variant of binary search algorithm
+
 ### Array.prototype.clear()
+
+Clears the array
+
 ### Array.prototype.commonLeft(list0[, list1[, ...]])
+
+Returns first index at which _lists_ start to differ
+
 ### Array.prototype.compact()
+
+Returns a copy of the array with all falsy values removed.
+
 ### Array.prototype.contains(searchElement)
+
+Whether list contains the given value.
+
 ### Array.prototype.copy()
 ### Array.prototype.diff(other)
 ### Array.prototype.exclusion(list0[, list1[, ...]])
