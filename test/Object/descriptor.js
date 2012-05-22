@@ -4,7 +4,8 @@ var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 module.exports = function (t, a) {
 	var o, c, cg, cs, ce, ceg, ces, cew, cw, e, eg, es, ew, v, vg, vs, w;
-	a(t.v, t, "Main object is 'v' descriptor");
+	a(t, t.cw, "Main object is 'cw' descriptor");
+	a(t.getSet, t.c.getSet, "Main objects 'getSet' is 'c.getSet' descriptor");
 
 	o = Object.create(Object.prototype, {
 		c: t.c(c = {}),
