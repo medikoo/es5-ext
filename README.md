@@ -180,7 +180,6 @@ Remove value from the array
 
 `some` starting from last element
 
-### Array.prototype.someValue(cb[, thisArg])
 ### Array.prototype.uniq()
 
 ## Boolean Constructor extensions
