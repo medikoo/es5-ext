@@ -64,7 +64,6 @@ API doesn't provide any methods for `Object.prototype` as extending such in any 
 
 Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
-### getNextIdGenerator([prefix[, postfix]])
 ### global
 ### guid()
 ### isPrimitive(arg)
