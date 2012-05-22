@@ -66,7 +66,8 @@ Object that represents global scope
 
 ### guid()
 
-Returns globally unique identifier, it is string starting with digit and followed by any charactres from 0-9 and a-z range. Simple and friendly implementation for common web application purpose.  
+Returns globally unique identifier, it is string starting with digit and followed by any charactres from 0-9 and a-z range.  
+Simple and friendly implementation for common web application purpose.  
 It's format is different from [official GUID format][GUID]
 
 ### isPrimitive(arg)
