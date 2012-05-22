@@ -110,16 +110,28 @@ Returns first index at which _lists_ start to differ
 
 ### Array.prototype.compact()
 
-Returns a copy of the array with all falsy values removed.
+Returns a copy of the list with all falsy values removed.
 
 ### Array.prototype.contains(searchElement)
 
 Whether list contains the given value.
 
 ### Array.prototype.copy()
+
+Returns a copy of the list
+
 ### Array.prototype.diff(other)
+
+Returns the array of elements that are present in context list but not present in other list.
+
 ### Array.prototype.exclusion(list0[, list1[, ...]])
+
+Returns the array of elements that are found only in context list or lists given in arguments.
+
 ### Array.prototype.find(query[, thisArg])
+
+Return first element for which given function returns true
+
 ### Array.prototype.first()
 ### Array.prototype.firstIndex()
 ### Array.prototype.flatten()
