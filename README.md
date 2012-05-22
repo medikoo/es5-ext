@@ -69,7 +69,7 @@ Object that represents global scope
 Returns globally unique identifier, it is string starting with digit and followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase over time.  
 Simple and friendly implementation for common web application purpose. It's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier)
 
-### isPrimitive ( x )
+### isPrimitive(x)
 
 Whether given value is a primitive
 
@@ -78,19 +78,19 @@ Whether given value is a primitive
 List of EcmaScript 5th edition reserved keywords.  
 Additionally under _keywords_, _future_ and _futureStrict_ properties we have lists grouped thematically.
 
-### validValue ( x )
+### validValue(x)
 
 Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
 ## Array Constructor extensions
 
-### Array.generate ( [ length [ , fill0 [ , fill1 [ , ... ] ] ] ] )
+### Array.generate([length[, …fill]])
 
 Generate an array of pregiven _length_ built of repeated arguments.
 
-### Array.of ( [ item0 [ , item1 [ , ... ] ] ] )
+### Array.of([…items])
 
-_(In EcmaScript 6th Edition draft)_  
+_In EcmaScript 6th Edition draft_  
 Create an array from given arguments.
 
 ## Array Prototype extensions
@@ -104,7 +104,7 @@ It's variant of binary search algorithm
 
 Clears the array
 
-### Array.prototype.commonLeft(list0[, list1[, ...]])
+### Array.prototype.commonLeft([…lists])
 
 Returns first index at which _lists_ start to differ
 
@@ -128,7 +128,7 @@ Returns the array of elements that are present in context list but not present i
 
 [_egal_](http://wiki.ecmascript.org/doku.php?id=harmony:egal) version of `indexOf` method
 
-### Array.prototype.exclusion(list0[, list1[, ...]])
+### Array.prototype.exclusion([…lists]])
 
 Returns the array of elements that are found only in context list or lists given in arguments.
 
@@ -160,7 +160,7 @@ Group list elements by value returned by _cb_ function
 
 Returns array of all indexes of given value
 
-### Array.prototype.intersection(list0[, list1[, ...]])
+### Array.prototype.intersection([…lists])
 
 Computes the array of values that are the intersection of all lists (context list and lists given in arguments)
 
