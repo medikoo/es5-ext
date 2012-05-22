@@ -124,6 +124,10 @@ Returns a copy of the list
 
 Returns the array of elements that are present in context list but not present in other list.
 
+### Array.prototype.eIndexOf(searchElement[, fromIndex])
+
+[_egal_](http://wiki.ecmascript.org/doku.php?id=harmony:egal) version of `indexOf` method
+
 ### Array.prototype.exclusion(list0[, list1[, ...]])
 
 Returns the array of elements that are found only in context list or lists given in arguments.
@@ -133,11 +137,25 @@ Returns the array of elements that are found only in context list or lists given
 Return first element for which given function returns true
 
 ### Array.prototype.first()
+
+Returns value for first declared index
+
 ### Array.prototype.firstIndex()
+
+Returns first declared index of array
+
 ### Array.prototype.flatten()
+
+Returns flattened version of array
+
 ### Array.prototype.forEachRight(cb[, thisArg])
+
+`forEach` starting from last element
+
 ### Array.prototype.group(cb[, thisArg])
-### Array.prototype.indexOf(searchElement[, fromIndex])
+
+Group list elements by value returned by _cb_ function
+
 ### Array.prototype.indexesOf(searchElement[, fromIndex])
 ### Array.prototype.intersection(list0[, list1[, ...]])
 ### Array.prototype.last()
