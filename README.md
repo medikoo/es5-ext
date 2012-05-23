@@ -254,19 +254,19 @@ Returns arguments object
 
 Returns context in which function was called
 
-_context.call(x) =def x_
+_context.call(x)  =def  x_
 
 ### i(x)
 
 Identity function. Returns first argument
 
-_i(x) =def x_
+_i(x)  =def  x_
 
 ### insert(name, value)
 
 Returns a function that will set _name_ to _value_ on given object
 
-_insert(name, value)(obj) =def object\[name\] = value_
+_insert(name, value)(obj)  =def  object\[name\] = value_
 
 ### invoke(name[, …args])
 
@@ -274,7 +274,7 @@ Returns a function that takes an object as an argument, and applies object's
 _name_ method to arguments.  
 _name_ can be name of the method or method itself.
 
-_invoke(name, …args)(object, …args2) =def object\[name\]\(…args, …args2\)_
+_invoke(name, …args)(object, …args2)  =def  object\[name\]\(…args, …args2\)_
 
 ### isArguments(x)
 
@@ -288,15 +288,27 @@ Wether value is instance of function
 
 Returns a constant function that returns pregiven argument
 
-_k(x)(y) =def x_
+_k(x)(y)  =def  x_
 
 ### noop()
+
+No operation function
+
 ### pluck(name)
+
+Returns a function that takes an object, and returns the value of its _name_
+property
+
+_pluck(name)(obj)  =def  obj[name]_
+
 ### remove(name)
+
+Returns a function that takes an object, and deletes object's _name_ property
+
+_remove(name)(obj)  =def  delete obj[name]_
 
 ## Function Prototype extensions
 
-### aritize(n)
 ### chain(fn0[, fn1[, ...]])
 ### curry([n])
 ### flip()
