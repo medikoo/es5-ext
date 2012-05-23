@@ -459,7 +459,6 @@ Returns number subtracted of _n_. Can be used to compare booleans numbers and da
 
 ## Object Constructor extensions
 
-### assertCallable(arg)
 ### bindMethods(obj[, context[, source]])
 ### compact(obj)
 ### clear(obj)
@@ -498,6 +497,7 @@ Returns number subtracted of _n_. Can be used to compare booleans numbers and da
 ### some(obj, cb[, thisArg[, compareFn]])
 ### toArray(obj)
 ### unset(obj, key)
+### validCallable(x)
 ### values(obj)
 
 ## RegExp Constructor extensions

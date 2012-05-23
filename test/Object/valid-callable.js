@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = function (t, a) {
-	a(t(function () {}), true, "Function");
+	var f = function () {};
+	a(t(f), f, "Function");
 	a.throws(function () {
 		t({});
 	}, "Not Function");
