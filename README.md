@@ -392,9 +392,9 @@ Returns a function that returns boolean negation of value returned by underlying
 
 _f.not()(…args)  =def !f(…args)_
 
-### partial([arg0[, arg1[, ...])
+### partial([…args])
 
-Returns a function that, applied to an argument list arg2, applies the underlying function to args ++ arg2.
+Returns a function that when called will behave like context function called with initially passed arguments. If more arguments are suplilied, they are appended to initial args.
 
 _partial(f, …args1)(…arg1)  =def  f(…arg1, …args2)_
 
