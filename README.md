@@ -477,7 +477,7 @@ Returns clone that shares all properties of the object and have same prototype a
 
 Returns copy of the object with all enumerable properties that have no falsy values
 
-### compare(arg1, arg2)
+### compare(obj1, obj2)
 
 Universal cross-type compare function. To be used for e.g. array sort.
 
@@ -526,7 +526,6 @@ Analogous to Array.prototype.forEach. Calls a function for each key-value pair f
 Optionally _compareFn_ can be provided which assures that properties are iterated in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
 ### get(obj, key)
-### getCompareBy(name)
 ### getPropertyNames()
 ### getSet(value)
 ### is(x, y)
