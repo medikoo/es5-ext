@@ -1,13 +1,13 @@
 'use strict';
 
-var toArray = require('../../lib/Object/to-array');
+var toArray = require('../../../lib/Object/to-array');
 
 module.exports = function (t, a) {
 	return {
 		"0": function () {
 			var i = 0, fn = function () { ++i; return 3; };
 
-			fn = t(fn);
+			fn = t.call(fn);
 			a(fn(), 3, "First");
 			a(fn(1), 3, "Second");
 			a(fn(5), 3, "Third");
@@ -16,7 +16,7 @@ module.exports = function (t, a) {
 		"1": function () {
 			var i = 0, fn = function (x) { ++i; return x; };
 
-			fn = t(fn);
+			fn = t.call(fn);
 			return {
 				"No arg": function () {
 					i = 0;
@@ -46,7 +46,7 @@ module.exports = function (t, a) {
 		"3": function () {
 			var i = 0, fn = function (x, y, z) { ++i; return [x, y, z]; }, r;
 
-			fn = t(fn);
+			fn = t.call(fn);
 			return {
 				"No args": function () {
 					i = 0;
@@ -90,7 +90,7 @@ module.exports = function (t, a) {
 		"Dynamic": function () {
 			var i = 0, fn = function () { ++i; return arguments; }, r;
 
-			fn = t(fn, false);
+			fn = t.call(fn, false);
 			return {
 				"No args": function () {
 					i = 0;
@@ -120,13 +120,13 @@ module.exports = function (t, a) {
 		"Original arguments": function (a) {
 			var fn, mfn, x = {};
 			fn = function (x, y) { return toArray(mfn.args); };
-			mfn = t(fn);
+			mfn = t.call(fn);
 
 			a.deep(mfn(23, 'raz', x), [23, 'raz', x]);
 		},
 		"Resolvers": function () {
 			var i = 0, fn, fn2, r, j = 0, z;
-			fn = t(function () { ++i; return arguments; },
+			fn = t.call(function () { ++i; return arguments; },
 				 3, [Boolean, String]);
 			return {
 				"No args": function () {
@@ -166,7 +166,7 @@ module.exports = function (t, a) {
 					return arguments;
 				}
 
-				mfn = t(fn);
+				mfn = t.call(fn);
 				mfn(1, x, 3);
 				mfn(1, x, 4);
 				mfn.clearCache(1, x, 4);
@@ -178,7 +178,7 @@ module.exports = function (t, a) {
 				a(i, 2, "After clear");
 
 				i = 0;
-				mfn = t(fn, false);
+				mfn = t.call(fn, false);
 				mfn(1, x, 3);
 				mfn(1, x, 3);
 				mfn();
@@ -195,7 +195,7 @@ module.exports = function (t, a) {
 					return arguments;
 				}
 
-				fn = t(fn);
+				fn = t.call(fn);
 				fn(1, x, 3);
 				fn(1, x, 4);
 				fn(1, x, 3);

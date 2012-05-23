@@ -290,7 +290,6 @@ Returns a constant function that returns pregiven argument
 
 _k(x)(y) =def x_
 
-### memoize(fn[, length[, resolvers]])
 ### noop()
 ### pluck(name)
 ### remove(name)
@@ -303,6 +302,7 @@ _k(x)(y) =def x_
 ### flip()
 ### lock([arg0[, arg1[, ...])
 ### match()
+### memoize([, length[, resolvers]])
 ### not()
 ### partial([arg0[, arg1[, ...])
 ### s(fn)
