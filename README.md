@@ -252,7 +252,7 @@ Returns arguments object
 
 ### context()
 
-Return context in which function was called
+Returns context in which function was called
 
 _context.call(x) =def x_
 
@@ -276,9 +276,20 @@ _name_ can be name of the method or method itself.
 
 _invoke(name, …args)(object, …args2) =def object\[name\]\(…args, …args2\)_
 
-### isArguments(arg)
+### isArguments(x)
+
+Whether value is arguments object
+
 ### isFunction(arg)
-### k(arg)
+
+Wether value is instance of function
+
+### k(x)
+
+Returns a constant function that returns pregiven argument
+
+_k(x)(y) =def x_
+
 ### memoize(fn[, length[, resolvers]])
 ### noop()
 ### pluck(name)
