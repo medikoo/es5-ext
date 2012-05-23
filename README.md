@@ -413,8 +413,17 @@ Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prot
 
 ## Number Constructor extensions
 
-### isNaN(arg)
-### isNumber(arg)
+### isNaN(x)
+
+_In EcmaScript 6th Edition draft_  
+
+Whether value is NaN. Differs from global isNaN that it doesn't do type coercion.
+See http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan
+
+### isNumber(x)
+
+Whether given value is number
+
 ### toInteger(arg)
 ### toUint32(arg)
 
