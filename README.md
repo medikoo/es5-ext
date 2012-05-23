@@ -486,6 +486,9 @@ Universal cross-type compare function. To be used for e.g. array sort.
 Returns copy of the object with all enumerable properties. Additionally nested objects can be copied aswell
 
 ### count(obj)
+
+Counts number of enumerable own properties on object
+
 ### descriptor
 ### diff(obj1, obj2)
 ### extend(obj, [properties])
