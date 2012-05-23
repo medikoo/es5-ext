@@ -413,7 +413,6 @@ Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prot
 
 ## Number Constructor extensions
 
-### getAutoincrement(start, step)
 ### getPad(length[, precision])
 ### isNaN(arg)
 ### isNumber(arg)
