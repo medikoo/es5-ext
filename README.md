@@ -246,6 +246,8 @@ Throws error
 
 ## Function Constructor extensions
 
+Some of the functions were inspired by [Functional JavaScript](http://osteele.com/sources/javascript/functional/) project by Olivier Steele
+
 ### arguments([…args])
 
 Returns arguments object
@@ -309,15 +311,93 @@ _remove(name)(obj)  =def  delete obj[name]_
 
 ## Function Prototype extensions
 
-### chain(fn0[, fn1[, ...]])
+Some of the methods were inspired by [Functional JavaScript](http://osteele.com/sources/javascript/functional/) project by Olivier Steele
+
+### chain([…fns])
+
+Applies the functions in argument-list order.
+
+_f1.chain(f2, f3, f4)(…args)  =def  f4(f3(f2(f1(…arg))))_
+
 ### curry([n])
+
+Invoking the function returned by this function only _n_ arguments are passed to the underlying function. If the underlying function is not saturated, the result is a function that passes all its arguments to the underlying function.  
+If _n_ is not provided then it defaults to context function length
+
+_f.curry(4)(arg1, arg2)(arg3)(arg4)  =def  f(arg1, args2, arg3, arg4)_
+
 ### flip()
-### lock([arg0[, arg1[, ...])
+
+Returns a function that swaps its first two arguments before passing them to
+the underlying function.
+
+_f.flip()(a, b, c)  =def  f(b, a, c)_
+
+### lock([…args])
+
+Returns a function that applies the underlying function to _args_, and ignores its own arguments.
+
+_f.lock(…args)(…args2)  =def  f(…args)_
+
+_Named after it's counterpart in Google Closure_
+
 ### match()
+
+Returns a function that applies underlying function with first list argument
+
+_f.match()(args)  =def  f.apply(null, args)_
+
 ### memoize([, length[, resolvers]])
+
+Memoizes function results, works with any type of input arguments.
+
+	memoizedFn = memoize.call(fn);
+
+	memoizedFn('foo', 3);
+	memoizedFn('foo', 3); // Result taken from cache
+
+#### Arguments length
+
+By default fixed number of arguments that function takes is assumed (it's
+read from `fn.length` property) this behaviour can be overriden by providing
+custom _length_ setting e.g.:
+
+	memoizedFn = memoize(fn, 2);
+
+or we may pass `false` as length:
+
+	memoizeFn = memoize(fn, false);
+
+which means that number of arguments is dynamic, and memoize will work with any number of them.
+
+#### Resolvers
+
+If we expect arguments of certain types it's good to coerce them before doing memoization. We can do that by passing additional resolvers array. Each item is function that would be run on given argument, value returned by function is accepted as coerced value.
+
+	memoizeFn = memoize(fn, 2, [String, Boolean]);
+
+#### Cache handling
+
+Collected cache can be cleared. To clear all collected data:
+
+	memoizedFn.clearAllCache();
+
+or data for particall call:
+
+	memoizedFn.clearCache('foo', true);
+
 ### not()
+
+Returns a function that returns boolean negation of value returned by underlying function.
+
+_f.not()(…args)  =def !f(…args)_
+
 ### partial([arg0[, arg1[, ...])
-### s(fn)
+
+Returns a function that, applied to an argument list arg2, applies the underlying function to args ++ arg2.
+
+_partial(f, …args1)(…arg1)  =def  f(…arg1, …args2)_
+
 ### silent([arg0[, arg1[, ...])
 ### wrap(fn)
 
