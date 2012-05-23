@@ -3,30 +3,32 @@
 var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 module.exports = function (t, a) {
-	var o, c, cg, cs, ce, ceg, ces, cew, cw, e, eg, es, ew, v, vg, vs, w;
-	a(t, t.cw, "Main object is 'cw' descriptor");
-	a(t.getSet, t.c.getSet, "Main objects 'getSet' is 'c.getSet' descriptor");
+	var o, c, cg, cs, ce, ceg, ces, cew, cw, e, eg, es, ew, v, vg, vs, w, df, dfg
+	  , dfs;
 
 	o = Object.create(Object.prototype, {
-		c: t.c(c = {}),
-		cgs: t.c.getSet(cg = function () {}, cs = function () {}),
-		ce: t.ce(ce = {}),
-		cegs: t.ce.getSet(ceg = function () {}, ces = function () {}),
-		cew: t.cew(cew = {}),
-		cw: t.cw(cw = {}),
-		e: t.e(e = {}),
-		egs: t.e.getSet(eg = function () {}, es = function () {}),
-		ew: t.ew(ew = {}),
-		v: t.v(v = {}),
-		vgs: t.v.getSet(vg = function () {}, vs = function () {}),
-		w: t.w(w = {})
+		c: t('c', c = {}),
+		cgs: t.gs('c', cg = function () {}, cs = function () {}),
+		ce: t('ce', ce = {}),
+		cegs: t.gs('ce', ceg = function () {}, ces = function () {}),
+		cew: t('cew', cew = {}),
+		cw: t('cw', cw = {}),
+		e: t('e', e = {}),
+		egs: t.gs('e', eg = function () {}, es = function () {}),
+		ew: t('ew', ew = {}),
+		v: t('', v = {}),
+		vgs: t.gs('', vg = function () {}, vs = function () {}),
+		w: t('w', w = {}),
+
+		df: t(df = {}),
+		dfgs: t.gs(dfg = function () {}, dfs = function () {})
 	});
 
 	a.throws(function () {
-		t.c.getSet({});
+		t.gs('', {});
 	}, "Not callable value");
 	a.throws(function () {
-		t.e.getSet(function () {}, true);
+		t.gs('', function () {}, true);
 	}, "Two values, second not callable");
 
 	return {
@@ -133,6 +135,24 @@ module.exports = function (t, a) {
 			a(d.configurable, false, "Configurable");
 			a(d.enumerable, false, "Enumerable");
 			a(d.writable, true, "Writable");
+		},
+
+		d: function (a) {
+			var d = getOwnPropertyDescriptor(o, 'df');
+			a(d.value, df, "Value");
+			a(d.get, undefined, "Get");
+			a(d.set, undefined, "Set");
+			a(d.configurable, true, "Configurable");
+			a(d.enumerable, false, "Enumerable");
+			a(d.writable, true, "Writable");
+
+			d = getOwnPropertyDescriptor(o, 'dfgs');
+			a(d.value, undefined, "GS Value");
+			a(d.get, dfg, "GS Get");
+			a(d.set, dfs, "GS Set");
+			a(d.configurable, true, "GS Configurable");
+			a(d.enumerable, false, "GS Enumerable");
+			a(d.writable, undefined, "GS Writable");
 		}
 	};
 };
