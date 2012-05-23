@@ -206,9 +206,6 @@ Returns a copy of the date object
 
 Returns number of days of date's month
 
-### Date.prototype.duration([to])
-
-
 ### Date.prototype.floorDay()
 ### Date.prototype.floorMonth()
 ### Date.prototype.floorYear()
