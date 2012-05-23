@@ -430,6 +430,10 @@ _In EcmaScript 6th Edition draft_
 
 Converts value to integer
 
+### toUint(x)
+
+Converts value to unsigned integer
+
 ### toUint32(x)
 
 Converts value to unsigned 32 bit integer. This type is used for array lengths.
@@ -438,9 +442,20 @@ See: http://www.2ality.com/2012/02/js-integers.html
 ## Number Prototype extensions
 
 ### isLessOrEqual(n)
+
+Returns true if the number is less than or equal to _n_
+
 ### isLess(n)
+
+Returns true if the number is less than _n_
+
 ### pad(length[, precision])
+
+Pad given number with zeros. Returns string
+
 ### subtract(n)
+
+Returns number subtracted of _n_. Can be used to compare booleans numbers and dates.
 
 ## Object Constructor extensions
 
