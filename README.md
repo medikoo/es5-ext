@@ -396,9 +396,15 @@ _f.not()(…args)  =def !f(…args)_
 
 Returns a function that when called will behave like context function called with initially passed arguments. If more arguments are suplilied, they are appended to initial args.
 
-_partial(f, …args1)(…arg1)  =def  f(…arg1, …args2)_
+_f.partial(…args1)(…args2)  =def  f(…args1, …args2)_
 
-### silent([arg0[, arg1[, ...])
+### silent()
+
+Returns a function that when called silents any error thrown by underlying function.
+If underlying function throws error, it is the result fo the function.
+
+_function () { throw err; }.silent()()  ==def  err_
+
 ### wrap(fn)
 
 ## Math Object extensions
