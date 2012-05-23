@@ -207,25 +207,75 @@ Returns a copy of the date object
 Returns number of days of date's month
 
 ### Date.prototype.floorDay()
+
+Sets the date time to 00:00:00.000
+
 ### Date.prototype.floorMonth()
+
+Sets date day to 1 and date time to 00:00:00.000
+
 ### Date.prototype.floorYear()
+
+Sets date month to 0, day to 1 and date time to 00:00:00.000
+
 ### Date.prototype.format(pattern)
+
+Formats date up to given string. Supported patterns:
+
+* `%Y` - Year with century, 1999, 2003
+* `%y` - Year without century, 99, 03
+* `%m` - Month, 01..12
+* `%d` - Day of the month 01..31
+* `%H` - Hour (24-hour clock), 00..23
+* `%M` - Minute, 00..59
+* `%S` - Second, 00..59
+* `%L` - Millisedonc, 000..999
 
 ## Error Constructor extensions
 
-### Error.isError(arg)
+### Error.isError(x)
+
+Whether value is error.  
+It returns true for all Error instances and Exception host instances (e.g. DOMException)
 
 ## Error Prototype extensions
 
 ### Error.prototype.throw()
 
+Throws error
+
 ## Function Constructor extensions
 
-### Function.arguments([arg0[, arg1[, ...]])
+### Function.arguments([…args])
+
+Returns arguments object
+
 ### Function.context()
+
+Return context in which function was called
+
+_context.call(x) =def x_
+
 ### Function.i(arg)
+
+Identity function. Returns first argument
+
+_i(x) =def x_
+
 ### Function.insert(name, value)
-### Function.invoke(name[, arg0[, arg1[, ...]]])
+
+Returns a function that will set _name_ to _value_ on given object
+
+_insert(name, value)(obj) =def object[name] = value_
+
+### Function.invoke(name[, …args])
+
+Returns a function that takes an object as an argument, and applies object's
+_name_ method to arguments.  
+_name_ can be name of the method or method itself.
+
+_invoke(name, …args)(object, …args2) =def  object[name](…args, …args2)_
+
 ### Function.isArguments(arg)
 ### Function.isFunction(arg)
 ### Function.k(arg)
