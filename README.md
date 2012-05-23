@@ -510,7 +510,6 @@ Returns differences between two objects (taking into account only its own enumer
 Analogous to Array.prototype.every. Returns true if every key-value pair in this object satisfies the provided testing function.  
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then default sort function for strings is used.
 
-### extend(obj, [properties])
 ### filter(obj, cb[, thisArg])
 ### flatten(obj)
 ### forEach(obj, cb[, thisArg[, compareFn]])
