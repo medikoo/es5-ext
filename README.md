@@ -407,9 +407,9 @@ _function () { throw err; }.silent()()  ==def  err_
 
 ### wrap(fn)
 
-## Math Object extensions
+Wrap function with other function, it allows to specify before and after behavior, transform return value or prevent original function from being called.
 
-### sign(n)
+Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prototype/wrap/)
 
 ## Number Constructor extensions
 
@@ -492,6 +492,10 @@ _function () { throw err; }.silent()()  ==def  err_
 ### repeat()
 ### startsWith()
 ### trimCommonLeft(str0[, str1[, ...]])
+
+## Math Object extensions
+
+### sign(n)
 
 ## Tests
 
