@@ -489,10 +489,28 @@ Returns copy of the object with all enumerable properties. Additionally nested o
 
 Counts number of enumerable own properties on object
 
-### descriptor
+### descriptor([mode[, value]])
+### descriptor.gs([mode[, get[, set]]])
+
+Descriptor factory.
+_mode_ is string, through we which we define whether value should be _configurable_, _enumerable_ and/or _writable_, we define it as token string, e.g.: `c`, `ce`, `cew`, `cw`, `e`, `ew`, `w`
+If _mode_ is not provided than `cw` _mode_ is assumed (it's how standard methods are defined on native objects).  
+To setup descriptor with getter and/or setter use `descriptor.gs` function, it works same as _value_ version, only difference is that settings for _writable_ are ignored.
+
 ### diff(obj1, obj2)
-### extend(obj, [properties])
+
+Returns differences between two objects (taking into account only its own enumerable properties).  Returned object is array of three arrays. Each array holds property names:
+
+* 0 - properties that were not present in `obj2`
+* 1 - properties that have different values
+* 2 - properties that were not present in `obj1`
+
 ### every(obj, cb[, thisArg[, compareFn]])
+
+Analogous to Array.prototype.every. Returns true if every key-value pair in this object satisfies the provided testing function.  
+Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then default sort function for strings is used.
+
+### extend(obj, [properties])
 ### filter(obj, cb[, thisArg])
 ### flatten(obj)
 ### forEach(obj, cb[, thisArg[, compareFn]])
