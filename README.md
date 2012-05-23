@@ -460,11 +460,31 @@ Returns number subtracted of _n_. Can be used to compare booleans numbers and da
 ## Object Constructor extensions
 
 ### bindMethods(obj[, context[, source]])
-### compact(obj)
+
+Bind all object functions to given scope. If scope is not given then functions are bound to object they're assigned to. This emulates Python's bound instance methods. If source (second argument) is present then all functions from source are binded to scope and assigned to object.
+
+Inspired by: http://mochi.github.com/mochikit/doc/html/MochiKit/Base.html#fn-bindmethods
+
 ### clear(obj)
+
+Remove all enumerable own properties of the object
+
 ### clone(obj)
+
+Returns clone that shares all properties of the object and have same prototype as the object
+
+### compact(obj)
+
+Returns copy of the object with all enumerable properties that have no falsy values
+
 ### compare(arg1, arg2)
+
+Universal cross-type compare function. To be used for e.g. array sort.
+
 ### copy(obj[, deep])
+
+Returns copy of the object with all enumerable properties. Additionally nested objects can be copied aswell
+
 ### count(obj)
 ### descriptor
 ### diff(obj1, obj2)
