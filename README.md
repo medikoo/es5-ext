@@ -229,7 +229,7 @@ Formats date up to given string. Supported patterns:
 * `%H` - Hour (24-hour clock), 00..23
 * `%M` - Minute, 00..59
 * `%S` - Second, 00..59
-* `%L` - Millisedonc, 000..999
+* `%L` - Milliseconds, 000..999
 
 ## Error Constructor extensions
 
@@ -266,7 +266,7 @@ _i(x) =def x_
 
 Returns a function that will set _name_ to _value_ on given object
 
-_insert(name, value)(obj) =def object[name] = value_
+_insert(name, value)(obj) =def object\[name\] = value_
 
 ### Function.invoke(name[, …args])
 
@@ -274,7 +274,7 @@ Returns a function that takes an object as an argument, and applies object's
 _name_ method to arguments.  
 _name_ can be name of the method or method itself.
 
-_invoke(name, …args)(object, …args2) =def  object[name](…args, …args2)_
+_invoke(name, …args)(object, …args2) =def object\[name\]\(…args, …args2\)_
 
 ### Function.isArguments(arg)
 ### Function.isFunction(arg)
