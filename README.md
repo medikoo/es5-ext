@@ -84,141 +84,141 @@ Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
 ## Array Constructor extensions
 
-### Array.generate([length[, …fill]])
+### generate([length[, …fill]])
 
 Generate an array of pregiven _length_ built of repeated arguments.
 
-### Array.of([…items])
+### of([…items])
 
 _In EcmaScript 6th Edition draft_  
 Create an array from given arguments.
 
 ## Array Prototype extensions
 
-### Array.prototype.binarySearch(compareFn)
+### binarySearch(compareFn)
 
 In __sorted__ list search for index of item for which _compareFn_ returns value closest to _0_.  
 It's variant of binary search algorithm
 
-### Array.prototype.clear()
+### clear()
 
 Clears the array
 
-### Array.prototype.commonLeft([…lists])
+### commonLeft([…lists])
 
 Returns first index at which _lists_ start to differ
 
-### Array.prototype.compact()
+### compact()
 
 Returns a copy of the list with all falsy values removed.
 
-### Array.prototype.contains(searchElement)
+### contains(searchElement)
 
 Whether list contains the given value.
 
-### Array.prototype.copy()
+### copy()
 
 Returns a copy of the list
 
-### Array.prototype.diff(other)
+### diff(other)
 
 Returns the array of elements that are present in context list but not present in other list.
 
-### Array.prototype.eIndexOf(searchElement[, fromIndex])
+### eIndexOf(searchElement[, fromIndex])
 
 [_egal_](http://wiki.ecmascript.org/doku.php?id=harmony:egal) version of `indexOf` method
 
-### Array.prototype.exclusion([…lists]])
+### exclusion([…lists]])
 
 Returns the array of elements that are found only in context list or lists given in arguments.
 
-### Array.prototype.find(query[, thisArg])
+### find(query[, thisArg])
 
 Return first element for which given function returns true
 
-### Array.prototype.first()
+### first()
 
 Returns value for first declared index
 
-### Array.prototype.firstIndex()
+### firstIndex()
 
 Returns first declared index of the array
 
-### Array.prototype.flatten()
+### flatten()
 
 Returns flattened version of the array
 
-### Array.prototype.forEachRight(cb[, thisArg])
+### forEachRight(cb[, thisArg])
 
 `forEach` starting from last element
 
-### Array.prototype.group(cb[, thisArg])
+### group(cb[, thisArg])
 
 Group list elements by value returned by _cb_ function
 
-### Array.prototype.indexesOf(searchElement[, fromIndex])
+### indexesOf(searchElement[, fromIndex])
 
 Returns array of all indexes of given value
 
-### Array.prototype.intersection([…lists])
+### intersection([…lists])
 
 Computes the array of values that are the intersection of all lists (context list and lists given in arguments)
 
-### Array.prototype.last()
+### last()
 
 Returns value for last declared index
 
-### Array.prototype.lastIndex()
+### lastIndex()
 
 Returns last declared index of the array
 
-### Array.prototype.remove(value)
+### remove(value)
 
 Remove value from the array
 
-### Array.prototype.someRight(cb[, thisArg])
+### someRight(cb[, thisArg])
 
 `some` starting from last element
 
-### Array.prototype.uniq()
+### uniq()
 
 Returns duplicate-free version of the array
 
 ## Boolean Constructor extensions
 
-### Boolean.isBoolean(x)
+### isBoolean(x)
 
 Whether value is boolean
 
 ## Date Constructor extensions
 
-### Date.isDate(x)
+### isDate(x)
 
 Whether value is date instance
 
 ## Date Prototype extensions
 
-### Date.prototype.copy(date)
+### copy(date)
 
 Returns a copy of the date object
 
-### Date.prototype.daysInMonth()
+### daysInMonth()
 
 Returns number of days of date's month
 
-### Date.prototype.floorDay()
+### floorDay()
 
 Sets the date time to 00:00:00.000
 
-### Date.prototype.floorMonth()
+### floorMonth()
 
 Sets date day to 1 and date time to 00:00:00.000
 
-### Date.prototype.floorYear()
+### floorYear()
 
 Sets date month to 0, day to 1 and date time to 00:00:00.000
 
-### Date.prototype.format(pattern)
+### format(pattern)
 
 Formats date up to given string. Supported patterns:
 
@@ -233,42 +233,42 @@ Formats date up to given string. Supported patterns:
 
 ## Error Constructor extensions
 
-### Error.isError(x)
+### isError(x)
 
 Whether value is error.  
 It returns true for all Error instances and Exception host instances (e.g. DOMException)
 
 ## Error Prototype extensions
 
-### Error.prototype.throw()
+### throw()
 
 Throws error
 
 ## Function Constructor extensions
 
-### Function.arguments([…args])
+### arguments([…args])
 
 Returns arguments object
 
-### Function.context()
+### context()
 
 Return context in which function was called
 
 _context.call(x) =def x_
 
-### Function.i(arg)
+### i(x)
 
 Identity function. Returns first argument
 
 _i(x) =def x_
 
-### Function.insert(name, value)
+### insert(name, value)
 
 Returns a function that will set _name_ to _value_ on given object
 
 _insert(name, value)(obj) =def object\[name\] = value_
 
-### Function.invoke(name[, …args])
+### invoke(name[, …args])
 
 Returns a function that takes an object as an argument, and applies object's
 _name_ method to arguments.  
@@ -276,113 +276,113 @@ _name_ can be name of the method or method itself.
 
 _invoke(name, …args)(object, …args2) =def object\[name\]\(…args, …args2\)_
 
-### Function.isArguments(arg)
-### Function.isFunction(arg)
-### Function.k(arg)
-### Function.memoize(fn[, length[, resolvers]])
-### Function.noop()
-### Function.pluck(name)
-### Function.remove(name)
+### isArguments(arg)
+### isFunction(arg)
+### k(arg)
+### memoize(fn[, length[, resolvers]])
+### noop()
+### pluck(name)
+### remove(name)
 
 ## Function Prototype extensions
 
-### Function.prototype.aritize(n)
-### Function.prototype.chain(fn0[, fn1[, ...]])
-### Function.prototype.curry([n])
-### Function.prototype.flip()
-### Function.prototype.lock([arg0[, arg1[, ...])
-### Function.prototype.match()
-### Function.prototype.not()
-### Function.prototype.partial([arg0[, arg1[, ...])
-### Function.prototype.s(fn)
-### Function.prototype.silent([arg0[, arg1[, ...])
-### Function.prototype.wrap(fn)
+### aritize(n)
+### chain(fn0[, fn1[, ...]])
+### curry([n])
+### flip()
+### lock([arg0[, arg1[, ...])
+### match()
+### not()
+### partial([arg0[, arg1[, ...])
+### s(fn)
+### silent([arg0[, arg1[, ...])
+### wrap(fn)
 
 ## Math Object extensions
 
-### Math.sign(n)
+### sign(n)
 
 ## Number Constructor extensions
 
-### Number.getAutoincrement(start, step)
-### Number.getPad(length[, precision])
-### Number.isNaN(arg)
-### Number.isNumber(arg)
-### Number.toInteger(arg)
-### Number.toUint32(arg)
+### getAutoincrement(start, step)
+### getPad(length[, precision])
+### isNaN(arg)
+### isNumber(arg)
+### toInteger(arg)
+### toUint32(arg)
 
 ## Number Prototype extensions
 
-### Number.prototype.isLessOrEqual(n)
-### Number.prototype.isLess(n)
-### Number.prototype.subtract(n)
+### isLessOrEqual(n)
+### isLess(n)
+### subtract(n)
 
 ## Object Constructor extensions
 
-### Object.assertCallable(arg)
-### Object.bindMethods(obj[, context[, source]])
-### Object.compact(obj)
-### Object.clear(obj)
-### Object.clone(obj)
-### Object.compare(arg1, arg2)
-### Object.copy(obj[, deep])
-### Object.count(obj)
-### Object.descriptor
-### Object.diff(obj1, obj2)
-### Object.extend(obj, [properties])
-### Object.every(obj, cb[, thisArg[, compareFn]])
-### Object.filter(obj, cb[, thisArg])
-### Object.flatten(obj)
-### Object.forEach(obj, cb[, thisArg[, compareFn]])
-### Object.get(obj, key)
-### Object.getCompareBy(name)
-### Object.getPropertyNames()
-### Object.getSet(value)
-### Object.is(x, y)
-### Object.isCallable(arg)
-### Object.isCopy(obj1, obj2)
-### Object.isEmpty(obj)
-### Object.isList(arg)
-### Object.isObject(arg)
-### Object.isPlainObject(arg)
-### Object.keyOf(obj, searchValue)
-### Object.map(obj, cb[, thisArg])
-### Object.mapKeys(obj, cb[, thisArg])
-### Object.mapToArray(obj[, cb[, thisArg[, compareFn]]])
-### Object.merge(obj, arg)
-### Object.mergeProperties(obj, arg)
-### Object.override(obj, properties)
-### Object.plainCreate(obj[, properties])
-### Object.plainExtend(obj[, properties])
-### Object.set(obj, key, value)
-### Object.some(obj, cb[, thisArg[, compareFn]])
-### Object.toArray(obj)
-### Object.unset(obj, key)
-### Object.values(obj)
+### assertCallable(arg)
+### bindMethods(obj[, context[, source]])
+### compact(obj)
+### clear(obj)
+### clone(obj)
+### compare(arg1, arg2)
+### copy(obj[, deep])
+### count(obj)
+### descriptor
+### diff(obj1, obj2)
+### extend(obj, [properties])
+### every(obj, cb[, thisArg[, compareFn]])
+### filter(obj, cb[, thisArg])
+### flatten(obj)
+### forEach(obj, cb[, thisArg[, compareFn]])
+### get(obj, key)
+### getCompareBy(name)
+### getPropertyNames()
+### getSet(value)
+### is(x, y)
+### isCallable(arg)
+### isCopy(obj1, obj2)
+### isEmpty(obj)
+### isList(arg)
+### isObject(arg)
+### isPlainObject(arg)
+### keyOf(obj, searchValue)
+### map(obj, cb[, thisArg])
+### mapKeys(obj, cb[, thisArg])
+### mapToArray(obj[, cb[, thisArg[, compareFn]]])
+### merge(obj, arg)
+### mergeProperties(obj, arg)
+### override(obj, properties)
+### plainCreate(obj[, properties])
+### plainExtend(obj[, properties])
+### set(obj, key, value)
+### some(obj, cb[, thisArg[, compareFn]])
+### toArray(obj)
+### unset(obj, key)
+### values(obj)
 
 ## RegExp Constructor extensions
 
-### RegExp.isRegExp(arg)
+### isRegExp(arg)
 
 ## String Constructor extensions
 
-### String.getFormat(map)
-### String.getIndent(indentString)
-### String.getPad(fill[, n])
-### String.getPrefixWith(prefix)
-### String.isString(arg)
+### getFormat(map)
+### getIndent(indentString)
+### getPad(fill[, n])
+### getPrefixWith(prefix)
+### isString(arg)
 
 ## String Prototype extensions
 
-### String.prototype.caseInsensitiveCompare(str)
-### String.prototype.contains(searchString)
-### String.prototype.dashToCamelCase()
-### String.prototype.endsWith()
-### String.prototype.isNumeric()
-### String.prototype.last()
-### String.prototype.repeat()
-### String.prototype.startsWith()
-### String.prototype.trimCommonLeft(str0[, str1[, ...]])
+### caseInsensitiveCompare(str)
+### contains(searchString)
+### dashToCamelCase()
+### endsWith()
+### isNumeric()
+### last()
+### repeat()
+### startsWith()
+### trimCommonLeft(str0[, str1[, ...]])
 
 ## Tests
 
