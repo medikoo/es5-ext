@@ -493,9 +493,9 @@ Counts number of enumerable own properties on object
 ### descriptor.gs([mode[, get[, set]]])
 
 Descriptor factory.
-_mode_ is string, through we which we define whether value should be _configurable_, _enumerable_ and/or _writable_, we define it as token string, e.g.: `c`, `ce`, `cew`, `cw`, `e`, `ew`, `w`
+_mode_ is string, through we which we define whether value should be _configurable_, _enumerable_ and/or _writable_, it's accepted as string of tokens, e.g.: `c`, `ce`, `cew`, `cw`, `e`, `ew`, `w`
 If _mode_ is not provided than `cw` _mode_ is assumed (it's how standard methods are defined on native objects).  
-To setup descriptor with getter and/or setter use `descriptor.gs` function, it works same as _value_ version, only difference is that settings for _writable_ are ignored.
+To setup descriptor with getter and/or setter use `descriptor.gs`, _mode_ is configured same way as in _value_ version, only difference is that settings for _writable_ attribute are ignored.
 
 ### diff(obj1, obj2)
 
@@ -508,11 +508,23 @@ Returns differences between two objects (taking into account only its own enumer
 ### every(obj, cb[, thisArg[, compareFn]])
 
 Analogous to Array.prototype.every. Returns true if every key-value pair in this object satisfies the provided testing function.  
-Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then default sort function for strings is used.
+Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
 ### filter(obj, cb[, thisArg])
+
+Analogous to Array.prototype.filter. Returns new object with properites for which _cb_ function returned truthy value.
+
 ### flatten(obj)
+
+Returns new object, with flatten properties of input object
+
+_flatten({ a: { b: 1 }, c: { d: 1 } })  =def  { b: 1, d: 1 }_
+
 ### forEach(obj, cb[, thisArg[, compareFn]])
+
+Analogous to Array.prototype.forEach. Calls a function for each key-value pair found in object
+Optionally _compareFn_ can be provided which assures that properties are iterated in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
+
 ### get(obj, key)
 ### getCompareBy(name)
 ### getPropertyNames()
