@@ -413,7 +413,6 @@ Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prot
 
 ## Number Constructor extensions
 
-### getPad(length[, precision])
 ### isNaN(arg)
 ### isNumber(arg)
 ### toInteger(arg)
@@ -423,6 +422,7 @@ Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prot
 
 ### isLessOrEqual(n)
 ### isLess(n)
+### pad(length[, precision])
 ### subtract(n)
 
 ## Object Constructor extensions
