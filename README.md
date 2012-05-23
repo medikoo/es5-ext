@@ -424,8 +424,16 @@ See http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan
 
 Whether given value is number
 
-### toInteger(arg)
-### toUint32(arg)
+### toInt(x)
+
+_In EcmaScript 6th Edition draft_  
+
+Converts value to integer
+
+### toUint32(x)
+
+Converts value to unsigned 32 bit integer. This type is used for array lengths.
+See: http://www.2ality.com/2012/02/js-integers.html
 
 ## Number Prototype extensions
 
