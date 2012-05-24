@@ -598,7 +598,6 @@ Analogous to Array.prototype.some Returns true if any key-value pair satisfies t
 testing function.  
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
-### unset(obj, key)
 ### validCallable(x)
 ### values(obj)
 
