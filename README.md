@@ -88,6 +88,11 @@ Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
 Generate an array of pregiven _length_ built of repeated arguments.
 
+### from(x)
+
+_In EcmaScript 6th Edition draft_  
+Convert array-like object to an Array
+
 ### of([…items])
 
 _In EcmaScript 6th Edition draft_  
@@ -593,7 +598,6 @@ Analogous to Array.prototype.some Returns true if any key-value pair satisfies t
 testing function.  
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
-### toArray(obj)
 ### unset(obj, key)
 ### validCallable(x)
 ### values(obj)
