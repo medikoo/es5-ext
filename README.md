@@ -559,7 +559,13 @@ Whether object is array-like object
 Whether value is not primitive
 
 ### isPlainObject(arg)
+
+Whether object is plain object, its protototype should be Object.prototype and it cannot be host object.
+
 ### keyOf(obj, searchValue)
+
+Search object for value
+
 ### map(obj, cb[, thisArg])
 ### mapKeys(obj, cb[, thisArg])
 ### mapToArray(obj[, cb[, thisArg[, compareFn]]])
