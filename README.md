@@ -525,7 +525,6 @@ _flatten({ a: { b: 1 }, c: { d: 1 } })  =def  { b: 1, d: 1 }_
 Analogous to Array.prototype.forEach. Calls a function for each key-value pair found in object
 Optionally _compareFn_ can be provided which assures that properties are iterated in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
-### get(obj, key)
 ### getPropertyNames()
 ### getSet(value)
 ### is(x, y)
