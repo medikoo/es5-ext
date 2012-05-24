@@ -532,11 +532,32 @@ Optionally _compareFn_ can be provided which assures that properties are iterate
 Get all (not just own) property names of the object
 
 ### is(x, y)
-### isCallable(arg)
+
+_In EcmaScript 6th Edition draft as `is` operator_  
+
+Whether two values are equal, takes into account NaN and -0/+0 cases
+
+### isCallable(x)
+
+Whether object is callable
+
 ### isCopy(obj1, obj2)
+
+Compares two objects.  
+Object is considered a copy when its own enumerable properties match own enumerable properties of other object
+
 ### isEmpty(obj)
-### isList(arg)
+
+True if object doesn't have any own enumerable property
+
+### isList(x)
+
+Whether object is array-like object
+
 ### isObject(arg)
+
+Whether value is not primitive
+
 ### isPlainObject(arg)
 ### keyOf(obj, searchValue)
 ### map(obj, cb[, thisArg])
