@@ -587,7 +587,6 @@ Create new object with same values, but remapped keys
 Creates an array of results of calling a provided function on every key-value pair in this object.  
 Optionally _compareFn_ can be provided which assures that results are added in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
-### plainExtend(obj[, properties])
 ### set(obj, key, value)
 ### some(obj, cb[, thisArg[, compareFn]])
 ### toArray(obj)
