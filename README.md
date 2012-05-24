@@ -614,7 +614,6 @@ Whether object is regular expression
 
 ## String Constructor extensions
 
-### getFormat(map)
 ### getIndent(indentString)
 ### getPad(fill[, n])
 ### getPrefixWith(prefix)
@@ -626,6 +625,7 @@ Whether object is regular expression
 ### contains(searchString)
 ### dashToCamelCase()
 ### endsWith()
+### format(map)
 ### isNumeric()
 ### last()
 ### repeat()
