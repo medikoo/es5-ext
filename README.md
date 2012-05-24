@@ -512,6 +512,10 @@ Returns differences between two objects (taking into account only its own enumer
 Analogous to Array.prototype.every. Returns true if every key-value pair in this object satisfies the provided testing function.  
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
+### extend(dest[, …src])
+
+Extend _dest_ by enumerable own properties of other objects. Properties found in both objects will be overwritten.
+
 ### filter(obj, cb[, thisArg])
 
 Analogous to Array.prototype.filter. Returns new object with properites for which _cb_ function returned truthy value.
@@ -567,9 +571,18 @@ Whether object is plain object, its protototype should be Object.prototype and i
 Search object for value
 
 ### map(obj, cb[, thisArg])
+
+Analogous to Array.prototype.map. Creates a new object with properties which values are results of calling a provided function on every key-value pair in this object.
+
 ### mapKeys(obj, cb[, thisArg])
+
+Create new object with same values, but remapped keys
+
 ### mapToArray(obj[, cb[, thisArg[, compareFn]]])
-### merge(obj, arg)
+
+Creates an array of results of calling a provided function on every key-value pair in this object.  
+Optionally _compareFn_ can be provided which assures that results are added in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
+
 ### mergeProperties(obj, arg)
 ### override(obj, properties)
 ### plainCreate(obj[, properties])
