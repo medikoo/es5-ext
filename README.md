@@ -252,6 +252,8 @@ Some of the functions were inspired by [Functional JavaScript](http://osteele.co
 
 Returns arguments object
 
+_arguments.call(…args)  =def  …args_
+
 ### context()
 
 Returns context in which function was called
@@ -526,6 +528,9 @@ Analogous to Array.prototype.forEach. Calls a function for each key-value pair f
 Optionally _compareFn_ can be provided which assures that properties are iterated in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
 ### getPropertyNames()
+
+Get all (not just own) property names of the object
+
 ### getSet(value)
 ### is(x, y)
 ### isCallable(arg)
