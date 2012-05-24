@@ -531,7 +531,6 @@ Optionally _compareFn_ can be provided which assures that properties are iterate
 
 Get all (not just own) property names of the object
 
-### getSet(value)
 ### is(x, y)
 ### isCallable(arg)
 ### isCopy(obj1, obj2)
