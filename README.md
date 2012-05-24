@@ -599,11 +599,18 @@ testing function.
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
 ### validCallable(x)
+
+If given object is not callable throw TypeError in other case return it.
+
 ### values(obj)
+
+Return array of object own enumerable properties
 
 ## RegExp Constructor extensions
 
-### isRegExp(arg)
+### isRegExp(x)
+
+Whether object is regular expression
 
 ## String Constructor extensions
 
