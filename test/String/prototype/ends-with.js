@@ -5,9 +5,10 @@
 'use strict';
 
 module.exports = function (t, a) {
-	a.ok(t.call('abc', ''), "Empty needle");
-	a.ok(t.call('abcd', 'cd'), "Ends with needle");
-	a.ok(t.call('abcd', 'abcd'), "Needle equals haystack");
-	a.ok(!t.call('abcd', 'ab'), "Doesn't end with needle");
-	a.ok(!t.call('abc', 'defg'), "Length trick");
+	a(t.call('abc', ''), true, "Empty needle");
+	a(t.call('abcd', 'cd'), true, "Ends with needle");
+	a(t.call('abcd', 'abcd'), true, "Needle equals haystack");
+	a(!t.call('abcd', 'ab'), true, "Doesn't end with needle");
+	a(!t.call('abc', 'defg'), true, "Length trick");
+	a(t.call('razdwa', 'dw', 2), false, "");
 };
