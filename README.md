@@ -78,10 +78,6 @@ Whether given value is a primitive
 List of EcmaScript 5th edition reserved keywords.  
 Additionally under _keywords_, _future_ and _futureStrict_ properties we have lists grouped thematically.
 
-### validValue(x)
-
-Throws error if given value is `null` or `undefined`, otherwise returns `true`.
-
 ## Array Constructor extensions
 
 ### generate([length[, …fill]])
@@ -601,6 +597,10 @@ Optionally _compareFn_ can be provided which assures that keys are tested in giv
 ### validCallable(x)
 
 If given object is not callable throw TypeError in other case return it.
+
+### validValue(x)
+
+Throws error if given value is `null` or `undefined`, otherwise returns `true`.
 
 ### values(obj)
 
