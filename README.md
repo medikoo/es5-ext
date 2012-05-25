@@ -633,7 +633,10 @@ Whether string contains given string.
 
 Convert dash separated string to camelCase, e.g. one-two-three -> oneTwoThree
 
-### endsWith()
+### endsWith(searchString)
+
+Whether strings ends with given string
+
 ### format(map)
 ### indent([indent[, nest[, nostart]]])
 ### isNumeric()
