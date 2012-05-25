@@ -681,6 +681,9 @@ Returns string left trimmed by characters same for all strings
 
 ### sign(n)
 
+_In EcmaScript 6th Edition draft_  
+Returns sign of a number value
+
 ## Tests
 
 	$ npm test
