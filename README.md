@@ -668,7 +668,11 @@ If it's shorter, then it's padded with repeated pregiven _fill_.
 
 Repeat given string _n_ times
 
-### startsWith()
+### startsWith(searchString[, position])
+
+_In EcmaScript 6th Edition draft_  
+Whether strings starts with given string
+
 ### trimCommonLeft(str0[, str1[, ...]])
 
 ## Math Object extensions
