@@ -614,7 +614,6 @@ Whether object is regular expression
 
 ## String Constructor extensions
 
-### getPrefixWith(prefix)
 ### isString(arg)
 
 ## String Prototype extensions
