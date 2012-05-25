@@ -633,7 +633,7 @@ Whether string contains given string.
 
 Convert dash separated string to camelCase, e.g. one-two-three -> oneTwoThree
 
-### endsWith(searchString[, endPosittion])
+### endsWith(searchString[, endPosition])
 
 _In EcmaScript 6th Edition draft_  
 Whether strings ends with given string
