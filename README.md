@@ -655,8 +655,6 @@ Map may also provide not direct values but functions that resolve value, in that
 
 Indents each line of given string with provided _indent_ string (repeated _nest_ times).
 
-
-### isNumeric()
 ### last()
 ### pad(fill, length)
 ### repeat()
