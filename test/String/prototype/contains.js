@@ -12,4 +12,5 @@ module.exports = function (t, a) {
 	a(t.call('', 'raz'), false, "Something in empty");
 	a(t.call('az', 'raz'), false, "Longer");
 	a(t.call('azasdfasdf', 'azff'), false, "Not found");
+	a(t.call('razdwa', 'raz', 1), false, "Position");
 };

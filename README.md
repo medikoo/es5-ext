@@ -624,9 +624,10 @@ Whether object is string
 
 Case insensitive compare
 
-### contains(searchString)
+### contains(searchString[, position])
 
-Whether string contains given string
+_In EcmaScript 6th Edition draft_  
+Whether string contains given string.
 
 ### dashToCamelCase()
 
