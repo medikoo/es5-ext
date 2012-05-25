@@ -614,13 +614,24 @@ Whether object is regular expression
 
 ## String Constructor extensions
 
-### isString(arg)
+### isString(x)
+
+Whether object is string
 
 ## String Prototype extensions
 
 ### caseInsensitiveCompare(str)
+
+Case insensitive compare
+
 ### contains(searchString)
+
+Whether string contains given string
+
 ### dashToCamelCase()
+
+Convert dash separated string to camelCase, e.g. one-two-three -> oneTwoThree
+
 ### endsWith()
 ### format(map)
 ### indent([indent[, nest[, nostart]]])
