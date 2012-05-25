@@ -633,12 +633,29 @@ Whether string contains given string.
 
 Convert dash separated string to camelCase, e.g. one-two-three -> oneTwoThree
 
-### endsWith(searchString)
+### endsWith(searchString[, endPosittion])
 
+_In EcmaScript 6th Edition draft_  
 Whether strings ends with given string
 
-### format(map)
+### format(fmap[, thisArg])
+
+Formats given template up to provided map, e.g.:
+
+```javascript
+"%capital is a capital of %country".format({
+	capital: "Warsaw",
+	country: "Poland"
+}); // -> "Warsaw is a capital of Poland"
+```
+Map may also provide not direct values but functions that resolve value, in that case optional _thisArg_ determines the context in which functions are called.
+
 ### indent([indent[, nest[, nostart]]])
+### indent([nest[, nostart]]])
+
+Indents each line of given string with provided _indent_ string (repeated _nest_ times).
+
+
 ### isNumeric()
 ### last()
 ### pad(fill, length)
