@@ -16,5 +16,6 @@ module.exports = {
 		a(t.call(o, 'foo'), false, "Primitive not found");
 		a(t.call(o, x), true, "Object found");
 		a(t.call(o, y), false, "Object not found");
+		a(t.call(o, 1, 1), false, "Position");
 	}
 };

@@ -117,7 +117,7 @@ Returns first index at which _lists_ start to differ
 
 Returns a copy of the list with all falsy values removed.
 
-### contains(searchElement)
+### contains(searchElement[, position])
 
 Whether list contains the given value.
 
