@@ -1,8 +1,10 @@
 'use strict';
 
+var partial = require('../../../lib/Function/prototype/partial');
+
 module.exports = {
 	"Left": function (t, a) {
-		t = t('x', 5);
+		t = partial.call(t, 'x', 5);
 
 		a(t.call('yy'), 'xxxyy');
 		a(t.call(''), 'xxxxx', "Empty string");
@@ -11,7 +13,7 @@ module.exports = {
 		a(t.call('yyyyyyy'), 'yyyyyyy', 'Longer');
 	},
 	"Right": function (t, a) {
-		t = t('x', -5);
+		t = partial.call(t, 'x', -5);
 
 		a(t.call('yy'), 'yyxxx');
 		a(t.call(''), 'xxxxx', "Empty string");
