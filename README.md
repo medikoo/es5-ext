@@ -673,7 +673,9 @@ Repeat given string _n_ times
 _In EcmaScript 6th Edition draft_  
 Whether strings starts with given string
 
-### trimCommonLeft(str0[, str1[, ...]])
+### trimCommonLeft([…strings])
+
+Returns string left trimmed by characters same for all strings
 
 ## Math Object extensions
 
