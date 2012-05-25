@@ -656,8 +656,18 @@ Map may also provide not direct values but functions that resolve value, in that
 Indents each line of given string with provided _indent_ string (repeated _nest_ times).
 
 ### last()
+
+Return last character
+
 ### pad(fill, length)
+
+Makes string at least _length_ characters long.
+If it's shorter, then it's padded with repeated pregiven _fill_.
+
 ### repeat()
+
+Repeat given string _n_ times
+
 ### startsWith()
 ### trimCommonLeft(str0[, str1[, ...]])
 
