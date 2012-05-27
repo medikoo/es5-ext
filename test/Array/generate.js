@@ -2,7 +2,6 @@
 
 module.exports = function (t, a) {
 	var x = {}, y = {};
-	a.deep(t(), [], "No arguments");
 	a.deep(t(3), [undefined, undefined, undefined], "Just length");
 	a.deep(t(0, 'x'), [], "No repeat");
 	a.deep(t(1, x, y), [x], "Arguments length larger than repeat number");
