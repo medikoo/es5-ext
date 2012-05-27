@@ -238,6 +238,10 @@ Formats date up to given string. Supported patterns:
 Whether value is error.  
 It returns true for all Error instances and Exception host instances (e.g. DOMException)
 
+### validError(x)
+
+If given object is not error throw TypeError in other case return it.
+
 ## Error Prototype extensions
 
 ### throw()
