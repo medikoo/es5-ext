@@ -64,11 +64,6 @@ API doesn't provide any methods for `Object.prototype` as extending such in any 
 
 Object that represents global scope
 
-### guid()
-
-Returns globally unique identifier, it is string starting with digit and followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase over time.  
-Simple and friendly implementation for common web application purpose. It's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier)
-
 ### reserved
 
 List of EcmaScript 5th edition reserved keywords.  
@@ -609,6 +604,11 @@ Return array of object own enumerable properties
 Whether object is regular expression
 
 ## String Constructor extensions
+
+### guid()
+
+Returns globally unique string identifier, it starts with a digit and is followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase in future.  
+Simple and friendly implementation for common web application purpose (it's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier))
 
 ### isString(x)
 
