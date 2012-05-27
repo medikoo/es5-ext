@@ -192,6 +192,10 @@ Whether value is boolean
 
 Whether value is date instance
 
+### validDate(x)
+
+If given object is not date throw TypeError in other case return it.
+
 ## Date Prototype extensions
 
 ### copy(date)
