@@ -646,10 +646,9 @@ Formats given template up to provided map, e.g.:
 ```
 Map may also provide not direct values but functions that resolve value, in that case optional _thisArg_ determines the context in which functions are called.
 
-### indent([indent[, nest]])
-### indent(nest)
+### indent(str[, count])
 
-Indents each line of given string with provided _indent_ string (repeated _nest_ times).
+Indents each line with provided _str_ (if _count_ given then _str_ is repeated _count_ times).
 
 ### last()
 
