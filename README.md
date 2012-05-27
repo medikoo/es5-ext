@@ -120,6 +120,10 @@ Returns the array of elements that are present in context list but not present i
 
 [_egal_](http://wiki.ecmascript.org/doku.php?id=harmony:egal) version of `indexOf` method
 
+### eLastIndexOf(searchElement[, fromIndex])
+
+[_egal_](http://wiki.ecmascript.org/doku.php?id=harmony:egal) version of `lastIndexOf` method
+
 ### exclusion([…lists]])
 
 Returns the array of elements that are found only in context list or lists given in arguments.
