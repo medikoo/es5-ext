@@ -69,10 +69,6 @@ Object that represents global scope
 Returns globally unique identifier, it is string starting with digit and followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase over time.  
 Simple and friendly implementation for common web application purpose. It's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier)
 
-### isPrimitive(x)
-
-Whether given value is a primitive
-
 ### reserved
 
 List of EcmaScript 5th edition reserved keywords.  
