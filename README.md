@@ -447,21 +447,9 @@ See: http://www.2ality.com/2012/02/js-integers.html
 
 ## Number Prototype extensions
 
-### isLessOrEqual(n)
-
-Returns true if the number is less than or equal to _n_
-
-### isLess(n)
-
-Returns true if the number is less than _n_
-
 ### pad(length[, precision])
 
 Pad given number with zeros. Returns string
-
-### subtract(n)
-
-Returns number subtracted of _n_. Can be used to compare booleans numbers and dates.
 
 ## Object Constructor extensions
 
