@@ -2,14 +2,15 @@
 
 module.exports = {
 	__generic: function (t, a) {
-		var count = 0;
+		var count = 0, self;
 
-		a.deep(t.call(this, function (v, i, scope) {
+		self = Object(this);
+		a.deep(t.call(self, function (v, i, scope) {
 			a(v, this[i], "Value");
 			a(i, count++, "Index");
 			a(scope, this, "Scope");
 			return i;
-		}, this), { 0: [this[0]], 1: [this[1]], 2: [this[2]] });
+		}, self), { 0: [this[0]], 1: [this[1]], 2: [this[2]] });
 	},
 	"": function (t, a) {
 		var r;
