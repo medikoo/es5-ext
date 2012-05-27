@@ -654,10 +654,11 @@ Indents each line with provided _str_ (if _count_ given then _str_ is repeated _
 
 Return last character
 
-### pad(fill, length)
+### pad(fill[, length])
 
-Makes string at least _length_ characters long.
-If it's shorter, then it's padded with repeated pregiven _fill_.
+Pad string with _fill_.
+If _length_ si given than _fill_ is reapated _length_ times.
+If _length_ is negative then pad is applied from right.
 
 ### repeat()
 
