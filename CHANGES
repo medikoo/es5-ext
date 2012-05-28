@@ -1,3 +1,124 @@
+v0.8.0  --  2012.05.28
+Again, major overhaul. Probably last experimental stuff was trashed, all API
+looks more like standard extensions now.
+
+Changes:
+* Turn all Object.prototype extensions into functions and move them to Object
+namespace. We learned that extending Object.prototype is bad idea in any case.
+* Rename Function.prototype.curry into Function.prototype.partial. This function
+  is really doing partial application while currying is slightly different
+  concept.
+* Convert Function.prototype.ncurry to new implementation of
+  Function.prototype.curry, it now serves real curry concept additionaly it
+  covers use cases for aritize and hold, which were removed.
+* Rename Array's peek to last, and provide support for sparse arrays in it
+* Rename Date's monthDaysCount into daysInMonth
+* Simplify object iterators, now order of iteration can be configured with just
+  compareFn argument (no extra byKeys option)
+* Rename Object.isDuplicate to Object.isCopy
+* Rename Object.isEqual to Object.is which is compatible with future 'is'
+  keyword
+* Function.memoize is now Function.prototype.memoize. Additionally clear cache
+  functionality is added, and access to original arguments object.
+* Rename validation functions: assertNotNull to validValue, assertCallable to
+  validCallable. validValue was moved to Object namespace. On success they now
+  return validated value instead of true, it supports better composition.
+  Additionally created Date.validDate and Error.validError
+* All documentation is now held in README.md not in code files.
+* Move guid to String namespace. All guids now start with numbers.
+* Array.generate: fill argument is now optional
+* Object.toArray is now Array.from (as new ES6 specification draft suggests)
+* All methods that rely on indexOf or lastIndexOf, now rely on egal (Object.is)
+  versions of them (eIndexOf, eLastIndexOf)
+* Turn all get* functions that returned methods into actuall methods (get*
+  functionality can still be achieved with help of Function.prototype.partial).
+  So: Date.getFormat is now Date.prototype.format,
+  Number.getPad is now Number.prototype.pad,
+  String.getFormat is now String.prototype.format,
+  String.getIndent is now String.prototype.indent,
+  String.getPad is now String.prototype.pad
+* Refactored Object.descriptor, it is now just two functions, main one and
+  main.gs, main is for describing values, and gs for describing getters and
+  setters. Configuration is passed with first argument as string e.g. 'ce' for
+  configurable and enumerable. If no configuration string is provided then by
+  default it returns configurable and writable but not enumerable for value or
+  configurable but not enumerable for getter/setter
+* Function.prototype.silent now returns prepared function (it was
+  expected to be fixed for 0.7)
+* Reserved keywords map (reserved) is now array not hash.
+* Object.merge is now Object.extend (while former Object.extend was completely
+  removed) - 'extend' implies that we change object, not creating new one (as
+  'merge' may imply). Similarily Object.mergeProperties was renamed to
+  Object.extendProperties
+* Position argument support in Array.prototype.contains and
+  String.prototype.contains (so it follows ES6 specification draft)
+* endPosition argument support in String.prototype.endsWith and fromPosition
+  argument support in String.prototype.startsWith (so it follows ES6
+  specification draft)
+* Better and cleaner String.prototype.indent implementation. No default value
+  for indent string argument, optional nest value (defaults to 1), remove
+  nostart argument
+* Correct length values for most methods (so they reflect length of similar
+  methods in standard)
+* Length argument is now optional in number and string pad methods.
+* Improve arguments validation in general, so it adheres to standard conventions
+* Fixed format of package.json
+
+Removed methods and functions:
+* Object.prototype.slice - Object is not ordered collection, so slice doesn't
+  make sense.
+* Function's rcurry, rncurry, s - too cumbersome for JS, not many use cases for
+  that
+* Function.prototype.aritize and Function.prototype.hold - same functionality
+  can be achieved with new Function.prototype.curry
+* Function.prototype.log - provided more generic Function.prototype.wrap for
+  same use case
+* getNextIdGenerator - no use case for that (String.guid should be used if
+  needed)
+* Object.toObject - Can be now acheived with Object(validValue(x))
+* Array.prototype.someValue - no real use case (personally used once and
+  case was already controversial)
+* Date.prototype.duration - moved to external package
+* Number.getAutoincrement - No real use case
+* Object.prototype.extend, Object.prototype.override,
+  Object.prototype.plainCreate, Object.prototype.plainExtend - It was probably
+  too complex, same should be achieved just with Object.create,
+  Object.descriptor and by saving references to super methods in local scope.
+* Object.getCompareBy - Functions should be created individually for each use
+  case
+* Object.get, Object.getSet, Object.set, Object.unset - Not many use cases and
+  same can be easily achieved with simple inline function
+* String.getPrefixWith - Not real use case for something that can be easily
+  achieved with '+' operator
+* Object.isPrimitive - It's just negation of Object.isObject
+* Number.prototype.isLess, Number.prototype.isLessOrEqual - they shouldn't be in
+  Number namespace and should rather be addressed with simple inline functions.
+* Number.prototype.subtract - Should rather be addressed with simple inline
+  function
+
+New methods and functions:
+* Array.prototype.lastIndex - Returns last declared index in array
+* String.prototype.last - last for strings
+* Function.prototype.wrap - Wrap function with other, it allows to specify
+  before and after behavior transform return value or prevent original function
+  from being called.
+* Math.sign - Returns sign of a number (already in ES6 specification draft)
+* Number.toInt - Converts value to integer (already in ES6 specification draft)
+* Number.isNaN - Returns true if value is NaN (already in ES6 specification
+  draft)
+* Number.toUint - Converts value to unsigned integer
+* Number.toUint32 - Converts value to 32bit unsigned integer
+* Array.prototype.eIndexOf, eLastIndexOf - Egal version (that uses Object.is) of
+  standard methods (all methods that were using native indexOf or lastIndexOf
+  now uses eIndexOf and elastIndexOf respectively)
+* Array.of - as it's specified for ES6
+
+Fixes:
+* Fixed binarySearch so it always returns valid list index
+* Object.isList - it failed on lists that are callable (e.g. NodeList in Nitro
+  engine)
+* Object.map now supports third argument for callback
+
 v0.7.1  --  2012.01.05
 New methods:
 * Array.prototype.firstIndex - returns first valid index of array (for
