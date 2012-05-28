@@ -10,7 +10,10 @@
     "ext",
     "addons",
     "extras",
-    "javascript"
+    "javascript",
+    "util",
+    "utils",
+    "utilities"
   ],
   "author": "Mariusz Nowak <medikoo+es5-ext@medikoo.com> (http://www.medikoo.com/)",
   "main": "lib",
