@@ -680,6 +680,6 @@ Returns string left trimmed by characters same for all strings
 _In EcmaScript 6th Edition draft_  
 Returns sign of a number value
 
-## Tests
+## Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
 
 	$ npm test
