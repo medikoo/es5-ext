@@ -16,7 +16,7 @@
 		"url": "https://github.com/medikoo/es5-ext/issues"
 	},
 	"engines": {
-		"node": ">=0.6"
+		"node": ">=0.4"
 	},
 	"scripts": {
 		"test": "node ./node_modules/tad/bin/tad lib"
