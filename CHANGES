@@ -1,3 +1,7 @@
+v0.8.1  --  2012.06.13
+Reorganized internal logic of Function.prototype.memoize. So it's more safe now
+and clears cache properly. Additionally preventCache option was provided.
+
 v0.8.0  --  2012.05.28
 Again, major overhaul. Probably last experimental stuff was trashed, all API
 looks more like standard extensions now.
