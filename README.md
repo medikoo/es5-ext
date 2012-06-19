@@ -474,7 +474,7 @@ Universal cross-type compare function. To be used for e.g. array sort.
 
 ### copy(obj[, deep])
 
-Returns copy of the object with all enumerable properties. Additionally nested objects can be copied aswell
+Returns copy of the object with all enumerable properties. Additionally nested objects can be copied as well
 
 ### count(obj)
 
