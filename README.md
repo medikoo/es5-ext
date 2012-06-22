@@ -45,16 +45,13 @@ functions:
 As with native ones most methods are generic and can be run on any object.
 In more detail:
 
-* `Array.prototype` methods can be run on any object (any
+* `Array.prototype`, `Number.prototype` and `String.prototype`, methods can be run on any object (any
 value that's neither _null_ nor _undefined_),
 * `Date.prototype` methods should be called only on `Date` instances.
 * `Function.prototype` methods can be called on any callable objects (not
 necessarily functions)
-* `Number.prototype` & `String.prototype` methods can be called on any value, in
-case of Number it’ll be degraded to number, in case of string it’ll be
-degraded to string.
 
-API doesn't provide any methods for `Object.prototype` as extending such in any case should be avoided. All `Object` utils are provided as fuctions.
+API doesn't provide any methods for `Object.prototype` as extending such in any case should be avoided. All `Object` utils are provided as fuctions and most of them expect first input argument to be a valid object (any value that's neither _null_ nor _undefined_).
 
 # API
 
@@ -477,7 +474,7 @@ Universal cross-type compare function. To be used for e.g. array sort.
 
 ### copy(obj[, deep])
 
-Returns copy of the object with all enumerable properties. Additionally nested objects can be copied aswell
+Returns copy of the object with all enumerable properties. Additionally nested objects can be copied as well
 
 ### count(obj)
 
