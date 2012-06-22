@@ -18,5 +18,7 @@ module.exports = {
 		r.sort();
 		a.deep(p, r, "Same parts");
 		a.deep(t.call(r, r), r, "Same");
+		a.deep(t.call([1, 2, x, 4, 5, y, 7], [7, y, 5, 4, x, 2, 1]),
+			[1, 2, x, 4, 5, y, 7], "Long reverse same");
 	}
 };
