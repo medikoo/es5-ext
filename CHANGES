@@ -1,3 +1,7 @@
+v0.8.2  --  2012.06.22
+Fix errors in Array's intersection and exclusion methods, related to improper
+usage of contains method
+
 v0.8.1  --  2012.06.13
 Reorganized internal logic of Function.prototype.memoize. So it's more safe now
 and clears cache properly. Additionally preventCache option was provided.
