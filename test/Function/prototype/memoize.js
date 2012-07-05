@@ -90,7 +90,7 @@ module.exports = function (t, a) {
 		"Dynamic": function () {
 			var i = 0, fn = function () { ++i; return arguments; }, r;
 
-			fn = t.call(fn, false);
+			fn = t.call(fn, { length: false });
 			return {
 				"No args": function () {
 					i = 0;
@@ -127,7 +127,7 @@ module.exports = function (t, a) {
 		"Resolvers": function () {
 			var i = 0, fn, fn2, r, j = 0, z;
 			fn = t.call(function () { ++i; return arguments; },
-				 3, [Boolean, String]);
+				 { length: 3, resolvers: [Boolean, String] });
 			return {
 				"No args": function () {
 					i = 0;
@@ -178,7 +178,7 @@ module.exports = function (t, a) {
 				a(i, 2, "After clear");
 
 				i = 0;
-				mfn = t.call(fn, false);
+				mfn = t.call(fn, { length: false });
 				mfn(1, x, 3);
 				mfn(1, x, 3);
 				mfn();

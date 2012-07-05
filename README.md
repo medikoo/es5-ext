@@ -350,7 +350,7 @@ Returns a function that applies underlying function with first list argument
 
 _f.match()(args)  =def  f.apply(null, args)_
 
-### memoize([, length[, resolvers]])
+### memoize([options]])
 
 Memoizes function results, works with any type of input arguments.
 
@@ -363,13 +363,13 @@ Memoizes function results, works with any type of input arguments.
 
 By default fixed number of arguments that function takes is assumed (it's
 read from `fn.length` property) this behaviour can be overriden by providing
-custom _length_ setting e.g.:
+custom _length_ option e.g.:
 
-	memoizedFn = memoize(fn, 2);
+	memoizedFn = memoize(fn, { length: 2 });
 
 or we may pass `false` as length:
 
-	memoizeFn = memoize(fn, false);
+	memoizeFn = memoize(fn, { length: false });
 
 which means that number of arguments is dynamic, and memoize will work with any number of them.
 
@@ -377,7 +377,7 @@ which means that number of arguments is dynamic, and memoize will work with any 
 
 If we expect arguments of certain types it's good to coerce them before doing memoization. We can do that by passing additional resolvers array. Each item is function that would be run on given argument, value returned by function is accepted as coerced value.
 
-	memoizeFn = memoize(fn, 2, [String, Boolean]);
+	memoizeFn = memoize(fn, { length: 2, resolvers: [String, Boolean] });
 
 #### Cache handling
 
