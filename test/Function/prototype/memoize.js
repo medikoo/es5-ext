@@ -208,6 +208,34 @@ module.exports = function (t, a) {
 				fn(1, x, 4);
 				a(i, 4, "After clear");
 			}
+		},
+		"Method": {
+			"No descriptor": function () {
+				var mfn, x = {}, i = 0, fn = function () {
+					++i;
+					return this;
+				};
+
+				mfn = t.call(fn, { method: 'foo' });
+				a(mfn.call(x), x, "Context");
+				a(x.foo(), x, "Method");
+				a(i, 1, "Cached");
+			},
+			"Descriptor": function () {
+				var mfn, x = {}, i = 0, fn = function () {
+					++i;
+					return this;
+				};
+
+				mfn = t.call(fn,
+					{ method: { name: 'foo', descriptor: { configurable: true } } });
+				a(mfn.call(x), x, "Context");
+				a.deep(Object.getOwnPropertyDescriptor(x, 'foo'),
+					{ enumerable: false, configurable: true, writable: false,
+						value: x.foo });
+				a(x.foo(), x, "Method");
+				a(i, 1, "Cached");
+			}
 		}
 	};
 };

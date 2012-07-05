@@ -379,6 +379,36 @@ If we expect arguments of certain types it's good to coerce them before doing me
 
 	memoizeFn = memoize(fn, { length: 2, resolvers: [String, Boolean] });
 
+#### Memoizing a method
+
+When we're defining a prototype, we may want to define method that will memoize it's results, but that will work individually on each instance. Normal way to obtain that would be:
+
+	var Foo = function () {
+		this.bar.bind(this).memoize();
+		// ... constructor logic
+	};
+	Foo.prototype.bar = function () {
+		// ... method logic
+	};
+
+With `method` option we can configure memoization directly on prototype and not in constructor. Following will have same effect:
+
+	var Foo = function () {
+		// ... constructor logic
+	};
+	Foo.prototype.bar = function () {
+		// ... method logic
+	}.memoize({ method: 'bar' });
+
+Additionally we may provide descriptor which would be used for defining method on instance object:
+
+	var Foo = function () {
+		// ... constructor logic
+	};
+	Foo.prototype.bar = function () {
+		// ... method logic
+	}.memoize({ method: { name: 'bar', descriptor: { configurable: true } } });
+
 #### Cache handling
 
 Collected cache can be cleared. To clear all collected data:
