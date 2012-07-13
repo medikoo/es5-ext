@@ -210,7 +210,7 @@ module.exports = function (t, a) {
 			}
 		},
 		"Method": {
-			"No descriptor": function () {
+			"No descriptor": function (a) {
 				var mfn, x = {}, i = 0, fn = function () {
 					++i;
 					return this;
@@ -221,7 +221,7 @@ module.exports = function (t, a) {
 				a(x.foo(), x, "Method");
 				a(i, 1, "Cached");
 			},
-			"Descriptor": function () {
+			"Descriptor": function (a) {
 				var mfn, x = {}, i = 0, fn = function () {
 					++i;
 					return this;
@@ -235,6 +235,31 @@ module.exports = function (t, a) {
 						value: x.foo });
 				a(x.foo(), x, "Method");
 				a(i, 1, "Cached");
+			}
+		},
+		"Primitive": {
+			"No args": function (a) {
+				var i = 0, fn = function () { ++i; return arguments[0]; }, mfn;
+				mfn = t.call(fn, { primitive: true });
+				a(mfn('ble'), 'ble', "#1");
+				a(mfn({}), 'ble', "#2");
+				a(i, 1, "Called once");
+			},
+			"One arg": function (a) {
+				var i = 0, fn = function (x) { ++i; return x; }, mfn
+				  , y = { toString: function () { return 'foo' } };
+				mfn = t.call(fn, { primitive: true });
+				a(mfn(y), y, "#1");
+				a(mfn('foo'), y, "#2");
+				a(i, 1, "Called once");
+			},
+			"Many args": function (a) {
+				var i = 0, fn = function (x, y, z) { ++i; return x + y + z; }, mfn
+				  , y = { toString: function () { return 'foo' } };
+				mfn = t.call(fn, { primitive: true });
+				a(mfn(y, 'bar', 'zeta'), 'foobarzeta', "#1");
+				a(mfn('foo', 'bar', 'zeta'), 'foobarzeta', "#2");
+				a(i, 1, "Called once");
 			}
 		}
 	};
