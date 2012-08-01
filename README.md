@@ -618,7 +618,7 @@ If given object is not callable throw TypeError in other case return it.
 
 ### validValue(x)
 
-Throws error if given value is `null` or `undefined`, otherwise returns `true`.
+Throws error if given value is `null` or `undefined`, otherwise returns value.
 
 ### values(obj)
 
