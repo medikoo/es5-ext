@@ -568,10 +568,16 @@ Whether two values are equal, takes into account NaN and -0/+0 cases
 
 Whether object is callable
 
-### isCopy(obj1, obj2)
+### isCopy(x, y[, depth])
 
-Compares two objects.  
-Object is considered a copy when its own enumerable properties match own enumerable properties of other object
+Two values are considered a copy of same value when they meet following rules:
+
+1. Are of same type (`typeof` check)
+2. Have same string representation
+3. (Objects only) Own enumerable properties of first object match own
+enumerable properties of other object. Optionally depth can be provided at which relaxed comparision rules need to be applied. This allows deep comparision of different objects.
+
+Objects can contain self references, algorithm is aware of possible infinite loop traps and won't into them.
 
 ### isEmpty(obj)
 
