@@ -2,6 +2,11 @@
 
 module.exports = function (t, a) {
 	var x, y;
+
+	a(t(null, null), true, "null vs null");
+	a(t({}, null), false, "Object vs null");
+	a(t(undefined, null), false, "Undefined vs null");
+
 	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }), true, "Same");
 	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 4 }), false,
 		"Different property value");
