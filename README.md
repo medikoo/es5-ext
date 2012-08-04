@@ -413,11 +413,11 @@ Additionally we may provide descriptor which would be used for defining method o
 
 Collected cache can be cleared. To clear all collected data:
 
-	memoizedFn.clearAllCache();
+	memoizedFn.clearAll();
 
 or data for particall call:
 
-	memoizedFn.clearCache('foo', true);
+	memoizedFn.clear('foo', true);
 
 ### not()
 
