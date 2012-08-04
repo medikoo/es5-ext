@@ -169,11 +169,11 @@ module.exports = function (t, a) {
 				mfn = t.call(fn);
 				mfn(1, x, 3);
 				mfn(1, x, 4);
-				mfn.clearCache(1, x, 4);
+				mfn.clear(1, x, 4);
 				mfn(1, x, 3);
 				mfn(1, x, 3);
 				a(i, 1, "Pre clear");
-				mfn.clearCache(1, x, 3);
+				mfn.clear(1, x, 3);
 				mfn(1, x, 3);
 				a(i, 2, "After clear");
 
@@ -183,7 +183,7 @@ module.exports = function (t, a) {
 				mfn(1, x, 3);
 				mfn();
 				mfn();
-				mfn.clearCache();
+				mfn.clear();
 				mfn(1, x, 3);
 				a(i, 1, "Proper no arguments clear");
 			},
@@ -201,7 +201,7 @@ module.exports = function (t, a) {
 				fn(1, x, 3);
 				fn(1, x, 4);
 				a(i, 2, "Pre clear");
-				fn.clearAllCache();
+				fn.clearAll();
 				fn(1, x, 3);
 				fn(1, x, 4);
 				fn(1, x, 3);
@@ -268,7 +268,7 @@ module.exports = function (t, a) {
 				a(mfn(y, 'bar', 'zeta'), 'foobarzeta', "#1");
 				a(mfn('foo', 'bar', 'zeta'), 'foobarzeta', "#2");
 				a(i, 1, "Called once");
-				mfn.clearCache('foo', { toString: function () { return 'bar'; } },
+				mfn.clear('foo', { toString: function () { return 'bar'; } },
 					'zeta');
 				a(mfn(y, 'bar', 'zeta'), 'foobarzeta', "#3");
 				a(i, 2, "Called twice");
