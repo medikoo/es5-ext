@@ -549,6 +549,11 @@ Analogous to Array.prototype.some Returns true if any key-value pair satisfies t
 testing function.  
 Optionally _compareFn_ can be provided which assures that keys are tested in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
+### toPlainObject(x)
+
+Returns plain object build from x object and it's prototypes enumerable properties
+If x is not given, then empty object is returned.
+
 ### validCallable(x)
 
 If given object is not callable throw TypeError in other case return it.
