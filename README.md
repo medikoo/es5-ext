@@ -8,9 +8,11 @@ EcmaScript conventions in mind.
 Can be used in any environment that implements EcmaScript 5th edition.  
 Many extensions will also work with ECMAScript 3rd edition, if they're not let [es5-shim](https://github.com/kriskowal/es5-shim) be your aid.
 
-To use it with node.js:
+### NPM:
 
 	$ npm install es5-ext
+
+### Browser:
 
 For browser, you can create custom toolset with help of
 [modules-webmake](https://github.com/medikoo/modules-webmake)
@@ -20,23 +22,21 @@ For browser, you can create custom toolset with help of
 __es5-ext__ mostly offer methods (not functions) which can directly be
 assigned to native object's prototype:
 
-	Function.prototype.curry = require('es5-ext/lib/Function/prototype/curry');
+	Function.prototype.partial = require('es5-ext/lib/Function/prototype/partial');
 
 	Array.prototype.flatten = require('es5-ext/lib/Array/prototype/flatten');
 
 	String.prototype.startsWith = require('es5-ext/lib/String/prototype/starts-with');
 
-However, extending native prototypes is controversial and in general discouraged,
-most will agree that __it's ok only if we own the context__ (see
+If you decide not to extend native prototypes, which in many cases is good idea (see
 [extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
-for more views on that matter).  
-So when you don't want to extend native prototypes you can use methods as
+for more views on that matter), you can use methods as
 functions:
 
 	var util = {};
 	var call = Function.prototype.call;
 
-	util.curry = call.bind(require('es5-ext/lib/Function/prototype/curry'));
+	util.partial = call.bind(require('es5-ext/lib/Function/prototype/partial'));
 
 	util.flatten = call.bind(require('es5-ext/lib/Array/prototype/flatten'));
 
@@ -51,7 +51,7 @@ value that's neither _null_ nor _undefined_),
 * `Function.prototype` methods can be called on any callable objects (not
 necessarily functions)
 
-API doesn't provide any methods for `Object.prototype` as extending such in any case should be avoided. All `Object` utils are provided as fuctions and most of them expect first input argument to be a valid object (any value that's neither _null_ nor _undefined_).
+API doesn't provide any methods for `Object.prototype` (extending such in any case should be avoided). All `Object` utils are provided as fuctions and most of them expect first input argument to be a valid object (any value that's neither _null_ nor _undefined_).
 
 # API
 
