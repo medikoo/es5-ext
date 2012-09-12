@@ -585,6 +585,11 @@ Whether object is string
 
 ## String Prototype extensions
 
+### camelToHyphen()
+
+Convert camelCase string to hyphen separated, e.g. one-two-three -> oneTwoThree.
+Useful when converting names from js property convention into filename convention.
+
 ### caseInsensitiveCompare(str)
 
 Case insensitive compare
@@ -594,9 +599,10 @@ Case insensitive compare
 _In EcmaScript 6th Edition draft_  
 Whether string contains given string.
 
-### dashToCamelCase()
+### hyphenToCamel()
 
-Convert dash separated string to camelCase, e.g. one-two-three -> oneTwoThree
+Convert hyphen separated string to camelCase, e.g. one-two-three -> oneTwoThree.
+Useful when converting names from filename convention to js property name convention.
 
 ### endsWith(searchString[, endPosition])
 
