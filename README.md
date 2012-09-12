@@ -599,11 +599,6 @@ Case insensitive compare
 _In EcmaScript 6th Edition draft_  
 Whether string contains given string.
 
-### hyphenToCamel()
-
-Convert hyphen separated string to camelCase, e.g. one-two-three -> oneTwoThree.
-Useful when converting names from filename convention to js property name convention.
-
 ### endsWith(searchString[, endPosition])
 
 _In EcmaScript 6th Edition draft_  
@@ -620,6 +615,11 @@ Formats given template up to provided map, e.g.:
 }); // -> "Warsaw is a capital of Poland"
 ```
 Map may also provide not direct values but functions that resolve value, in that case optional _thisArg_ determines the context in which functions are called.
+
+### hyphenToCamel()
+
+Convert hyphen separated string to camelCase, e.g. one-two-three -> oneTwoThree.
+Useful when converting names from filename convention to js property name convention.
 
 ### indent(str[, count])
 
