@@ -68,14 +68,14 @@ Additionally under _keywords_, _future_ and _futureStrict_ properties we have li
 
 ## Array Constructor extensions
 
-### generate([length[, …fill]])
-
-Generate an array of pregiven _length_ built of repeated arguments.
-
 ### from(x)
 
 _In EcmaScript 6th Edition draft_  
 Convert array-like object to an Array
+
+### generate([length[, …fill]])
+
+Generate an array of pregiven _length_ built of repeated arguments.
 
 ### of([…items])
 
