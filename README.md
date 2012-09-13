@@ -249,12 +249,6 @@ Throws error
 
 Some of the functions were inspired by [Functional JavaScript](http://osteele.com/sources/javascript/functional/) project by Olivier Steele
 
-### context()
-
-Returns context in which function was called
-
-_context.call(x)  =def  x_
-
 ### i(x)
 
 Identity function. Returns first argument
