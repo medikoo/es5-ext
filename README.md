@@ -635,7 +635,7 @@ Pad string with _fill_.
 If _length_ si given than _fill_ is reapated _length_ times.
 If _length_ is negative then pad is applied from right.
 
-### repeat([n])
+### repeat(n)
 
 Repeat given string _n_ times
 
