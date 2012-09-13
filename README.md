@@ -249,12 +249,6 @@ Throws error
 
 Some of the functions were inspired by [Functional JavaScript](http://osteele.com/sources/javascript/functional/) project by Olivier Steele
 
-### arguments([…args])
-
-Returns arguments object
-
-_arguments.call(…args)  =def  …args_
-
 ### context()
 
 Returns context in which function was called
