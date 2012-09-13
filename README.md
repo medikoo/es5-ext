@@ -396,10 +396,6 @@ Pad given number with zeros. Returns string
 
 Remove all enumerable own properties of the object
 
-### clone(obj)
-
-Returns clone that shares all properties of the object and have same prototype as the object
-
 ### compact(obj)
 
 Returns copy of the object with all enumerable properties that have no falsy values
