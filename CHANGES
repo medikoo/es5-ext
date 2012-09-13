@@ -1,3 +1,40 @@
+v0.9.0  --  2012.09.13
+We're getting to real solid API
+
+Removed:
+* Function#memoize - it's grown up to be external package, to be soon published
+  as 'memoizee'
+* String.guid - it doesn't fit es5-ext (extensions) concept, will be provided as
+  external package
+# Function.arguments - obsolete
+# Function.context - obsolete
+# Function#flip - not readable when used, so it was never used
+# Object.clone - obsolete and confusing
+
+Added:
+* String#camelToHyphen - String format convertion
+
+Renamed:
+* String#dashToCamelCase -> String#hyphenToCamel
+
+Fixes:
+* Object.isObject - Quote names in literals that match reserved keywords
+  (older implementations crashed on that)
+* String#repeat - Do not accept negative values (coerce them to 1)
+
+Improvements:
+* Array#remove - Accepts many arguments, we can now remove many values at once
+* Object iterators (forEach, map, some) - Compare function invoked with scope
+  object bound to this
+* Function#curry - Algorithm cleanup
+* Object.isCopy - Support for all types, not just plain objects
+* Object.isPlainObject - Support for cross-frame objects
+* Do not memoize any of the functions, it shouldn't be decided internally
+* Remove Object.freeze calls in reserved, it's not up to convention
+* Improved documentation
+* Better linting (hard-core approach using both JSLint mod and JSHint)
+* Optional arguments are now documented in funtions signature
+
 v0.8.2  --  2012.06.22
 Fix errors in Array's intersection and exclusion methods, related to improper
 usage of contains method
