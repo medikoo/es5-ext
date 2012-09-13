@@ -317,13 +317,6 @@ If _n_ is not provided then it defaults to context function length
 
 _f.curry(4)(arg1, arg2)(arg3)(arg4)  =def  f(arg1, args2, arg3, arg4)_
 
-### flip()
-
-Returns a function that swaps its first two arguments before passing them to
-the underlying function.
-
-_f.flip()(a, b, c)  =def  f(b, a, c)_
-
 ### lock([…args])
 
 Returns a function that applies the underlying function to _args_, and ignores its own arguments.
