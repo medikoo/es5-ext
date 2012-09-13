@@ -545,11 +545,6 @@ Whether object is regular expression
 
 ## String Constructor extensions
 
-### guid()
-
-Returns globally unique string identifier, it starts with a digit and is followed by any characters from _0-9_ and _a-z_ range. Length of string is 9 characters but may increase in future.  
-Simple and friendly implementation for common web application purpose (it's format is different from [official GUID format](http://en.wikipedia.org/wiki/Globally_unique_identifier))
-
 ### isString(x)
 
 Whether object is string
