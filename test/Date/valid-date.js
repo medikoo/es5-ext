@@ -7,6 +7,6 @@ module.exports = function (t, a) {
 		t({});
 	}, "Object");
 	a.throws(function () {
-		t(new Number(20));
+		t({ valueOf: function () { return 20; } });
 	}, "Number object");
 };

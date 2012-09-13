@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var x = {}, y = {}, z = {}, r;
+	var x = {}, y = {}, r;
 
 	r = t({ foo: 'bar', x: x, raz: 'dwa', y: y  },
 		{ foo: 'bar', x: y, raz: 'trzy', z: x });

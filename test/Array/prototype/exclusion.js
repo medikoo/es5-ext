@@ -6,7 +6,7 @@ module.exports = {
 		a.deep(t.call(this, this, [this[0], this[2], x]), [x]);
 	},
 	"": function (t, a) {
-		var x = {}, y = {}, z = {};
+		var x = {}, y = {};
 
 		a.deep(t.call([x, y]), [x, y], "No arguments");
 		a.deep(t.call([x, 1], [], []), [x, 1], "Empty arguments");

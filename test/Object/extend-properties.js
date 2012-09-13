@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var o, o1, o2, o3, x, y = {}, z = {};
+	var o, o1, o2, x, y = {}, z = {};
 	o = { inherited: true };
 	o1 = Object.create(o);
 	o1.visible = z;
 	o1.nonremovable = 'raz';
 	Object.defineProperty(o1, 'hidden', { value: 'hidden' });
 
-	o2 = Object.defineProperties({}, { nonremovable: { value: y }});
+	o2 = Object.defineProperties({}, { nonremovable: { value: y } });
 	o2.other = 'other';
 
 	o2 = t(o2, o1);
@@ -37,7 +37,7 @@ module.exports = function (t, a) {
 	a(x.hasOwnProperty('inherited'), false, "Extend only own");
 	a(x.inherited, undefined, "Extend ony own: value");
 
-	a(x.nonremovable,'raz', "Ignored non configurable");
+	a(x.nonremovable, 'raz', "Ignored non configurable");
 	a(x.other, 'other', "Other");
 
 	x.visible = 3;

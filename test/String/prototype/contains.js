@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var o, x = {}, y = {};
-
 	a(t.call('raz', ''), true, "Empty");
 	a(t.call('', ''), true, "Both Empty");
 	a(t.call('raz', 'raz'), true, "Same");

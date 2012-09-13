@@ -7,4 +7,4 @@ module.exports = function (t, a) {
 	a.deep(t(3), [3], "One numeric argument");
 	a.deep(t(3, 'raz', null, x, undefined), [3, 'raz', null, x, undefined],
 		"Many arguments");
-}
+};

@@ -15,9 +15,9 @@ module.exports = function (t, a) {
 	x = create(x);
 	x.dwa = 'two!';
 	x.trzy = 'three!';
-	x.pięć = 'five';
-	x.sześć = 'six';
+	x.piec = 'five';
+	x.szesc = 'six';
 
 	a.deep(t(x), { raz: 'one', dwa: 'two!', trzy: 'three!', cztery: 'four',
-		pięć: 'five', sześć: 'six' }, "Deep object");
+		piec: 'five', szesc: 'six' }, "Deep object");
 };

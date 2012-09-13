@@ -9,7 +9,7 @@ module.exports = function (t, a) {
 	}, o1);
 	a.deep(o2, [2, 4, 6]);
 
-	t(o).sort().forEach(function (item, index) {
+	t(o).sort().forEach(function (item) {
 		a.deep(item, [item[0], o[item[0]]], "Default");
 	});
 };

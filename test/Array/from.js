@@ -1,12 +1,12 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var o = [1, 2, 3], r;
+	var o = [1, 2, 3];
 	a(t(o), o, "Array");
 	a.deep(t('12r3v'), ['1', '2', 'r', '3', 'v'], "String");
-	a.deep(t((function (x) { return arguments; }(3, o, 'raz'))),
+	a.deep(t((function () { return arguments; }(3, o, 'raz'))),
 		[3, o, 'raz'], "Arguments");
-	a.deep(t((function (x) { return arguments; }(3))), [3],
+	a.deep(t((function () { return arguments; }(3))), [3],
 		"Arguments with one numeric value");
 	a(t("12345", 2, 3).length, 5, "Extra arguments does not affect result");
 

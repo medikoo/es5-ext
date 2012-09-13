@@ -15,7 +15,7 @@ module.exports = {
 	"": function (t, a) {
 		var r;
 		r = t.call([2, 3, 3, 4, 5, 6, 7, 7, 23, 45, 34, 56],
-			function (v, i, scope) {
+			function (v) {
 				return v % 2 ? 'odd' : 'even';
 			});
 		a.deep(r.odd, [3, 3, 5, 7, 7, 23, 45]);

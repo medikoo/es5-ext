@@ -4,7 +4,7 @@ var toArray = require('../../../lib/Array/from')
 
   , f;
 
-f = function (a, b, c) {
+f = function () {
 	return toArray(arguments);
 };
 

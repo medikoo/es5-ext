@@ -5,7 +5,7 @@ var compare  = function (value) {
 };
 
 module.exports = function (t, a) {
-	var arr, fn, search;
+	var arr;
 	arr = [2, 5, 5, 8, 34, 67, 98, 345, 678];
 
 	// highest, equal match

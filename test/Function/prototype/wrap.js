@@ -1,8 +1,5 @@
 'use strict';
 
-var noop    = require('../../../lib/Function/noop')
-  , toArray = require('../../../lib/Array/from');
-
 module.exports = function (t, a) {
 	var called = false, original, x = {}, y = {}, z = {}, w = {}, wrap;
 

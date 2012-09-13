@@ -7,7 +7,7 @@ module.exports = function (t, a) {
 		"{} with any property keys is plain object");
 	a(t(null), false, "Null is not plain object");
 	a(t('string'), false, "Primitive is not plain object");
-	a(t(function (t, a) {}), false, "Function is not plain object");
+	a(t(function () {}), false, "Function is not plain object");
 	a(t(Object.create({})), false,
 		"Object whose prototype is not Object.prototype is not plain object");
 };
