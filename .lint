@@ -28,6 +28,7 @@ jshint.globalstrict
 jshint.global module, require, exports
 jshint.smarttabs
 jshint.eqnull
+jshint.expr
 
 ./lib/global.js
 jshint.evil
