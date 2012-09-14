@@ -514,6 +514,12 @@ Create new object with same values, but remapped keys
 Creates an array of results of calling a provided function on every key-value pair in this object.  
 Optionally _compareFn_ can be provided which assures that results are added in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
 
+### reduce(obj, cb[, initial[, compareFn]])
+
+Analogous to Array.prototype.reduce. Apply a function against an accumulator and each value of the object.
+Optionally _compareFn_ can be provided which assures that object keys are iterated in given order. If _compareFn_ is equal to `true`, then order is alphabetical (by key).
+If we need to provide _compareFn_ but don't want to provide _initial_ value, then we have to pass reduce.NO_INITIAL as initial argument.
+
 ### some(obj, cb[, thisArg[, compareFn]])
 
 Analogous to Array.prototype.some Returns true if any key-value pair satisfies the provided
