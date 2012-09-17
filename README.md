@@ -518,7 +518,7 @@ Optionally _compareFn_ can be provided which assures that results are added in g
 
 Analogous to Array.prototype.reduce. Apply a function against an accumulator and each value of the object.
 Optionally _compareFn_ can be provided which assures that object keys are iterated in given order. If _compareFn_ is equal to `true`, then order is alphabetical (by key).
-If we need to provide _compareFn_ but don't want to provide _initial_ value, then we have to pass reduce.NO_INITIAL as initial argument.
+If we need to provide _compareFn_ but don't want to provide _initial_ value, then we have to pass `reduce.NO_INITIAL` as initial argument.
 
 ### some(obj, cb[, thisArg[, compareFn]])
 
