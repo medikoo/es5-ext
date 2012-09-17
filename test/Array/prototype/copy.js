@@ -1,7 +1,8 @@
 'use strict';
 
-var map     = Array.prototype.map
-  , i       = require('../../../lib/Function/i');
+var i = require('../../../lib/Function/i')
+
+  , map = Array.prototype.map;
 
 module.exports = {
 	__generic: function (t, a) {

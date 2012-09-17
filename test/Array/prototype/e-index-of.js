@@ -7,5 +7,4 @@ module.exports = function (t, a) {
 	a(t.call([3, 'raz', 0, {}, -0], -0), 4, "-0");
 	a(t.call([3, 'raz', -0, {}, 0], +0), 4, "+0");
 	a(t.call([3, 'raz', NaN, {}, NaN], NaN, 3), 4, "fromIndex");
-
 };
