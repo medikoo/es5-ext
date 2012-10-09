@@ -437,6 +437,10 @@ Optionally _compareFn_ can be provided which assures that keys are tested in giv
 
 Extend _dest_ by enumerable own properties of other objects. Properties found in both objects will be overwritten.
 
+### extendDeep(dest[, …src])
+
+Extend _dest_ by enumerable own properties of other objects. Properties found in both objects will be overwritten with exception of plain objects which again reiterated so only matching properties from other nested plain objects are affected
+
 ### extendProperties(dest[, …src])
 
 Extend _dest_ by all own properties of other objects. Properties found in both objects will be overwritten (unless they're not configrable and cannot be overwritten).
