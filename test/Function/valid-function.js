@@ -3,7 +3,7 @@
 module.exports = function (t, a) {
 	var f = function () {};
 	a(t(f), f, "Function");
-	f = new Function ();
+	f = new Function();
 	a(t(f), f, "Function");
 	a.throws(function () {
 		t({});
