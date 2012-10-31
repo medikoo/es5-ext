@@ -10,7 +10,6 @@ jslint_medikoo.plusplus
 
 jshint.laxcomma
 jshint.camelcase
-jshint.curly
 jshint.eqeqeq
 jshint.forin
 jshint.immed
