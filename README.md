@@ -300,6 +300,10 @@ Returns a function that takes an object, and deletes object's _name_ property
 
 _remove(name)(obj)  =def  delete obj[name]_
 
+### validFunction(arg)
+
+If given object is not function throw TypeError in other case return it.
+
 ## Function Prototype extensions
 
 Some of the methods were inspired by [Functional JavaScript](http://osteele.com/sources/javascript/functional/) project by Olivier Steele
