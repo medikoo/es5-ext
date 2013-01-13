@@ -619,6 +619,10 @@ If _length_ is negative then pad is applied from right.
 
 Repeat given string _n_ times
 
+### simpleReplace(search, replace)
+
+Simple `replace` version. Doesn't support regular expressions. Replaces just first occurence of search string. Doesn't support insert patterns, therefore it is safe to replace text with text obtained programmatically (there's no need for additional _$_ characters escape in such case).
+
 ### startsWith(searchString[, position])
 
 _In EcmaScript 6th Edition draft_  
