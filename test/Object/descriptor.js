@@ -1,6 +1,8 @@
 'use strict';
 
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var defineProperty = Object.defineProperty
+  , defineProperties = Object.defineProperties
+  , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 module.exports = function (t, a) {
 	var o, c, cg, cs, ce, ceg, ces, cew, cw, e, eg, es, ew, v, vg, vs, w, df, dfg
@@ -152,6 +154,19 @@ module.exports = function (t, a) {
 			a(d.configurable, true, "GS Configurable");
 			a(d.enumerable, false, "GS Enumerable");
 			a(d.writable, undefined, "GS Writable");
+		},
+		binder: function (a) {
+			var o = {};
+			defineProperty(o, 'foo', t.binder('foo',
+				t(function () { return this; })));
+			a((o.foo)(), o, "Single");
+
+			defineProperties(o, t.binder({
+				bar: t(function () { return this === o; }),
+				bar2: t(function () { return this; })
+			}));
+
+			a.deep([(o.bar)(), (o.bar2)()], [true, o], "Multiple");
 		}
 	};
 };
