@@ -136,7 +136,6 @@ module.exports = function (t, a) {
 			a(d.enumerable, false, "Enumerable");
 			a(d.writable, true, "Writable");
 		},
-
 		d: function (a) {
 			var d = getOwnPropertyDescriptor(o, 'df');
 			a(d.value, df, "Value");
