@@ -157,6 +157,10 @@ Returns array of all indexes of given value
 
 Computes the array of values that are the intersection of all lists (context list and lists given in arguments)
 
+### isCopy(other)
+
+Returns true if both context and _other_ lists have same content
+
 ### last()
 
 Returns value for last declared index

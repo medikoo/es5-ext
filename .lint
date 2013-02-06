@@ -59,6 +59,9 @@ jslint_medikoo.bitwise
 ./lib/Array/prototype/for-each-right.js
 jslint_medikoo.bitwise
 
+./lib/Array/prototype/is-copy.js
+jslint_medikoo.bitwise
+
 ./lib/Array/prototype/last-index.js
 jslint_medikoo.bitwise
 
