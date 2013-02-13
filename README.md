@@ -161,6 +161,10 @@ Computes the array of values that are the intersection of all lists (context lis
 
 Returns true if both context and _other_ lists have same content
 
+### isUniq()
+
+Returns true if all values in array are unique
+
 ### last()
 
 Returns value for last declared index
