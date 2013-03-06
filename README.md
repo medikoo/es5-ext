@@ -578,6 +578,10 @@ Whether object is string
 Convert camelCase string to hyphen separated, e.g. one-two-three -> oneTwoThree.
 Useful when converting names from js property convention into filename convention.
 
+### capitalize()
+
+Capitalize first character of a string
+
 ### caseInsensitiveCompare(str)
 
 Case insensitive compare
