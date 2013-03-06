@@ -536,6 +536,10 @@ Analogous to Array.prototype.reduce. Apply a function against an accumulator and
 Optionally _compareFn_ can be provided which assures that object keys are iterated in given order. If _compareFn_ is equal to `true`, then order is alphabetical (by key).
 If we need to provide _compareFn_ but don't want to provide _initial_ value, then we have to pass `reduce.NO_INITIAL` as initial argument.
 
+### safeTraverse(obj[, …names])
+
+Save navigation of object properties. See http://wiki.ecmascript.org/doku.php?id=strawman:existential_operator
+
 ### some(obj, cb[, thisArg[, compareFn]])
 
 Analogous to Array.prototype.some Returns true if any key-value pair satisfies the provided
