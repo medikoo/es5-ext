@@ -1,3 +1,25 @@
+v0.9.2  --  2013.03.11
+Added:
+* Array.prototype.isCopy
+* Array.prototype.isUniq
+* Error.CustomError
+* Function.validFunction
+* Object.extendDeep
+* Object.descriptor.binder
+* Object.safeTraverse
+* RegExp.validRegExp
+* String.prototype.capitalize
+* String.prototype.simpleReplace
+
+Fixed:
+* Fix Array.prototype.diff for sparse arrays
+* Accept primitive objects as input values in Object iteration methods and
+  Object.clear, Object.count, Object.diff, Object.extend,
+  Object.getPropertyNames, Object.values
+* Pass expected arguments to callbacks of Object.filter, Object.mapKeys,
+  Object.mapToArray, Object.map
+* Improve callable callback support in Object.mapToArray
+
 v0.9.1  --  2012.09.17
 * Object.reduce - reduce for hash-like collections
 * Accapt any callable object as callback in Object.filter, mapKeys and map
