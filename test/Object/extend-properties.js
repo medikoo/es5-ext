@@ -59,4 +59,10 @@ module.exports = function (t, a) {
 	a.throws(function () {
 		delete x.hidden;
 	}, "Not configurable is not configurable");
+
+	x = Object.defineProperty({}, 'foo',
+		{ configurable: false, writable: true, enumerable: false, value: 'bar' });
+
+	t(x, { foo: 'lorem' });
+	a(x.foo, 'lorem', "Writable, not enumerable");
 };
