@@ -185,6 +185,14 @@ Returns array of which items are separeted with provided separator
 
 `some` starting from last element
 
+### toObject([cb|values[, thisArg])
+
+Converts array to object.  
+When called without arguments, context array is taken as list of [key, value] pairs.
+When called with an additional list, context array is taken as array of keys and other list as array of values.
+Third option is to pass custom callback that will map array values to object on its own rules.
+Arguments passed to callback are: `resultObj, arrayItem, arrayIndex, array`.
+
 ### uniq()
 
 Returns duplicate-free version of the array
