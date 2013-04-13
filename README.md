@@ -177,6 +177,10 @@ Returns last declared index of the array
 
 Remove value from the array
 
+### sepItems(sep)
+
+Returns array of which items are separeted with provided separator
+
 ### someRight(cb[, thisArg])
 
 `some` starting from last element
