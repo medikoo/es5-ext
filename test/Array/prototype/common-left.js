@@ -6,6 +6,7 @@ exports.__generic = function (t, a) {
 
 exports[''] = function (t, a) {
 	a(t.call('abc', ''), 0, "Empty");
+	a(t.call('abc', 'abc'), 3, "Same");
 	a(t.call(['a', 2, 'c'], ['a', 2, 'c'], ['a', 2, 'c', 'c', 'd']), 3,
 		"Whole same");
 	a(t.call('abcd', 'abc', 'ab'), 2, "Same start");
