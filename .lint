@@ -1,82 +1,57 @@
 @root
 
-jslint_medikoo.indent 2
-jslint_medikoo.maxlen 80
+module
 es5
 
-jslint_medikoo.tabs
-jslint_medikoo.module
-jslint_medikoo.plusplus
+indent 2
+maxlen 80
+tabs
 
-jshint.laxcomma
-jshint.camelcase
-jshint.eqeqeq
-jshint.forin
-jshint.immed
-jshint.latedef
-jshint.newcap
-jshint.noarg
-jshint.noempty
-jshint.nonew
-jshint.regexp
-jshint.undef
-jshint.unused
-jshint.strict
-jshint.trailing
-jshint.globalstrict
-jshint.global module, require, exports
-jshint.smarttabs
-jshint.eqnull
-jshint.expr
+ass
+nomen
+plusplus
 
 ./lib/global.js
-jshint.evil
+evil
 
 ./lib/Array/generate.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/_compare-by-length.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/binary-search.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/common-left.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/diff.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/e-index-of.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/e-last-index-of.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/first-index.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/for-each-right.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/is-copy.js
-jslint_medikoo.bitwise
+bitwise
 
 ./lib/Array/prototype/last-index.js
-jslint_medikoo.bitwise
+bitwise
 
 ./test/Function/valid-function.js
-jshint.evil
+evil
 
 ./lib/Number/to-uint32.js
-jslint_medikoo.bitwise
+bitwise
 
 ./test/Number/index.js
-jslint_medikoo.predef+ __dirname
-jshint.global+ __dirname
-
-./lib/Object/compare.js
-!jshint.eqeqeq
-
-./test
-jslint_medikoo.nomen
+predef+ __dirname
