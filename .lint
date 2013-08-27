@@ -11,47 +11,47 @@ ass
 nomen
 plusplus
 
-./lib/global.js
+./global.js
 evil
 
-./lib/Array/generate.js
+./array/generate.js
 bitwise
 
-./lib/Array/prototype/_compare-by-length.js
+./array/#/_compare-by-length.js
 bitwise
 
-./lib/Array/prototype/binary-search.js
+./array/#/binary-search.js
 bitwise
 
-./lib/Array/prototype/common-left.js
+./array/#/common-left.js
 bitwise
 
-./lib/Array/prototype/diff.js
+./array/#/diff.js
 bitwise
 
-./lib/Array/prototype/e-index-of.js
+./array/#/e-index-of.js
 bitwise
 
-./lib/Array/prototype/e-last-index-of.js
+./array/#/e-last-index-of.js
 bitwise
 
-./lib/Array/prototype/first-index.js
+./array/#/first-index.js
 bitwise
 
-./lib/Array/prototype/for-each-right.js
+./array/#/for-each-right.js
 bitwise
 
-./lib/Array/prototype/is-copy.js
+./array/#/is-copy.js
 bitwise
 
-./lib/Array/prototype/last-index.js
+./array/#/last-index.js
 bitwise
 
-./test/Function/valid-function.js
+./test/function/valid-function.js
 evil
 
-./lib/Number/to-uint32.js
+./number/to-uint32.js
 bitwise
 
-./test/Number/index.js
+./test/number/index.js
 predef+ __dirname

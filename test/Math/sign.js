@@ -1,6 +1,6 @@
 'use strict';
 
-var is = require('../../lib/Object/is');
+var is = require('../../object/is');
 
 module.exports = function (t, a) {
 	a(is(t(0), +0), true, "+0");

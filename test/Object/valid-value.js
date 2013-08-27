@@ -1,6 +1,6 @@
 'use strict';
 
-var numIsNaN = require('../../lib/Number/is-nan');
+var numIsNaN = require('../../number/is-nan');
 
 module.exports = function (t, a) {
 	var x;

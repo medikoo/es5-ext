@@ -1,9 +1,9 @@
 'use strict';
 
-var forEach   = require('../../lib/Object/for-each')
+var forEach   = require('../../object/for-each')
   , indexTest = require('tad/lib/utils/index-test')
 
-  , path = require('path').resolve(__dirname, '../../lib/Number');
+  , path = require('path').resolve(__dirname, '../../number');
 
 module.exports = function (t, a, d) {
 	indexTest.readDir(path)(function (data) {

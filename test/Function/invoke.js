@@ -1,6 +1,6 @@
 'use strict';
 
-var k  = require('../../lib/Function/k')
+var k  = require('../../function/k')
 
   , o = { b: k('c') };
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var contains = require('../lib/Array/prototype/contains');
+var contains = require('../array/#/contains');
 
 module.exports = function (t, a) {
 	a(contains.call(t.keywords, 'break'), true,

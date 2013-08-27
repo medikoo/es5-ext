@@ -1,6 +1,6 @@
 'use strict';
 
-var isEmpty = require('../../lib/Object/is-empty');
+var isEmpty = require('../../object/is-empty');
 
 module.exports = function (t, a) {
 	var x = {};
