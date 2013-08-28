@@ -22,11 +22,11 @@ For browser, you can create custom toolset with help of
 __es5-ext__ mostly offer methods (not functions) which can directly be
 assigned to native object's prototype:
 
-	Function.prototype.partial = require('es5-ext/lib/Function/prototype/partial');
+	Function.prototype.partial = require('es5-ext/function/#/partial');
 
-	Array.prototype.flatten = require('es5-ext/lib/Array/prototype/flatten');
+	Array.prototype.flatten = require('es5-ext/array/#/flatten');
 
-	String.prototype.startsWith = require('es5-ext/lib/String/prototype/starts-with');
+	String.prototype.startsWith = require('es5-ext/string/#/starts-with');
 
 If you decide not to extend native prototypes, which in many cases is good idea (see
 [extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
@@ -36,11 +36,11 @@ functions:
 	var util = {};
 	var call = Function.prototype.call;
 
-	util.partial = call.bind(require('es5-ext/lib/Function/prototype/partial'));
+	util.partial = call.bind(require('es5-ext/function/#/partial'));
 
-	util.flatten = call.bind(require('es5-ext/lib/Array/prototype/flatten'));
+	util.flatten = call.bind(require('es5-ext/array/#/flatten'));
 
-	util.startsWith = call.bind(require('es5-ext/lib/String/prototype/starts-with'));
+	util.startsWith = call.bind(require('es5-ext/string/#/starts-with'));
 
 As with native ones most methods are generic and can be run on any object.
 In more detail:
