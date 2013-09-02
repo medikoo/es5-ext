@@ -10,4 +10,8 @@ module.exports = function (t, a) {
 	a(t(function () {}), false, "Function is not plain object");
 	a(t(Object.create({})), false,
 		"Object whose prototype is not Object.prototype is not plain object");
+	a(t(Object.create(Object.prototype)), true,
+		"Object whose prototype is Object.prototype is plain object");
+	a(t(Object.create(null)), true,
+		"Object whose prototype is null is plain object");
 };

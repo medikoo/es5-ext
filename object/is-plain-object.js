@@ -11,5 +11,6 @@ module.exports = function (value) {
 		return false;
 	}
 	proto = getPrototypeOf(value);
+	if (proto === null) return true;
 	return (proto === prototype) || (getPrototypeOf(proto) === null);
 };
