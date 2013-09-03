@@ -1,6 +1,7 @@
 'use strict';
 
-var isCallable = require('./is-callable')
+var noop       = require('../function/noop')
+  , isCallable = require('./is-callable')
   , callable   = require('./valid-callable')
   , validValue = require('./valid-value')
   , copy       = require('./copy')
@@ -86,6 +87,24 @@ d.lazy = function self(name, dv) {
 		dv.value = value.call(this);
 		defineProperty(this, name, dv);
 		return this[name];
+	};
+	return dgs;
+};
+
+d.once = function self(name, dv) {
+	var value, dgs;
+	if (!isString(name)) {
+		return map(name, function (dv, name) { return self(name, dv); });
+	}
+	value = validValue(dv) && callable(dv.value);
+	dgs = copy(dv);
+	delete dgs.writable;
+	delete dgs.value;
+	dgs.get = function () {
+		if (hasOwnProperty.call(this, name)) return value;
+		dv.value = noop;
+		defineProperty(this, name, dv);
+		return value;
 	};
 	return dgs;
 };
