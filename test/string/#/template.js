@@ -13,4 +13,8 @@ module.exports = function (t, a) {
 	a(compiled({ raz: 'raz1', prik2: 23, foo: 'morda', moled: 'eho',
 		su: 'vivi' }), 'raz1 %% f23oo morek\n%mis\\1k\\2omordaehoechelooviv' +
 		'ielo%marko');
+
+	a.deep(t.compile('ula%melo%far%ulo%'), ['ula', 'melo', 'far', 'ulo'],
+		"Compile");
+
 };

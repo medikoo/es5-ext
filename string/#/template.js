@@ -41,7 +41,7 @@ compile = function (str, fmap) {
 	for (i = 0; i < length; ++i) state = state(str[i]);
 	if (state === sEscape) result.push(current + '\\');
 	else if (state === sIn) result.push(current + '%' + name);
-	else result.push(current);
+	else if (current) result.push(current);
 	return result;
 };
 
