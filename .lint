@@ -50,6 +50,9 @@ bitwise
 ./number/to-uint32.js
 bitwise
 
+./object/first-key.js
+forin
+
 ./test/function/valid-function.js
 evil
 

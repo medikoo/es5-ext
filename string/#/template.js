@@ -1,6 +1,7 @@
 'use strict';
 
-var isCallable = require('../../object/is-callable')
+var d          = require('../../object/descriptor')
+  , isCallable = require('../../object/is-callable')
   , value      = require('../../object/valid-value')
 
   , compile;
@@ -44,7 +45,7 @@ compile = function (str, fmap) {
 	return result;
 };
 
-module.exports = function (/* conf */) {
+module.exports = exports = function (/* conf */) {
 	var conf = arguments[0], map = compile(String(value(this)), conf);
 	return function (context) {
 		value(context);
@@ -58,3 +59,5 @@ module.exports = function (/* conf */) {
 		return result.join('');
 	};
 };
+
+Object.defineProperty(exports, 'compile', d(compile));

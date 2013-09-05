@@ -13,6 +13,7 @@ module.exports = {
 	extendDeep:       require('./extend-deep'),
 	extendProperties: require('./extend-properties'),
 	filter:           require('./filter'),
+	firstKey:         require('./first-key'),
 	flatten:          require('./flatten'),
 	forEach:          require('./for-each'),
 	getPropertyNames: require('./get-property-names'),
