@@ -47,11 +47,11 @@ bitwise
 ./array/#/last-index.js
 bitwise
 
-./test/function/valid-function.js
-evil
-
 ./number/to-uint32.js
 bitwise
+
+./test/function/valid-function.js
+evil
 
 ./test/number/index.js
 predef+ __dirname
