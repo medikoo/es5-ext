@@ -17,4 +17,7 @@ module.exports = function (t, a) {
 	a.deep(t.compile('ula%melo%far%ulo%'), ['ula', 'melo', 'far', 'ulo'],
 		"Compile");
 
+	a.deep(t.compile('%melo%far%ulo%ula'), ['', 'melo', 'far', 'ulo', 'ula'],
+		"Compile #2");
+
 };
