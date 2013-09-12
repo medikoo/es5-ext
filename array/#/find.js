@@ -16,5 +16,5 @@ module.exports = function (query/*, thisArg*/) {
 			return true;
 		}
 		return false;
-	}, arguments[1]) ? r : null;
+	}, arguments[1]) ? r : undefined;
 };

@@ -6,7 +6,7 @@ exports.__generic = function (t, a) {
 		a(value, this[i], "Value");
 		a(i, count++, "Index");
 		a(scope, this, "Scope");
-	}, self), null, "Falsy result");
+	}, self), undefined, "Falsy result");
 	a(count, 3);
 
 	count = -1;
