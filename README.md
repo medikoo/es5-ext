@@ -1,11 +1,12 @@
-# es5-ext - ECMAScript5 extensions
+# es5-ext
+## ECMAScript5 extensions
 
 Methods, functions and objects that are not part of the standard, written with
-EcmaScript conventions in mind.
+ECMAScript conventions in mind.
 
 ## Installation
 
-Can be used in any environment that implements EcmaScript 5th edition.  
+Can be used in any environment that implements ECMAScript 5th edition.  
 Many extensions will also work with ECMAScript 3rd edition, if they're not let [es5-shim](https://github.com/kriskowal/es5-shim) be your aid.
 
 ### NPM:
@@ -63,14 +64,14 @@ Object that represents global scope
 
 ### reserved
 
-List of EcmaScript 5th edition reserved keywords.  
+List of ECMAScript 5th edition reserved keywords.  
 Additionally under _keywords_, _future_ and _futureStrict_ properties we have lists grouped thematically.
 
 ## Array Constructor extensions
 
 ### from(x)
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Convert array-like object to an Array
 
 ### generate([length[, …fill]])
@@ -79,7 +80,7 @@ Generate an array of pregiven _length_ built of repeated arguments.
 
 ### of([…items])
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Create an array from given arguments.
 
 ## Array Prototype extensions
@@ -384,7 +385,7 @@ Inspired by [Prototype's wrap](http://api.prototypejs.org/language/Function/prot
 
 ### isNaN(x)
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 
 Whether value is NaN. Differs from global isNaN that it doesn't do type coercion.
 See http://wiki.ecmascript.org/doku.php?id=harmony:number.isnan
@@ -395,7 +396,7 @@ Whether given value is number
 
 ### toInt(x)
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 
 Converts value to integer
 
@@ -490,7 +491,7 @@ Get all (not just own) property names of the object
 
 ### is(x, y)
 
-_In EcmaScript 6th Edition draft as `is` operator_  
+_In ECMAScript 6th Edition draft as `is` operator_  
 
 Whether two values are equal, takes into account NaN and -0/+0 cases
 
@@ -604,12 +605,12 @@ Case insensitive compare
 
 ### contains(searchString[, position])
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Whether string contains given string.
 
 ### endsWith(searchString[, endPosition])
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Whether strings ends with given string
 
 ### format(fmap[, thisArg])
@@ -653,7 +654,7 @@ Simple `replace` version. Doesn't support regular expressions. Replaces just fir
 
 ### startsWith(searchString[, position])
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Whether strings starts with given string
 
 ### trimCommonLeft([…strings])
@@ -664,7 +665,7 @@ Returns string left trimmed by characters same for all strings
 
 ### sign(n)
 
-_In EcmaScript 6th Edition draft_  
+_In ECMAScript 6th Edition draft_  
 Returns sign of a number value
 
 ## Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
