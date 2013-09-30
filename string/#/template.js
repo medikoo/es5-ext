@@ -1,7 +1,6 @@
 'use strict';
 
-var d          = require('../../object/descriptor')
-  , isCallable = require('../../object/is-callable')
+var isCallable = require('../../object/is-callable')
   , value      = require('../../object/valid-value')
 
   , compile;
@@ -60,4 +59,5 @@ module.exports = exports = function (/* conf */) {
 	};
 };
 
-Object.defineProperty(exports, 'compile', d(compile));
+Object.defineProperty(exports, 'compile', { configurable: true,
+	enumerable: false, value: compile, writable: true });

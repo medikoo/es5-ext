@@ -1,7 +1,6 @@
 'use strict';
 
-var d      = require('../object/descriptor')
-  , extend = require('../object/extend')
+var extend = require('../object/extend')
 
   , captureStackTrace = Error.captureStackTrace
   , CustomError;
@@ -15,6 +14,8 @@ CustomError = module.exports = function CustomError(message, code/*, ext*/) {
 };
 
 CustomError.prototype = Object.create(Error.prototype, {
-	constructor: d(CustomError),
-	name: d('CustomError')
+	constructor: { configurable: true, enumerable: false, value: CustomError,
+		writable: true },
+	name: { configurable: true, enumerable: false, value: 'CustomError',
+		writable: true }
 });

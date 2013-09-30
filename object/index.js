@@ -6,7 +6,6 @@ module.exports = {
 	compare:          require('./compare'),
 	copy:             require('./copy'),
 	count:            require('./count'),
-	descriptor:       require('./descriptor'),
 	diff:             require('./diff'),
 	every:            require('./every'),
 	extend:           require('./extend'),
