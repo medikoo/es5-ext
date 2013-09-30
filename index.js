@@ -2,7 +2,6 @@
 
 module.exports = {
 	global:   require('./global'),
-	reserved: require('./reserved'),
 
 	array:    require('./array'),
 	boolean:  require('./boolean'),
