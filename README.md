@@ -62,11 +62,6 @@ API doesn't provide any methods for `Object.prototype` (extending such in any ca
 
 Object that represents global scope
 
-#### reserved
-
-List of ECMAScript 5th edition reserved keywords.  
-Additionally under _keywords_, _future_ and _futureStrict_ properties we have lists grouped thematically.
-
 ### Array Constructor extensions
 
 #### from(x)
