@@ -15,9 +15,12 @@ typeMap = {
 
 resolve = function (a) {
 	if (isObject(a)) {
+		if (typeof a.valueOf !== 'function') return NaN;
 		a = a.valueOf();
 		if (isObject(a)) {
+			if (typeof a.toString !== 'function') return NaN;
 			a = a.toString();
+			if (typeof a !== 'string') return NaN;
 		}
 	}
 	return a;
