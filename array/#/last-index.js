@@ -1,6 +1,8 @@
 'use strict';
 
-var value = require('../../object/valid-value');
+var value = require('../../object/valid-value')
+
+  , hasOwnProperty = Object.prototype.hasOwnProperty;
 
 module.exports = function () {
 	var i, l;
@@ -8,7 +10,7 @@ module.exports = function () {
 		return null;
 	}
 	i = l - 1;
-	while (!this.hasOwnProperty(i)) {
+	while (!hasOwnProperty.call(this, i)) {
 		if (--i === -1) {
 			return null;
 		}
