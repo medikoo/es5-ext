@@ -126,6 +126,10 @@ Returns the array of elements that are found only in context list or lists given
 
 Return first element for which given function returns true
 
+#### findIndex(predicate[, thisArg])
+
+Return first index for which given function returns true
+
 #### first()
 
 Returns value for first declared index
