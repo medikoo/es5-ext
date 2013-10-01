@@ -17,11 +17,8 @@ module.exports = function (compareFn) {
 
 	while (low <= high) {
 		middle = floor((low + high) / 2);
-		if (compareFn(this[middle]) < 0) {
-			high = middle - 1;
-		} else {
-			low = middle + 1;
-		}
+		if (compareFn(this[middle]) < 0) high = middle - 1;
+		else low = middle + 1;
 	}
 
 	if (high < 0) return 0;
