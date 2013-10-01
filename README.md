@@ -122,7 +122,7 @@ Returns the array of elements that are present in context list but not present i
 
 Returns the array of elements that are found only in context list or lists given in arguments.
 
-#### find(query[, thisArg])
+#### find(predicate[, thisArg])
 
 Return first element for which given function returns true
 
