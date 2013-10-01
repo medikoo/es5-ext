@@ -4,6 +4,4 @@
 
 var filter = Array.prototype.filter;
 
-module.exports = function () {
-	return filter.call(this, Boolean);
-};
+module.exports = function () { return filter.call(this, Boolean); };
