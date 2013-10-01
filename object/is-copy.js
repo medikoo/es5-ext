@@ -4,6 +4,7 @@ var toUint = require('../number/to-uint')
   , ois    = require('./is')
 
   , keys = Object.keys
+  , propertyIsEnumerable = Object.prototype.propertyIsEnumerable
 
   , isCopy;
 
@@ -44,7 +45,7 @@ isCopy = function (a, b, depth, cache) {
 		}
 	}
 	return aKeys.every(function (name) {
-		if (!b.propertyIsEnumerable(name)) {
+		if (!propertyIsEnumerable.call(b, name)) {
 			return false;
 		}
 		if (ois(a[name], b[name])) {
