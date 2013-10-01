@@ -2,7 +2,7 @@
 
 var ois      = require('../../object/is')
   , value    = require('../../object/valid-value')
-  , toArray  = require('../from')
+  , aFrom    = require('../from')
   , byLength = require('./_compare-by-length')
 
   , every = Array.prototype.every;
@@ -10,7 +10,7 @@ var ois      = require('../../object/is')
 module.exports = function (/*…lists*/) {
 	var lists, r, l;
 
-	lists = [this].concat(toArray(arguments));
+	lists = [this].concat(aFrom(arguments));
 	lists.forEach(value);
 	lists.sort(byLength);
 	l = r = (lists[0].length >>> 0);

@@ -64,10 +64,11 @@ Object that represents global scope
 
 ### Array Constructor extensions
 
-#### from(x)
+#### from(arrayLike/*, mapFn, thisArg*/)
 
-_In ECMAScript 6th Edition draft_  
-Convert array-like object to an Array
+Returns array representation of `arrayLike`. If `arrayLike` is already an array its copy is returned.
+
+Works as [specified in ES6](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-22.1.2.1) with that difference that doesn't support iterators and always produces plain array instances
 
 #### generate([length[, …fill]])
 
@@ -77,6 +78,10 @@ Generate an array of pregiven _length_ built of repeated arguments.
 
 _In ECMAScript 6th Edition draft_  
 Create an array from given arguments.
+
+#### toArray(arrayLike)
+
+Returns array representation of `arrayLike`. If `arrayLike` is already an array, `arrayLike` is returned without further processing.
 
 ### Array Prototype extensions
 
@@ -100,10 +105,6 @@ Returns a copy of the list with all falsy values removed.
 #### contains(searchElement[, position])
 
 Whether list contains the given value.
-
-#### copy()
-
-Returns a copy of the list
 
 #### diff(other)
 

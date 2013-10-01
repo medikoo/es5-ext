@@ -1,6 +1,6 @@
 'use strict';
 
-var toArray = require('../../../array/from');
+var toArray = require('../../../array/to-array');
 
 module.exports = {
 	__generic: function (t, a) {

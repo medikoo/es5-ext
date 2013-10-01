@@ -4,5 +4,6 @@ module.exports = {
 	'#':      require('./#'),
 	from:     require('./from'),
 	generate: require('./generate'),
-	of:       require('./of')
+	of:       require('./of'),
+	toArray:  require('./to-array')
 };

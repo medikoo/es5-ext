@@ -1,15 +1,15 @@
 'use strict';
 
 var callable = require('../../object/valid-callable')
-  , toArray  = require('../../array/from')
+  , aFrom    = require('../../array/from')
 
   , apply = Function.prototype.apply;
 
 module.exports = function (/*…args*/) {
 	var fn = callable(this)
-	  , args = toArray(arguments);
+	  , args = aFrom(arguments);
 
 	return function () {
-		return apply.call(fn, this, args.concat(toArray(arguments)));
+		return apply.call(fn, this, args.concat(aFrom(arguments)));
 	};
 };

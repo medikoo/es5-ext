@@ -1,13 +1,20 @@
 'use strict';
 
-var isArguments   = require('../function/is-arguments')
+var isArguments = require('../function/is-arguments')
+  , callable    = require('../object/valid-callable')
+  , validValue  = require('../object/valid-value')
 
-  , isArray = Array.isArray, slice = Array.prototype.slice;
+  , map = Array.prototype.map, slice = Array.prototype.slice;
 
-module.exports = function (obj) {
-	if (isArray(obj)) return obj;
-	if (isArguments(obj)) {
-		return (obj.length === 1) ? [obj[0]] : Array.apply(null, obj);
+module.exports = function (arrayLike/*, mapFn, thisArg*/) {
+	var mapFn = arguments[1], thisArg = arguments[2];
+
+	validValue(arrayLike);
+	if (mapFn != null) return map.call(arrayLike, callable(mapFn), thisArg);
+
+	if (isArguments(arrayLike)) {
+		return (arrayLike.length === 1) ? [arrayLike[0]] :
+				Array.apply(null, arrayLike);
 	}
-	return slice.call(obj);
+	return slice.call(arrayLike);
 };

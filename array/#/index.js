@@ -6,7 +6,6 @@ module.exports = {
 	commonLeft:     require('./common-left'),
 	compact:        require('./compact'),
 	contains:       require('./contains'),
-	copy:           require('./copy'),
 	diff:           require('./diff'),
 	eIndexOf:       require('./e-index-of'),
 	eLastIndexOf:   require('./e-last-index-of'),

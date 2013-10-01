@@ -1,6 +1,6 @@
 'use strict';
 
-var toArray = require('../../../array/from')
+var toArray = require('../../../array/to-array')
 
   , f = function () { return toArray(arguments); };
 

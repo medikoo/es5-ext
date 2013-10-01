@@ -1,7 +1,7 @@
 'use strict';
 
 var callable = require('../../object/valid-callable')
-  , toArray  = require('../../array/from')
+  , aFrom    = require('../../array/from')
 
   , apply = Function.prototype.apply
 
@@ -12,7 +12,7 @@ callFn = function (result, fn) {
 };
 
 module.exports = function () {
-	var fns = [this].concat(toArray(arguments));
+	var fns = [this].concat(aFrom(arguments));
 	fns.forEach(callable);
 	return function () {
 		return fns.reduce(callFn.bind(this), arguments)[0];

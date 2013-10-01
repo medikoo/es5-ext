@@ -1,12 +1,12 @@
 'use strict';
 
 var value    = require('../../object/valid-value')
-  , toArray  = require('../from')
+  , aFrom    = require('../from')
+  , toArray  = require('../to-array')
   , contains = require('./contains')
-  , copy     = require('./copy')
   , byLength = require('./_compare-by-length')
 
-, filter = Array.prototype.filter, push = Array.prototype.push;
+  , filter = Array.prototype.filter, push = Array.prototype.push;
 
 module.exports = function (/*…lists*/) {
 	var lists, seen, result;
@@ -25,5 +25,5 @@ module.exports = function (/*…lists*/) {
 		});
 		return result;
 	}
-	return copy.call(this);
+	return aFrom(this);
 };
