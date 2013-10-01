@@ -1,5 +1,3 @@
-// Generate an array built of repeated arguments
-
 'use strict';
 
 var value = require('../object/valid-value')
@@ -9,9 +7,8 @@ var value = require('../object/valid-value')
 module.exports = function (length/*, …fill*/) {
 	var arr, l;
 	length = value(length) >>> 0;
-	if (length === 0) {
-		return [];
-	}
+	if (length === 0) return [];
+
 	arr = (arguments.length < 2) ? [undefined] :
 			slice.call(arguments, 1, 1 + length);
 
