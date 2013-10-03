@@ -16,9 +16,7 @@ module.exports = function (cb/*, thisArg*/) {
 	r = {};
 	forEach.call(this, function (v) {
 		var key = apply.call(cb, this, arguments);
-		if (!r.hasOwnProperty(key)) {
-			r[key] = [];
-		}
+		if (!r.hasOwnProperty(key)) r[key] = [];
 		r[key].push(v);
 	}, arguments[1]);
 	return r;
