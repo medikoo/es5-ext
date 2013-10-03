@@ -6,14 +6,10 @@ var value = require('../../object/valid-value')
 
 module.exports = function () {
 	var i, l;
-	if (!(l = (value(this).length >>> 0))) {
-		return null;
-	}
+	if (!(l = (value(this).length >>> 0))) return null;
 	i = 0;
 	while (!hasOwnProperty.call(this, i)) {
-		if (++i === l) {
-			return null;
-		}
+		if (++i === l) return null;
 	}
 	return i;
 };
