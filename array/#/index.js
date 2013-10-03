@@ -26,6 +26,5 @@ module.exports = {
 	remove:         require('./remove'),
 	sepItems:       require('./sep-items'),
 	someRight:      require('./some-right'),
-	toObject:       require('./to-object'),
 	uniq:           require('./uniq')
 };
