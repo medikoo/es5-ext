@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = {
+	assign:           require('./assign'),
+	assignMultiple:   require('./assign-multiple'),
 	clear:            require('./clear'),
 	compact:          require('./compact'),
 	compare:          require('./compare'),
@@ -9,7 +11,6 @@ module.exports = {
 	diff:             require('./diff'),
 	eq:               require('./eq'),
 	every:            require('./every'),
-	extend:           require('./extend'),
 	extendDeep:       require('./extend-deep'),
 	extendProperties: require('./extend-properties'),
 	filter:           require('./filter'),
