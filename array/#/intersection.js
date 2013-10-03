@@ -9,16 +9,11 @@ var value    = require('../../object/valid-value')
 
 module.exports = function (/*…list*/) {
 	var lists;
-
-	if (arguments.length) {
-		push.apply(lists = [this], arguments);
-		lists.forEach(value);
-		lists.sort(byLength);
-		return lists.reduce(function (a, b) {
-			return filter.call(a, function (x) {
-				return contains.call(b, x);
-			});
-		});
-	}
-	return slice.call(this);
+	if (!arguments.length) slice.call(this);
+	push.apply(lists = [this], arguments);
+	lists.forEach(value);
+	lists.sort(byLength);
+	return lists.reduce(function (a, b) {
+		return filter.call(a, function (x) { return contains.call(b, x); });
+	});
 };
