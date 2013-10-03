@@ -27,10 +27,8 @@ resolve = function (a) {
 };
 
 module.exports = function (a, b) {
-	if (a === b) {
-		// Same
-		return 0;
-	}
+	if (a === b) return 0; // Same
+
 	a = resolve(a);
 	b = resolve(b);
 	if (a == b) return typeMap[typeof a] - typeMap[typeof b]; //jslint: skip
