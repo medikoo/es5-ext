@@ -7,6 +7,7 @@ module.exports = {
 	copy:             require('./copy'),
 	count:            require('./count'),
 	diff:             require('./diff'),
+	eq:               require('./eq'),
 	every:            require('./every'),
 	extend:           require('./extend'),
 	extendDeep:       require('./extend-deep'),
