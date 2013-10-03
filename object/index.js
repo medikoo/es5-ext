@@ -11,7 +11,6 @@ module.exports = {
 	diff:             require('./diff'),
 	eq:               require('./eq'),
 	every:            require('./every'),
-	extendDeep:       require('./extend-deep'),
 	filter:           require('./filter'),
 	firstKey:         require('./first-key'),
 	flatten:          require('./flatten'),
