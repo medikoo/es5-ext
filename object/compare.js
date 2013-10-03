@@ -37,5 +37,6 @@ module.exports = function (a, b) {
 	if ((typeof a === 'string') || (typeof b === 'string')) {
 		return strCompare.call(a, b);
 	}
+	if ((a !== a) && (b !== b)) return 0;
 	return Number(a) - Number(b);
 };
