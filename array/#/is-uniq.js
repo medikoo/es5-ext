@@ -9,6 +9,4 @@ isFirst = function (value, index) {
 	return indexOf.call(this, value) === index;
 };
 
-module.exports = function () {
-	return every.call(this, isFirst, this);
-};
+module.exports = function () { return every.call(this, isFirst, this); };
