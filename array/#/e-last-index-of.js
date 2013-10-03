@@ -1,7 +1,7 @@
 'use strict';
 
 var numIsNaN = require('../../number/is-nan')
-  , ois      = require('../../object/is')
+  , eq       = require('../../object/eq')
   , value    = require('../../object/valid-value')
 
   , lastIndexOf = Array.prototype.lastIndexOf
@@ -21,7 +21,7 @@ module.exports = function (searchElement/*, fromIndex*/) {
 	else fromIndex = (this.length >>> 0) - floor(abs(fromIndex));
 
 	for (i = fromIndex; i >= 0; --i) {
-		if (hasOwnProperty.call(this, i) && ois(searchElement, this[i])) return i;
+		if (hasOwnProperty.call(this, i) && eq(searchElement, this[i])) return i;
 	}
 	return -1;
 };

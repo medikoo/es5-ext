@@ -1,6 +1,6 @@
 'use strict';
 
-var ois   = require('../../object/is')
+var eq    = require('../../object/eq')
   , value = require('../../object/valid-value')
 
   , hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -14,7 +14,7 @@ module.exports = function (other) {
 		if (hasOwnProperty.call(this, i) !== hasOwnProperty.call(other, i)) {
 			return false;
 		}
-		if (!ois(this[i], other[i])) return false;
+		if (!eq(this[i], other[i])) return false;
 	}
 	return true;
 };

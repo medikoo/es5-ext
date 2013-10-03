@@ -1,12 +1,12 @@
 'use strict';
 
-var ois  = require('./is')
+var eq   = require('./eq')
   , some = require('./some');
 
 module.exports = function (obj, searchValue) {
 	var r;
 	return some(obj, function (value, name) {
-		if (ois(value, searchValue)) {
+		if (eq(value, searchValue)) {
 			r = name;
 			return true;
 		}

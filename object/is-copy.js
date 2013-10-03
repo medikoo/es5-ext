@@ -1,7 +1,7 @@
 'use strict';
 
 var toUint = require('../number/to-uint')
-  , ois    = require('./is')
+  , eq     = require('./eq')
 
   , keys = Object.keys
   , propertyIsEnumerable = Object.prototype.propertyIsEnumerable
@@ -48,7 +48,7 @@ isCopy = function (a, b, depth, cache) {
 		if (!propertyIsEnumerable.call(b, name)) {
 			return false;
 		}
-		if (ois(a[name], b[name])) {
+		if (eq(a[name], b[name])) {
 			return true;
 		}
 		return depth ? isCopy(a[name], b[name], depth - 1, cache) : false;
@@ -58,7 +58,7 @@ isCopy = function (a, b, depth, cache) {
 module.exports = function (a, b/*, depth*/) {
 	var depth;
 
-	if (ois(a, b)) {
+	if (eq(a, b)) {
 		return true;
 	}
 

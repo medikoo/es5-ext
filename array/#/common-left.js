@@ -1,6 +1,6 @@
 'use strict';
 
-var ois      = require('../../object/is')
+var eq       = require('../../object/eq')
   , value    = require('../../object/valid-value')
   , aFrom    = require('../from')
   , byLength = require('./_compare-by-length')
@@ -19,7 +19,7 @@ module.exports = function (/*…lists*/) {
 		var i;
 		for (i = 0; i < l; ++i) {
 			if (i > r) break;
-			if (!ois(this[i], list[i])) {
+			if (!eq(this[i], list[i])) {
 				r = i;
 				break;
 			}
