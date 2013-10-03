@@ -11,7 +11,7 @@ module.exports = function (t, a) {
 	o2 = Object.defineProperties({}, { nonremovable: { value: y } });
 	o2.other = 'other';
 
-	o2 = t(o2, o1);
+	try { t(o2, o1); } catch (ignore) {}
 
 	a(o2.visible, z, "Enumerable");
 	a(o1.hidden, 'hidden', "Not Enumerable");
@@ -26,7 +26,8 @@ module.exports = function (t, a) {
 	a(o2.other, 'other', "Own kept");
 
 	x = {};
-	t(x, o2, o1);
+	t(x, o2);
+	try { t(x, o1); } catch (ignore) {}
 
 	a(x.visible, z, "Enumerable");
 	a(x.hidden, 'hidden', "Not Enumerable");
@@ -37,7 +38,7 @@ module.exports = function (t, a) {
 	a(x.hasOwnProperty('inherited'), false, "Extend only own");
 	a(x.inherited, undefined, "Extend ony own: value");
 
-	a(x.nonremovable, 'raz', "Ignored non configurable");
+	a(x.nonremovable, y, "Ignored non configurable");
 	a(x.other, 'other', "Other");
 
 	x.visible = 3;
@@ -63,6 +64,6 @@ module.exports = function (t, a) {
 	x = Object.defineProperty({}, 'foo',
 		{ configurable: false, writable: true, enumerable: false, value: 'bar' });
 
-	t(x, { foo: 'lorem' });
-	a(x.foo, 'lorem', "Writable, not enumerable");
+	try { t(x, { foo: 'lorem' }); } catch (ignore) {}
+	a(x.foo, 'bar', "Writable, not enumerable");
 };
