@@ -6,11 +6,8 @@ var isPlainObject = require('./is-plain-object')
   , process;
 
 process = function self(value, key) {
-	if (isPlainObject(value)) {
-		forEach(value, self, this);
-	} else {
-		this[key] = value;
-	}
+	if (isPlainObject(value)) forEach(value, self, this);
+	else this[key] = value;
 };
 
 module.exports = function (obj) {
