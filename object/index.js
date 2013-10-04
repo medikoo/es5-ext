@@ -29,7 +29,6 @@ module.exports = {
 	mapKeys:          require('./map-keys'),
 	mixin:            require('./mixin'),
 	primitiveSet:     require('./primitive-set'),
-	reduce:           require('./reduce'),
 	safeTraverse:     require('./safe-traverse'),
 	some:             require('./some'),
 	toArray:          require('./to-array'),
