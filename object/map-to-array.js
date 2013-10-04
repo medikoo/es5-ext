@@ -7,8 +7,8 @@ var callable = require('./valid-callable')
 
   , defaultCb = function (value, key) { return [key, value]; };
 
-module.exports = function (obj, cb/*, thisArg, compareFn*/) {
-	var a = [], thisArg = arguments[2];
+module.exports = function (obj/*, cb, thisArg, compareFn*/) {
+	var a = [], cb = arguments[1], thisArg = arguments[2];
 	cb = (cb == null) ? defaultCb : callable(cb);
 
 	forEach(obj, function (value, key, obj, index) {
