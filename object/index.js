@@ -9,7 +9,6 @@ module.exports = {
 	copy:             require('./copy'),
 	copyDeep:         require('./copy-deep'),
 	count:            require('./count'),
-	diff:             require('./diff'),
 	eq:               require('./eq'),
 	every:            require('./every'),
 	filter:           require('./filter'),
