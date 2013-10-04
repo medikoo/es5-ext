@@ -19,6 +19,7 @@ module.exports = {
 	is:               require('./is'),
 	isCallable:       require('./is-callable'),
 	isCopy:           require('./is-copy'),
+	isCopyDeep:       require('./is-copy-deep'),
 	isEmpty:          require('./is-empty'),
 	isList:           require('./is-list'),
 	isObject:         require('./is-object'),

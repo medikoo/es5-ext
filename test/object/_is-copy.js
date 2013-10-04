@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function (t, a) {
+	t = t(function (a, b) { return a === b; });
 	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }), true, "Same");
 	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 4 }), false,
 		"Different property value");
