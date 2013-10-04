@@ -11,18 +11,12 @@ var toUint = require('../number/to-uint')
 isCopy = function (a, b, depth, cache) {
 	var aKeys, bKeys, index, index2;
 
-	if (((typeof a) !== (typeof b)) || (String(a) !== String(b))) {
-		return false;
-	}
-	if (!a || (typeof a !== 'object')) {
-		return true;
-	}
+	if (((typeof a) !== (typeof b)) || (String(a) !== String(b))) return false;
+	if (!a || (typeof a !== 'object')) return true;
 
 	aKeys = keys(a);
 	bKeys = keys(b);
-	if (aKeys.length !== bKeys.length) {
-		return false;
-	}
+	if (aKeys.length !== bKeys.length) return false;
 	if (cache) {
 		// Prevent infinite recursion
 		index = cache.a.indexOf(a);
@@ -45,12 +39,8 @@ isCopy = function (a, b, depth, cache) {
 		}
 	}
 	return aKeys.every(function (name) {
-		if (!propertyIsEnumerable.call(b, name)) {
-			return false;
-		}
-		if (eq(a[name], b[name])) {
-			return true;
-		}
+		if (!propertyIsEnumerable.call(b, name)) return false;
+		if (eq(a[name], b[name])) return true;
 		return depth ? isCopy(a[name], b[name], depth - 1, cache) : false;
 	});
 };
@@ -58,9 +48,7 @@ isCopy = function (a, b, depth, cache) {
 module.exports = function (a, b/*, depth*/) {
 	var depth;
 
-	if (eq(a, b)) {
-		return true;
-	}
+	if (eq(a, b)) return true;
 
 	depth = arguments[2];
 	depth = isNaN(depth) ? 0 : toUint(depth);
