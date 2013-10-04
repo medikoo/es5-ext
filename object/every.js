@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./_iterate')('every');
+module.exports = require('./_iterate')('every', true);
