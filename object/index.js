@@ -7,6 +7,7 @@ module.exports = {
 	compact:          require('./compact'),
 	compare:          require('./compare'),
 	copy:             require('./copy'),
+	copyDeep:         require('./copy-deep'),
 	count:            require('./count'),
 	diff:             require('./diff'),
 	eq:               require('./eq'),

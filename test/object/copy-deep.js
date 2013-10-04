@@ -15,5 +15,10 @@ module.exports = function (t, a) {
 	o.raz.rec = o;
 
 	no = t(o);
-	a(o.raz, no.raz, "Shallow");
+	a.not(o.raz, no.raz, "Deep");
+	a.not(o.raz.trzy, no.raz.trzy, "Deep #2");
+	a(stringify(o.raz.trzy), stringify(no.raz.trzy), "Deep content");
+	a(no.raz.rec, no, "Recursive");
+	a.not(o.raz.osiem, no.raz.osiem, "Empty object");
+	a(o.raz['dziewięć'], no.raz['dziewięć'], "Function");
 };
