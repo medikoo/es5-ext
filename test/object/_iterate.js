@@ -27,20 +27,4 @@ module.exports = function (t, a) {
 	});
 	a.deep(o2, o, "Sort by Values: Content");
 	a.deep(arr, [3, 2, 1], "Sort by Values: Order");
-
-	arr = [];
-	o2 = {};
-	i = -1;
-	t('raz', function (value, name, self, index) {
-		arr.push(value);
-		o2[name] = value;
-		a(index, ++i, "Primitive: Index");
-		a(typeof self, 'object', "Primitive: Self type");
-		a(String(self), 'raz', "Primitive: Self value");
-		a(this, o3, "Scope");
-	}, o3, function (a, b) {
-		return a - b;
-	});
-	a.deep(o2, Object('raz'), "Primitive: Sort by Values: Content");
-	a.deep(arr, ['r', 'a', 'z'], "Primitive: Sort by Values: Order");
 };
