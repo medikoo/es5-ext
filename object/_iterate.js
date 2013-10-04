@@ -14,12 +14,12 @@ var isCallable = require('./is-callable')
 module.exports = function (method, defVal) {
 	return function (obj, cb/*, thisArg, compareFn*/) {
 		var list, thisArg = arguments[2], compareFn = arguments[3]
-		  , origin = obj, isPrimitive;
+		  , isPrimitive;
 		obj = Object(value(obj));
 		callable(cb);
 
-		isPrimitive = (obj !== origin);
 		list = keys(obj);
+		isPrimitive = (list.length && !propertyIsEnumerable.call(obj, list[0]));
 		if (compareFn) {
 			list.sort(isCallable(compareFn) ? compareFn.bind(obj) : undefined);
 		}
