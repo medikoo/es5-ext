@@ -2,11 +2,8 @@
 
 var toString = Object.prototype.toString
 
-  , id = toString.call(new Error())
-  , exceptionRe = /^\[object [a-zA-z0-9]*(?:Exception|Error)\]$/;
+  , id = toString.call(new Error());
 
 module.exports = function (x) {
-	var xid;
-	return (x && ((x instanceof Error) || ((xid = toString.call(x)) === id) ||
-		xid.match(exceptionRe))) || false;
+	return (x && ((x instanceof Error) || (toString.call(x)) === id)) || false;
 };
