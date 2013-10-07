@@ -3,10 +3,10 @@
 var create = Object.create;
 
 module.exports = function (t, a) {
-	var x;
-	a.deep(t(), {}, "No object");
-	a.deep(t('raz'), {}, "Primitive");
-	a.deep(t({ foo: 'raz', bar: 'dwa' }), { foo: 'raz', bar: 'dwa' }, "Plain");
+	var x = { foo: 'raz', bar: 'dwa' }, y;
+	y = t(x);
+	a.not(y, x, "Returns copy");
+	a.deep(y, x, "Plain");
 
 	x = { raz: 'one', dwa: 'two' };
 	x = create(x);

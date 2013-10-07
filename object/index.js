@@ -27,12 +27,12 @@ module.exports = {
 	keyOf:            require('./key-of'),
 	map:              require('./map'),
 	mapKeys:          require('./map-keys'),
+	normalizeOptions: require('./normalize-options'),
 	mixin:            require('./mixin'),
 	primitiveSet:     require('./primitive-set'),
 	safeTraverse:     require('./safe-traverse'),
 	some:             require('./some'),
 	toArray:          require('./to-array'),
-	toPlainObject:    require('./to-plain-object'),
 	validCallable:    require('./valid-callable'),
 	validValue:       require('./valid-value'),
 	values:           require('./values')
