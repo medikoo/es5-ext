@@ -2,20 +2,19 @@
 
 var assign = require('../object/assign')
 
-  , captureStackTrace = Error.captureStackTrace
-  , CustomError;
+  , captureStackTrace = Error.captureStackTrace;
 
-CustomError = module.exports = function CustomError(message, code/*, ext*/) {
-	var ext = arguments[2];
-	if (ext != null) assign(this, ext);
-	this.message = String(message);
-	if (code != null) this.code = String(code);
-	if (captureStackTrace) captureStackTrace(this, CustomError);
+exports = module.exports = function (message/*, code, ext*/) {
+	var err = new Error(), code = arguments[1], ext = arguments[2];
+	if (ext == null) {
+		if (code && (typeof code === 'object')) {
+			ext = code;
+			code = null;
+		}
+	}
+	if (ext != null) assign(err, ext);
+	err.message = String(message);
+	if (code != null) err.code = String(code);
+	if (captureStackTrace) captureStackTrace(err, exports);
+	return err;
 };
-
-CustomError.prototype = Object.create(Error.prototype, {
-	constructor: { configurable: true, enumerable: false, value: CustomError,
-		writable: true },
-	name: { configurable: true, enumerable: false, value: 'CustomError',
-		writable: true }
-});
