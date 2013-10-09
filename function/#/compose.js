@@ -15,6 +15,6 @@ module.exports = function (fn/*, …fnn*/) {
 	first = fns[0];
 	fns = fns.slice(1);
 	return function (arg) {
-		return fns.reduce(callFn, first.apply(this, arguments));
+		return fns.reduce(callFn, apply.call(first, this, arguments));
 	};
 };
