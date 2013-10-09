@@ -10,9 +10,9 @@ module.exports = {
 	indent:                 require('./indent'),
 	last:                   require('./last'),
 	pad:                    require('./pad'),
+	plainReplace:           require('./plain-replace'),
 	plainReplaceAll:        require('./plain-replace-all'),
 	repeat:                 require('./repeat'),
-	simpleReplace:          require('./simple-replace'),
 	startsWith:             require('./starts-with'),
 	template:               require('./template'),
 	trimCommonLeft:         require('./trim-common-left')
