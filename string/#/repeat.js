@@ -3,9 +3,13 @@
 
 'use strict';
 
-var value  = require('../../object/valid-value')
-  , toUint = require('../../number/to-uint');
+var value = require('../../object/valid-value')
+  , toInt = require('../../number/to-int');
 
-module.exports = function (n) {
-	return new Array((isNaN(n) ? 1 : toUint(n)) + 1).join(String(value(this)));
+module.exports = function (count) {
+	count = toInt(count);
+	if (count < 0) throw new RangeError("Count must be >= 0");
+	if (!isFinite(count)) throw new RangeError("Count must be < ∞");
+	if (!count) return '';
+	return new Array(count + 1).join(String(value(this)));
 };
