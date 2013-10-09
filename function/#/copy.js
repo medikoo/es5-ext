@@ -3,11 +3,13 @@
 var mixin         = require('../../object/mixin')
   , validFunction = require('../valid-function')
 
-  , re = new RegExp('^\\s*function[\\0-\'\\)-\\uffff]*' +
-		'\\(([\\0-\\(\\*-\\uffff]*)\\)\\s*\\{([\\0-\\uffff]*)\\}\\s*$');
+  , re = /^\s*function\s*([\0-'\)-\uffff]+)*\s*\(([\0-\(\*-\uffff]*)\)\s*\{/;
 
 module.exports = function () {
-	var fn = Function.apply(null, String(validFunction(this)).match(re).slice(1));
+	var match = String(validFunction(this)).match(re), fn;
+
+	fn = new Function('fn', 'return function ' + match[1].trim() + '(' +
+		match[2] + ') { return fn.apply(this, arguments); };')(this);
 	try { mixin(fn, this); } catch (ignore) {}
 	return fn;
 };

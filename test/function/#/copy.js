@@ -1,16 +1,19 @@
 'use strict';
 
 module.exports = function (t, a) {
-	var fn = function (a, b) { return a + b; }, o = {}, fn2;
+	var foo = 'raz', bar = 'dwa'
+	  , fn = function marko(a, b) { return this + a + b + foo + bar; }
+	  , result, o = {};
 
 	fn.prototype = o;
 
 	fn.foo = 'raz';
 
-	fn2 = t.call(fn);
+	result = t.call(fn);
 
-	a(fn2.length, fn.length, "Length");
-	a(fn2(13, 43), 56, "Body");
-	a(fn2.prototype, fn.prototype, "Prototype");
-	a(fn2.foo, fn.foo, "Custom property");
+	a(result.length, fn.length, "Length");
+	a(result.name, fn.name, "Length");
+	a(result.call('marko', 'el', 'fe'), 'markoelferazdwa', "Body");
+	a(result.prototype, fn.prototype, "Prototype");
+	a(result.foo, fn.foo, "Custom property");
 };

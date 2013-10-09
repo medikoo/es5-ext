@@ -48,6 +48,7 @@ bitwise
 bitwise
 
 ./function/_define-length.js
+./function/#/copy.js
 evil
 
 ./number/to-uint32.js
