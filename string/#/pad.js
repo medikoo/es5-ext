@@ -14,6 +14,5 @@ module.exports = function (fill/*, length*/) {
 	length = isNaN(length) ? 1 : toInt(length);
 	fill = repeat.call(String(fill), abs(length));
 	if (length >= 0) return fill.slice(0, max(0, length - sLength)) + self;
-	return self + (((sLength + length) >= 0) ? '' :
-			fill.slice(length + sLength));
+	return self + (((sLength + length) >= 0) ? '' : fill.slice(length + sLength));
 };
