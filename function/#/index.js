@@ -5,9 +5,9 @@ module.exports = {
 	copy:    require('./copy'),
 	curry:   require('./curry'),
 	lock:    require('./lock'),
-	match:   require('./match'),
 	not:     require('./not'),
 	partial: require('./partial'),
 	silent:  require('./silent'),
+	spread:  require('./spread'),
 	wrap:    require('./wrap')
 };
