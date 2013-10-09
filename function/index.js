@@ -11,6 +11,5 @@ module.exports = {
 	k:             require('./k'),
 	noop:          require('./noop'),
 	pluck:         require('./pluck'),
-	remove:        require('./remove'),
 	validFunction: require('./valid-function')
 };
