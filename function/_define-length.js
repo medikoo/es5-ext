@@ -1,6 +1,7 @@
 'use strict';
 
-var test = function (a, b) {}, desc, defineProperty
+var toUint = require('../number/to-uint')
+  , test = function (a, b) {}, desc, defineProperty
   , generate, mixin;
 
 try {
@@ -13,6 +14,8 @@ if (test.length === 1) {
 	desc = { configurable: true, writable: false, enumerable: false };
 	defineProperty = Object.defineProperty;
 	module.exports = function (fn, length) {
+		length = toUint(length);
+		if (fn.length === length) return fn;
 		desc.value = length;
 		return defineProperty(fn, 'length', desc);
 	};
@@ -30,7 +33,10 @@ if (test.length === 1) {
 		};
 	}());
 	module.exports = function (src, length) {
-		var target = generate(length)(src);
+		var target;
+		length = toUint(length);
+		if (src.length === length) return src;
+		target = generate(length)(src);
 		try { mixin(target, src); } catch (ignore) {}
 		return target;
 	};
