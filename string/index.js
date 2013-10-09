@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
-	'#':      require('./#'),
-	isString: require('./is-string')
+	'#':       require('./#'),
+	getFormat: require('./get-format'),
+	isString:  require('./is-string')
 };

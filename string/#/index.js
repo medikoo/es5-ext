@@ -7,7 +7,6 @@ module.exports = {
 	contains:               require('./contains'),
 	hyphenToCamel:          require('./hyphen-to-camel'),
 	endsWith:               require('./ends-with'),
-	format:                 require('./format'),
 	indent:                 require('./indent'),
 	last:                   require('./last'),
 	pad:                    require('./pad'),

@@ -1,12 +1,11 @@
 'use strict';
 
-var pad    = require('../../number/#/pad')
-  , format = require('../../string/#/format')
-  , date   = require('../valid-date')
+var pad       = require('../../number/#/pad')
+  , date      = require('../valid-date')
 
-  , map;
+  , format;
 
-map = {
+format = require('../../string/get-format')({
 	Y: function () { return String(this.getFullYear()); },
 	y: function () { return String(this.getFullYear()).slice(-2); },
 	m: function () { return pad.call(this.getMonth() + 1, 2); },
@@ -15,8 +14,8 @@ map = {
 	M: function () { return pad.call(this.getMinutes(), 2); },
 	S: function () { return pad.call(this.getSeconds(), 2); },
 	L: function () { return pad.call(this.getMilliseconds(), 3); }
-};
+});
 
 module.exports = function (pattern) {
-	return format.call(String(pattern), map, date(this));
+	return format.call(date(this), pattern);
 };
