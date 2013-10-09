@@ -1,20 +1,23 @@
 'use strict';
 
-var callable = require('../../object/valid-callable')
+var toUint   = require('../../number/to-uint')
+  , callable = require('../../object/valid-callable')
 
   , slice = Array.prototype.slice, apply = Function.prototype.apply
+  , curry;
 
-  , curry = function self(fn, n, inputArgs) {
+curry = function self(fn, length, preArgs) {
 	return function () {
-		var args = inputArgs ?
-				inputArgs.concat(slice.call(arguments, 0, n - inputArgs.length)) :
-				slice.call(arguments, 0, n);
-		return (args.length === n) ? apply.call(fn, this, args) :
-				self(fn, n, args);
+		var args = preArgs ?
+				preArgs.concat(slice.call(arguments, 0, length - preArgs.length)) :
+				slice.call(arguments, 0, length);
+		return (args.length === length) ? apply.call(fn, this, args) :
+				self(fn, length, args);
 	};
 };
 
-module.exports = function (/*n*/) {
-	var n = arguments[0];
-	return curry(callable(this), isNaN(n) ? this.length : Number(n));
+module.exports = function (/*length*/) {
+	var length = arguments[0];
+	return curry(callable(this),
+		isNaN(length) ? toUint(this.length) : toUint(length));
 };
