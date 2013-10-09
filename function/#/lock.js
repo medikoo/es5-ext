@@ -8,7 +8,5 @@ module.exports = function (/*…args*/) {
 	var fn = callable(this)
 	  , args = arguments;
 
-	return function () {
-		return apply.call(fn, this, args);
-	};
+	return function () { return apply.call(fn, this, args); };
 };
