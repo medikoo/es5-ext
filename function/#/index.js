@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	chain:   require('./chain'),
+	compose: require('./compose'),
 	copy:    require('./copy'),
 	curry:   require('./curry'),
 	lock:    require('./lock'),
