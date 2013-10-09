@@ -7,7 +7,6 @@ module.exports = {
 	lock:    require('./lock'),
 	not:     require('./not'),
 	partial: require('./partial'),
-	silent:  require('./silent'),
 	spread:  require('./spread'),
 	wrap:    require('./wrap')
 };
