@@ -47,6 +47,9 @@ bitwise
 ./array/#/last-index.js
 bitwise
 
+./function/_define-length.js
+evil
+
 ./number/to-uint32.js
 bitwise
 
