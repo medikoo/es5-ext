@@ -6,7 +6,5 @@ var callable = require('../../object/valid-callable')
 
 module.exports = function () {
 	var fn = callable(this);
-	return function (args) {
-		return apply.call(fn, this, args);
-	};
+	return function (args) { return apply.call(fn, this, args); };
 };
