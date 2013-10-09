@@ -5,7 +5,6 @@
 module.exports = {
 	'#':           require('./#'),
 	i:             require('./i'),
-	insert:        require('./insert'),
 	invoke:        require('./invoke'),
 	isArguments:   require('./is-arguments'),
 	isFunction:    require('./is-function'),
