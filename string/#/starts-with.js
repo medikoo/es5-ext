@@ -1,10 +1,12 @@
 'use strict';
 
-var toUint = require('../../number/to-uint')
+var value = require('../../object/valid-value')
+  , toInt = require('../../number/to-int')
 
-  , indexOf = String.prototype.indexOf;
+  , max = Math.max, min = Math.min;
 
 module.exports = function (searchString/*, position*/) {
-	var start = toUint(arguments[1]);
-	return (indexOf.call(this, searchString, start) === start);
+	var start, self = String(value(this));
+	start = min(max(toInt(arguments[1]), 0), self.length);
+	return (self.indexOf(searchString, start) === start);
 };
