@@ -14,6 +14,5 @@ module.exports = {
 	plainReplaceAll:        require('./plain-replace-all'),
 	repeat:                 require('./repeat'),
 	startsWith:             require('./starts-with'),
-	template:               require('./template'),
 	trimCommonLeft:         require('./trim-common-left')
 };
