@@ -31,6 +31,7 @@ module.exports = {
 	mixin:            require('./mixin'),
 	primitiveSet:     require('./primitive-set'),
 	safeTraverse:     require('./safe-traverse'),
+	setPrototypeOf:   require('./set-prototype-of'),
 	some:             require('./some'),
 	toArray:          require('./to-array'),
 	validCallable:    require('./valid-callable'),
