@@ -1,6 +1,6 @@
 'use strict';
 
-var value    = require('../../object/valid-value')
+var value = require('../../object/valid-value')
 
   , indexOf = Array.prototype.indexOf
   , hasOwnProperty = Object.prototype.hasOwnProperty
