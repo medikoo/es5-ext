@@ -29,6 +29,7 @@ module.exports = {
 	mapKeys:          require('./map-keys'),
 	normalizeOptions: require('./normalize-options'),
 	mixin:            require('./mixin'),
+	mixinPrototypes:  require('./mixin-prototypes'),
 	primitiveSet:     require('./primitive-set'),
 	safeTraverse:     require('./safe-traverse'),
 	setPrototypeOf:   require('./set-prototype-of'),
