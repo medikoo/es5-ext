@@ -6,6 +6,6 @@ module.exports = function (obj) {
 	var proto;
 	if (!obj || !isArray(obj)) return false;
 	proto = getPrototypeOf(obj);
-	if (!isArray(proto)) return true;
+	if (!isArray(proto)) return false;
 	return !isArray(getPrototypeOf(proto));
 };

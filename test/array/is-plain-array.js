@@ -1,5 +1,7 @@
 'use strict';
 
+var SubArray = require('./__sub-array');
+
 module.exports = function (t, a) {
 	var arr = [1, 2, 3];
 	a(t(arr), true, "Array");
@@ -10,4 +12,6 @@ module.exports = function (t, a) {
 	a(t({}), false, "Plain object");
 	a(t({ length: 1, 0: 'raz' }), false, "Array-like");
 	a(t(Object.create(arr)), false, "Array extension");
+	if (!SubArray) return;
+	a(t(new SubArray(23)), false, "Subclass instance");
 };
