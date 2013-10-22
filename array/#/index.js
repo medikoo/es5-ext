@@ -25,6 +25,7 @@ module.exports = {
 	isUniq:         require('./is-uniq'),
 	last:           require('./last'),
 	lastIndex:      require('./last-index'),
+	map:            require('./map'),
 	remove:         require('./remove'),
 	sepItems:       require('./sep-items'),
 	someRight:      require('./some-right'),
