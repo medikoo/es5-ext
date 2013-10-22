@@ -5,6 +5,7 @@ module.exports = {
 	clear:          require('./clear'),
 	commonLeft:     require('./common-left'),
 	compact:        require('./compact'),
+	concat:         require('./concat'),
 	contains:       require('./contains'),
 	diff:           require('./diff'),
 	eIndexOf:       require('./e-index-of'),
