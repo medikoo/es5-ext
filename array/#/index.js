@@ -28,6 +28,7 @@ module.exports = {
 	map:            require('./map'),
 	remove:         require('./remove'),
 	sepItems:       require('./sep-items'),
+	slice:          require('./slice'),
 	someRight:      require('./some-right'),
 	splice:         require('./splice'),
 	uniq:           require('./uniq')
