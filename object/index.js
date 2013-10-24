@@ -36,5 +36,6 @@ module.exports = {
 	some:             require('./some'),
 	toArray:          require('./to-array'),
 	validCallable:    require('./valid-callable'),
+	validObject:      require('./valid-object'),
 	validValue:       require('./valid-value')
 };
