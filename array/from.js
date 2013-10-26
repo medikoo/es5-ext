@@ -16,9 +16,20 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	if (!this || !Array.isPrototypeOf(this)) Constructor = Array;
 	else Constructor = this;
 
+	if (mapFn != null) callable(mapFn);
+	if (!isArray(arrayLike) && (typeof arrayLike['@@iterator'] === 'function')) {
+		iterator = arrayLike['@@iterator']();
+		result = iterator.next();
+		i = 0;
+		while (!result.done) {
+			arr[i++] = mapFn ? call.call(mapFn, thisArg, result.value) : result.value;
+			result = iterator.next();
+		}
+		return arr;
+	}
+
 	l = arrayLike.length >>> 0;
 	if (mapFn != null) {
-		callable(mapFn);
 		arr = new Constructor(l);
 		for (i = 0; i < l; ++i) {
 			if (!hasOwnProperty.call(arrayLike, i)) continue;
@@ -35,16 +46,6 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	}
 
 	arr = new Constructor(l);
-	if (!isArray(arrayLike) && (typeof arrayLike['@@iterator'] === 'function')) {
-		iterator = arrayLike['@@iterator']();
-		result = iterator.next();
-		i = 0;
-		while (!result.done) {
-			arr[i++] = result.value;
-			result = iterator.next();
-		}
-		return arr;
-	}
 	for (i = 0; i < l; ++i) {
 		if (!hasOwnProperty.call(arrayLike, i)) continue;
 		arr[i] = arrayLike[i];
