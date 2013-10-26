@@ -4,11 +4,12 @@ var isArguments    = require('../function/is-arguments')
   , callable       = require('../object/valid-callable')
   , validValue     = require('../object/valid-value')
 
-  , call = Function.prototype.call
+  , isArray = Array.isArray, call = Function.prototype.call
   , hasOwnProperty = Object.prototype.hasOwnProperty;
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
-	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, arr, l;
+	var mapFn = arguments[1], thisArg = arguments[2], Constructor
+	  , i, arr, l, iterator, result;
 
 	validValue(arrayLike);
 
@@ -34,6 +35,16 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	}
 
 	arr = new Constructor(l);
+	if (!isArray(arrayLike) && (typeof arrayLike['@@iterator'] === 'function')) {
+		iterator = arrayLike['@@iterator']();
+		result = iterator.next();
+		i = 0;
+		while (!result.done) {
+			arr[i++] = result.value;
+			result = iterator.next();
+		}
+		return arr;
+	}
 	for (i = 0; i < l; ++i) {
 		if (!hasOwnProperty.call(arrayLike, i)) continue;
 		arr[i] = arrayLike[i];
