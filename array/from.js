@@ -26,9 +26,13 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		return arr;
 	}
 
-	if ((l !== 1) && isArguments(arrayLike)) {
-		return Constructor.apply(null, arrayLike);
+	if (isArguments(arrayLike)) {
+		if (l !== 1) return Constructor.apply(null, arrayLike);
+		arr = new Constructor(1);
+		arr[0] = arrayLike[0];
+		return arr;
 	}
+
 	arr = new Constructor(l);
 	for (i = 0; i < l; ++i) {
 		if (!hasOwnProperty.call(arrayLike, i)) continue;
