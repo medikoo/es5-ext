@@ -39,6 +39,8 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		return arr;
 	}
 
+	if (Constructor === arrayLike.constructor) return arrayLike.slice();
+
 	if (isArguments(arrayLike)) {
 		if (l !== 1) return Constructor.apply(null, arrayLike);
 		arr = new Constructor(1);
