@@ -18,6 +18,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 
 	if (mapFn != null) callable(mapFn);
 	if ((typeof arrayLike['@@iterator'] === 'function') && !isArray(arrayLike)) {
+		arr = new Constructor();
 		iterator = arrayLike['@@iterator']();
 		result = iterator.next();
 		i = 0;
