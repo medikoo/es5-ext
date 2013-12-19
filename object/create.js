@@ -36,7 +36,7 @@ module.exports = (function () {
 	Object.defineProperty(shim, 'nullPolyfill', { configurable: false,
 		enumerable: false, writable: false, value: nullObject });
 
-	return function (prototype) {
-		return create((prototype === null) ? nullObject : prototype);
+	return function (prototype, props) {
+		return create((prototype === null) ? nullObject : prototype, props);
 	};
 }());
