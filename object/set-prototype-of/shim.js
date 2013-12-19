@@ -59,3 +59,5 @@ module.exports = (function (status) {
 
 	return false;
 }())));
+
+require('../create');
