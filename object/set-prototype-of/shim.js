@@ -6,6 +6,10 @@
 var isObject      = require('../is-object')
   , value         = require('../valid-value')
 
+  , isPrototypeOf = Object.prototype.isPrototypeOf
+  , defineProperty = Object.defineProperty
+  , nullDesc = { configurable: true, enumerable: false, writable: true,
+		value: undefined }
   , validate;
 
 validate = function (obj, prototype) {
@@ -32,9 +36,13 @@ module.exports = (function (status) {
 		}
 	} else {
 		fn = function self(obj, prototype) {
+			var isNullBase;
 			validate(obj, prototype);
+			isNullBase = isPrototypeOf.call(self.nullPolyfill, obj);
+			if (isNullBase) delete self.nullPolyfill.__proto__;
 			if (prototype === null) prototype = self.nullPolyfill;
 			obj.__proto__ = prototype;
+			if (isNullBase) defineProperty(self.nullPolyfill, '__proto__', nullDesc);
 			return obj;
 		};
 	}

@@ -3,10 +3,10 @@
 //
 // When `null` is provided as a prototype, it's substituted with specially
 // prepared object that derives from Object.prototype but has all
-// Object.prototype properties (aside of `__proto__`) shadowed with undefined.
+// Object.prototype properties shadowed with undefined.
 //
 // It's quirky solution that allows us to have plain objects with no truthy
-// properties (with exception of `__proto__`) but with turnable prototype.
+// properties but with turnable prototype.
 //
 // Use only for objects that you plan to switch prototypes of and be aware of
 // limitations of this workaround.
@@ -27,7 +27,11 @@ module.exports = (function () {
 	nullObject = {};
 	props = {};
 	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
-		if (name === '__proto__') return;
+		if (name === '__proto__') {
+			props[name] = { configurable: true, enumerable: false, writable: true,
+				value: undefined };
+			return;
+		}
 		props[name] = { configurable: false, enumerable: false, writable: true,
 			value: undefined };
 	});
