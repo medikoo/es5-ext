@@ -20,20 +20,21 @@ if (!require('./set-prototype-of/is-implemented')()) {
 }
 
 module.exports = (function () {
-	var nullObject, props;
+	var nullObject, props, desc;
 	if (!shim) return create;
 	if (shim.level !== 1) return create;
 
 	nullObject = {};
 	props = {};
+	desc = { configurable: false, enumerable: false, writable: true,
+		value: undefined };
 	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
 		if (name === '__proto__') {
 			props[name] = { configurable: true, enumerable: false, writable: true,
 				value: undefined };
 			return;
 		}
-		props[name] = { configurable: false, enumerable: false, writable: true,
-			value: undefined };
+		props[name] = desc;
 	});
 	Object.defineProperties(nullObject, props);
 
