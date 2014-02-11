@@ -2,6 +2,7 @@
 
 var assign = require('./assign')
 
+  , forEach = Array.prototype.forEach
   , create = Object.create, getPrototypeOf = Object.getPrototypeOf
 
   , process;
@@ -11,7 +12,11 @@ process = function (src, obj) {
 	return assign(proto ? process(proto, obj) : obj, src);
 };
 
-module.exports = function (options) {
-	if (options == null) return {};
-	return process(Object(options), create(null));
+module.exports = function (options/*, …options*/) {
+	var result = create(null);
+	forEach.call(arguments, function (options) {
+		if (options == null) return;
+		process(Object(options), result);
+	});
+	return result;
 };

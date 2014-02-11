@@ -20,4 +20,8 @@ module.exports = function (t, a) {
 
 	a.deep(t(x), { raz: 'one', dwa: 'two!', trzy: 'three!', cztery: 'four',
 		piec: 'five', szesc: 'six' }, "Deep object");
+
+	a.deep(t({ marko: 'raz', raz: 'foo' }, x, { szesc: 'elo', siedem: 'bibg' }),
+		{ marko: 'raz', raz: 'one', dwa: 'two!', trzy: 'three!', cztery: 'four',
+			piec: 'five', szesc: 'elo', siedem: 'bibg' }, "Multiple options");
 };
