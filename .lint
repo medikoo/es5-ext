@@ -16,36 +16,17 @@ plusplus
 evil
 
 ./array/generate.js
-bitwise
-
 ./array/#/_compare-by-length.js
-bitwise
-
 ./array/#/binary-search.js
-bitwise
-
 ./array/#/common-left.js
-bitwise
-
 ./array/#/diff.js
-bitwise
-
 ./array/#/e-index-of.js
-bitwise
-
 ./array/#/e-last-index-of.js
-bitwise
-
 ./array/#/first-index.js
-bitwise
-
 ./array/#/for-each-right.js
-bitwise
-
 ./array/#/is-copy.js
-bitwise
-
 ./array/#/last-index.js
+./string/#/repeat.js
 bitwise
 
 ./function/_define-length.js
