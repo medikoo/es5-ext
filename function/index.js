@@ -4,11 +4,11 @@
 
 module.exports = {
 	'#':           require('./#'),
+	constant:      require('./constant'),
 	identity:      require('./identity'),
 	invoke:        require('./invoke'),
 	isArguments:   require('./is-arguments'),
 	isFunction:    require('./is-function'),
-	k:             require('./k'),
 	noop:          require('./noop'),
 	pluck:         require('./pluck'),
 	validFunction: require('./valid-function')
