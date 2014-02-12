@@ -1,5 +1,4 @@
-// Not rocket science but taken from:
-// http://closure-library.googlecode.com/svn/trunk/closure/goog/string/string.js
+// Thanks: http://www.2ality.com/2014/01/efficient-string-repeat.html
 
 'use strict';
 
@@ -7,9 +6,17 @@ var value = require('../../object/valid-value')
   , toInt = require('../../number/to-int');
 
 module.exports = function (count) {
+	var str = String(value(this)), result;
 	count = toInt(count);
 	if (count < 0) throw new RangeError("Count must be >= 0");
 	if (!isFinite(count)) throw new RangeError("Count must be < ∞");
-	if (!count) return '';
-	return new Array(count + 1).join(String(value(this)));
+	result = '';
+	if (!count) return result;
+	while (true) {
+		if (count & 1) result += str;
+		count >>>= 1;
+		if (count <= 0) break;
+		str += str;
+	}
+	return result;
 };
