@@ -5,5 +5,6 @@ module.exports = {
 	asinh: require('./asinh'),
 	atanh: require('./atanh'),
 	cbrt:  require('./cbrt'),
+	cosh:  require('./cosh'),
 	sign:  require('./sign')
 };
