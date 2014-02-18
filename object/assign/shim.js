@@ -1,6 +1,6 @@
 'use strict';
 
-var value = require('./valid-value')
+var value = require('../valid-value')
 
   , keys = Object.keys;
 
