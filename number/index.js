@@ -2,6 +2,7 @@
 
 module.exports = {
 	'#':      require('./#'),
+	EPSILON:  require('./epsilon'),
 	isNaN:    require('./is-nan'),
 	isNumber: require('./is-number'),
 	toInt:    require('./to-int'),
