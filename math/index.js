@@ -9,5 +9,6 @@ module.exports = {
 	expm1:  require('./expm1'),
 	fround: require('./fround'),
 	hypot:  require('./hypot'),
+	imul:   require('./imul'),
 	sign:   require('./sign')
 };
