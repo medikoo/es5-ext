@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-	sign: require('./sign')
+	acosh: require('./acosh'),
+	sign:  require('./sign')
 };
