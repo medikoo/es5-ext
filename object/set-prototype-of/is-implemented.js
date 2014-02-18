@@ -6,6 +6,6 @@ var create = Object.create, getPrototypeOf = Object.getPrototypeOf
 module.exports = function (/*customCreate*/) {
 	var setPrototypeOf = Object.setPrototypeOf
 	  , customCreate = arguments[0] || create;
-	if (typeof setPrototype !== 'function') return false;
+	if (typeof setPrototypeOf !== 'function') return false;
 	return getPrototypeOf(setPrototypeOf(customCreate(null), x)) === x;
 };
