@@ -18,7 +18,6 @@ evil
 ./array/generate.js
 ./array/#/_compare-by-length.js
 ./array/#/binary-search.js
-./array/#/common-left.js
 ./array/#/diff.js
 ./array/#/e-index-of.js
 ./array/#/e-last-index-of.js

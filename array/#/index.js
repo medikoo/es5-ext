@@ -3,7 +3,6 @@
 module.exports = {
 	binarySearch:   require('./binary-search'),
 	clear:          require('./clear'),
-	commonLeft:     require('./common-left'),
 	compact:        require('./compact'),
 	concat:         require('./concat'),
 	contains:       require('./contains'),
