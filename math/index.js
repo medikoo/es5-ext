@@ -6,5 +6,6 @@ module.exports = {
 	atanh: require('./atanh'),
 	cbrt:  require('./cbrt'),
 	cosh:  require('./cosh'),
+	expm1: require('./expm1'),
 	sign:  require('./sign')
 };
