@@ -3,6 +3,7 @@
 module.exports = {
 	'#':      require('./#'),
 	EPSILON:  require('./epsilon'),
+	isFinite: require('./is-finite'),
 	isNaN:    require('./is-nan'),
 	isNumber: require('./is-number'),
 	toInt:    require('./to-int'),
