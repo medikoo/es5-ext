@@ -8,5 +8,6 @@ module.exports = {
 	cosh:   require('./cosh'),
 	expm1:  require('./expm1'),
 	fround: require('./fround'),
+	hypot:  require('./hypot'),
 	sign:   require('./sign')
 };
