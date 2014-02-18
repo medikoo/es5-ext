@@ -1,8 +1,9 @@
 'use strict';
 
 var isInteger = require('../is-integer/shim')
+  , maxValue  = require('../max-safe-integer')
 
-  , abs = Math.abs, maxValue = Math.pow(2, 53) - 1;
+  , abs = Math.abs;
 
 module.exports = function (value) {
 	if (!isInteger(value)) return false;
