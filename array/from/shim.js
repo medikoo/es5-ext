@@ -1,8 +1,8 @@
 'use strict';
 
-var isArguments    = require('../function/is-arguments')
-  , callable       = require('../object/valid-callable')
-  , validValue     = require('../object/valid-value')
+var isArguments = require('../../function/is-arguments')
+  , callable    = require('../../object/valid-callable')
+  , validValue  = require('../../object/valid-value')
 
   , isArray = Array.isArray, call = Function.prototype.call
   , hasOwnProperty = Object.prototype.hasOwnProperty;
