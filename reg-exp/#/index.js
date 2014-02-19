@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-	match: require('./match')
+	match:   require('./match'),
+	replace: require('./replace')
 };
