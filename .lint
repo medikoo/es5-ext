@@ -45,5 +45,5 @@ forin
 ./test/function/valid-function.js
 evil
 
-./test/number/index.js
+./test/reg-exp/#/index.js
 predef+ __dirname
