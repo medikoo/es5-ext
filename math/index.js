@@ -11,6 +11,7 @@ module.exports = {
 	hypot:  require('./hypot'),
 	imul:   require('./imul'),
 	log10:  require('./log10'),
+	log2:   require('./log2'),
 	log1p:  require('./log1p'),
 	sign:   require('./sign')
 };
