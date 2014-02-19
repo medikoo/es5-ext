@@ -4,6 +4,7 @@ module.exports = {
 	camelToHyphen:          require('./camel-to-hyphen'),
 	capitalize:             require('./capitalize'),
 	caseInsensitiveCompare: require('./case-insensitive-compare'),
+	codePointAt:            require('./code-point-at'),
 	contains:               require('./contains'),
 	hyphenToCamel:          require('./hyphen-to-camel'),
 	endsWith:               require('./ends-with'),
