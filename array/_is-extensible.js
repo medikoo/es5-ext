@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (function () {
-	var SubArray = require('./_sub-array'), arr;
+	var SubArray = require('./_sub-array-dummy'), arr;
 
 	if (!SubArray) return false;
 	arr = new SubArray();

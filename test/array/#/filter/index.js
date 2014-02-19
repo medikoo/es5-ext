@@ -1,6 +1,6 @@
 'use strict';
 
-var SubArray = require('../../__sub-array');
+var SubArray = require('../../../../array/_sub-array-dummy-safe');
 
 module.exports = function (t, a) {
 	var arr, x = {}, subArr, result;
