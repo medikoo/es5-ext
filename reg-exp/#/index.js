@@ -2,5 +2,6 @@
 
 module.exports = {
 	match:   require('./match'),
-	replace: require('./replace')
+	replace: require('./replace'),
+	search:  require('./search')
 };
