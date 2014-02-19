@@ -13,5 +13,6 @@ module.exports = {
 	log10:  require('./log10'),
 	log2:   require('./log2'),
 	log1p:  require('./log1p'),
-	sign:   require('./sign')
+	sign:   require('./sign'),
+	sinh:   require('./sinh')
 };
