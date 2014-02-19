@@ -1,7 +1,7 @@
 'use strict';
 
-var value = require('../../object/valid-value')
-  , toInt = require('../../number/to-int')
+var value = require('../../../object/valid-value')
+  , toInt = require('../../../number/to-int')
 
   , max = Math.max, min = Math.min;
 
