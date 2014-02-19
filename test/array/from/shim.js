@@ -14,4 +14,7 @@ module.exports = function (t, a) {
 
 	a.deep(t(o, function (val) { return (val + 2) * 10; }, 10), [30, 40, 50],
 		"Mapping");
+
+	a.throws(function () { t(); }, TypeError, "Undefined");
+	a.deep(t(3), [], "Primitive");
 };
