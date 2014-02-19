@@ -10,6 +10,7 @@ module.exports = {
 	fround: require('./fround'),
 	hypot:  require('./hypot'),
 	imul:   require('./imul'),
+	log10:  require('./log10'),
 	log1p:  require('./log1p'),
 	sign:   require('./sign')
 };
