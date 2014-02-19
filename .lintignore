@@ -1,3 +1,4 @@
+/string/#/normalize/_data.js
 /test/boolean/is-boolean.js
 /test/date/is-date.js
 /test/number/is-number.js

@@ -10,6 +10,7 @@ module.exports = {
 	endsWith:               require('./ends-with'),
 	indent:                 require('./indent'),
 	last:                   require('./last'),
+	normalize:              require('./normalize'),
 	pad:                    require('./pad'),
 	plainReplace:           require('./plain-replace'),
 	plainReplaceAll:        require('./plain-replace-all'),
