@@ -15,5 +15,6 @@ module.exports = {
 	log1p:  require('./log1p'),
 	sign:   require('./sign'),
 	sinh:   require('./sinh'),
-	tanh:   require('./tanh')
+	tanh:   require('./tanh'),
+	trunc:  require('./trunc')
 };
