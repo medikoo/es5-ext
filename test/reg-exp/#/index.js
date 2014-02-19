@@ -7,5 +7,6 @@ var indexTest = require('tad/lib/utils/index-test')
 module.exports = function (t, a, d) {
 	indexTest(indexTest.readDir(path).aside(function (data) {
 		delete data.sticky;
+		delete data.unicode;
 	}))(t, a, d);
 };
