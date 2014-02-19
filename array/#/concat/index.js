@@ -1,4 +1,4 @@
 'use strict';
 
-module.exports = require('../../_is-extensible') ?
+module.exports = require('./is-implemented')() ?
 		Array.prototype.concat : require('./shim');
