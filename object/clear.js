@@ -1,10 +1,16 @@
 'use strict';
 
-var keys  = require('./keys')
-
-  , unset = function (key) { delete this[key]; };
+var keys = require('./keys');
 
 module.exports = function (obj) {
-	keys(obj).forEach(unset, obj);
+	var error;
+	keys(obj).forEach(function (key) {
+		try {
+			delete this[key];
+		} catch (e) {
+			if (!error) error = e;
+		}
+	}, obj);
+	if (error !== undefined) throw error;
 	return obj;
 };
