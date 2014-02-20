@@ -6,6 +6,7 @@ module.exports = {
 	compact:        require('./compact'),
 	concat:         require('./concat'),
 	contains:       require('./contains'),
+	copyWithin:     require('./copy-within'),
 	diff:           require('./diff'),
 	eIndexOf:       require('./e-index-of'),
 	eLastIndexOf:   require('./e-last-index-of'),
