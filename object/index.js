@@ -26,6 +26,7 @@ module.exports = {
 	isObject:         require('./is-object'),
 	isPlainObject:    require('./is-plain-object'),
 	keyOf:            require('./key-of'),
+	keys:             require('./keys'),
 	map:              require('./map'),
 	mapKeys:          require('./map-keys'),
 	normalizeOptions: require('./normalize-options'),
