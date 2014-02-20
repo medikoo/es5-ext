@@ -14,6 +14,6 @@ module.exports = function (target, source) {
 			defineProperty(target, name, getOwnPropertyDescriptor(source, name));
 		} catch (e) { error = e; }
 	});
-	if (error) throw error;
+	if (error !== undefined) throw error;
 	return target;
 };
