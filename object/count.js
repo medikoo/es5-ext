@@ -1,7 +1,5 @@
 'use strict';
 
-var value = require('./valid-value')
+var keys  = require('./keys');
 
-  , keys = Object.keys;
-
-module.exports = function (obj) { return keys(Object(value(obj))).length; };
+module.exports = function (obj) { return keys(obj).length; };
