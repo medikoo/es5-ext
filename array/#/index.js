@@ -11,6 +11,7 @@ module.exports = {
 	eIndexOf:       require('./e-index-of'),
 	eLastIndexOf:   require('./e-last-index-of'),
 	exclusion:      require('./exclusion'),
+	fill:           require('./fill'),
 	filter:         require('./filter'),
 	find:           require('./find'),
 	findIndex:      require('./find-index'),
