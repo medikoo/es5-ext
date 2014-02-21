@@ -146,7 +146,7 @@ UCharIterator.prototype.next = function () {
 	if (!!this.str && this.cursor < this.str.length) {
 		var cp = this.str.charCodeAt(this.cursor++), d;
 		if (UChar.isHighSurrogate(cp) && this.cursor < this.str.length &&
-			 UChar.isLowSurrogate((d = this.str.charCodeAt(this.cursor)))) {
+				UChar.isLowSurrogate((d = this.str.charCodeAt(this.cursor)))) {
 			cp = (cp - 0xD800) * 0x400 + (d - 0xDC00) + 0x10000;
 			++this.cursor;
 		}
