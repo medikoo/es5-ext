@@ -296,7 +296,7 @@ ES6's version of `map`, returns array of same type as the context.
 
 Remove values from the array
 
-#### arr.sepItems(sep) _(es5-ext/array/#/sep-items)_
+#### arr.separate(sep) _(es5-ext/array/#/separate)_
 
 Returns array with items separated with `sep` value
 

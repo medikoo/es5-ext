@@ -28,7 +28,7 @@ module.exports = {
 	lastIndex:      require('./last-index'),
 	map:            require('./map'),
 	remove:         require('./remove'),
-	sepItems:       require('./sep-items'),
+	separate:       require('./separate'),
 	slice:          require('./slice'),
 	someRight:      require('./some-right'),
 	splice:         require('./splice'),
