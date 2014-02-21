@@ -1,5 +1,6 @@
 # es5-ext
-## ECMAScript5 extensions (with respect to ECMAScript6 standard)
+## ECMAScript5 extensions
+### (with respect to ECMAScript6 standard)
 
 Shims for upcoming ES6 standard and other goodies implemented strictly with ECMAScript conventions in mind.
 
@@ -100,7 +101,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 
 #### Non ECMAScript standard features
 
-__es5-ext__ provides also other utils, and implements them if they were proposed for a standard, so it mostly offer methods (not functions) which can directly be assigned to native object's prototype:
+__es5-ext__ provides also other utils, and implements them as if they were proposed for a standard. It mostly offers methods (not functions) which can directly be assigned to native prototypes:
 
 ```javascript
 Object.defineProperty(Function.prototype, 'partial', { value: require('es5-ext/function/#/partial'),
@@ -113,7 +114,7 @@ Object.defineProperty(String.prototype, 'capitalize', { value: require('es5-ext/
 
 If you decide not to extend native prototypes, which in most cases is right decision (see
 [extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
-for more views on that matter), you can use them indirectly:
+for more views on that matter), you can use methods indirectly:
 
 ```javascript
 var flatten = require('es5-ext/array/#/flatten');
