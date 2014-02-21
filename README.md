@@ -591,9 +591,7 @@ The value of Number.MAX_SAFE_INTEGER is 9007199254740991.
 [_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.minsafeinteger).  
 The value of Number.MIN_SAFE_INTEGER is -9007199254740991 (253-1).
 
-#### toInt(x) _(es5-ext/number/to-int)_
-
-_In ECMAScript 6th Edition draft_  
+#### toInteger(x) _(es5-ext/number/to-integer)_
 
 Converts value to integer
 

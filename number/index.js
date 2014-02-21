@@ -10,7 +10,7 @@ module.exports = {
 	isSafeInteger:    require('./is-safe-integer'),
 	MAX_SAFE_INTEGER: require('./max-safe-integer'),
 	MIN_SAFE_INTEGER: require('./min-safe-integer'),
-	toInt:            require('./to-int'),
+	toInteger:        require('./to-integer'),
 	toUint:           require('./to-uint'),
 	toUint32:         require('./to-uint32')
 };

@@ -2,12 +2,12 @@
 
 'use strict';
 
-var value = require('../../../object/valid-value')
-  , toInt = require('../../../number/to-int');
+var value     = require('../../../object/valid-value')
+  , toInteger = require('../../../number/to-integer');
 
 module.exports = function (count) {
 	var str = String(value(this)), result;
-	count = toInt(count);
+	count = toInteger(count);
 	if (count < 0) throw new RangeError("Count must be >= 0");
 	if (!isFinite(count)) throw new RangeError("Count must be < ∞");
 	result = '';

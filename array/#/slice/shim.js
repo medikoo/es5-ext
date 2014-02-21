@@ -1,6 +1,6 @@
 'use strict';
 
-var toInt        = require('../../../number/to-int')
+var toInteger    = require('../../../number/to-integer')
   , isPlainArray = require('../../is-plain-array')
 
   , isArray = Array.isArray, slice = Array.prototype.slice
@@ -12,13 +12,13 @@ module.exports = function (start, end) {
 		return slice.apply(this, arguments);
 	}
 	length = this.length >>> 0;
-	start = toInt(start);
+	start = toInteger(start);
 	if (start < 0) start = max(length + start, 0);
 	else if (start > length) start = length;
 	if (end === undefined) {
 		end = length;
 	} else {
-		end = toInt(end);
+		end = toInteger(end);
 		if (end < 0) end = max(length + end, 0);
 		else if (end > length) end = length;
 	}

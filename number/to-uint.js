@@ -1,7 +1,7 @@
 'use strict';
 
-var toInt = require('./to-int')
+var toInteger = require('./to-integer')
 
   , max = Math.max;
 
-module.exports = function (value) { return max(0, toInt(value)); };
+module.exports = function (value) { return max(0, toInteger(value)); };

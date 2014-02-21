@@ -3,12 +3,12 @@
 
 'use strict';
 
-var toInt      = require('../../../number/to-int')
+var toInteger  = require('../../../number/to-integer')
   , validValue = require('../../../object/valid-value');
 
 module.exports = function (pos) {
 	var str = String(validValue(this)), l = str.length, first, second;
-	pos = toInt(pos);
+	pos = toInteger(pos);
 
 	// Account for out-of-bounds indices:
 	if (pos < 0 || pos >= l) return undefined;

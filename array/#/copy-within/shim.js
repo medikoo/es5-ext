@@ -3,7 +3,7 @@
 'use strict';
 
 var validValue = require('../../../object/valid-value')
-  , toInt      = require('../../../number/to-int')
+  , toInteger  = require('../../../number/to-integer')
 
   , hasOwnProperty = Object.prototype.hasOwnProperty
   , max = Math.max, min = Math.min;
@@ -12,9 +12,9 @@ module.exports = function (target, start/*, end*/) {
 	var o = validValue(this), end = arguments[2], l = o.length >>> 0
 	  , to, from, fin, count, direction;
 
-	target = toInt(target);
-	start = toInt(start);
-	end = (end === undefined) ? l : toInt(end);
+	target = toInteger(target);
+	start = toInteger(start);
+	end = (end === undefined) ? l : toInteger(end);
 
 	to = target < 0 ? max(l + target, 0) : min(target, l);
 	from = start < 0 ? max(l + start, 0) : min(start, l);

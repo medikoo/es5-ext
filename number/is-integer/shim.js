@@ -1,6 +1,6 @@
 'use strict';
 
-var toInteger = require('../to-int');
+var toInteger = require('../to-integer');
 
 module.exports = function (value) {
 	if (typeof value !== 'number') return false;
