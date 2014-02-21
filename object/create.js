@@ -1,15 +1,4 @@
-// Object.create alternative that provides workaround for V8 issue
-// http://code.google.com/p/v8/issues/detail?id=2804
-//
-// When `null` is provided as a prototype, it's substituted with specially
-// prepared object that derives from Object.prototype but has all
-// Object.prototype properties shadowed with undefined.
-//
-// It's quirky solution that allows us to have plain objects with no truthy
-// properties but with turnable prototype.
-//
-// Use only for objects that you plan to switch prototypes of and be aware of
-// limitations of this workaround.
+// Workaround for http://code.google.com/p/v8/issues/detail?id=2804
 
 'use strict';
 
