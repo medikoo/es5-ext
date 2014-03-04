@@ -4,14 +4,13 @@ var isArguments = require('../../function/is-arguments')
   , callable    = require('../../object/valid-callable')
   , validValue  = require('../../object/valid-value')
 
-  , isArray = Array.isArray, call = Function.prototype.call
-  , hasOwnProperty = Object.prototype.hasOwnProperty;
+  , isArray = Array.isArray, call = Function.prototype.call;
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	var mapFn = arguments[1], thisArg = arguments[2], Constructor
 	  , i, arr, l, iterator, result;
 
-	validValue(arrayLike);
+	arrayLike = Object(validValue(arrayLike));
 
 	if (!this || !Array.isPrototypeOf(this)) Constructor = Array;
 	else Constructor = this;
@@ -33,7 +32,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	if (mapFn != null) {
 		arr = new Constructor(l);
 		for (i = 0; i < l; ++i) {
-			if (!hasOwnProperty.call(arrayLike, i)) continue;
+			if (!(i in arrayLike)) continue;
 			arr[i] = call.call(mapFn, thisArg, arrayLike[i]);
 		}
 		return arr;
@@ -50,7 +49,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 
 	arr = new Constructor(l);
 	for (i = 0; i < l; ++i) {
-		if (!hasOwnProperty.call(arrayLike, i)) continue;
+		if (!(i in arrayLike)) continue;
 		arr[i] = arrayLike[i];
 	}
 	return arr;
