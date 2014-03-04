@@ -53,8 +53,10 @@ module.exports = (function (status) {
 	  , desc = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');
 
 	if (desc) {
-		set = desc.set;
-		try { set.call(x, y); } catch (ignore) { }
+		try {
+			set = desc.set; // Opera crashes at this point
+			set.call(x, y);
+		} catch (ignore) { }
 		if (Object.getPrototypeOf(x) === y) return { set: set, level: 2 };
 	}
 
