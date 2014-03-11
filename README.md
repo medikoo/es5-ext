@@ -4,7 +4,7 @@
 
 Shims for upcoming ES6 standard and other goodies implemented strictly with ECMAScript conventions in mind.
 
-It's designed to be used in compliant ECMAScript5 or ECMAScript6 environments. Older environments are not supported although most of the features should work with correct ECMAScript5 shim on board.
+It's designed to be used in compliant ECMAScript5 or ECMAScript6 environments. Older environments are not supported, although most of the features should work with correct ECMAScript5 shim on board.
 
 When used in ECMAScript6 environment, native implementation (if valid) takes precedence over shims.
 
