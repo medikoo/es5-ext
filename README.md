@@ -448,7 +448,7 @@ Applies the functions in reverse argument-list order.
 
 _f1.compose(f2, f3, f4)(…args)  =def  f1(f2(f3(f4(…arg))))_
 
-#### fn.copy() _(es5-ext/function/compose)_
+#### fn.copy() _(es5-ext/function/#/copy)_
 
 Produces copy of given function
 
@@ -479,7 +479,7 @@ Returns a function that when called will behave like context function called wit
 
 _f.partial(…args1)(…args2)  =def  f(…args1, …args2)_
 
-#### fn.spread() _(es5-ext/function/spread)_
+#### fn.spread() _(es5-ext/function/#/spread)_
 
 Returns a function that applies underlying function with first list argument
 
@@ -851,7 +851,7 @@ It's a getter, so only `implement` and `is-implemented` modules are provided.
 
 #### fromCodePoint([…codePoints]) _(es5-ext/string/from-code-point)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint]
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint)
 
 #### getFormat(fMap) _(es5-ext/string/get-format)_
 
@@ -863,7 +863,7 @@ Whether object is string
 
 #### raw(callSite[, …substitutions]) _(es5-ext/string/raw)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw]
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw)
 
 ### String Prototype extensions
 
@@ -882,17 +882,17 @@ Case insensitive compare
 
 #### str.codePointAt(pos) _(es5-ext/string/#/code-point-at)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat]
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat)
 
 #### str.contains(searchString[, position]) _(es5-ext/string/#/contains)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains]
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains)
 
 Whether string contains given string.
 
 #### str.endsWith(searchString[, endPosition]) _(es5-ext/string/#/ends-with)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith].  
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).  
 Whether strings ends with given string
 
 #### str.hyphenToCamel() _(es5-ext/string/#/hyphen-to-camel)_
@@ -916,7 +916,7 @@ If _length_ is negative then pad is applied from right.
 
 #### str.repeat(n) _(es5-ext/string/#/repeat)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat].  
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat).  
 Repeat given string _n_ times
 
 #### plainReplace(search, replace) _(es5-ext/string/#/plain-replace)_
@@ -929,7 +929,7 @@ Simple `replace` version. Doesn't support regular expressions. Replaces all occu
 
 #### startsWith(searchString[, position]) _(es5-ext/string/#/starts-with)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith].  
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith).  
 Whether strings starts with given string
 
 ### Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
