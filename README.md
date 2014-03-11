@@ -378,8 +378,7 @@ Creates custom error object, optinally extended with `code` and other extension 
 
 #### isError(x) _(es5-ext/error/is-error)_
 
-Whether value is error.  
-It returns true for all Error instances and Exception host instances (e.g. DOMException)
+Whether value is an error (instance of `Error`).  
 
 #### validError(x) _(es5-ext/error/valid-error)_
 
