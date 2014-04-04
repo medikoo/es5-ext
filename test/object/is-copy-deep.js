@@ -17,6 +17,7 @@ module.exports = function (t, a) {
 
 	a(t([1, 'raz', true], [1, 'raz', true]), true, "Array: same");
 	a(t([1, 'raz', undefined], [1, 'raz']), false, "Array: diff");
+	a(t(['foo'], ['one']), false, "Array: One value comparision");
 
 	x = { foo: { bar: { mar: {} } } };
 	y = { foo: { bar: { mar: {} } } };

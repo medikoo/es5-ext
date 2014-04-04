@@ -14,7 +14,7 @@ eqArr = function (a, b, recMap) {
 	if (l !== b.length) return false;
 	for (i = 0; i < l; ++i) {
 		if (a.hasOwnProperty(i) !== b.hasOwnProperty(i)) return false;
-		if (!eqVal(a, b, recMap)) return false;
+		if (!eqVal(a[i], b[i], recMap)) return false;
 	}
 	return true;
 };
