@@ -862,6 +862,13 @@ Whether object is string
 
 ### String Prototype extensions
 
+#### str.at(pos) _(es5-ext/string/#/at)_
+
+_Proposed for ECMAScript 6/7 standard, but not (yet) in a draft_
+
+Returns a string at given position in unicode safe manner.
+Based on [implementation by Matthias Bynes](https://github.com/mathiasbynens/String.prototype.at).
+
 #### str.camelToHyphen() _(es5-ext/string/#/camel-to-hyphen)_
 
 Convert camelCase string to hyphen separated, e.g. one-two-three -> oneTwoThree.

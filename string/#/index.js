@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+	at:                     require('./at'),
 	camelToHyphen:          require('./camel-to-hyphen'),
 	capitalize:             require('./capitalize'),
 	caseInsensitiveCompare: require('./case-insensitive-compare'),
