@@ -32,14 +32,9 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	l = toPosInt(arrayLike.length);
 	if (mapFn != null) {
 		arr = new Constructor(l);
-		for (i = 0; i < l; ++i) {
-			if (!(i in arrayLike)) continue;
-			arr[i] = call.call(mapFn, thisArg, arrayLike[i]);
-		}
+		for (i = 0; i < l; ++i) arr[i] = call.call(mapFn, thisArg, arrayLike[i]);
 		return arr;
 	}
-
-	if (Constructor === arrayLike.constructor) return arrayLike.slice();
 
 	if (isArguments(arrayLike)) {
 		if (l !== 1) return Constructor.apply(null, arrayLike);
@@ -49,9 +44,6 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	}
 
 	arr = new Constructor(l);
-	for (i = 0; i < l; ++i) {
-		if (!(i in arrayLike)) continue;
-		arr[i] = arrayLike[i];
-	}
+	for (i = 0; i < l; ++i) arr[i] = arrayLike[i];
 	return arr;
 };
