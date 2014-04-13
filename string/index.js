@@ -2,8 +2,8 @@
 
 module.exports = {
 	'#':           require('./#'),
+	formatMethod:  require('./format-method'),
 	fromCodePoint: require('./from-code-point'),
-	getFormat:     require('./get-format'),
 	isString:      require('./is-string'),
 	raw:           require('./raw')
 };

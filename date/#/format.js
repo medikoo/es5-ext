@@ -5,7 +5,7 @@ var pad       = require('../../number/#/pad')
 
   , format;
 
-format = require('../../string/get-format')({
+format = require('../../string/format-method')({
 	Y: function () { return String(this.getFullYear()); },
 	y: function () { return String(this.getFullYear()).slice(-2); },
 	m: function () { return pad.call(this.getMonth() + 1, 2); },

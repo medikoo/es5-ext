@@ -844,13 +844,13 @@ It's a getter, so only `implement` and `is-implemented` modules are provided.
 
 ### String Constructor extensions
 
+#### formatMethod(fMap) _(es5-ext/string/format-method)_
+
+Creates format method. It's used e.g. to create `Date.prototype.format` method
+
 #### fromCodePoint([…codePoints]) _(es5-ext/string/from-code-point)_
 
 [_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint)
-
-#### getFormat(fMap) _(es5-ext/string/get-format)_
-
-Creates format function. It's used e.g. to create `Date.prototype.format` method/
 
 #### isString(x) _(es5-ext/string/is-string)_
 
