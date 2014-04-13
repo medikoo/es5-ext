@@ -1,6 +1,7 @@
 'use strict';
 
-var value    = require('../../object/valid-value')
+var toPosInt = require('../../number/to-pos-integer')
+  , value    = require('../../object/valid-value')
 
   , lastIndexOf = Array.prototype.lastIndexOf
   , hasOwnProperty = Object.prototype.hasOwnProperty
@@ -14,9 +15,9 @@ module.exports = function (searchElement/*, fromIndex*/) {
 
 	value(this);
 	fromIndex = arguments[1];
-	if (isNaN(fromIndex)) fromIndex = ((this.length >>> 0) - 1);
+	if (isNaN(fromIndex)) fromIndex = (toPosInt(this.length) - 1);
 	else if (fromIndex >= 0) fromIndex = floor(fromIndex);
-	else fromIndex = (this.length >>> 0) - floor(abs(fromIndex));
+	else fromIndex = toPosInt(this.length) - floor(abs(fromIndex));
 
 	for (i = fromIndex; i >= 0; --i) {
 		if (hasOwnProperty.call(this, i)) {

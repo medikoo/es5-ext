@@ -1,12 +1,13 @@
 'use strict';
 
-var value = require('../object/valid-value')
+var toPosInt = require('../number/to-pos-integer')
+  , value    = require('../object/valid-value')
 
   , slice = Array.prototype.slice;
 
 module.exports = function (length/*, …fill*/) {
 	var arr, l;
-	length = value(length) >>> 0;
+	length = toPosInt(value(length));
 	if (length === 0) return [];
 
 	arr = (arguments.length < 2) ? [undefined] :

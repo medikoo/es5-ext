@@ -1,6 +1,7 @@
 'use strict';
 
 var isArguments = require('../../function/is-arguments')
+  , toPosInt    = require('../../number/to-pos-integer')
   , callable    = require('../../object/valid-callable')
   , validValue  = require('../../object/valid-value')
 
@@ -28,7 +29,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		return arr;
 	}
 
-	l = arrayLike.length >>> 0;
+	l = toPosInt(arrayLike.length);
 	if (mapFn != null) {
 		arr = new Constructor(l);
 		for (i = 0; i < l; ++i) {

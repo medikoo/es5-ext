@@ -2,14 +2,15 @@
 
 'use strict';
 
-var validValue = require('../../../object/valid-value')
-  , toInteger  = require('../../../number/to-integer')
+var toInteger  = require('../../../number/to-integer')
+  , toPosInt   = require('../../../number/to-pos-integer')
+  , validValue = require('../../../object/valid-value')
 
   , hasOwnProperty = Object.prototype.hasOwnProperty
   , max = Math.max, min = Math.min;
 
 module.exports = function (target, start/*, end*/) {
-	var o = validValue(this), end = arguments[2], l = o.length >>> 0
+	var o = validValue(this), end = arguments[2], l = toPosInt(o.length)
 	  , to, from, fin, count, direction;
 
 	target = toInteger(target);

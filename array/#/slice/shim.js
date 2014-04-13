@@ -1,6 +1,7 @@
 'use strict';
 
 var toInteger    = require('../../../number/to-integer')
+  , toPosInt     = require('../../../number/to-pos-integer')
   , isPlainArray = require('../../is-plain-array')
 
   , isArray = Array.isArray, slice = Array.prototype.slice
@@ -11,7 +12,7 @@ module.exports = function (start, end) {
 	if (!this || !isArray(this) || isPlainArray(this)) {
 		return slice.apply(this, arguments);
 	}
-	length = this.length >>> 0;
+	length = toPosInt(this.length);
 	start = toInteger(start);
 	if (start < 0) start = max(length + start, 0);
 	else if (start > length) start = length;

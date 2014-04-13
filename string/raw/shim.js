@@ -1,12 +1,13 @@
 'use strict';
 
-var validValue = require('../../object/valid-value')
+var toPosInt   = require('../../number/to-pos-integer')
+  , validValue = require('../../object/valid-value')
 
   , reduce = Array.prototype.reduce;
 
 module.exports = function (callSite/*,  …substitutions*/) {
 	var args, rawValue = Object(validValue(Object(validValue(callSite)).raw));
-	if (!(rawValue.length >>> 0)) return '';
+	if (!toPosInt(rawValue.length)) return '';
 	args = arguments;
 	return reduce.call(rawValue, function (a, b, i) {
 		return a + String(args[i]) + b;

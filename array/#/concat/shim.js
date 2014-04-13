@@ -1,6 +1,7 @@
 'use strict';
 
 var isPlainArray = require('../../is-plain-array')
+  , toPosInt     = require('../../../number/to-pos-integer')
   , isObject     = require('../../../object/is-object')
 
   , isArray = Array.isArray, concat = Array.prototype.concat
@@ -28,7 +29,7 @@ module.exports = function (item/*, …items*/) {
 		var base;
 		if (isSpreadable(arg)) {
 			base = result.length;
-			result.length += (arg.length >>> 0);
+			result.length += toPosInt(arg.length);
 			forEach.call(arg, function (val, i) { result[base + i] = val; });
 			return;
 		}

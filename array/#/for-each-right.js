@@ -1,6 +1,7 @@
 'use strict';
 
-var callable = require('../../object/valid-callable')
+var toPosInt = require('../../number/to-pos-integer')
+  , callable = require('../../object/valid-callable')
   , value    = require('../../object/valid-value')
 
   , hasOwnProperty = Object.prototype.hasOwnProperty
@@ -13,7 +14,7 @@ module.exports = function (cb/*, thisArg*/) {
 	callable(cb);
 	thisArg = arguments[1];
 
-	for (i = self.length >>> 0; i >= 0; --i) {
+	for (i = toPosInt(self.length); i >= 0; --i) {
 		if (hasOwnProperty.call(self, i)) call.call(cb, thisArg, self[i], i, self);
 	}
 };

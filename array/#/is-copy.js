@@ -1,6 +1,7 @@
 'use strict';
 
-var eq    = require('../../object/eq')
+var toPosInt = require('../../number/to-pos-integer')
+  , eq    = require('../../object/eq')
   , value = require('../../object/valid-value')
 
   , hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -8,8 +9,8 @@ var eq    = require('../../object/eq')
 module.exports = function (other) {
 	var i, l;
 	(value(this) && value(other));
-	l = this.length >>> 0;
-	if (l !== (other.length >>> 0)) return false;
+	l = toPosInt(this.length);
+	if (l !== toPosInt(other.length)) return false;
 	for (i = 0; i < l; ++i) {
 		if (hasOwnProperty.call(this, i) !== hasOwnProperty.call(other, i)) {
 			return false;

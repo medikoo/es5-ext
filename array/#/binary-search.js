@@ -1,6 +1,7 @@
 'use strict';
 
-var callable = require('../../object/valid-callable')
+var toPosInt = require('../../number/to-pos-integer')
+  , callable = require('../../object/valid-callable')
   , value    = require('../../object/valid-value')
 
   , floor    = Math.floor;
@@ -11,7 +12,7 @@ module.exports = function (compareFn) {
 	value(this);
 	callable(compareFn);
 
-	length = (this.length >>> 0);
+	length = toPosInt(this.length);
 	low = 0;
 	high = length - 1;
 

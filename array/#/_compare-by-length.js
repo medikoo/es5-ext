@@ -2,6 +2,8 @@
 
 'use strict';
 
+var toPosInt = require('../../number/to-pos-integer');
+
 module.exports = function (a, b) {
-	return (a.length >>> 0) - (b.length >>> 0);
+	return toPosInt(a.length) - toPosInt(b.length);
 };
