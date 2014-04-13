@@ -14,4 +14,5 @@ module.exports = function (t, a) {
 	a(t(Object.create(arr)), false, "Array extension");
 	if (!SubArray) return;
 	a(t(new SubArray(23)), false, "Subclass instance");
+	a(t(Array.prototype), false, "Array.prototype");
 };
