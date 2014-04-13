@@ -1,6 +1,6 @@
 'use strict';
 
-var toUint       = require('../../number/to-uint')
+var toPosInt     = require('../../number/to-pos-integer')
   , callable     = require('../../object/valid-callable')
   , defineLength = require('../_define-length')
 
@@ -20,5 +20,5 @@ curry = function self(fn, length, preArgs) {
 module.exports = function (/*length*/) {
 	var length = arguments[0];
 	return curry(callable(this),
-		isNaN(length) ? toUint(this.length) : toUint(length));
+		isNaN(length) ? toPosInt(this.length) : toPosInt(length));
 };

@@ -1,6 +1,7 @@
 'use strict';
 
-var toUint = require('../number/to-uint')
+var toPosInt = require('../number/to-pos-integer')
+
   , test = function (a, b) {}, desc, defineProperty
   , generate, mixin;
 
@@ -14,7 +15,7 @@ if (test.length === 1) {
 	desc = { configurable: true, writable: false, enumerable: false };
 	defineProperty = Object.defineProperty;
 	module.exports = function (fn, length) {
-		length = toUint(length);
+		length = toPosInt(length);
 		if (fn.length === length) return fn;
 		desc.value = length;
 		return defineProperty(fn, 'length', desc);
@@ -34,7 +35,7 @@ if (test.length === 1) {
 	}());
 	module.exports = function (src, length) {
 		var target;
-		length = toUint(length);
+		length = toPosInt(length);
 		if (src.length === length) return src;
 		target = generate(length)(src);
 		try { mixin(target, src); } catch (ignore) {}

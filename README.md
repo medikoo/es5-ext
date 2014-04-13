@@ -595,9 +595,9 @@ The value of Number.MIN_SAFE_INTEGER is -9007199254740991 (253-1).
 
 Converts value to integer
 
-#### toUint(x) _(es5-ext/number/to-uint)_
+#### toPosInteger(x) _(es5-ext/number/to-pos-integer)_
 
-Converts value to unsigned integer
+Converts value to positive integer. If provided value is less than 0, then 0 is returned
 
 #### toUint32(x) _(es5-ext/number/to-uint32)_
 
