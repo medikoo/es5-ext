@@ -6,15 +6,16 @@ var keys  = require('../keys')
   , max = Math.max;
 
 module.exports = function (dest, src/*, …srcn*/) {
-	var error, i = 1, l = max(arguments.length, 2);
+	var error, i, l = max(arguments.length, 2), assign;
 	dest = Object(value(dest));
-	for (; i < l; ++i) {
+	assign = function (key) {
+		try { dest[key] = src[key]; } catch (e) {
+			if (!error) error = e;
+		}
+	};
+	for (i = 1; i < l; ++i) {
 		src = arguments[i];
-		keys(src).forEach(function (key) {
-			try { dest[key] = src[key]; } catch (e) {
-				if (!error) error = e;
-			}
-		});
+		keys(src).forEach(assign);
 	}
 	if (error !== undefined) throw error;
 	return dest;
