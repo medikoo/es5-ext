@@ -1,3 +1,138 @@
+v0.10.0  --  2014.04.13
+Major update:
+- All methods and function specified for ECMAScript 6 are now introduced as
+  shims accompanied with functions through which (optionally) they can be
+  implementend on native objects
+- Filename convention was changed to shorter and strictly lower case names. e.g.
+  `lib/String/prototype/starts-with` became `string/#/starts-with`
+- Generated functions are guaranteed to have expected length
+- Objects with null prototype (created via `Object.create(null)`) are widely
+  supported (older version have crashed due to implied `obj.hasOwnProperty` and
+  related invocations)
+- Support array subclasses
+- When handling lists do not limit its length to Uint32 range
+- Use newly introduced `Object.eq` for strict equality in place of `Object.is`
+- Iteration of Object have been improved so properties that were hidden or
+  removed after iteration started are not iterated.
+
+Additions:
+- `Array.isPlainArray`
+- `Array.validArray`
+- `Array.prototype.concat` (as updated with ES6)
+- `Array.prototype.copyWithin` (as introduced with ES6)
+- `Array.prototype.fill` (as introduced with ES6)
+- `Array.prototype.filter` (as updated with ES6)
+- `Array.prototype.findIndex` (as introduced with ES6)
+- `Array.prototype.map` (as updated with ES6)
+- `Array.prototype.separate`
+- `Array.prototype.slice` (as updated with ES6)
+- `Array.prototype.splice` (as updated with ES6)
+- `Function.prototype.copy`
+- `Math.acosh` (as introduced with ES6)
+- `Math.atanh` (as introduced with ES6)
+- `Math.cbrt` (as introduced with ES6)
+- `Math.clz32` (as introduced with ES6)
+- `Math.cosh` (as introduced with ES6)
+- `Math.expm1` (as introduced with ES6)
+- `Math.fround` (as introduced with ES6)
+- `Math.hypot` (as introduced with ES6)
+- `Math.imul` (as introduced with ES6)
+- `Math.log2` (as introduced with ES6)
+- `Math.log10` (as introduced with ES6)
+- `Math.log1p` (as introduced with ES6)
+- `Math.sinh` (as introduced with ES6)
+- `Math.tanh` (as introduced with ES6)
+- `Math.trunc` (as introduced with ES6)
+- `Number.EPSILON` (as introduced with ES6)
+- `Number.MIN_SAFE_INTEGER` (as introduced with ES6)
+- `Number.MAX_SAFE_INTEGER` (as introduced with ES6)
+- `Number.isFinite` (as introduced with ES6)
+- `Number.isInteger` (as introduced with ES6)
+- `Number.isSafeInteger` (as introduced with ES6)
+- `Object.create` (with fix for V8 issue which disallows prototype turn of
+  objects derived from null
+- `Object.eq` - Less restrictive version of `Object.is` based on SameValueZero
+  algorithm
+- `Object.firstKey`
+- `Object.keys` (as updated with ES6)
+- `Object.mixinPrototypes`
+- `Object.primitiveSet`
+- `Object.setPrototypeOf` (as introduced with ES6)
+- `Object.validObject`
+- `RegExp.escape`
+- `RegExp.prototype.match` (as introduced with ES6)
+- `RegExp.prototype.replace` (as introduced with ES6)
+- `RegExp.prototype.search` (as introduced with ES6)
+- `RegExp.prototype.split` (as introduced with ES6)
+- `RegExp.prototype.sticky` (as introduced with ES6)
+- `RegExp.prototype.unicode` (as introduced with ES6)
+- `String.fromCodePoint` (as introduced with ES6)
+- `String.raw` (as introduced with ES6)
+- `String.prototype.at`
+- `String.prototype.codePointAt` (as introduced with ES6)
+- `String.prototype.normalize` (as introduced with ES6)
+- `String.prototype.plainReplaceAll`
+
+Removals:
+- `reserved` set
+- `Array.prototype.commonLeft`
+- `Function.insert`
+- `Function.remove`
+- `Function.prototype.silent`
+- `Function.prototype.wrap`
+- `Object.descriptor` Move to external `d` project.
+  See: https://github.com/medikoo/d
+- `Object.diff`
+- `Object.extendDeep`
+- `Object.reduce`
+- `Object.values`
+- `String.prototype.trimCommonLeft`
+
+Renames:
+- `Function.i` into `Function.identity`
+- `Function.k` into `Function.constant`
+- `Number.toInt` into `Number.toInteger`
+- `Number.toUint` into `Number.toPosInteger`
+- `Object.extend` into `Object.assign` (as introduced in ES 6)
+- `Object.extendProperties` into `Object.mixin`, with improved internal
+  handling, so it matches temporarily specified `Object.mixin` for ECMAScript 6
+- `Object.isList` into `Object.isArrayLike`
+- `Object.mapToArray` into `Object.toArray` (with fixed function length)
+- `Object.toPlainObject` into `Object.normalizeOptions` (as this is the real
+  use case where we use this function)
+- `Function.prototype.chain` into `Function.prototype.compose`
+- `Function.prototype.match` into `Function.prototype.spread`
+- `String.prototype.format` into `String.formatMethod`
+
+Improvements & Fixes:
+- Remove workaround for primitive values handling in object iterators
+- `Array.from`: Update so it follows ES 6 spec
+- `Array.prototype.compact`: filters just null and undefined values
+  (not all falsies)
+- `Array.prototype.eIndexOf` and `Array.prototype.eLastIndexOf`: fix position
+  handling, improve internals
+- `Array.prototype.find`: return undefined not null, in case of not found
+  (follow ES 6)
+- `Array.prototype.remove` fix function length
+- `Error.custom`: simplify, Custom class case is addressed by outer
+  `error-create` project -> https://github.com/medikoo/error-create
+- `Error.isError` true only for Error instances (remove detection of host
+  Exception objects)
+- `Number.prototype.pad`: Normalize negative pad
+- `Object.clear`: Handle errors same way as in `Object.assign`
+- `Object.compact`: filters just null and undefined values (not all falsies)
+- `Object.compare`: Take into account NaN values
+- `Object.copy`: Split into `Object.copy` and `Object.copyDeep`
+- `Object.isCopy`: Separate into `Object.isCopy` and `Object.isCopyDeep`, where
+  `isCopyDeep` handles nested plain objects and plain arrays only
+- `String.prototype.endsWith`: Adjust up to ES6 specification
+- `String.prototype.repeat`: Adjust up to ES6 specification and improve algorithm
+- `String.prototype.simpleReplace`: Rename into `String.prototype.plainReplace`
+- `String.prototype.startsWith`: Adjust up to ES6 specification
+- Update lint rules, and adjust code to that
+- Update Travis CI configuration
+- Remove Makefile (it's cross-env utility)
+
 v0.9.2  --  2013.03.11
 Added:
 * Array.prototype.isCopy
