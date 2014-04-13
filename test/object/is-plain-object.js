@@ -14,4 +14,5 @@ module.exports = function (t, a) {
 		"Object whose prototype is Object.prototype is plain object");
 	a(t(Object.create(null)), true,
 		"Object whose prototype is null is plain object");
+	a(t(Object.prototype), false, "Object.prototype");
 };
