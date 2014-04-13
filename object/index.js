@@ -2,7 +2,6 @@
 
 module.exports = {
 	assign:           require('./assign'),
-	assignMultiple:   require('./assign-multiple'),
 	clear:            require('./clear'),
 	compact:          require('./compact'),
 	compare:          require('./compare'),

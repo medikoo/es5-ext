@@ -612,14 +612,10 @@ Pad given number with zeros. Returns string
 
 ### Object Constructor extensions
 
-#### assign(target, source) _(es5-ext/object/assign)_
+#### assign(target, source[, …sourcen]) _(es5-ext/object/assign)_
 
 [_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign).  
-Extend _target_ by enumerable own properties of other object. Properties found in both objects will be overwritten.
-
-#### assignMultiple(target, source[, …sources]) _(es5-ext/object/assign-multiple)_
-
-Same as `Object.assign` but accepts multiple source arguments
+Extend _target_ by enumerable own properties of other objects. If properties are already set on target object, they will be overwritten.
 
 #### clear(obj) _(es5-ext/object/clear)_
 

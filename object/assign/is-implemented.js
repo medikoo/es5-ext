@@ -4,6 +4,6 @@ module.exports = function () {
 	var assign = Object.assign, obj;
 	if (typeof assign !== 'function') return false;
 	obj = { foo: 'raz' };
-	assign(obj, { bar: 'dwa' });
-	return (obj.foo + obj.bar) === 'razdwa';
+	assign(obj, { bar: 'dwa' }, { trzy: 'trzy' });
+	return (obj.foo + obj.bar + obj.trzy) === 'razdwatrzy';
 };
