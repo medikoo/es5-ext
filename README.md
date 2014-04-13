@@ -62,6 +62,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 - `Math.asinh` -> `require('es5-ext/math/asinh')`
 - `Math.atanh` -> `require('es5-ext/math/atanh')`
 - `Math.cbrt` -> `require('es5-ext/math/cbrt')`
+- `Math.clz32` -> `require('es5-ext/math/clz32')`
 - `Math.cosh` -> `require('es5-ext/math/cosh')`
 - `Math.exmp1` -> `require('es5-ext/math/expm1')`
 - `Math.fround` -> `require('es5-ext/math/fround')`
@@ -501,6 +502,10 @@ _f.match()(args)  =def  f.apply(null, args)_
 #### cbrt(x) _(es5-ext/math/cbrt)_
 
 [_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt).  
+
+#### clz32(x) _(es5-ext/math/clz32)_
+
+[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32).  
 
 #### cosh(x) _(es5-ext/math/cosh)_
 

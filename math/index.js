@@ -5,6 +5,7 @@ module.exports = {
 	asinh:  require('./asinh'),
 	atanh:  require('./atanh'),
 	cbrt:   require('./cbrt'),
+	clz32:  require('./clz32'),
 	cosh:   require('./cosh'),
 	expm1:  require('./expm1'),
 	fround: require('./fround'),
