@@ -1,12 +1,12 @@
 # es5-ext
-## ECMAScript5 extensions
-### (with respect to ECMAScript6 standard)
+## ECMAScript 5 extensions
+### (with respect to ECMAScript 6 standard)
 
 Shims for upcoming ES6 standard and other goodies implemented strictly with ECMAScript conventions in mind.
 
-It's designed to be used in compliant ECMAScript5 or ECMAScript6 environments. Older environments are not supported, although most of the features should work with correct ECMAScript5 shim on board.
+It's designed to be used in compliant ECMAScript 5 or ECMAScript 6 environments. Older environments are not supported, although most of the features should work with correct ECMAScript 5 shim on board.
 
-When used in ECMAScript6 environment, native implementation (if valid) takes precedence over shims.
+When used in ECMAScript 6 environment, native implementation (if valid) takes precedence over shims.
 
 ### Installation
 
@@ -20,7 +20,7 @@ You easily bundle custom toolkit of your choice, with any CJS bundler, e.g. [mod
 
 ### Usage
 
-#### ECMAScript6 features
+#### ECMAScript 6 features
 
 You can force ES6 features to be implemented in your environment, e.g. following will assign `from` function to `Array` (only if it's not implemented already).
 
@@ -158,7 +158,7 @@ Object that represents global scope
 
 #### from(arrayLike/*, mapFn, thisArg*/) _(es5-ext/array/from)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from).  
 Returns array representation of `arrayLike`. If `arrayLike` is already an array its copy is returned.
 
 #### generate([length[, …fill]]) _(es5-ext/array/generate)_
@@ -171,7 +171,7 @@ Returns true if object is plain array (not instance of one of the Array's extens
 
 #### of([…items]) _(es5-ext/array/of)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.of).  
 Create an array from given arguments.
 
 #### toArray(obj) _(es5-ext/array/to-array)_
@@ -199,7 +199,7 @@ Returns a copy of the context with all non-values (`null` or `undefined`) remove
 
 #### arr.concat() _(es5-ext/array/#/concat)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.concat).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.concat).  
 ES6's version of `concat`. Supports `isConcatSpreadable` symbol, and returns array of same type as the context.
 
 #### arr.contains(searchElement[, position]) _(es5-ext/array/#/contains)_
@@ -208,7 +208,7 @@ Whether list contains the given value.
 
 #### arr.copyWithin(target, start[, end]) _(es5-ext/array/#/copy-within)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.copywithin).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.copywithin).  
 
 #### arr.diff(other) _(es5-ext/array/#/diff)_
 
@@ -228,21 +228,21 @@ Returns the array of elements that are found only in one of the lists (either co
 
 #### arr.fill(value[, start, end]) _(es5-ext/array/#/fill)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.fill).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.fill).  
 
 #### arr.filter(callback[, thisArg]) _(es5-ext/array/#/filter)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.filter).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.filter).  
 ES6's version of `filter`, returns array of same type as the context.
 
 #### arr.find(predicate[, thisArg]) _(es5-ext/array/#/find)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.find).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.find).  
 Return first element for which given function returns true
 
 #### arr.findIndex(predicate[, thisArg]) _(es5-ext/array/#/find-index)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.findindex).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.findindex).  
 Return first index for which given function returns true
 
 #### arr.first() _(es5-ext/array/#/first)_
@@ -291,7 +291,7 @@ Returns last defined index of the array
 
 #### arr.map(callback[, thisArg]) _(es5-ext/array/#/map)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.map).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.map).  
 ES6's version of `map`, returns array of same type as the context.
 
 #### remove(value[, …valuen]) _(es5-ext/array/#/remove)_
@@ -304,7 +304,7 @@ Returns array with items separated with `sep` value
 
 #### arr.slice(callback[, thisArg]) _(es5-ext/array/#/slice)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.slice).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.slice).  
 ES6's version of `slice`, returns array of same type as the context.
 
 #### arr.someRight(cb[, thisArg]) _(es5-ext/array/#/someRight)_
@@ -313,7 +313,7 @@ ES6's version of `slice`, returns array of same type as the context.
 
 #### arr.splice(callback[, thisArg]) _(es5-ext/array/#/splice)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.splice).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.splice).  
 ES6's version of `splice`, returns array of same type as the context.
 
 #### arr.uniq() _(es5-ext/array/#/uniq)_
@@ -489,93 +489,93 @@ _f.match()(args)  =def  f.apply(null, args)_
 
 #### acosh(x) _(es5-ext/math/acosh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.acosh).  
 
 #### asinh(x) _(es5-ext/math/asinh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.asinh).  
 
 #### atanh(x) _(es5-ext/math/atanh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.atanh).  
 
 #### cbrt(x) _(es5-ext/math/cbrt)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cbrt).  
 
 #### clz32(x) _(es5-ext/math/clz32)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.clz32).  
 
 #### cosh(x) _(es5-ext/math/cosh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.cosh).  
 
 #### expm1(x) _(es5-ext/math/expm1)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.expm1).  
 
 #### fround(x) _(es5-ext/math/fround)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.fround).  
 
 #### hypot([…values]) _(es5-ext/math/hypot)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.hypot).  
 
 #### imul(x, y) _(es5-ext/math/imul)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.imul).  
 
 #### log1p(x) _(es5-ext/math/log1p)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log1p).  
 
 #### log2(x) _(es5-ext/math/log2)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log2).  
 
 #### log10(x) _(es5-ext/math/log10)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.log10).  
 
 #### sign(x) _(es5-ext/math/sign)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sign).  
 
 #### sinh(x) _(es5-ext/math/sinh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.sinh).  
 
 #### tanh(x) _(es5-ext/math/tanh)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.tanh).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.tanh).  
 
 #### trunc(x) _(es5-ext/math/trunc)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-math.trunc).  
 
 ### Number Constructor extensions
 
 #### EPSILON _(es5-ext/number/epsilon)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.epsilon).  
 
 The difference between 1 and the smallest value greater than 1 that is representable as a Number value, which is approximately 2.2204460492503130808472633361816 x 10-16.
 
 #### isFinite(x) _(es5-ext/number/is-finite)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite).  
 Whether value is finite. Differs from global isNaN that it doesn't do type coercion.
 
 #### isInteger(x) _(es5-ext/number/is-integer)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isinteger).  
 Whether value is integer.
 
 #### isNaN(x) _(es5-ext/number/is-nan)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isnan).  
 Whether value is NaN. Differs from global isNaN that it doesn't do type coercion.
 
 #### isNumber(x) _(es5-ext/number/is-number)_
@@ -584,16 +584,16 @@ Whether given value is number
 
 #### isSafeInteger(x) _(es5-ext/number/is-safe-integer)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.issafeinteger).  
 
 #### MAX_SAFE_INTEGER _(es5-ext/number/max-safe-integer)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.maxsafeinteger).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.maxsafeinteger).  
 The value of Number.MAX_SAFE_INTEGER is 9007199254740991.
 
 #### MIN_SAFE_INTEGER _(es5-ext/number/min-safe-integer)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.minsafeinteger).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.minsafeinteger).  
 The value of Number.MIN_SAFE_INTEGER is -9007199254740991 (253-1).
 
 #### toInteger(x) _(es5-ext/number/to-integer)_
@@ -619,7 +619,7 @@ Pad given number with zeros. Returns string
 
 #### assign(target, source[, …sourcen]) _(es5-ext/object/assign)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.assign).  
 Extend _target_ by enumerable own properties of other objects. If properties are already set on target object, they will be overwritten.
 
 #### clear(obj) _(es5-ext/object/clear)_
@@ -726,7 +726,7 @@ Search object for value
 
 #### keys(obj) _(es5-ext/object/keys)_
 
-[_Updated with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.keys).  
+[_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.keys).  
 ES6's version of `keys`, doesn't throw on primitive input
 
 #### map(obj, cb[, thisArg]) _(es5-ext/object/map)_
@@ -740,7 +740,7 @@ Create new object with same values, but remapped keys
 #### mixin(target, source)
 
 Extend _target_ by all own properties of other objects. Properties found in both objects will be overwritten (unless they're not configurable and cannot be overwritten).
-_It was for a moment part of ECMAScript6 draft._
+_It was for a moment part of ECMAScript 6 draft._
 
 #### mixinPrototypes(target, …source])
 
@@ -767,7 +767,7 @@ Safe navigation of object properties. See http://wiki.ecmascript.org/doku.php?id
 
 #### setPrototypeOf(object, proto) _(es5-ext/object/set-prototype-of)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.setprototypeof).  
 If native version is not provided, it depends on existence of `__proto__` functionality, if it's missing, `null` instead of function is exposed.
 
 #### some(obj, cb[, thisArg[, compareFn]]) _(es5-ext/object/some)_
@@ -823,28 +823,28 @@ It's to be used as counterpart to [regExp.unicode](http://people.mozilla.org/~jo
 
 #### re.match(string) _(es5-ext/reg-exp/#/match)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match).  
 
 #### re.replace(string, replaceValue) _(es5-ext/reg-exp/#/replace)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.replace).  
 
 #### re.search(string) _(es5-ext/reg-exp/#/search)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search).  
 
 #### re.split(string) _(es5-ext/reg-exp/#/search)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.split).  
 
 #### re.sticky _(es5-ext/reg-exp/#/sticky/implement)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.sticky).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.sticky).  
 It's a getter, so only `implement` and `is-implemented` modules are provided.
 
 #### re.unicode _(es5-ext/reg-exp/#/unicode/implement)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.unicode).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.unicode).  
 It's a getter, so only `implement` and `is-implemented` modules are provided.
 
 ### String Constructor extensions
@@ -855,7 +855,7 @@ Creates format method. It's used e.g. to create `Date.prototype.format` method
 
 #### fromCodePoint([…codePoints]) _(es5-ext/string/from-code-point)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint)
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.fromcodepoint)
 
 #### isString(x) _(es5-ext/string/is-string)_
 
@@ -863,7 +863,7 @@ Whether object is string
 
 #### raw(callSite[, …substitutions]) _(es5-ext/string/raw)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw)
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw)
 
 ### String Prototype extensions
 
@@ -889,17 +889,17 @@ Case insensitive compare
 
 #### str.codePointAt(pos) _(es5-ext/string/#/code-point-at)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat)
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat)
 
 #### str.contains(searchString[, position]) _(es5-ext/string/#/contains)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains)
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains)
 
 Whether string contains given string.
 
 #### str.endsWith(searchString[, endPosition]) _(es5-ext/string/#/ends-with)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).  
 Whether strings ends with given string
 
 #### str.hyphenToCamel() _(es5-ext/string/#/hyphen-to-camel)_
@@ -923,7 +923,7 @@ If _length_ is negative then pad is applied from right.
 
 #### str.repeat(n) _(es5-ext/string/#/repeat)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat).  
 Repeat given string _n_ times
 
 #### plainReplace(search, replace) _(es5-ext/string/#/plain-replace)_
@@ -936,7 +936,7 @@ Simple `replace` version. Doesn't support regular expressions. Replaces all occu
 
 #### startsWith(searchString[, position]) _(es5-ext/string/#/starts-with)_
 
-[_Introduced with ECMAScript6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith).  
 Whether strings starts with given string
 
 ### Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
