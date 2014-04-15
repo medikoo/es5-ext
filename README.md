@@ -939,6 +939,6 @@ Simple `replace` version. Doesn't support regular expressions. Replaces all occu
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith).  
 Whether strings starts with given string
 
-### Tests [![Build Status](https://secure.travis-ci.org/medikoo/es5-ext.png?branch=master)](https://secure.travis-ci.org/medikoo/es5-ext)
+### Tests [![Build Status](https://travis-ci.org/medikoo/es5-ext.png)](https://travis-ci.org/medikoo/es5-ext)
 
 	$ npm test
