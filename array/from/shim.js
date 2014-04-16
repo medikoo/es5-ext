@@ -23,8 +23,10 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		result = iterator.next();
 		i = 0;
 		while (!result.done) {
-			arr[i++] = mapFn ? call.call(mapFn, thisArg, result.value) : result.value;
+			arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i)
+				: result.value;
 			result = iterator.next();
+			++i;
 		}
 		return arr;
 	}
@@ -32,7 +34,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	l = toPosInt(arrayLike.length);
 	if (mapFn != null) {
 		arr = new Constructor(l);
-		for (i = 0; i < l; ++i) arr[i] = call.call(mapFn, thisArg, arrayLike[i]);
+		for (i = 0; i < l; ++i) arr[i] = call.call(mapFn, thisArg, arrayLike[i], i);
 		return arr;
 	}
 
