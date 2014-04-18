@@ -696,10 +696,6 @@ Whether two values are equal, using [_SameValue_](http://people.mozilla.org/~jor
 
 Whether object is array-like object
 
-#### isCallable(x) _(es5-ext/object/is-callable)_
-
-Whether object is callable
-
 #### isCopy(x, y) _(es5-ext/object/is-copy)_
 
 Two values are considered a copy of same value when all of their own enumerable properties have same values.
