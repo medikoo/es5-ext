@@ -1,3 +1,9 @@
+v0.10.2  --  2014.04.24
+- Simplify and deprecate `isCallable`. It seems in ES5 based engines there are
+  no callable objects which are `typeof obj !== 'function'`
+- Update Array.from map callback signature (up to latest resolution of TC39)
+- Improve documentation
+
 v0.10.1  --  2014.04.14
 Bump version for npm
 (Workaround for accidental premature publish & unpublish of v0.10.0 a while ago)
