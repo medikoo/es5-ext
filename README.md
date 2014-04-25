@@ -156,7 +156,7 @@ Object that represents global scope
 
 ### Array Constructor extensions
 
-#### from(arrayLike/*, mapFn, thisArg*/) _(es5-ext/array/from)_
+#### from(arrayLike[, mapFn[, thisArg]]) _(es5-ext/array/from)_
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from).  
 Returns array representation of `arrayLike`. If `arrayLike` is already an array its copy is returned.
