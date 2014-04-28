@@ -25,14 +25,11 @@
     "type": "git",
     "url": "git://github.com/medikoo/es5-ext.git"
   },
-  "engines": {
-    "node": ">=0.4"
+  "devDependencies": {
+    "tad": "0.2.x"
   },
   "scripts": {
     "test": "node ./node_modules/tad/bin/tad"
-  },
-  "devDependencies": {
-    "tad": "~0.1.21"
   },
   "licence": "MIT"
 }
