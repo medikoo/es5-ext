@@ -25,6 +25,9 @@
     "type": "git",
     "url": "git://github.com/medikoo/es5-ext.git"
   },
+  "dependencies": {
+    "es6-symbol": "0.1.x"
+  },
   "devDependencies": {
     "tad": "0.2.x"
   },
