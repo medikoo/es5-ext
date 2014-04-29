@@ -20,6 +20,18 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	if (mapFn != null) callable(mapFn);
 
 	if (!isArray(arrayLike)) {
+		if ((getIterator = arrayLike[iteratorSymbol]) !== undefined) {
+			arr = new Constructor();
+			iterator = callable(getIterator).call(arrayLike);
+			result = iterator.next();
+			i = 0;
+			while (!result.done) {
+				arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
+				result = iterator.next();
+				++i;
+			}
+			return arr;
+		}
 		if (isString(arrayLike)) {
 			l = arrayLike.length;
 			arr = new Constructor();
@@ -30,18 +42,6 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 					if ((code >= 0xD800) && (code <= 0xDBFF)) char += arrayLike[++i];
 				}
 				arr.push(mapFn ? call.call(mapFn, thisArg, char, j++) : char);
-			}
-			return arr;
-		}
-		if ((getIterator = arrayLike[iteratorSymbol]) !== undefined) {
-			arr = new Constructor();
-			iterator = callable(getIterator).call(arrayLike);
-			result = iterator.next();
-			i = 0;
-			while (!result.done) {
-				arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
-				result = iterator.next();
-				++i;
 			}
 			return arr;
 		}
