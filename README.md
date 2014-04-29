@@ -932,6 +932,11 @@ Indents each line with provided _str_ (if _count_ given then _str_ is repeated _
 
 Return last character
 
+#### str.normalize([form]) _(es5-ext/string/#/normalize)_
+
+[_Introduced with ECMAScript 6_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize).  
+Returns the Unicode Normalization Form of a given string
+
 #### str.pad(fill[, length]) _(es5-ext/string/#/pad)_
 
 Pad string with _fill_.
