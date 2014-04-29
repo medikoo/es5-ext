@@ -10,7 +10,7 @@ var iteratorSymbol = require('es6-symbol').iterator
   , isArray = Array.isArray, call = Function.prototype.call;
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
-	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, arr, l, char, code, iterator
+	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, j, arr, l, char, code, iterator
 	  , result, getIterator;
 
 	arrayLike = Object(validValue(arrayLike));
@@ -23,13 +23,13 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		if (isString(arrayLike)) {
 			l = arrayLike.length;
 			arr = new Constructor();
-			for (i = 0; i < l; ++i) {
+			for (i = 0, j = 0; i < l; ++i) {
 				char = arrayLike[i];
 				if ((i + 1) < l) {
 					code = char.charCodeAt(0);
 					if ((code >= 0xD800) && (code <= 0xDBFF)) char += arrayLike[++i];
 				}
-				arr.push(mapFn ? call.call(mapFn, thisArg, char, i) : char);
+				arr.push(mapFn ? call.call(mapFn, thisArg, char, j++) : char);
 			}
 			return arr;
 		}
