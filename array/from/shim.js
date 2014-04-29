@@ -1,16 +1,17 @@
 'use strict';
 
-var isArguments = require('../../function/is-arguments')
-  , toPosInt    = require('../../number/to-pos-integer')
-  , callable    = require('../../object/valid-callable')
-  , validValue  = require('../../object/valid-value')
-  , isString    = require('../../string/is-string')
+var iteratorSymbol = require('es6-symbol').iterator
+  , isArguments    = require('../../function/is-arguments')
+  , toPosInt       = require('../../number/to-pos-integer')
+  , callable       = require('../../object/valid-callable')
+  , validValue     = require('../../object/valid-value')
+  , isString       = require('../../string/is-string')
 
   , isArray = Array.isArray, call = Function.prototype.call;
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, arr, l, char, code, iterator
-	  , result;
+	  , result, getIterator;
 
 	arrayLike = Object(validValue(arrayLike));
 
@@ -32,9 +33,9 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 			}
 			return arr;
 		}
-		if ((typeof arrayLike['@@iterator'] === 'function')) {
+		if ((getIterator = arrayLike[iteratorSymbol]) !== undefined) {
 			arr = new Constructor();
-			iterator = arrayLike['@@iterator']();
+			iterator = callable(getIterator).call(arrayLike);
 			result = iterator.next();
 			i = 0;
 			while (!result.done) {
