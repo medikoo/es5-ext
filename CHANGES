@@ -1,3 +1,17 @@
+v0.10.3  --  2014.04.29
+Provide accurate iterators handling:
+* Array.from improvements:
+  * Assure right unicode symbols resolution when processing strings in Array.from
+  * Rely on ES6 symbol shim and use native @@iterator Symbol if provided by environment
+* Add methods:
+  * Array.prototype.entries
+  * Array.prototype.keys
+  * Array.prototype.values
+  * Array.prototype[@@iterator]
+  * String.prototype[@@iterator]
+
+Improve documentation
+
 v0.10.2  --  2014.04.24
 - Simplify and deprecate `isCallable`. It seems in ES5 based engines there are
   no callable objects which are `typeof obj !== 'function'`
