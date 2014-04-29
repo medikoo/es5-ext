@@ -306,7 +306,7 @@ Returns last defined index of the array
 [_Updated with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.map).  
 ES6's version of `map`, returns array of same type as the context.
 
-#### remove(value[, …valuen]) _(es5-ext/array/#/remove)_
+#### arr.remove(value[, …valuen]) _(es5-ext/array/#/remove)_
 
 Remove values from the array
 
