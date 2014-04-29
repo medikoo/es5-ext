@@ -10,6 +10,7 @@ module.exports = {
 	diff:           require('./diff'),
 	eIndexOf:       require('./e-index-of'),
 	eLastIndexOf:   require('./e-last-index-of'),
+	entries:        require('./entries'),
 	exclusion:      require('./exclusion'),
 	fill:           require('./fill'),
 	filter:         require('./filter'),

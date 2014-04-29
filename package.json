@@ -26,6 +26,7 @@
     "url": "git://github.com/medikoo/es5-ext.git"
   },
   "dependencies": {
+    "es6-iterator": "~0.1.1",
     "es6-symbol": "0.1.x"
   },
   "devDependencies": {

@@ -51,6 +51,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 - `Array.of` -> `require('es5-ext/array/of')`
 - `Array.prototype.concat` -> `require('es5-ext/array/#/concat')`
 - `Array.prototype.copyWithin` -> `require('es5-ext/array/#/copy-within')`
+- `Array.prototype.entries` -> `require('es5-ext/array/#/entries')`
 - `Array.prototype.fill` -> `require('es5-ext/array/#/fill')`
 - `Array.prototype.filter` -> `require('es5-ext/array/#/filter')`
 - `Array.prototype.find` -> `require('es5-ext/array/#/find')`
@@ -221,6 +222,11 @@ _egal_ version of `indexOf` method. [_SameValueZero_](http://people.mozilla.org/
 #### arr.eLastIndexOf(searchElement[, fromIndex]) _(es5-ext/array/#/e-last-index-of)_
 
 _egal_ version of `lastIndexOf` method. [_SameValueZero_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero) logic is used for comparision
+
+#### arr.entries() _(es5-ext/array/#/entries)_
+
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.entries).  
+Return iterator object, where each iterated value represents array of index and corresponding value.
 
 #### arr.exclusion([…lists]]) _(es5-ext/array/#/exclusion)_
 
