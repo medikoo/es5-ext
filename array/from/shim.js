@@ -4,12 +4,13 @@ var isArguments = require('../../function/is-arguments')
   , toPosInt    = require('../../number/to-pos-integer')
   , callable    = require('../../object/valid-callable')
   , validValue  = require('../../object/valid-value')
+  , isString    = require('../../string/is-string')
 
   , isArray = Array.isArray, call = Function.prototype.call;
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
-	var mapFn = arguments[1], thisArg = arguments[2], Constructor
-	  , i, arr, l, iterator, result;
+	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, arr, l, char, code, iterator
+	  , result;
 
 	arrayLike = Object(validValue(arrayLike));
 
@@ -17,17 +18,32 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	else Constructor = this;
 	if (mapFn != null) callable(mapFn);
 
-	if ((typeof arrayLike['@@iterator'] === 'function') && !isArray(arrayLike)) {
-		arr = new Constructor();
-		iterator = arrayLike['@@iterator']();
-		result = iterator.next();
-		i = 0;
-		while (!result.done) {
-			arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
-			result = iterator.next();
-			++i;
+	if (!isArray(arrayLike)) {
+		if (isString(arrayLike)) {
+			l = arrayLike.length;
+			arr = new Constructor();
+			for (i = 0; i < l; ++i) {
+				char = arrayLike[i];
+				if ((i + 1) < l) {
+					code = char.charCodeAt(0);
+					if ((code >= 0xD800) && (code <= 0xDBFF)) char += arrayLike[++i];
+				}
+				arr.push(char);
+			}
+			return arr;
 		}
-		return arr;
+		if ((typeof arrayLike['@@iterator'] === 'function')) {
+			arr = new Constructor();
+			iterator = arrayLike['@@iterator']();
+			result = iterator.next();
+			i = 0;
+			while (!result.done) {
+				arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
+				result = iterator.next();
+				++i;
+			}
+			return arr;
+		}
 	}
 
 	l = toPosInt(arrayLike.length);
