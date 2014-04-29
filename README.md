@@ -908,6 +908,8 @@ Case insensitive compare
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat)
 
+Based on [implementation by Matthias Bynes](https://github.com/mathiasbynens/String.prototype.codePointAt).
+
 #### str.contains(searchString[, position]) _(es5-ext/string/#/contains)_
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.contains)
@@ -935,7 +937,8 @@ Return last character
 #### str.normalize([form]) _(es5-ext/string/#/normalize)_
 
 [_Introduced with ECMAScript 6_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize).  
-Returns the Unicode Normalization Form of a given string
+Returns the Unicode Normalization Form of a given string.  
+Based on Matsuza's version. Code used for integrated shim can be found at [github.com/walling/unorm](https://github.com/walling/unorm/blob/master/lib/unorm.js)
 
 #### str.pad(fill[, length]) _(es5-ext/string/#/pad)_
 
