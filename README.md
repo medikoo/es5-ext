@@ -160,7 +160,7 @@ Object that represents global scope
 #### from(arrayLike[, mapFn[, thisArg]]) _(es5-ext/array/from)_
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from).  
-Returns array representation of `arrayLike`. If `arrayLike` is already an array its copy is returned.
+Returns array representation of _iterable_ or _arrayLike_. If _arrayLike_ is actually an instance of array, its copy is returned.
 
 #### generate([length[, …fill]]) _(es5-ext/array/generate)_
 
