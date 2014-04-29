@@ -34,5 +34,6 @@ module.exports = {
 	slice:          require('./slice'),
 	someRight:      require('./some-right'),
 	splice:         require('./splice'),
-	uniq:           require('./uniq')
+	uniq:           require('./uniq'),
+	values:         require('./values')
 };

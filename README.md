@@ -332,6 +332,11 @@ ES6's version of `splice`, returns array of same type as the context.
 
 Returns duplicate-free version of the array
 
+#### arr.values() _(es5-ext/array/#/values)_
+
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.values).  
+Returns iterator object which traverses all array values.
+
 ### Boolean Constructor extensions
 
 #### isBoolean(x) _(es5-ext/boolean/is-boolean)_
