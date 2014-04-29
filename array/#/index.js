@@ -20,6 +20,7 @@ module.exports = {
 	firstIndex:     require('./first-index'),
 	flatten:        require('./flatten'),
 	forEachRight:   require('./for-each-right'),
+	keys:           require('./keys'),
 	group:          require('./group'),
 	indexesOf:      require('./indexes-of'),
 	intersection:   require('./intersection'),

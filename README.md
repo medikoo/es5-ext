@@ -56,6 +56,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 - `Array.prototype.filter` -> `require('es5-ext/array/#/filter')`
 - `Array.prototype.find` -> `require('es5-ext/array/#/find')`
 - `Array.prototype.findIndex` -> `require('es5-ext/array/#/find-index')`
+- `Array.prototype.keys` -> `require('es5-ext/array/#/keys')`
 - `Array.prototype.map` -> `require('es5-ext/array/#/map')`
 - `Array.prototype.slice` -> `require('es5-ext/array/#/slice')`
 - `Array.prototype.splice` -> `require('es5-ext/array/#/splice')`
@@ -286,6 +287,11 @@ Returns true if both context and _other_ lists have same content
 #### arr.isUniq() _(es5-ext/array/#/is-uniq)_
 
 Returns true if all values in array are unique
+
+#### arr.keys() _(es5-ext/array/#/keys)_
+
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.keys).  
+Return iterator object, where each iterated value represents array index.
 
 #### arr.last() _(es5-ext/array/#/last)_
 
