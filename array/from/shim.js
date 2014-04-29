@@ -23,8 +23,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		result = iterator.next();
 		i = 0;
 		while (!result.done) {
-			arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i)
-				: result.value;
+			arr[i] = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
 			result = iterator.next();
 			++i;
 		}
