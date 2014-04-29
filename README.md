@@ -103,6 +103,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 - `String.prototype.normalize` -> `require('es5-ext/string/#/normalize')`
 - `String.prototype.repeat` -> `require('es5-ext/string/#/repeat')`
 - `String.prototype.startsWith` -> `require('es5-ext/string/#/starts-with')`
+- `String.prototype[@@iterator]` -> `require('es5-ext/string/#/@@iterator')`
 
 #### Non ECMAScript standard features
 
@@ -946,18 +947,23 @@ If _length_ is negative then pad is applied from right.
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat).  
 Repeat given string _n_ times
 
-#### plainReplace(search, replace) _(es5-ext/string/#/plain-replace)_
+#### str.plainReplace(search, replace) _(es5-ext/string/#/plain-replace)_
 
 Simple `replace` version. Doesn't support regular expressions. Replaces just first occurrence of search string. Doesn't support insert patterns, therefore it is safe to replace text with text obtained programmatically (there's no need for additional _$_ characters escape in such case).
 
-#### plainReplaceAll(search, replace) _(es5-ext/string/#/plain-replace-all)_
+#### str.plainReplaceAll(search, replace) _(es5-ext/string/#/plain-replace-all)_
 
 Simple `replace` version. Doesn't support regular expressions. Replaces all occurrences of search string. Doesn't support insert patterns, therefore it is safe to replace text with text obtained programmatically (there's no need for additional _$_ characters escape in such case).
 
-#### startsWith(searchString[, position]) _(es5-ext/string/#/starts-with)_
+#### str.startsWith(searchString[, position]) _(es5-ext/string/#/starts-with)_
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith).  
 Whether strings starts with given string
+
+#### str[@@iterator] _(es5-ext/string/#/@@iterator)_
+
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype-@@iterator).  
+Returns iterator object which traverses all string characters (with respect to unicode symbols)
 
 ### Tests [![Build Status](https://travis-ci.org/medikoo/es5-ext.png)](https://travis-ci.org/medikoo/es5-ext)
 

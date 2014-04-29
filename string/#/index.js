@@ -18,3 +18,4 @@ module.exports = {
 	repeat:                 require('./repeat'),
 	startsWith:             require('./starts-with')
 };
+module.exports[require('es6-symbol').iterator] = require('./@@iterator');
