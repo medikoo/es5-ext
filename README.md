@@ -61,6 +61,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 - `Array.prototype.slice` -> `require('es5-ext/array/#/slice')`
 - `Array.prototype.splice` -> `require('es5-ext/array/#/splice')`
 - `Array.prototype.values` -> `require('es5-ext/array/#/values')`
+- `Array.prototype[@@iterator]` -> `require('es5-ext/array/#/@@iterator')`
 - `Math.acosh` -> `require('es5-ext/math/acosh')`
 - `Math.asinh` -> `require('es5-ext/math/asinh')`
 - `Math.atanh` -> `require('es5-ext/math/atanh')`
@@ -227,7 +228,7 @@ _egal_ version of `lastIndexOf` method. [_SameValueZero_](http://people.mozilla.
 
 #### arr.entries() _(es5-ext/array/#/entries)_
 
-[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.entries).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.entries).  
 Returns iterator object, which traverses the array. Each value is represented with an array, where first value is an index and second is corresponding to index value.
 
 #### arr.exclusion([…lists]]) _(es5-ext/array/#/exclusion)_
@@ -291,7 +292,7 @@ Returns true if all values in array are unique
 
 #### arr.keys() _(es5-ext/array/#/keys)_
 
-[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.keys).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.keys).  
 Returns iterator object, which traverses all array indexes.
 
 #### arr.last() _(es5-ext/array/#/last)_
@@ -335,7 +336,12 @@ Returns duplicate-free version of the array
 
 #### arr.values() _(es5-ext/array/#/values)_
 
-[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.values).  
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.values).  
+Returns iterator object which traverses all array values.
+
+#### arr[@@iterator] _(es5-ext/array/#/@@iterator)_
+
+[_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype-@@iterator).  
 Returns iterator object which traverses all array values.
 
 ### Boolean Constructor extensions

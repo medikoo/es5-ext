@@ -37,3 +37,4 @@ module.exports = {
 	uniq:           require('./uniq'),
 	values:         require('./values')
 };
+module.exports[require('es6-symbol').iterator] = require('./@@iterator');
