@@ -28,7 +28,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 					code = char.charCodeAt(0);
 					if ((code >= 0xD800) && (code <= 0xDBFF)) char += arrayLike[++i];
 				}
-				arr.push(char);
+				arr.push(mapFn ? call.call(mapFn, thisArg, char, i) : char);
 			}
 			return arr;
 		}
