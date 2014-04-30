@@ -888,8 +888,8 @@ Whether object is string
 
 _Proposed for ECMAScript 6/7 standard, but not (yet) in a draft_
 
-Returns a string at given position in unicode safe manner.
-Based on [implementation by Matthias Bynes](https://github.com/mathiasbynens/String.prototype.at).
+Returns a string at given position in Unicode-safe manner.
+Based on [implementation by Mathias Bynens](https://github.com/mathiasbynens/String.prototype.at).
 
 #### str.camelToHyphen() _(es5-ext/string/#/camel-to-hyphen)_
 
@@ -908,7 +908,7 @@ Case insensitive compare
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat)
 
-Based on [implementation by Matthias Bynes](https://github.com/mathiasbynens/String.prototype.codePointAt).
+Based on [implementation by Mathias Bynens](https://github.com/mathiasbynens/String.prototype.codePointAt).
 
 #### str.contains(searchString[, position]) _(es5-ext/string/#/contains)_
 
