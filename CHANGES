@@ -1,3 +1,7 @@
+v0.10.4  --  2014.04.30
+* Assure maximum spec compliance of Array.of and Array.from (thanks @mathiasbynens)
+* Improve documentations
+
 v0.10.3  --  2014.04.29
 Provide accurate iterators handling:
 * Array.from improvements:
