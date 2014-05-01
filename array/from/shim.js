@@ -14,7 +14,7 @@ var iteratorSymbol = require('es6-symbol').iterator
 
 module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 	var mapFn = arguments[1], thisArg = arguments[2], Constructor, i, j, arr, l, code, iterator
-	  , result, getIterator, isPlain, value;
+	  , result, getIterator, value;
 
 	arrayLike = Object(validValue(arrayLike));
 
@@ -53,7 +53,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 			while (!result.done) {
 				value = mapFn ? call.call(mapFn, thisArg, result.value, i) : result.value;
 				if (!Constructor) {
-					arr[i] = value
+					arr[i] = value;
 				} else {
 					desc.value = value;
 					defineProperty(arr, i, desc);
@@ -74,7 +74,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 				}
 				value = mapFn ? call.call(mapFn, thisArg, value, j) : value;
 				if (!Constructor) {
-					arr[j] = value
+					arr[j] = value;
 				} else {
 					desc.value = value;
 					defineProperty(arr, j, desc);
@@ -91,7 +91,7 @@ module.exports = function (arrayLike/*, mapFn, thisArg*/) {
 		for (i = 0; i < l; ++i) {
 			value = mapFn ? call.call(mapFn, thisArg, arrayLike[i], i) : arrayLike[i];
 			if (!Constructor) {
-				arr[i] = value
+				arr[i] = value;
 			} else {
 				desc.value = value;
 				defineProperty(arr, i, desc);

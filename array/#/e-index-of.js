@@ -9,7 +9,7 @@ var toPosInt = require('../../number/to-pos-integer')
 
 module.exports = function (searchElement/*, fromIndex*/) {
 	var i, l, fromIndex, val;
-	if (searchElement === searchElement) { //jslint: skip
+	if (searchElement === searchElement) { //jslint: ignore
 		return indexOf.apply(this, arguments);
 	}
 
@@ -22,7 +22,7 @@ module.exports = function (searchElement/*, fromIndex*/) {
 	for (i = fromIndex; i < l; ++i) {
 		if (hasOwnProperty.call(this, i)) {
 			val = this[i];
-			if (val !== val) return i; //jslint: skip
+			if (val !== val) return i; //jslint: ignore
 		}
 	}
 	return -1;

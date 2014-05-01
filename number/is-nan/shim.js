@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = function (value) { return (value !== value); } //jslint: skip
+module.exports = function (value) { return (value !== value); } //jslint: ignore

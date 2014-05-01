@@ -31,12 +31,12 @@ module.exports = function (a, b) {
 
 	a = resolve(a);
 	b = resolve(b);
-	if (a == b) return typeMap[typeof a] - typeMap[typeof b]; //jslint: skip
+	if (a == b) return typeMap[typeof a] - typeMap[typeof b]; //jslint: ignore
 	if (a == null) return -1;
 	if (b == null) return 1;
 	if ((typeof a === 'string') || (typeof b === 'string')) {
 		return strCompare.call(a, b);
 	}
-	if ((a !== a) && (b !== b)) return 0; //jslint: skip
+	if ((a !== a) && (b !== b)) return 0; //jslint: ignore
 	return Number(a) - Number(b);
 };

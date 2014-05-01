@@ -7,7 +7,7 @@ var value = require('./valid-value')
 module.exports = function (obj) {
 	var i;
 	value(obj);
-	for (i in obj) { //jslint: skip
+	for (i in obj) { //jslint: ignore
 		if (propertyIsEnumerable.call(obj, i)) return false;
 	}
 	return true;

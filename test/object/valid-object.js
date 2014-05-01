@@ -7,7 +7,7 @@ module.exports = function (t, a) {
 	a.throws(function () { t(''); }, TypeError, "''");
 	a(t(x = {}), x, "Object");
 	a(t(x = function () {}), x, "Function");
-	a(t(x = new String('raz')), x, "String object"); //jslint: skip
+	a(t(x = new String('raz')), x, "String object"); //jslint: ignore
 	a(t(x = new Date()), x, "Date");
 
 	a.throws(function () { t(); }, TypeError, "Undefined");
