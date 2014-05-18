@@ -115,7 +115,8 @@ Object.defineProperty(String.prototype, 'capitalize', { value: require('es5-ext/
 ```
 
 You can use simple helper for extending native objects
-```
+
+```javascript
 require('es5-ext').extendNative.function.call(Function);
 // custom list of methods
 require('es5-ext').extendNative.function.call(Function, ['pluck', 'lock']);
