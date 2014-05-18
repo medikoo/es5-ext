@@ -12,5 +12,6 @@ module.exports = {
 	number:   require('./number'),
 	object:   require('./object'),
 	regExp:   require('./reg-exp'),
-	string:   require('./string')
+	string:   require('./string'),
+	extendNative:   require('./extend-native')
 };
