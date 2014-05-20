@@ -117,14 +117,14 @@ Object.defineProperty(String.prototype, 'capitalize', { value: require('es5-ext/
 You can use simple helper for extending native objects
 
 ```javascript
-require('es5-ext').extendNative.function(Function);
+require('es5-ext').extend.function(Function);
 
 // custom list of methods
-require('es5-ext').extendNative.function(Function, ['pluck', 'lock']);
+require('es5-ext').extend.function(Function, ['pluck', 'lock']);
 
 // and custom descriptor options
 // default descriptor {writable: false, configurable: false, enumerable: false}
-require('es5-ext').extendNative.function(Function, undefined, {configurable: true});
+require('es5-ext').extend.function(Function, undefined, {configurable: true});
 ```
 
 If you decide not to extend native prototypes, which in most cases is right decision (see

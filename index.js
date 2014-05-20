@@ -13,5 +13,5 @@ module.exports = {
 	object:   require('./object'),
 	regExp:   require('./reg-exp'),
 	string:   require('./string'),
-	extendNative:   require('./extend-native')
+	extend:   require('./extend')
 };

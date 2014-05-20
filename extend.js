@@ -5,11 +5,11 @@ var assign = require('./object/assign')
   , objectFilter = require('./object/filter')
   , extension = require('./index')
 
-  , extendNative
+  , extend
   , extractStaticMethods
   , extractInstanceMethods;
 
-extendNative = function(staticMethods, instanceMethods) {
+extend = function(staticMethods, instanceMethods) {
 	var availableMethods = keys(staticMethods || {}).concat(keys(instanceMethods) || {});
 
 	return function(nativeObject, methods, descriptorOptions) {
@@ -59,5 +59,5 @@ extractInstanceMethods = function(object) {
 ['array', 'boolean', 'date', 'error', 'function', 'math', 'number', 'object', 'regExp', 'string'].forEach(function(key) {
 	var methods = extension[key];
 
-	exports[key] = extendNative(extractStaticMethods(methods), extractInstanceMethods(methods));
+	exports[key] = extend(extractStaticMethods(methods), extractInstanceMethods(methods));
 });
