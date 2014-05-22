@@ -114,6 +114,8 @@ Object.defineProperty(String.prototype, 'capitalize', { value: require('es5-ext/
   configurable: true, enumerable: false, writable: true });
 ```
 
+Or you can use simple helper https://www.npmjs.org/package/es5-extend
+
 If you decide not to extend native prototypes, which in most cases is right decision (see
 [extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
 for more views on that matter), you can use methods indirectly:
