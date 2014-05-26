@@ -114,9 +114,12 @@ Object.defineProperty(String.prototype, 'capitalize', { value: require('es5-ext/
   configurable: true, enumerable: false, writable: true });
 ```
 
-If you decide not to extend native prototypes, which in most cases is right decision (see
-[extending-javascript-natives](http://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/)
-for more views on that matter), you can use methods indirectly:
+See [es5-extend](https://github.com/wookieb/es5-extend#es5-extend), a great utility that automatically will extend natives for you. 
+
+__Important:__ Remember to __not__ extend natives in scope of generic reusable packages (e.g. ones you intend to publish to npm). Extending natives is fine __only__ if you're the _owner_ of the global scope, so e.g. in final project you lead development of.
+
+When you're in situation when native extensions are not good idea, then you should use methods indirectly:
+
 
 ```javascript
 var flatten = require('es5-ext/array/#/flatten');
@@ -124,7 +127,7 @@ var flatten = require('es5-ext/array/#/flatten');
 flatten.call([1, [2, [3, 4]]]); // [1, 2, 3, 4]
 ```
 
-or for better convenience turn methods into functions:
+for better convenience you can turn methods into functions:
 
 
 ```javascript
