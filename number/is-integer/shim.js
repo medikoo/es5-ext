@@ -1,9 +1,8 @@
-'use strict';
+// Credit: http://www.2ality.com/2014/05/is-integer.html
 
-var toInteger = require('../to-integer');
+'use strict';
 
 module.exports = function (value) {
 	if (typeof value !== 'number') return false;
-	if (!isFinite(value)) return false;
-	return toInteger(value) === value;
+	return (value % 1 === 0);
 };
