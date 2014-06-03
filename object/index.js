@@ -35,6 +35,7 @@ module.exports = {
 	safeTraverse:     require('./safe-traverse'),
 	setPrototypeOf:   require('./set-prototype-of'),
 	some:             require('./some'),
+	stringify:        require('./stringify'),
 	toArray:          require('./to-array'),
 	validCallable:    require('./valid-callable'),
 	validObject:      require('./valid-object'),
