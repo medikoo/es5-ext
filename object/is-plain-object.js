@@ -3,7 +3,7 @@
 var getPrototypeOf = Object.getPrototypeOf, prototype = Object.prototype
   , toString = prototype.toString
 
-  , id = {}.toString();
+  , id = Object().toString();
 
 module.exports = function (value) {
 	var proto, constructor;
