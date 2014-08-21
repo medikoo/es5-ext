@@ -21,9 +21,9 @@ module.exports = function (t, a) {
 	a.deep(t(3), [], "Primitive");
 
 	a(t.length, 1, "Length");
-	a.deep(t({ 'length': 0 }), [], "No values Array-like");
-	a.deep(t({ 'length': -1 }), [], "Invalid length Array-like");
-	a.deep(t({ 'length': -Infinity }), [], "Invalid length Array-like #2");
+	a.deep(t({ length: 0 }), [], "No values Array-like");
+	a.deep(t({ length: -1 }), [], "Invalid length Array-like");
+	a.deep(t({ length: -Infinity }), [], "Invalid length Array-like #2");
 	a.throws(function () { t(undefined); }, TypeError, "Undefined");
 	a.throws(function () { t(null); }, TypeError, "Null");
 	a.deep(t(false), [], "Boolean");
@@ -33,18 +33,18 @@ module.exports = function (t, a) {
 	a.deep(t(1), [], "1");
 	a.deep(t(+Infinity), [], "+Infinity");
 	a.deep(t({}), [], "Plain object");
-	a.deep(t({ 'length': 1 }), [undefined], "Sparse array-like");
-	a.deep(t({ '0': 'a', '1': 'b', 'length': 2 }, function (x) { return x + x; }), ['aa', 'bb'],
+	a.deep(t({ length: 1 }), [undefined], "Sparse array-like");
+	a.deep(t({ '0': 'a', '1': 'b', length: 2 }, function (x) { return x + x; }), ['aa', 'bb'],
 		"Map");
-	a.deep(t({ '0': 'a', '1': 'b', 'length': 2 }, function (x) { return String(this); }, undefined),
+	a.deep(t({ '0': 'a', '1': 'b', length: 2 }, function (x) { return String(this); }, undefined),
 		['undefined', 'undefined'], "Map context");
-	a.deep(t({ '0': 'a', '1': 'b', 'length': 2 }, function (x) { return String(this); }, 'x'),
+	a.deep(t({ '0': 'a', '1': 'b', length: 2 }, function (x) { return String(this); }, 'x'),
 		['x', 'x'], "Map primitive context");
 	a.throws(function () { t({}, 'foo', 'x'); }, TypeError, "Non callable for map");
 
-	a.deep(t.call(null, { 'length': 1, '0': 'a' }), ['a'], "Null context");
+	a.deep(t.call(null, { length: 1, '0': 'a' }), ['a'], "Null context");
 
-	a(t({ '__proto__': { '0': 'abc', 'length': 1 } })[0], 'abc', "Values on prototype");
+	a(t({ __proto__: { '0': 'abc', length: 1 } })[0], 'abc', "Values on prototype");
 
 	a.throws(function () { t.call(function () { return Object.freeze({}); }, {}); },
 		TypeError, "Contructor producing freezed objects");
@@ -55,6 +55,6 @@ module.exports = function (t, a) {
 	Object.defineProperty(MyType.prototype, '0', {
 		set: function (x) { throw new Error('Setter called: ' + x); }
 	});
-	a.deep(t.call(MyType, { '0': 'abc', 'length': 1 }), { '0': 'abc', 'length': 1 },
+	a.deep(t.call(MyType, { '0': 'abc', length: 1 }), { '0': 'abc', length: 1 },
 		"Defined not set");
 };

@@ -25,8 +25,8 @@ module.exports = function (t, a) {
 	a.deep(t(1), [1], "1");
 	a.deep(t(1, 2, 3), [1, 2, 3], "Numeric args");
 	a.deep(t(+Infinity), [+Infinity], "+Infinity");
-	a.deep(t({ '0': 'a', '1': 'b', '2': 'c', 'length': 3 }),
-		[{ '0': 'a', '1': 'b', '2': 'c', 'length': 3 }], "Array like");
+	a.deep(t({ '0': 'a', '1': 'b', '2': 'c', length: 3 }),
+		[{ '0': 'a', '1': 'b', '2': 'c', length: 3 }], "Array like");
 	a.deep(t(undefined, null, false, -Infinity, -0, +0, 1, 2, +Infinity),
 		[undefined, null, false, -Infinity, -0, +0, 1, 2, +Infinity], "Falsy arguments");
 
@@ -41,13 +41,13 @@ module.exports = function (t, a) {
 	a.deep(t.call(null, 1), [1], "1");
 	a.deep(t.call(null, 1, 2, 3), [1, 2, 3], "Numeric");
 	a.deep(t.call(null, +Infinity), [+Infinity], "+Infinity");
-	a.deep(t.call(null, { '0': 'a', '1': 'b', '2': 'c', 'length': 3 }),
-		[{ '0': 'a', '1': 'b', '2': 'c', 'length': 3 }], "Array-like");
+	a.deep(t.call(null, { '0': 'a', '1': 'b', '2': 'c', length: 3 }),
+		[{ '0': 'a', '1': 'b', '2': 'c', length: 3 }], "Array-like");
 	a.deep(t.call(null, undefined, null, false, -Infinity, -0, +0, 1, 2, +Infinity),
 		[undefined, null, false, -Infinity, -0, +0, 1, 2, +Infinity], "Falsy");
 
 	a.h1("Other constructor context");
-	a.deep(t.call(Object, 1, 2, 3), { '0': 1, '1': 2, '2': 3, 'length': 3 }, "Many arguments");
+	a.deep(t.call(Object, 1, 2, 3), { '0': 1, '1': 2, '2': 3, length: 3 }, "Many arguments");
 
 	testObject = Object(3);
 	testObject[0] = 1;
@@ -64,5 +64,5 @@ module.exports = function (t, a) {
 	defineProperty(MyType.prototype, '0', {
 		set: function (x) { throw new Error('Setter called: ' + x); }
 	});
-	a.deep(t.call(MyType, 'abc'), { '0': 'abc', 'length': 1 }, "Define, not set");
+	a.deep(t.call(MyType, 'abc'), { '0': 'abc', length: 1 }, "Define, not set");
 };

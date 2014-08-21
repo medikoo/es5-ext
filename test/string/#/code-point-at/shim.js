@@ -69,7 +69,7 @@ module.exports = function (t, a) {
 	a.throws(function () { t.call(null, 4); }, TypeError);
 	a(t.call(42, 0), 0x34);
 	a(t.call(42, 1), 0x32);
-	a(t.call({ 'toString': function () { return 'abc'; } }, 2), 0x63);
+	a(t.call({ toString: function () { return 'abc'; } }, 2), 0x63);
 
 	a.throws(function () { t.apply(undefined); }, TypeError);
 	a.throws(function () { t.apply(undefined, [4]); }, TypeError);
@@ -77,5 +77,5 @@ module.exports = function (t, a) {
 	a.throws(function () { t.apply(null, [4]); }, TypeError);
 	a(t.apply(42, [0]), 0x34);
 	a(t.apply(42, [1]), 0x32);
-	a(t.apply({ 'toString': function () { return 'abc'; } }, [2]), 0x63);
+	a(t.apply({ toString: function () { return 'abc'; } }, [2]), 0x63);
 };

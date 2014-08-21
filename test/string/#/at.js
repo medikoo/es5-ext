@@ -93,5 +93,5 @@ module.exports = function (t, a) {
 	a.throws(function () { t.call(null, 4); }, TypeError, "Null + argument");
 	a(t.call(42, 0), '4', "Number #1");
 	a(t.call(42, 1), '2', "Number #2");
-	a(t.call({ 'toString': function () { return 'abc'; } }, 2), 'c', "Object");
+	a(t.call({ toString: function () { return 'abc'; } }, 2), 'c', "Object");
 };
