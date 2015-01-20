@@ -889,6 +889,10 @@ Creates format method. It's used e.g. to create `Date.prototype.format` method
 
 Whether object is string
 
+#### randomUniq() _(es5-ext/string/random-uniq)_
+
+Returns randomly generated id, with guarantee of local uniqueness (no same id will be returned twice)
+
 #### raw(callSite[, …substitutions]) _(es5-ext/string/raw)_
 
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.raw)
