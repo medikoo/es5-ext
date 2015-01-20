@@ -13,6 +13,9 @@ plusplus
 vars
 
 ./global.js
+./function/_define-length.js
+./function/#/copy.js
+./test/function/valid-function.js
 evil
 
 ./math/_pack-ieee754.js
@@ -23,18 +26,11 @@ evil
 ./string/#/at.js
 bitwise
 
-./function/_define-length.js
-./function/#/copy.js
-evil
-
 ./math/fround/shim.js
 predef+ Float32Array
 
 ./object/first-key.js
 forin
-
-./test/function/valid-function.js
-evil
 
 ./test/reg-exp/#/index.js
 predef+ __dirname
