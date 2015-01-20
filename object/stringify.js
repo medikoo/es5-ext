@@ -16,10 +16,12 @@ module.exports = exports = function (obj) {
 	case 'boolean':
 	case 'function':
 		return String(obj);
-	default:
+	case 'object':
 		if (isArray(obj)) return '[' + obj.map(exports) + ']';
 		if (isRegExp(obj)) return String(obj);
 		if (isDate(obj)) return 'new Date(' + obj.valueOf() + ')';
 		return '{' + toArray(obj, keyValueToString) + '}';
+	default:
+		throw new TypeError("Serialization of " + String(obj) + "is unsupported");
 	}
 };
