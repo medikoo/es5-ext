@@ -757,17 +757,17 @@ Analogous to Array.prototype.map. Creates a new object with properties which val
 
 Create new object with same values, but remapped keys
 
-#### mixin(target, source)
+#### mixin(target, source) _(es5-ext/object/mixin)_
 
 Extend _target_ by all own properties of other objects. Properties found in both objects will be overwritten (unless they're not configurable and cannot be overwritten).
 _It was for a moment part of ECMAScript 6 draft._
 
-#### mixinPrototypes(target, …source])
+#### mixinPrototypes(target, …source]) _(es5-ext/object/mixin-prototypes)_
 
 Extends _target_, with all source and source's prototype properties.
 Useful as an alternative for `setPrototypeOf` in environments in which it cannot be shimmed (no `__proto__` support).
 
-#### normalizeOptions(options)
+#### normalizeOptions(options) _(es5-ext/object/normalize-options)_
 
 Normalizes options object into flat plain object.  
 
@@ -777,13 +777,17 @@ Useful for functions in which we either need to keep options object for future r
 - `options` can be undefined in such case empty plain object is returned.
 - Copies all enumerable properties found down prototype chain.
 
-#### primitiveSet([…names])
+#### primitiveSet([…names]) _(es5-ext/object/primitive-set)_
 
 Creates `null` prototype based plain object, and sets on it all property names provided in arguments to true.
 
-#### safeTraverse(obj[, …names])
+#### safeTraverse(obj[, …names]) _(es5-ext/object/safe-traverse)_
 
 Safe navigation of object properties. See http://wiki.ecmascript.org/doku.php?id=strawman:existential_operator
+
+#### serialize(value) _(es5-ext/object/serialize)_
+
+Serialize value into string. Differs from [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) that it serializes also dates, functions and regular expresssions.
 
 #### setPrototypeOf(object, proto) _(es5-ext/object/set-prototype-of)_
 
@@ -800,6 +804,10 @@ Optionally _compareFn_ can be provided which assures that keys are tested in giv
 
 Creates an array of results of calling a provided function on every key-value pair in this object.  
 Optionally _compareFn_ can be provided which assures that results are added in given order. If provided _compareFn_ is equal to `true`, then order is alphabetical (by key).
+
+#### unserialize(str) _(es5-ext/object/unserialize)_
+
+Userializes value previously serialized with [serialize](#serializevalue-es5-extobjectserialize)
 
 #### validCallable(x) _(es5-ext/object/valid-callable)_
 
