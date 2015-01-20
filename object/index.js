@@ -37,6 +37,7 @@ module.exports = {
 	setPrototypeOf:   require('./set-prototype-of'),
 	some:             require('./some'),
 	toArray:          require('./to-array'),
+	unserialize:      require('./unserialize'),
 	validCallable:    require('./valid-callable'),
 	validObject:      require('./valid-object'),
 	validValue:       require('./valid-value')

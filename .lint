@@ -15,6 +15,7 @@ vars
 ./global.js
 ./function/_define-length.js
 ./function/#/copy.js
+./object/unserialize.js
 ./test/function/valid-function.js
 evil
 
