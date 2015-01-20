@@ -509,6 +509,10 @@ Returns a function that applies underlying function with first list argument
 
 _f.match()(args)  =def  f.apply(null, args)_
 
+#### fn.toStringTokens() _(es5-ext/function/#/to-string-tokens)_
+
+Serializes function into two (arguments and body) string tokens. Result is plain object with `args` and `body` properties.
+
 ### Math extensions
 
 #### acosh(x) _(es5-ext/math/acosh)_
