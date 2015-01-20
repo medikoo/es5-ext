@@ -10,6 +10,7 @@ ass
 continue
 nomen
 plusplus
+vars
 
 ./global.js
 evil
