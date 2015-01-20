@@ -1,3 +1,13 @@
+v0.10.5  --  2015.0120
+* Add Function#toStringTokens
+* Add Object.serialize and Object.unserialize
+* Add String.randomUniq
+* Fix Strin#camelToHyphen issue with tokens that end with digit
+* Optimise Number.isInteger logic
+* Improve documentation
+* Configure lint scripts
+* Fix spelling of LICENSE
+
 v0.10.4  --  2014.04.30
 * Assure maximum spec compliance of Array.of and Array.from (thanks @mathiasbynens)
 * Improve documentations
