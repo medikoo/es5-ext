@@ -1,4 +1,4 @@
-v0.10.5  --  2015.0120
+v0.10.5  --  2015.01.20
 * Add Function#toStringTokens
 * Add Object.serialize and Object.unserialize
 * Add String.randomUniq
