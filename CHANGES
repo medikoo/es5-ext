@@ -1,3 +1,7 @@
+v0.10.6  --  2015.02.02
+* Fix handling of infinite values in Math.trunc
+* Fix handling of getters in Object.normalizeOptions
+
 v0.10.5  --  2015.01.20
 * Add Function#toStringTokens
 * Add Object.serialize and Object.unserialize
