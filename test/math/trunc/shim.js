@@ -5,8 +5,8 @@ var is = require('../../../object/is');
 module.exports = function (t, a) {
 	a(t({}), NaN, "NaN");
 	a(t(0), 0, "Zero");
-	a(t(Infinity), 1, "Infinity");
-	a(t(-Infinity), -1, "-Infinity");
+	a(t(Infinity), Infinity, "Infinity");
+	a(t(-Infinity), -Infinity, "-Infinity");
 	a(is(t(0.234), 0), true, "0");
 	a(is(t(-0.234), -0), true, "-0");
 	a(t(13.7), 13, "Positive #1");
