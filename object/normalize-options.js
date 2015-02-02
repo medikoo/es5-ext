@@ -1,15 +1,10 @@
 'use strict';
 
-var assign = require('./assign')
+var forEach = Array.prototype.forEach, create = Object.create;
 
-  , forEach = Array.prototype.forEach
-  , create = Object.create, getPrototypeOf = Object.getPrototypeOf
-
-  , process;
-
-process = function (src, obj) {
-	var proto = getPrototypeOf(src);
-	return assign(proto ? process(proto, obj) : obj, src);
+var process = function (src, obj) {
+	var key;
+	for (key in src) obj[key] = src[key];
 };
 
 module.exports = function (options/*, …options*/) {
