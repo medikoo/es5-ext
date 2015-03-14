@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+	'@@iterator':           require('./@@iterator'),
 	at:                     require('./at'),
 	camelToHyphen:          require('./camel-to-hyphen'),
 	capitalize:             require('./capitalize'),
@@ -18,4 +19,3 @@ module.exports = {
 	repeat:                 require('./repeat'),
 	startsWith:             require('./starts-with')
 };
-module.exports[require('es6-symbol').iterator] = require('./@@iterator');

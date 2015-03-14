@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+	'@@iterator':   require('./@@iterator'),
 	binarySearch:   require('./binary-search'),
 	clear:          require('./clear'),
 	compact:        require('./compact'),
@@ -37,4 +38,3 @@ module.exports = {
 	uniq:           require('./uniq'),
 	values:         require('./values')
 };
-module.exports[require('es6-symbol').iterator] = require('./@@iterator');
