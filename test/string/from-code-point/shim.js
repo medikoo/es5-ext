@@ -8,7 +8,7 @@ var pow = Math.pow;
 module.exports = function (t, a) {
 	var counter, result;
 
-	a(t.length, 0, "Length");
+	a(t.length, 1, "Length");
 	a(String.propertyIsEnumerable('fromCodePoint'), false, "Not enumerable");
 
 	a(t(''), '\0', "Empty string");

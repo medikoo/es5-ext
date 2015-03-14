@@ -8,7 +8,7 @@
 
 var floor = Math.floor, fromCharCode = String.fromCharCode;
 
-module.exports = function (/* …codePoints*/) {
+module.exports = function (codePoint/*, …codePoints*/) {
 	var chars = [], l = arguments.length, i, c, result = '';
 	for (i = 0; i < l; ++i) {
 		c = Number(arguments[i]);
