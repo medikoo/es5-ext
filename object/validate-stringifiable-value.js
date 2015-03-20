@@ -1,12 +1,6 @@
 'use strict';
 
-var value = require('./valid-value');
+var value         = require('./valid-value')
+  , stringifiable = require('./validate-stringifiable');
 
-module.exports = function (stringifiable) {
-	value(stringifiable);
-	try {
-		return String(stringifiable);
-	} catch (e) {
-		throw new TypeError("Passed argument cannot be stringifed");
-	}
-};
+module.exports = function (x) { return stringifiable(value(x)); };

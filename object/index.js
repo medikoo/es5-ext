@@ -42,6 +42,7 @@ module.exports = {
 	validateArrayLikeObject:    require('./validate-array-like-object'),
 	validCallable:              require('./valid-callable'),
 	validObject:                require('./valid-object'),
+	validateStringifiable:      require('./validate-stringifiable'),
 	validateStringifiableValue: require('./validate-stringifiable-value'),
 	validValue:                 require('./valid-value')
 };
