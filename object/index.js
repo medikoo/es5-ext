@@ -38,6 +38,7 @@ module.exports = {
 	some:                       require('./some'),
 	toArray:                    require('./to-array'),
 	unserialize:                require('./unserialize'),
+	validateArrayLike:          require('./validate-array-like'),
 	validCallable:              require('./valid-callable'),
 	validObject:                require('./valid-object'),
 	validateStringifiableValue: require('./validate-stringifiable-value'),
