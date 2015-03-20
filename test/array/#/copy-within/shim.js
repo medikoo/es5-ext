@@ -24,6 +24,6 @@ module.exports = function (t, a) {
 	a.deep(t.call([1, 2, 3, 4, 5], -4, -3), [1, 3, 4, 5, 5]);
 
 	a.h1("Array-likes");
-	args = (function () { return arguments; }(1, 2, 3));
-	a.deep(t.call(args, -2, 0), { '0': 1, '1': 1, '2':  2 });
+	args = { 0: 1, 1: 2, 2: 3, length: 3 };
+	a.deep(t.call(args, -2, 0), { '0': 1, '1': 1, '2': 2, length: 3 });
 };
