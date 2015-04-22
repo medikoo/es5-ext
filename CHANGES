@@ -1,3 +1,22 @@
+v0.10.7  --  2015.04.22
+* New utlitities. They're convention differs from v0.10, as they were supposed to land in v1.
+  Still they're non breaking and start the conventions to be used in v1
+  * Object.validateArrayLike
+  * Object.validateArrayLikeObject
+  * Object.validateStringifiable
+  * Object.validateStringifiableValue
+  * Universal utilities for array-like/iterable objects
+    * Iterable.is
+    * Iterable.validate
+    * Iterable.validateObject
+    * Iterable.forEach
+* Fix camelToHyphen resolution, it must be absolutely reversable by hyphenToCamel
+* Fix calculations of large numbers in Math.tanh
+* Fix indexes to not use real symbols
+* Fix length of String.fromCodePoint
+* Fix tests of Array#copyWithin
+* Update Travis CI configuration
+
 v0.10.6  --  2015.02.02
 * Fix handling of infinite values in Math.trunc
 * Fix handling of getters in Object.normalizeOptions
