@@ -12,6 +12,7 @@ v0.10.7  --  2015.04.22
     * Iterable.forEach
 * Fix camelToHyphen resolution, it must be absolutely reversable by hyphenToCamel
 * Fix calculations of large numbers in Math.tanh
+* Fix algorithm of Math.sinh
 * Fix indexes to not use real symbols
 * Fix length of String.fromCodePoint
 * Fix tests of Array#copyWithin
