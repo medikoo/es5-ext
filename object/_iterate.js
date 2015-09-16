@@ -20,7 +20,8 @@ module.exports = function (method, defVal) {
 		if (compareFn) {
 			list.sort((typeof compareFn === 'function') ? bind.call(compareFn, obj) : undefined);
 		}
-		return list[method](function (key, index) {
+		if (typeof method !== 'function') method = list[method];
+		return call.call(method, list, function (key, index) {
 			if (!propertyIsEnumerable.call(obj, key)) return defVal;
 			return call.call(cb, thisArg, obj[key], key, obj, index);
 		});
