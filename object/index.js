@@ -12,6 +12,7 @@ module.exports = {
 	eq:                         require('./eq'),
 	every:                      require('./every'),
 	filter:                     require('./filter'),
+	find:                       require('./find'),
 	findKey:                    require('./find-key'),
 	firstKey:                   require('./first-key'),
 	flatten:                    require('./flatten'),
