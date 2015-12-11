@@ -26,6 +26,7 @@ module.exports = {
 	isCopy:                     require('./is-copy'),
 	isCopyDeep:                 require('./is-copy-deep'),
 	isEmpty:                    require('./is-empty'),
+	isNumberValue:              require('./is-number-value'),
 	isObject:                   require('./is-object'),
 	isPlainObject:              require('./is-plain-object'),
 	keyOf:                      require('./key-of'),
