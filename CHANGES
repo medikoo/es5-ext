@@ -1,3 +1,6 @@
+v0.10.11  --  2015.12.18
+* Ensure that check for implementation of RegExp flags doesn't crash in V8 (thanks @mathiasbynens)
+
 v0.10.10  --  2015.12.11
 * Add Object.isNumberValue util
 
