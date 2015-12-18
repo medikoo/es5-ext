@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = function () {
-	return RegExp.prototype.unicode === false;
+	var dummyRegExp = /a/;
+	return 'unicode' in dummyRegExp;
 };
