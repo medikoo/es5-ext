@@ -1,6 +1,6 @@
 {
   "name": "es-ext",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "ECMAScript extensions and shims",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [
