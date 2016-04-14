@@ -1,0 +1,6 @@
+node_modules
+test
+.travis.yml
+.lint
+.lintcache
+.lintignore
