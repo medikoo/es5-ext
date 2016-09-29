@@ -33,4 +33,4 @@ module.exports = (function () {
 	return function (prototype, props) {
 		return create((prototype === null) ? nullObject : prototype, props);
 	};
-}());
+})();
