@@ -13,7 +13,6 @@ exports = module.exports = function (message/*, code, ext*/) {
 		}
 	}
 	if (ext != null) assign(err, ext);
-	err.message = String(message);
 	if (code != null) err.code = String(code);
 	if (captureStackTrace) captureStackTrace(err, exports);
 	return err;
