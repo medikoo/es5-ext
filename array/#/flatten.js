@@ -1,12 +1,27 @@
+// Stack grow safe implementation
+
 'use strict';
 
-var isArray = Array.isArray, forEach = Array.prototype.forEach;
+var ensureValue = require('../../object/valid-value')
+  , isArray     = Array.isArray;
 
 module.exports = function () {
-	var r = [];
-	forEach.call(this, function self(x) {
-		if (isArray(x)) x.forEach(self);
-		else r.push(x);
-	});
-	return r;
+	var input = ensureValue(this), remaining, l, i, result = [];
+	main: //jslint: ignore
+	while (input) {
+		l = input.length;
+		for (i = 0; i < l; ++i) {
+			if (isArray(input[i])) {
+				if (i < (l - 1)) {
+					if (!remaining) remaining = [];
+					remaining.unshift(input.slice(i + 1));
+				}
+				input = input[i];
+				continue main;
+			}
+			result.push(input[i]);
+		}
+		input = remaining ? remaining.shift() : null;
+	}
+	return result;
 };
