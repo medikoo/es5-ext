@@ -14,14 +14,14 @@ module.exports = function () {
 			if (isArray(input[i])) {
 				if (i < (l - 1)) {
 					if (!remaining) remaining = [];
-					remaining.unshift(input.slice(i + 1));
+					remaining.push(input.slice(i + 1));
 				}
 				input = input[i];
 				continue main;
 			}
 			result.push(input[i]);
 		}
-		input = remaining ? remaining.shift() : null;
+		input = remaining ? remaining.pop() : null;
 	}
 	return result;
 };
