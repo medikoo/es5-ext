@@ -6,22 +6,32 @@ var ensureValue = require('../../object/valid-value')
   , isArray     = Array.isArray;
 
 module.exports = function () {
-	var input = ensureValue(this), remaining, l, i, result = [];
+	var input = ensureValue(this), index = 0, remaining, remainingIndexes, l, i, result = [];
 	main: //jslint: ignore
 	while (input) {
 		l = input.length;
-		for (i = 0; i < l; ++i) {
+		for (i = index; i < l; ++i) {
 			if (isArray(input[i])) {
 				if (i < (l - 1)) {
-					if (!remaining) remaining = [];
-					remaining.push(input.slice(i + 1));
+					if (!remaining) {
+						remaining = [];
+						remainingIndexes = [];
+					}
+					remaining.push(input);
+					remainingIndexes.push(i + 1);
 				}
 				input = input[i];
+				index = 0;
 				continue main;
 			}
 			result.push(input[i]);
 		}
-		input = remaining ? remaining.pop() : null;
+		if (remaining) {
+			input = remaining.pop();
+			index = remainingIndexes.pop();
+		} else {
+			input = null;
+		}
 	}
 	return result;
 };
