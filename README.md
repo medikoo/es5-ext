@@ -2,6 +2,8 @@
 ## ECMAScript 5 extensions
 ### (with respect to ECMAScript 6 standard)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/medikoo/es5-ext.svg)](https://greenkeeper.io/)
+
 Shims for upcoming ES6 standard and other goodies implemented strictly with ECMAScript conventions in mind.
 
 It's designed to be used in compliant ECMAScript 5 or ECMAScript 6 environments. Older environments are not supported, although most of the features should work with correct ECMAScript 5 shim on board.
