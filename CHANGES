@@ -1,3 +1,6 @@
+v0.10.14  --  2017.03.15
+* Object.isValue util
+
 v0.10.13  --  2017.03.13
 * Introduce JSON.safeStringify
 * Improve message handling in error/custom
