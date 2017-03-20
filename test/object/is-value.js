@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = function (t, a) {
-	a(t(), true);
-	a(t(undefined), true);
-	a(t(null), true);
-	a(t(NaN), false);
-	a(t(0), false);
-	a(t(false), false);
-	a(t('null'), false);
-	a(t(''), false);
-	a(t({}), false);
-	a(t(Object.prototype), false);
+	a(t(), false);
+	a(t(undefined), false);
+	a(t(null), false);
+	a(t(NaN), true);
+	a(t(0), true);
+	a(t(false), true);
+	a(t('null'), true);
+	a(t(''), true);
+	a(t({}), true);
+	a(t(Object.prototype), true);
 };
