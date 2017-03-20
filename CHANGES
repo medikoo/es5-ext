@@ -1,3 +1,6 @@
+v0.10.15  --  2017.03.20
+* Fix Object.isValue (it was actually isNotValue)
+
 v0.10.14  --  2017.03.15
 * Object.isValue util
 
