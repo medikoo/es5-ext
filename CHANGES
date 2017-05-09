@@ -1,3 +1,7 @@
+For recent changelog see CHANGELOG.md
+
+-----
+
 v0.10.15  --  2017.03.20
 * Fix Object.isValue (it was actually isNotValue)
 

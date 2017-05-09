@@ -9,3 +9,8 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * add String.prototype.count ([2e53241](https://github.com/medikoo/es5-ext/commit/2e53241))
+
+
+## Changelog for previous versions
+
+See `CHANGES` file
