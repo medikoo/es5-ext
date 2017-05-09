@@ -3,6 +3,7 @@
 module.exports = {
 	'@@iterator':           require('./@@iterator'),
 	at:                     require('./at'),
+	count:                  require('./count'),
 	camelToHyphen:          require('./camel-to-hyphen'),
 	capitalize:             require('./capitalize'),
 	caseInsensitiveCompare: require('./case-insensitive-compare'),
