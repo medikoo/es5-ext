@@ -35,5 +35,8 @@ predef+ Float32Array
 ./object/first-key.js
 forin
 
+./test
+predef+ Symbol
+
 ./test/reg-exp/#/index.js
 predef+ __dirname
