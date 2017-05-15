@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.18"></a>
+## [0.10.18](https://github.com/medikoo/es5-ext/compare/v0.10.17...v0.10.18) (2017-05-15)
+
+
+### Bug Fixes
+
+* take all changes in safeToString ([3c5cd12](https://github.com/medikoo/es5-ext/commit/3c5cd12))
+
+
+
 <a name="0.10.17"></a>
 ## [0.10.17](https://github.com/medikoo/es5-ext/compare/v0.10.16...v0.10.17) (2017-05-15)
 
