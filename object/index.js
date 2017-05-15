@@ -11,6 +11,7 @@ module.exports = {
 	create:                     require('./create'),
 	ensureNaturalNumber:        require('./ensure-natural-number'),
 	ensureNaturalNumberValue:   require('./ensure-natural-number-value'),
+	ensurePromise:              require('./ensure-promise'),
 	eq:                         require('./eq'),
 	every:                      require('./every'),
 	filter:                     require('./filter'),
