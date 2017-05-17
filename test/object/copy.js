@@ -24,4 +24,6 @@ module.exports = function (t, a) {
 	a(o.raz, no.raz, 'Shallow');
 
 	a.deep(t(o, ['foo']), { foo: 'bar' });
+	a.deep(t(Object.create(o), ['foo']), { foo: 'bar' });
+	a.deep(t(o, ['foo', 'habla']), { foo: 'bar' });
 };
