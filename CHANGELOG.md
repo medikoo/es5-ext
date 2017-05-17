@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.19"></a>
+## [0.10.19](https://github.com/medikoo/es5-ext/compare/v0.10.18...v0.10.19) (2017-05-17)
+
+
+### Features
+
+* support propertyNames option in Object.copy ([5442279](https://github.com/medikoo/es5-ext/commit/5442279))
+
+
+
 <a name="0.10.18"></a>
 ## [0.10.18](https://github.com/medikoo/es5-ext/compare/v0.10.17...v0.10.18) (2017-05-15)
 
