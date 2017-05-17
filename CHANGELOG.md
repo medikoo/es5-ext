@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.20"></a>
+## [0.10.20](https://github.com/medikoo/es5-ext/compare/v0.10.19...v0.10.20) (2017-05-17)
+
+
+### Features
+
+* if listed copy not only if own property ([d7e7cef](https://github.com/medikoo/es5-ext/commit/d7e7cef))
+* support `ensure` option in Object.copy ([295326f](https://github.com/medikoo/es5-ext/commit/295326f))
+
+
+
 <a name="0.10.19"></a>
 ## [0.10.19](https://github.com/medikoo/es5-ext/compare/v0.10.18...v0.10.19) (2017-05-17)
 
