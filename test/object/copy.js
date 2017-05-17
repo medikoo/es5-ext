@@ -26,4 +26,5 @@ module.exports = function (t, a) {
 	a.deep(t(o, ['foo']), { foo: 'bar' });
 	a.deep(t(Object.create(o), ['foo']), { foo: 'bar' });
 	a.deep(t(o, ['foo', 'habla']), { foo: 'bar' });
+	a.deep(t(o, ['foo', 'habla'], { ensure: true }), { foo: 'bar', habla: undefined });
 };
