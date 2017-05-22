@@ -2,8 +2,8 @@
 
 var validFunction = require('../valid-function')
 
-  , re = new RegExp('^\\s*function[\\0-\'\\)-\\uffff]*' +
-	'\\(([\\0-\\(\\*-\\uffff]*)\\)\\s*\\{([\\0-\\uffff]*)\\}\\s*$');
+var re = /^\s*function[\0-\'\)-\uffff]*\(([\0-\(\*-\uffff]*)\)\s*\{([\0-\uffff]*)\}\s*$/;
+
 
 module.exports = function () {
 	var data = String(validFunction(this)).match(re);
