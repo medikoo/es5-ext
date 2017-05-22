@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.21"></a>
+## [0.10.21](https://github.com/medikoo/es5-ext/compare/v0.10.20...v0.10.21) (2017-05-22)
+
+
+### Features
+
+* support arrow functions in Function/#/to-tring-tokens.js ([ad3de1e](https://github.com/medikoo/es5-ext/commit/ad3de1e))
+
+
+
 <a name="0.10.20"></a>
 ## [0.10.20](https://github.com/medikoo/es5-ext/compare/v0.10.19...v0.10.20) (2017-05-17)
 
