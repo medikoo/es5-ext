@@ -9,4 +9,16 @@ module.exports = function (t, a) {
 		{ args: 'raz', body: '' });
 	a.deep(t.call(function () { Object(); }),
 		{ args: '', body: ' Object(); ' });
+
+	try {
+		eval("(() => {})");
+	} catch (e) {
+		// Non ES2015 env
+		return;
+	}
+
+	a.deep(t.call(eval("(() => {})")), { args: '', body: '' });
+	a.deep(t.call(eval("((elo) => foo)")), { args: 'elo', body: 'foo' });
+	a.deep(t.call(eval("(elo => foo)")), { args: 'elo', body: 'foo' });
+	a.deep(t.call(eval("((elo, bar) => foo())")), { args: 'elo, bar', body: 'foo()' });
 };

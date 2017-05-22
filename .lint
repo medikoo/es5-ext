@@ -19,6 +19,7 @@ sub
 ./function/#/copy.js
 ./object/unserialize.js
 ./test/function/valid-function.js
+./test/function/#/to-string-tokens.js
 evil
 
 ./math/_pack-ieee754.js
