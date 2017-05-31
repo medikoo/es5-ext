@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.22"></a>
+## [0.10.22](https://github.com/medikoo/es5-ext/compare/v0.10.21...v0.10.22) (2017-05-31)
+
+
+### Bug Fixes
+
+* ensure proper symbols stringification in early implementations ([ce51900](https://github.com/medikoo/es5-ext/commit/ce51900))
+
+
+
 <a name="0.10.21"></a>
 ## [0.10.21](https://github.com/medikoo/es5-ext/compare/v0.10.20...v0.10.21) (2017-05-22)
 
