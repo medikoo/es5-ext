@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.23"></a>
+## [0.10.23](https://github.com/medikoo/es5-ext/compare/v0.10.22...v0.10.23) (2017-06-05)
+
+
+### Bug Fixes
+
+* **Error.custom:** allow non-string code ([e8db3a0](https://github.com/medikoo/es5-ext/commit/e8db3a0))
+* **Error.custom:** improve `ext` argument detection ([0edbfbc](https://github.com/medikoo/es5-ext/commit/0edbfbc))
+
+
+
 <a name="0.10.22"></a>
 ## [0.10.22](https://github.com/medikoo/es5-ext/compare/v0.10.21...v0.10.22) (2017-05-31)
 
