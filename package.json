@@ -35,9 +35,9 @@
     "xlint-jslint-medikoo": "~0.1.4"
   },
   "scripts": {
-    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
-    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
-    "test": "node ./node_modules/tad/bin/tad"
+    "lint": "xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
+    "test": "tad"
   },
   "license": "MIT"
 }
