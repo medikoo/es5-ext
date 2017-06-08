@@ -445,7 +445,7 @@ Whether value is arguments object
 
 #### isFunction(arg) _(es5-ext/function/is-function)_
 
-Wether value is instance of function
+Whether value is instance of function
 
 #### noop() _(es5-ext/function/noop)_
 
