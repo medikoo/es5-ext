@@ -48,7 +48,7 @@ module.exports = (function (status) {
 	}
 	return Object.defineProperty(fn, 'level', { configurable: false,
 		enumerable: false, writable: false, value: status.level });
-}((function () {
+})((function () {
 	var x = Object.create(null), y = {}, set
 	  , desc = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');
 
@@ -68,6 +68,6 @@ module.exports = (function (status) {
 	if (Object.getPrototypeOf(x) === y) return { level: 1 };
 
 	return false;
-}())));
+})());
 
 require('../create');
