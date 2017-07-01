@@ -6,9 +6,6 @@ node_js:
   - 6
   - 8
 
-before_install:
-  - mkdir node_modules; ln -s ../ node_modules/es5-ext
-
 notifications:
   email:
     - medikoo+es5-ext@medikoo.com
