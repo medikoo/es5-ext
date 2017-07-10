@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.24"></a>
+## [0.10.24](https://github.com/medikoo/es5-ext/compare/v0.10.23...v0.10.24) (2017-07-10)
+
+
+### Features
+
+* resolve global with CSP safe method ([d386449](https://github.com/medikoo/es5-ext/commit/d386449))
+
+
+
 <a name="0.10.23"></a>
 ## [0.10.23](https://github.com/medikoo/es5-ext/compare/v0.10.22...v0.10.23) (2017-06-05)
 
