@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var value = require('../../object/valid-value');
+var value = require("../../object/valid-value");
 
 module.exports = function (search, replace) {
 	var index, pos = 0, str = String(value(this)), sl, rl;

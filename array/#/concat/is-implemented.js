@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var SubArray = require('../../_sub-array-dummy-safe');
+var SubArray = require("../../_sub-array-dummy-safe");
 
 module.exports = function () {
-	return (new SubArray()).concat('foo') instanceof SubArray;
+	return (new SubArray()).concat("foo") instanceof SubArray;
 };

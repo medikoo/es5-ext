@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	__generic: function (t, a) {
+	"__generic": function (t, a) {
 		a(t.call(this).length, 3);
 	},
 	"": function (t, a) {

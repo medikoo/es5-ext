@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
-	a(t.call(/foo/, 'barfoo'), 3);
+	a(t.call(/foo/, "barfoo"), 3);
 };

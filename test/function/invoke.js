@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-var constant = require('../../function/constant')
+var constant = require("../../function/constant")
 
-  , o = { b: constant('c') };
+  , o = { b: constant("c") };
 
 module.exports = function (t, a) {
-	a(t('b')(o), 'c');
+	a(t("b")(o), "c");
 };

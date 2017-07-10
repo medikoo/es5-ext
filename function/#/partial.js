@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-var callable     = require('../../object/valid-callable')
-  , aFrom        = require('../../array/from')
-  , defineLength = require('../_define-length')
+var callable     = require("../../object/valid-callable")
+  , aFrom        = require("../../array/from")
+  , defineLength = require("../_define-length")
 
   , apply = Function.prototype.apply;
 
-module.exports = function (/*…args*/) {
+module.exports = function (/* …args*/) {
 	var fn = callable(this)
 	  , args = aFrom(arguments);
 

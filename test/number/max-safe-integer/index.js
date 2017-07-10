@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
-	a(typeof t, 'number');
+	a(typeof t, "number");
 };

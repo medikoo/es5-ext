@@ -1,5 +1,7 @@
-'use strict';
+"use strict";
 
-var isImplemented = require('../../../array/from/is-implemented');
+var isImplemented = require("../../../array/from/is-implemented");
 
-module.exports = function (a) { a(isImplemented(), true); };
+module.exports = function (a) {
+ a(isImplemented(), true);
+};

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var args, x;
@@ -25,5 +25,5 @@ module.exports = function (t, a) {
 
 	a.h1("Array-likes");
 	args = { 0: 1, 1: 2, 2: 3, length: 3 };
-	a.deep(t.call(args, -2, 0), { '0': 1, '1': 1, '2': 2, length: 3 });
+	a.deep(t.call(args, -2, 0), { 0: 1, 1: 1, 2: 2, length: 3 });
 };

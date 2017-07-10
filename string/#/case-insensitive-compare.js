@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var toLowerCase = String.prototype.toLowerCase;
 

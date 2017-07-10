@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var ensureStringifiable = require('../../object/validate-stringifiable-value');
+var ensureStringifiable = require("../../object/validate-stringifiable-value");
 
 module.exports = function () {
 	var str = ensureStringifiable(this);

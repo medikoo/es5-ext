@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var is = require('./is');
+var is = require("./is");
 
 module.exports = function (x) {
 	if (is(x)) return x;

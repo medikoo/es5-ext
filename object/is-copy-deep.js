@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var eq            = require('./eq')
-  , isPlainObject = require('./is-plain-object')
-  , value         = require('./valid-value')
+var eq            = require("./eq")
+  , isPlainObject = require("./is-plain-object")
+  , value         = require("./valid-value")
 
   , isArray = Array.isArray, keys = Object.keys
   , propertyIsEnumerable = Object.prototype.propertyIsEnumerable

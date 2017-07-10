@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var o = { foo: 'bar' };
+var o = { foo: "bar" };
 
 module.exports = function (t, a) {
-	a(t('foo')(o), o.foo);
+	a(t("foo")(o), o.foo);
 };

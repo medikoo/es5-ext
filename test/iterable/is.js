@@ -1,12 +1,14 @@
-'use strict';
+"use strict";
 
-var iteratorSymbol = require('es6-symbol').iterator;
+var iteratorSymbol = require("es6-symbol").iterator;
 
 module.exports = function (t, a) {
 	var x;
 	a(t([]), true, "Array");
 	a(t(""), true, "String");
-	a(t((function () { return arguments; }())), true, "Arguments");
+	a(t((function () {
+ return arguments;
+}())), true, "Arguments");
 	a(t({ length: 0 }), true, "List object");
 	a(t(function () {}), false, "Function");
 	a(t({}), false, "Plain object");

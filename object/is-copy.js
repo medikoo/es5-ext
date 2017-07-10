@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var eq     = require('./eq')
-  , value  = require('./valid-value')
+var eq     = require("./eq")
+  , value  = require("./valid-value")
 
   , keys = Object.keys
   , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;

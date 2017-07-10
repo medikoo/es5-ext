@@ -1,8 +1,10 @@
-'use strict';
+"use strict";
 
-var toArray = require('../../../array/to-array')
+var toArray = require("../../../array/to-array")
 
-  , f = function () { return toArray(arguments); };
+  , f = function () {
+ return toArray(arguments);
+};
 
 module.exports = function (t, a) {
 	var x, y = {}, z;
@@ -14,5 +16,5 @@ module.exports = function (t, a) {
 	z = z(3, 4);
 	a(z.length, 1, "Length #1");
 	a.deep(z(5, 6), [1, 2, 3, 4, 5], "Many arguments");
-	a.deep(x(8, 3)(y, 45)('raz', 6), [8, 3, y, 45, 'raz'], "Many arguments #2");
+	a.deep(x(8, 3)(y, 45)("raz", 6), [8, 3, y, 45, "raz"], "Many arguments #2");
 };

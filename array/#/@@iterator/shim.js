@@ -1,3 +1,3 @@
-'use strict';
+"use strict";
 
-module.exports = require('../values/shim');
+module.exports = require("../values/shim");

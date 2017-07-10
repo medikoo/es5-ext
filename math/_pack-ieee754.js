@@ -1,6 +1,6 @@
 // Credit: https://github.com/paulmillr/es6-shim/
 
-'use strict';
+"use strict";
 
 var abs = Math.abs, floor = Math.floor, log = Math.log, min = Math.min
   , pow = Math.pow, LN2 = Math.LN2
@@ -26,11 +26,11 @@ module.exports = function (v, ebits, fbits) {
 	} else if (v === Infinity || v === -Infinity) {
 		e = (1 << ebits) - 1;
 		f = 0;
-		s = (v < 0) ? 1 : 0;
+		s = v < 0 ? 1 : 0;
 	} else if (v === 0) {
 		e = 0;
 		f = 0;
-		s = (1 / v === -Infinity) ? 1 : 0;
+		s = 1 / v === -Infinity ? 1 : 0;
 	} else {
 		s = v < 0;
 		v = abs(v);
@@ -39,7 +39,7 @@ module.exports = function (v, ebits, fbits) {
 			e = min(floor(log(v) / LN2), 1023);
 			f = roundToEven(v / pow(2, e) * pow(2, fbits));
 			if (f / pow(2, fbits) >= 2) {
-				e = e + 1;
+				e += 1;
 				f = 1;
 			}
 			if (e > bias) {
@@ -48,8 +48,8 @@ module.exports = function (v, ebits, fbits) {
 				f = 0;
 			} else {
 				// Normal
-				e = e + bias;
-				f = f - pow(2, fbits);
+				e += bias;
+				f -= pow(2, fbits);
 			}
 		} else {
 			// Subnormal
@@ -70,7 +70,7 @@ module.exports = function (v, ebits, fbits) {
 	}
 	bits.push(s ? 1 : 0);
 	bits.reverse();
-	str = bits.join('');
+	str = bits.join("");
 
 	// Bits to bytes
 	bytes = [];

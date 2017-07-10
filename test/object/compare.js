@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var d = new Date();

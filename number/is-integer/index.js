@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = require('./is-implemented')()
+module.exports = require("./is-implemented")()
 	? Number.isInteger
-	: require('./shim');
+	: require("./shim");

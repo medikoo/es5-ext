@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var getMonth = Date.prototype.getMonth;
 

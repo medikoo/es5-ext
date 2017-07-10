@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var isNatural = require('../number/is-natural');
+var isNatural = require("../number/is-natural");
 
 module.exports = function (arg) {
 	var num = Number(arg);

@@ -1,5 +1,7 @@
-'use strict';
+"use strict";
 
 var getTime = Date.prototype.getTime;
 
-module.exports = function () { return new Date(getTime.call(this)); };
+module.exports = function () {
+ return new Date(getTime.call(this));
+};

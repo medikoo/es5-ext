@@ -9,14 +9,14 @@
 	* $Rev: 13309 $
 */
 
-'use strict';
+"use strict";
 
-var primitiveSet = require('../../../object/primitive-set')
-  , validValue   = require('../../../object/valid-value')
-  , data         = require('./_data')
+var primitiveSet = require("../../../object/primitive-set")
+  , validValue   = require("../../../object/valid-value")
+  , data         = require("./_data")
 
   , floor = Math.floor
-  , forms = primitiveSet('NFC', 'NFD', 'NFKC', 'NFKD')
+  , forms = primitiveSet("NFC", "NFD", "NFKC", "NFKD")
 
   , DEFAULT_FEATURE = [null, 0, {}], CACHE_THRESHOLD = 10, SBase = 0xAC00
   , LBase = 0x1100, VBase = 0x1161, TBase = 0x11A7, LCount = 19, VCount = 21
@@ -38,7 +38,7 @@ fromCache = function (next, cp, needFeature) {
 	var ret = cache[cp];
 	if (!ret) {
 		ret = next(cp, needFeature);
-		if (!!ret.feature && ++cacheCounter[(cp >> 8) & 0xFF] > CACHE_THRESHOLD) {
+		if (Boolean(ret.feature) && ++cacheCounter[(cp >> 8) & 0xFF] > CACHE_THRESHOLD) {
 			cache[cp] = ret;
 		}
 	}
@@ -50,7 +50,7 @@ fromData = function (next, cp, needFeature) {
 	return f ? new UChar(cp, f) : new UChar(cp, DEFAULT_FEATURE);
 };
 fromCpOnly = function (next, cp, needFeature) {
-	return !!needFeature ? next(cp, needFeature) : new UChar(cp, null);
+	return needFeature ? next(cp, needFeature) : new UChar(cp, null);
 };
 
 fromRuleBasedJamo = function (next, cp, needFeature) {
@@ -76,8 +76,10 @@ fromRuleBasedJamo = function (next, cp, needFeature) {
 	if (TIndex !== 0) {
 		feature[0] = [SBase + SIndex - TIndex, TBase + TIndex];
 	} else {
-		feature[0] = [LBase + floor(SIndex / NCount), VBase +
-			floor((SIndex % NCount) / TCount)];
+		feature[0] = [
+LBase + floor(SIndex / NCount), VBase +
+			floor((SIndex % NCount) / TCount)
+];
 		feature[2] = {};
 		for (j = 1; j < TCount; ++j) {
 			feature[2][TBase + j] = cp + j;
@@ -87,18 +89,24 @@ fromRuleBasedJamo = function (next, cp, needFeature) {
 };
 
 fromCpFilter = function (next, cp, needFeature) {
-	return (cp < 60) || ((13311 < cp) && (cp < 42607))
+	return (cp < 60) || ((cp > 13311) && (cp < 42607))
 		? new UChar(cp, DEFAULT_FEATURE) : next(cp, needFeature);
 };
 
 strategies = [fromCpFilter, fromCache, fromCpOnly, fromRuleBasedJamo, fromData];
 
 UChar.fromCharCode = strategies.reduceRight(function (next, strategy) {
-	return function (cp, needFeature) { return strategy(next, cp, needFeature); };
+	return function (cp, needFeature) {
+ return strategy(next, cp, needFeature);
+};
 }, null);
 
-UChar.isHighSurrogate = function (cp) { return cp >= 0xD800 && cp <= 0xDBFF; };
-UChar.isLowSurrogate = function (cp) { return cp >= 0xDC00 && cp <= 0xDFFF; };
+UChar.isHighSurrogate = function (cp) {
+ return cp >= 0xD800 && cp <= 0xDBFF;
+};
+UChar.isLowSurrogate = function (cp) {
+ return cp >= 0xDC00 && cp <= 0xDFFF;
+};
 
 UChar.prototype.prepFeature = function () {
 	if (!this.feature) {
@@ -120,15 +128,15 @@ UChar.prototype.getDecomp = function () {
 
 UChar.prototype.isCompatibility = function () {
 	this.prepFeature();
-	return !!this.feature[1] && (this.feature[1] & (1 << 8));
+	return Boolean(this.feature[1]) && (this.feature[1] & (1 << 8));
 };
 UChar.prototype.isExclude = function () {
 	this.prepFeature();
-	return !!this.feature[1] && (this.feature[1] & (1 << 9));
+	return Boolean(this.feature[1]) && (this.feature[1] & (1 << 9));
 };
 UChar.prototype.getCanonicalClass = function () {
 	this.prepFeature();
-	return !!this.feature[1] ? (this.feature[1] & 0xff) : 0;
+	return this.feature[1] ? this.feature[1] & 0xff : 0;
 };
 UChar.prototype.getComposite = function (following) {
 	var cp;
@@ -143,10 +151,10 @@ UCharIterator = function (str) {
 	this.cursor = 0;
 };
 UCharIterator.prototype.next = function () {
-	if (!!this.str && this.cursor < this.str.length) {
+	if (Boolean(this.str) && this.cursor < this.str.length) {
 		var cp = this.str.charCodeAt(this.cursor++), d;
 		if (UChar.isHighSurrogate(cp) && this.cursor < this.str.length &&
-				UChar.isLowSurrogate((d = this.str.charCodeAt(this.cursor)))) {
+				UChar.isLowSurrogate(d = this.str.charCodeAt(this.cursor))) {
 			cp = (cp - 0xD800) * 0x400 + (d - 0xDC00) + 0x10000;
 			++this.cursor;
 		}
@@ -166,12 +174,12 @@ RecursDecompIterator.prototype.next = function () {
 	var recursiveDecomp, uchar;
 	recursiveDecomp = function (cano, uchar) {
 		var decomp = uchar.getDecomp(), ret, i, a, j;
-		if (!!decomp && !(cano && uchar.isCompatibility())) {
+		if (Boolean(decomp) && !(cano && uchar.isCompatibility())) {
 			ret = [];
 			for (i = 0; i < decomp.length; ++i) {
 				a = recursiveDecomp(cano, UChar.fromCharCode(decomp[i]));
-				//ret.concat(a); //<-why does not this work?
-				//following block is a workaround.
+				// Ret.concat(a); //<-why does not this work?
+				// following block is a workaround.
 				for (j = 0; j < a.length; ++j) ret.push(a[j]);
 			}
 			return ret;
@@ -235,7 +243,7 @@ CompIterator.prototype.next = function () {
 			starter = this.procBuf[0];
 			composite = starter.getComposite(uchar);
 			cc = uchar.getCanonicalClass();
-			if (!!composite && (this.lastClass < cc || this.lastClass === 0)) {
+			if (Boolean(composite) && (this.lastClass < cc || this.lastClass === 0)) {
 				this.procBuf[0] = composite;
 			} else {
 				if (cc === 0) {
@@ -273,17 +281,17 @@ createIterator = function (mode, str) {
 };
 normalize = function (mode, str) {
 	var it = createIterator(mode, str), ret = "", uchar;
-	while (!!(uchar = it.next())) ret += uchar.toString();
+	while (uchar = it.next()) ret += uchar.toString();
 	return ret;
 };
 
 /* Unicode data */
-UChar.udata =  data;
+UChar.udata = data;
 
-module.exports = function (/*form*/) {
+module.exports = function (/* Form*/) {
 	var str = String(validValue(this)), form = arguments[0];
-	if (form === undefined) form = 'NFC';
+	if (form === undefined) form = "NFC";
 	else form = String(form);
-	if (!forms[form]) throw new RangeError('Invalid normalization form: ' + form);
+	if (!forms[form]) throw new RangeError("Invalid normalization form: " + form);
 	return normalize(form, str);
 };

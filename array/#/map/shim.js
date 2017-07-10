@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var isPlainArray = require('../../is-plain-array')
-  , callable     = require('../../../object/valid-callable')
+var isPlainArray = require("../../is-plain-array")
+  , callable     = require("../../../object/valid-callable")
 
   , isArray = Array.isArray, map = Array.prototype.map
   , forEach = Array.prototype.forEach, call = Function.prototype.call;

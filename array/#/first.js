@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var firstIndex = require('./first-index');
+var firstIndex = require("./first-index");
 
 module.exports = function () {
 	var i;

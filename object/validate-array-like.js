@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var isArrayLike = require('./is-array-like');
+var isArrayLike = require("./is-array-like");
 
 module.exports = function (obj) {
 	if (isArrayLike(obj)) return obj;

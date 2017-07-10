@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-var isPlainArray       = require('../../is-plain-array')
-  , toPosInt           = require('../../../number/to-pos-integer')
-  , isObject           = require('../../../object/is-object')
-  , isConcatSpreadable = require('es6-symbol').isConcatSpreadable
+var isPlainArray       = require("../../is-plain-array")
+  , toPosInt           = require("../../../number/to-pos-integer")
+  , isObject           = require("../../../object/is-object")
+  , isConcatSpreadable = require("es6-symbol").isConcatSpreadable
 
   , isArray = Array.isArray, concat = Array.prototype.concat
   , forEach = Array.prototype.forEach
@@ -26,7 +26,9 @@ module.exports = function (item/*, …items*/) {
 	}
 	result = new this.constructor();
 	if (isSpreadable(this)) {
-		forEach.call(this, function (val, i) { result[i] = val; });
+		forEach.call(this, function (val, i) {
+ result[i] = val;
+});
 	} else {
 		result[0] = this;
 	}
@@ -35,7 +37,9 @@ module.exports = function (item/*, …items*/) {
 		if (isSpreadable(arg)) {
 			base = result.length;
 			result.length += toPosInt(arg.length);
-			forEach.call(arg, function (val, i) { result[base + i] = val; });
+			forEach.call(arg, function (val, i) {
+ result[base + i] = val;
+});
 			return;
 		}
 		result.push(arg);

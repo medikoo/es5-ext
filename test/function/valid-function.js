@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var f = function () {};
@@ -12,6 +12,8 @@ module.exports = function (t, a) {
 		t(/re/);
 	}, "RegExp");
 	a.throws(function () {
-		t({ call: function () { return 20; } });
+		t({ call: function () {
+ return 20;
+} });
 	}, "Plain object");
 };

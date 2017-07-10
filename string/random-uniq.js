@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var generated = Object.create(null)
 
@@ -6,6 +6,8 @@ var generated = Object.create(null)
 
 module.exports = function () {
 	var str;
-	do { str = random().toString(36).slice(2); } while (generated[str]);
+	do {
+ str = random().toString(36).slice(2);
+} while (generated[str]);
 	return str;
 };

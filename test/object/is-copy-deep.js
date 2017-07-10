@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var x, y;
@@ -15,15 +15,15 @@ module.exports = function (t, a) {
 	a(t("raz", "raz"), true, "String: same");
 	a(t("32", 32), false, "String & Number");
 
-	a(t([1, 'raz', true], [1, 'raz', true]), true, "Array: same");
-	a(t([1, 'raz', undefined], [1, 'raz']), false, "Array: diff");
-	a(t(['foo'], ['one']), false, "Array: One value comparision");
+	a(t([1, "raz", true], [1, "raz", true]), true, "Array: same");
+	a(t([1, "raz", undefined], [1, "raz"]), false, "Array: diff");
+	a(t(["foo"], ["one"]), false, "Array: One value comparision");
 
 	x = { foo: { bar: { mar: {} } } };
 	y = { foo: { bar: { mar: {} } } };
 	a(t(x, y), true, "Deep");
 
-	a(t({ foo: { bar: { mar: 'foo' } } }, { foo: { bar: { mar: {} } } }),
+	a(t({ foo: { bar: { mar: "foo" } } }, { foo: { bar: { mar: {} } } }),
 		false, "Deep: false");
 
 	x = { foo: { bar: { mar: {} } } };
@@ -41,6 +41,6 @@ module.exports = function (t, a) {
 	y.rec.foo = y;
 	a(t(x, y), true, "Object: Infinite Recursion: Same #3");
 
-	y.foo.bar.mar = 'raz';
+	y.foo.bar.mar = "raz";
 	a(t(x, y), false, "Object: Infinite Recursion: Diff");
 };

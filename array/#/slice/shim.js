@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var toInteger    = require('../../../number/to-integer')
-  , toPosInt     = require('../../../number/to-pos-integer')
-  , isPlainArray = require('../../is-plain-array')
+var toInteger    = require("../../../number/to-integer")
+  , toPosInt     = require("../../../number/to-pos-integer")
+  , isPlainArray = require("../../is-plain-array")
 
   , isArray = Array.isArray, slice = Array.prototype.slice
   , hasOwnProperty = Object.prototype.hasOwnProperty, max = Math.max;

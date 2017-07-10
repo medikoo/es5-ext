@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var is = require('../../../object/is');
+var is = require("../../../object/is");
 
 module.exports = function (t, a) {
 	a(t({}), NaN, "NaN");

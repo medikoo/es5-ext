@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var forEach       = require('./for-each')
-  , isPlainObject = require('./is-plain-object')
-  , value         = require('./valid-value')
+var forEach       = require("./for-each")
+  , isPlainObject = require("./is-plain-object")
+  , value         = require("./valid-value")
 
   , isArray = Array.isArray
   , copy, copyItem;

@@ -1,3 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function (value) { return (value !== value); } //jslint: ignore
+module.exports = function (value) {
+ return value !== value;
+}; // Jslint: ignore

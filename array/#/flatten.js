@@ -1,14 +1,14 @@
 // Stack grow safe implementation
 
-'use strict';
+"use strict";
 
-var ensureValue = require('../../object/valid-value')
+var ensureValue = require("../../object/valid-value")
 
   , isArray = Array.isArray, hasOwnProperty = Object.prototype.hasOwnProperty;
 
 module.exports = function () {
 	var input = ensureValue(this), index = 0, remaining, remainingIndexes, l, i, result = [];
-	main: //jslint: ignore
+	main: // Jslint: ignore
 	while (input) {
 		l = input.length;
 		for (i = index; i < l; ++i) {

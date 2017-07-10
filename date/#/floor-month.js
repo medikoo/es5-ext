@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var floorDay = require('./floor-day');
+var floorDay = require("./floor-day");
 
 module.exports = function () {
 	floorDay.call(this).setDate(1);

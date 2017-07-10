@@ -1,5 +1,7 @@
-'use strict';
+"use strict";
 
-var error = require('../valid-error');
+var error = require("../valid-error");
 
-module.exports = function () { throw error(this); };
+module.exports = function () {
+ throw error(this);
+};

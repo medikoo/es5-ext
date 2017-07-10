@@ -1,14 +1,14 @@
-'use strict';
+"use strict";
 
-var value    = require('../../object/valid-value')
-  , aFrom    = require('../from')
-  , toArray  = require('../to-array')
-  , contains = require('./contains')
-  , byLength = require('./_compare-by-length')
+var value    = require("../../object/valid-value")
+  , aFrom    = require("../from")
+  , toArray  = require("../to-array")
+  , contains = require("./contains")
+  , byLength = require("./_compare-by-length")
 
   , filter = Array.prototype.filter, push = Array.prototype.push;
 
-module.exports = function (/*…lists*/) {
+module.exports = function (/* …lists*/) {
 	var lists, seen, result;
 	if (!arguments.length) return aFrom(this);
 	push.apply(lists = [this], arguments);

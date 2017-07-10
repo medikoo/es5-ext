@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function () {
 	var dummyRegExp = /a/;
@@ -6,5 +6,5 @@ module.exports = function () {
 	// https://github.com/tc39/ecma262/issues/262
 	// https://github.com/tc39/ecma262/pull/263
 	// https://bugs.chromium.org/p/v8/issues/detail?id=4617
-	return 'sticky' in dummyRegExp;
+	return "sticky" in dummyRegExp;
 };

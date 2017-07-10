@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	a(t.call(new Date(2001, 0, 1)), 31, "January");

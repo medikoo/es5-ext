@@ -1,9 +1,9 @@
 // Parts of implementation taken from es6-shim project
 // See: https://github.com/paulmillr/es6-shim/blob/master/es6-shim.js
 
-'use strict';
+"use strict";
 
-var expm1 = require('../expm1')
+var expm1 = require("../expm1")
 
   , abs = Math.abs, exp = Math.exp, e = Math.E;
 

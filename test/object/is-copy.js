@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	a(t({ 1: 1, 2: 2, 3: 3 }, { 1: 1, 2: 2, 3: 3 }), true, "Same");
@@ -13,6 +13,6 @@ module.exports = function (t, a) {
 	a(t("raz", "raz"), true, "String: same");
 	a(t("32", 32), false, "String & Number");
 
-	a(t([1, 'raz', true], [1, 'raz', true]), true, "Array: same");
-	a(t([1, 'raz', undefined], [1, 'raz']), false, "Array: diff");
+	a(t([1, "raz", true], [1, "raz", true]), true, "Array: same");
+	a(t([1, "raz", undefined], [1, "raz"]), false, "Array: diff");
 };

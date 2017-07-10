@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var ensureString = require('../../object/validate-stringifiable-value');
+var ensureString = require("../../object/validate-stringifiable-value");
 
 module.exports = function (search) {
 	var string = ensureString(this), count = 0, index = 0;

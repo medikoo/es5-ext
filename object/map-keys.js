@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var callable = require('./valid-callable')
-  , forEach  = require('./for-each')
+var callable = require("./valid-callable")
+  , forEach  = require("./for-each")
 
   , call = Function.prototype.call;
 

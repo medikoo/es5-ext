@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var validRegExp = require('../valid-reg-exp')
+var validRegExp = require("../valid-reg-exp")
 
   , re = /\/[a-xz]*u[a-xz]*$/;
 

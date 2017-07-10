@@ -1,10 +1,10 @@
 // Based on: https://github.com/mathiasbynens/String.prototype.codePointAt
 // Thanks @mathiasbynens !
 
-'use strict';
+"use strict";
 
-var toInteger  = require('../../../number/to-integer')
-  , validValue = require('../../../object/valid-value');
+var toInteger  = require("../../../number/to-integer")
+  , validValue = require("../../../object/valid-value");
 
 module.exports = function (pos) {
 	var str = String(validValue(this)), l = str.length, first, second;

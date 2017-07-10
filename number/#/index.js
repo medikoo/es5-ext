@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	pad: require('./pad')
+	pad: require("./pad")
 };

@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var o = { raz: 1, dwa: 2, trzy: 3 }
 	  , o2 = {}, o3 = {}, arr, i = -1;
 
-	t = t('forEach');
+	t = t("forEach");
 	t(o, function (value, name, self, index) {
 		o2[name] = value;
 		a(index, ++i, "Index");

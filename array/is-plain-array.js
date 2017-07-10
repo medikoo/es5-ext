@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var isArray = Array.isArray, getPrototypeOf = Object.getPrototypeOf;
 

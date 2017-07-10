@@ -1,6 +1,6 @@
 // Thanks: https://github.com/monolithed/ECMAScript-6
 
-'use strict';
+"use strict";
 
 var exp = Math.exp;
 

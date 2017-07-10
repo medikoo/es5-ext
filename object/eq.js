@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = function (x, y) {
-	return ((x === y) || ((x !== x) && (y !== y))); //jslint: ignore
+	return (x === y) || ((x !== x) && (y !== y)); // Jslint: ignore
 };

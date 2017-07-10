@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var value = require('./valid-value')
+var value = require("./valid-value")
 
   , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
 

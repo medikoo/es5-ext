@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var toString = Object.prototype.toString
 

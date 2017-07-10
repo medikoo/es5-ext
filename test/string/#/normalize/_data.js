@@ -1,3 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function (t, a) { a(typeof t[0], 'object'); };
+module.exports = function (t, a) {
+ a(typeof t[0], "object");
+};

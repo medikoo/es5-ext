@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var keys  = require('../keys')
-  , value = require('../valid-value')
+var keys  = require("../keys")
+  , value = require("../valid-value")
 
   , max = Math.max;
 
@@ -9,7 +9,9 @@ module.exports = function (dest, src/*, …srcn*/) {
 	var error, i, l = max(arguments.length, 2), assign;
 	dest = Object(value(dest));
 	assign = function (key) {
-		try { dest[key] = src[key]; } catch (e) {
+		try {
+ dest[key] = src[key];
+} catch (e) {
 			if (!error) error = e;
 		}
 	};

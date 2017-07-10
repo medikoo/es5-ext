@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var o = { first: 1, second: 4 }, r1, r2;
@@ -11,7 +11,7 @@ module.exports = function (t, a) {
 
 	r1 = t(o);
 	r1.sort();
-	r2 = ['first', 'second', 'third', 'fourth']
+	r2 = ["first", "second", "third", "fourth"]
 		.concat(Object.getOwnPropertyNames(Object.prototype));
 	r2.sort();
 	a.deep(r1, r2);

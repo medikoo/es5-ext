@@ -1,10 +1,12 @@
-'use strict';
+"use strict";
 
 var forEach = Array.prototype.forEach;
 
 module.exports = function (sep) {
 	var result = [];
-	forEach.call(this, function (val, i) { result.push(val, sep); });
+	forEach.call(this, function (val, i) {
+ result.push(val, sep);
+});
 	result.pop();
 	return result;
 };

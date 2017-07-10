@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var o = { call: Function.prototype.call, apply: Function.prototype.apply };
 

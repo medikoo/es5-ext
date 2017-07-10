@@ -4,12 +4,12 @@
 // https://github.com/mathiasbynens/String.fromCodePoint/blob/master
 // /fromcodepoint.js
 
-'use strict';
+"use strict";
 
 var floor = Math.floor, fromCharCode = String.fromCharCode;
 
 module.exports = function (codePoint/*, …codePoints*/) {
-	var chars = [], l = arguments.length, i, c, result = '';
+	var chars = [], l = arguments.length, i, c, result = "";
 	for (i = 0; i < l; ++i) {
 		c = Number(arguments[i]);
 		if (!isFinite(c) || c < 0 || c > 0x10FFFF || floor(c) !== c) {

@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var value = require('./valid-value')
+var value = require("./valid-value")
 
   , defineProperty = Object.defineProperty
   , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
@@ -13,13 +13,17 @@ module.exports = function (target, source) {
 	getOwnPropertyNames(sourceObject).forEach(function (name) {
 		try {
 			defineProperty(target, name, getOwnPropertyDescriptor(source, name));
-		} catch (e) { error = e; }
+		} catch (e) {
+ error = e;
+}
 	});
-	if (typeof getOwnPropertySymbols === 'function') {
+	if (typeof getOwnPropertySymbols === "function") {
 		getOwnPropertySymbols(sourceObject).forEach(function (symbol) {
 			try {
 				defineProperty(target, symbol, getOwnPropertyDescriptor(source, symbol));
-			} catch (e) { error = e; }
+			} catch (e) {
+ error = e;
+}
 		});
 	}
 	if (error !== undefined) throw error;

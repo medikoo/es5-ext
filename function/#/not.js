@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var callable     = require('../../object/valid-callable')
-  , defineLength = require('../_define-length')
+var callable     = require("../../object/valid-callable")
+  , defineLength = require("../_define-length")
 
   , apply = Function.prototype.apply;
 

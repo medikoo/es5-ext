@@ -1,7 +1,9 @@
-'use strict';
+"use strict";
 
-var filter = require('./filter');
+var filter = require("./filter");
 
 module.exports = function (obj) {
-	return filter(obj, function (val) { return val != null; });
+	return filter(obj, function (val) {
+ return val != null;
+});
 };

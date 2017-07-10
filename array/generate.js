@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var toPosInt = require('../number/to-pos-integer')
-  , value    = require('../object/valid-value')
+var toPosInt = require("../number/to-pos-integer")
+  , value    = require("../object/valid-value")
 
   , slice = Array.prototype.slice;
 
@@ -10,8 +10,8 @@ module.exports = function (length/*, …fill*/) {
 	length = toPosInt(value(length));
 	if (length === 0) return [];
 
-	arr = (arguments.length < 2) ? [undefined] :
-			slice.call(arguments, 1, 1 + length);
+	arr = arguments.length < 2 ? [undefined]
+			: slice.call(arguments, 1, 1 + length);
 
 	while ((l = arr.length) < length) {
 		arr = arr.concat(arr.slice(0, length - l));

@@ -1,17 +1,17 @@
 // Inspired by Underscore's groupBy:
 // http://documentcloud.github.com/underscore/#groupBy
 
-'use strict';
+"use strict";
 
-var callable = require('../../object/valid-callable')
-  , value    = require('../../object/valid-value')
+var callable = require("../../object/valid-callable")
+  , value    = require("../../object/valid-value")
 
   , forEach = Array.prototype.forEach, apply = Function.prototype.apply;
 
 module.exports = function (cb/*, thisArg*/) {
 	var r;
 
-	(value(this) && callable(cb));
+	value(this) && callable(cb);
 
 	r = {};
 	forEach.call(this, function (v) {

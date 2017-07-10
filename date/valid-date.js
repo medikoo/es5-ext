@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var isDate = require('./is-date');
+var isDate = require("./is-date");
 
 module.exports = function (x) {
 	if (!isDate(x) || isNaN(x)) throw new TypeError(x + " is not valid Date object");

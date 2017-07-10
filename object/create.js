@@ -1,11 +1,11 @@
 // Workaround for http://code.google.com/p/v8/issues/detail?id=2804
 
-'use strict';
+"use strict";
 
 var create = Object.create, shim;
 
-if (!require('./set-prototype-of/is-implemented')()) {
-	shim = require('./set-prototype-of/shim');
+if (!require("./set-prototype-of/is-implemented")()) {
+	shim = require("./set-prototype-of/shim");
 }
 
 module.exports = (function () {
@@ -15,11 +15,15 @@ module.exports = (function () {
 
 	nullObject = {};
 	props = {};
-	desc = { configurable: false, enumerable: false, writable: true,
+	desc = { configurable: false,
+enumerable: false,
+writable: true,
 		value: undefined };
 	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
-		if (name === '__proto__') {
-			props[name] = { configurable: true, enumerable: false, writable: true,
+		if (name === "__proto__") {
+			props[name] = { configurable: true,
+enumerable: false,
+writable: true,
 				value: undefined };
 			return;
 		}
@@ -27,10 +31,12 @@ module.exports = (function () {
 	});
 	Object.defineProperties(nullObject, props);
 
-	Object.defineProperty(shim, 'nullPolyfill', { configurable: false,
-		enumerable: false, writable: false, value: nullObject });
+	Object.defineProperty(shim, "nullPolyfill", { configurable: false,
+		enumerable: false,
+writable: false,
+value: nullObject });
 
 	return function (prototype, props) {
-		return create((prototype === null) ? nullObject : prototype, props);
+		return create(prototype === null ? nullObject : prototype, props);
 	};
 }());

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var isCallable = require('../object/is-callable')
-  , value      = require('../object/valid-value')
+var isCallable = require("../object/is-callable")
+  , value      = require("../object/valid-value")
 
   , call = Function.prototype.call;
 

@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var str = 'foo';
+var str = "foo";
 
 module.exports = function () {
-	if (typeof str.repeat !== 'function') return false;
-	return (str.repeat(2) === 'foofoo');
+	if (typeof str.repeat !== "function") return false;
+	return str.repeat(2) === "foofoo";
 };

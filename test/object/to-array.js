@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var o = { 1: 1, 2: 2, 3: 3 }, o1 = {}

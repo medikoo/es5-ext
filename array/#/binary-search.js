@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var toPosInt = require('../../number/to-pos-integer')
-  , callable = require('../../object/valid-callable')
-  , value    = require('../../object/valid-value')
+var toPosInt = require("../../number/to-pos-integer")
+  , callable = require("../../object/valid-callable")
+  , value    = require("../../object/valid-value")
 
   , floor    = Math.floor;
 

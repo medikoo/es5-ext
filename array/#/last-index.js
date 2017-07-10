@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var toPosInt = require('../../number/to-pos-integer')
-  , value    = require('../../object/valid-value')
+var toPosInt = require("../../number/to-pos-integer")
+  , value    = require("../../object/valid-value")
 
   , hasOwnProperty = Object.prototype.hasOwnProperty;
 

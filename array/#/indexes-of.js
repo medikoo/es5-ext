@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var indexOf = require('./e-index-of');
+var indexOf = require("./e-index-of");
 
 module.exports = function (value/*, fromIndex*/) {
 	var r = [], i, fromIndex = arguments[1];

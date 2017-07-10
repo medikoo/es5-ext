@@ -1,6 +1,6 @@
 // Taken from https://github.com/paulmillr/es6-shim/blob/master/test/array.js
 
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var x;

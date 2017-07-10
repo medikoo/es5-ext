@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var value = require('./valid-value');
+var value = require("./valid-value");
 
 module.exports = function (obj/*, …names*/) {
 	var length, current = 1;

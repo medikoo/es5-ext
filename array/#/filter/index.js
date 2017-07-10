@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
-module.exports = require('./is-implemented')() ?
-		Array.prototype.filter : require('./shim');
+module.exports = require("./is-implemented")()
+		? Array.prototype.filter : require("./shim");

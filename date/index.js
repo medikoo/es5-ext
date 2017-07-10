@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	'#':       require('./#'),
-	isDate:    require('./is-date'),
-	validDate: require('./valid-date')
+	"#": require("./#"),
+	"isDate": require("./is-date"),
+	"validDate": require("./valid-date")
 };

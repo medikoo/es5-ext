@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	safeStringify: require('./safe-stringify')
+	safeStringify: require("./safe-stringify")
 };

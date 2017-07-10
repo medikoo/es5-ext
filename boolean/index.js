@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	isBoolean: require('./is-boolean')
+	isBoolean: require("./is-boolean")
 };

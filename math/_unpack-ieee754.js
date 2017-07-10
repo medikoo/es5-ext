@@ -1,6 +1,6 @@
 // Credit: https://github.com/paulmillr/es6-shim/
 
-'use strict';
+"use strict";
 
 var pow = Math.pow;
 
@@ -13,11 +13,11 @@ module.exports = function (bytes, ebits, fbits) {
 		b = bytes[i - 1];
 		for (j = 8; j; j -= 1) {
 			bits.push(b % 2 ? 1 : 0);
-			b = b >> 1;
+			b >>= 1;
 		}
 	}
 	bits.reverse();
-	str = bits.join('');
+	str = bits.join("");
 
 	// Unpack sign, exponent, fraction
 	bias = (1 << (ebits - 1)) - 1;

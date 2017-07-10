@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-var str = 'razdwatrzy';
+var str = "razdwatrzy";
 
 module.exports = function () {
-	if (typeof str.startsWith !== 'function') return false;
-	return ((str.startsWith('trzy') === false) &&
-		(str.startsWith('raz') === true));
+	if (typeof str.startsWith !== "function") return false;
+	return (str.startsWith("trzy") === false) &&
+		(str.startsWith("raz") === true);
 };

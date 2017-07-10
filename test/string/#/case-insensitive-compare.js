@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	a(t.call("AA", "aa"), 0, "Same");

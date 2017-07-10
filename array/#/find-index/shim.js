@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var callable = require('../../../object/valid-callable')
-  , value    = require('../../../object/valid-value')
+var callable = require("../../../object/valid-callable")
+  , value    = require("../../../object/valid-value")
 
   , some = Array.prototype.some, apply = Function.prototype.apply;
 

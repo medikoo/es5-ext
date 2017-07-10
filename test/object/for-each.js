@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var o = { raz: 1, dwa: 2, trzy: 3 }

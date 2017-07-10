@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var forOf      = require('es6-iterator/for-of')
-  , isIterable = require('es6-iterator/is-iterable')
-  , iterable   = require('./validate')
+var forOf      = require("es6-iterator/for-of")
+  , isIterable = require("es6-iterator/is-iterable")
+  , iterable   = require("./validate")
 
   , forEach = Array.prototype.forEach;
 

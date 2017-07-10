@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var indexTest = require('tad/lib/utils/index-test')
+var indexTest = require("tad/lib/utils/index-test")
 
-  , path = require('path').resolve(__dirname, '../../../reg-exp/#');
+  , path = require("path").resolve(__dirname, "../../../reg-exp/#");
 
 module.exports = function (t, a, d) {
 	indexTest(indexTest.readDir(path).aside(function (data) {

@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var isCallable = require('./is-callable');
+var isCallable = require("./is-callable");
 
 module.exports = function (stringifiable) {
 	try {

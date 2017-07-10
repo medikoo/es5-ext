@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 exports.__generic = function (t, a) {
 	var iterator = t.call(this);

@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = require('./is-implemented')()
+module.exports = require("./is-implemented")()
 	? RegExp.prototype.replace
-	: require('./shim');
+	: require("./shim");

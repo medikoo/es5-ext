@@ -1,3 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function (value) { return (value != null) && !isNaN(value); };
+module.exports = function (value) {
+ return (value != null) && !isNaN(value);
+};

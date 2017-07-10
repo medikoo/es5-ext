@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var isInteger = require('../is-integer/shim')
-  , maxValue  = require('../max-safe-integer')
+var isInteger = require("../is-integer/shim")
+  , maxValue  = require("../max-safe-integer")
 
   , abs = Math.abs;
 

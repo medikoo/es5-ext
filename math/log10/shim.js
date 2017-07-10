@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var log = Math.log, LOG10E = Math.LOG10E;
 

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var assign   = require('../object/assign')
-  , isObject = require('../object/is-object')
+var assign   = require("../object/assign")
+  , isObject = require("../object/is-object")
 
   , captureStackTrace = Error.captureStackTrace;
 

@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var indexOf = require('./e-index-of')
+var indexOf = require("./e-index-of")
 
   , forEach = Array.prototype.forEach, splice = Array.prototype.splice;
 

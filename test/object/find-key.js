@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var o = { 1: 1, 2: 2, 3: 3 };
 
@@ -13,7 +13,7 @@ module.exports = function (t, a) {
 	a(t(o, function () {
 		++i;
 		return true;
-	}), '1', "Finds");
+	}), "1", "Finds");
 	a(i, 1, "Stops iteration after condition is met");
 
 	a(t(o, function () {

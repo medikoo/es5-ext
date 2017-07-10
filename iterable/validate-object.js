@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var isObject = require('../object/is-object')
-  , is       = require('./is');
+var isObject = require("../object/is-object")
+  , is       = require("./is");
 
 module.exports = function (x) {
 	if (is(x) && isObject(x)) return x;

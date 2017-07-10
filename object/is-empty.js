@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-var value = require('./valid-value')
+var value = require("./valid-value")
 
   , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 module.exports = function (obj) {
 	var i;
 	value(obj);
-	for (i in obj) { //jslint: ignore
+	for (i in obj) { // Jslint: ignore
 		if (propertyIsEnumerable.call(obj, i)) return false;
 	}
 	return true;

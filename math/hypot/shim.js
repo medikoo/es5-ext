@@ -1,12 +1,18 @@
 // Thanks for hints: https://github.com/paulmillr/es6-shim
 
-'use strict';
+"use strict";
 
 var some = Array.prototype.some, abs = Math.abs, sqrt = Math.sqrt
 
-  , compare = function (a, b) { return b - a; }
-  , divide = function (x) { return x / this; }
-  , add = function (sum, number) { return sum + number * number; };
+  , compare = function (a, b) {
+ return b - a;
+}
+  , divide = function (x) {
+ return x / this;
+}
+  , add = function (sum, number) {
+ return sum + number * number;
+};
 
 module.exports = function (val1, val2/*, …valn*/) {
 	var result, numbers;

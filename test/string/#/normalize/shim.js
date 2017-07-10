@@ -1,8 +1,8 @@
 // Taken from: https://github.com/walling/unorm/blob/master/test/es6-shim.js
 
-'use strict';
+"use strict";
 
-var str = 'äiti';
+var str = "äiti";
 
 module.exports = function (t, a) {
 	a(t.call(str), "\u00e4iti");

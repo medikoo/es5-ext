@@ -1,10 +1,10 @@
 // Taken from: https://github.com/paulmillr/es6-shim/
 
-'use strict';
+"use strict";
 
-var toInteger  = require('../../../number/to-integer')
-  , toPosInt   = require('../../../number/to-pos-integer')
-  , validValue = require('../../../object/valid-value')
+var toInteger  = require("../../../number/to-integer")
+  , toPosInt   = require("../../../number/to-pos-integer")
+  , validValue = require("../../../object/valid-value")
 
   , hasOwnProperty = Object.prototype.hasOwnProperty
   , max = Math.max, min = Math.min;
@@ -15,7 +15,7 @@ module.exports = function (target, start/*, end*/) {
 
 	target = toInteger(target);
 	start = toInteger(start);
-	end = (end === undefined) ? l : toInteger(end);
+	end = end === undefined ? l : toInteger(end);
 
 	to = target < 0 ? max(l + target, 0) : min(target, l);
 	from = start < 0 ? max(l + start, 0) : min(start, l);

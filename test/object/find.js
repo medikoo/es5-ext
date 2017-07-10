@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var o = { 1: 1, 2: 2, 3: 3 };
 

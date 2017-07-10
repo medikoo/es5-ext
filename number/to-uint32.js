@@ -1,3 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function (value) { return value >>> 0; };
+module.exports = function (value) {
+ return value >>> 0;
+};

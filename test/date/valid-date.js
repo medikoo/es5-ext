@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
 	var d = new Date();
@@ -7,6 +7,8 @@ module.exports = function (t, a) {
 		t({});
 	}, "Object");
 	a.throws(function () {
-		t({ valueOf: function () { return 20; } });
+		t({ valueOf: function () {
+ return 20;
+} });
 	}, "Number object");
 };

@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-var iteratorSymbol = require('es6-symbol').iterator
-  , isArguments    = require('../../function/is-arguments')
-  , isFunction     = require('../../function/is-function')
-  , toPosInt       = require('../../number/to-pos-integer')
-  , callable       = require('../../object/valid-callable')
-  , validValue     = require('../../object/valid-value')
-  , isString       = require('../../string/is-string')
+var iteratorSymbol = require("es6-symbol").iterator
+  , isArguments    = require("../../function/is-arguments")
+  , isFunction     = require("../../function/is-function")
+  , toPosInt       = require("../../number/to-pos-integer")
+  , callable       = require("../../object/valid-callable")
+  , validValue     = require("../../object/valid-value")
+  , isString       = require("../../string/is-string")
 
   , isArray = Array.isArray, call = Function.prototype.call
   , desc = { configurable: true, enumerable: true, writable: true, value: null }

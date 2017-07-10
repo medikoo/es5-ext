@@ -1,6 +1,8 @@
-'use strict';
+"use strict";
 
-var value         = require('./valid-value')
-  , stringifiable = require('./validate-stringifiable');
+var value         = require("./valid-value")
+  , stringifiable = require("./validate-stringifiable");
 
-module.exports = function (x) { return stringifiable(value(x)); };
+module.exports = function (x) {
+ return stringifiable(value(x));
+};

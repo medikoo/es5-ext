@@ -1,10 +1,12 @@
-'use strict';
+"use strict";
 
-var callable = require('../../object/valid-callable')
-  , aFrom    = require('../../array/from')
+var callable = require("../../object/valid-callable")
+  , aFrom    = require("../../array/from")
 
   , apply = Function.prototype.apply, call = Function.prototype.call
-  , callFn = function (arg, fn) { return call.call(fn, this, arg); };
+  , callFn = function (arg, fn) {
+ return call.call(fn, this, arg);
+};
 
 module.exports = function (fn/*, …fnn*/) {
 	var fns, first;

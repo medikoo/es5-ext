@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var toPosInt = require('../../number/to-pos-integer')
-  , value    = require('../../object/valid-value')
+var toPosInt = require("../../number/to-pos-integer")
+  , value    = require("../../object/valid-value")
 
   , indexOf = Array.prototype.indexOf
   , hasOwnProperty = Object.prototype.hasOwnProperty
@@ -9,7 +9,7 @@ var toPosInt = require('../../number/to-pos-integer')
 
 module.exports = function (searchElement/*, fromIndex*/) {
 	var i, l, fromIndex, val;
-	if (searchElement === searchElement) { //jslint: ignore
+	if (searchElement === searchElement) { // Jslint: ignore
 		return indexOf.apply(this, arguments);
 	}
 
@@ -22,7 +22,7 @@ module.exports = function (searchElement/*, fromIndex*/) {
 	for (i = fromIndex; i < l; ++i) {
 		if (hasOwnProperty.call(this, i)) {
 			val = this[i];
-			if (val !== val) return i; //jslint: ignore
+			if (val !== val) return i; // Jslint: ignore
 		}
 	}
 	return -1;

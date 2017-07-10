@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var eq   = require('./eq')
-  , some = require('./some');
+var eq   = require("./eq")
+  , some = require("./some");
 
 module.exports = function (obj, searchValue) {
 	var r;

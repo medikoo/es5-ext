@@ -1,14 +1,18 @@
-'use strict';
+"use strict";
 
 module.exports = function (t, a) {
-	a.deep(t.call(function (a, b) { return this[a] + this[b]; }),
-		{ args: 'a, b', body: ' return this[a] + this[b]; ' });
+	a.deep(t.call(function (a, b) {
+ return this[a] + this[b];
+}),
+		{ args: "a, b", body: " return this[a] + this[b]; " });
 	a.deep(t.call(function () {}),
-		{ args: '', body: '' });
+		{ args: "", body: "" });
 	a.deep(t.call(function (raz) {}),
-		{ args: 'raz', body: '' });
-	a.deep(t.call(function () { Object(); }),
-		{ args: '', body: ' Object(); ' });
+		{ args: "raz", body: "" });
+	a.deep(t.call(function () {
+ Object();
+}),
+		{ args: "", body: " Object(); " });
 
 	try {
 		eval("(() => {})");
@@ -17,8 +21,8 @@ module.exports = function (t, a) {
 		return;
 	}
 
-	a.deep(t.call(eval("(() => {})")), { args: '', body: '' });
-	a.deep(t.call(eval("((elo) => foo)")), { args: 'elo', body: 'foo' });
-	a.deep(t.call(eval("(elo => foo)")), { args: 'elo', body: 'foo' });
-	a.deep(t.call(eval("((elo, bar) => foo())")), { args: 'elo, bar', body: 'foo()' });
+	a.deep(t.call(eval("(() => {})")), { args: "", body: "" });
+	a.deep(t.call(eval("((elo) => foo)")), { args: "elo", body: "foo" });
+	a.deep(t.call(eval("(elo => foo)")), { args: "elo", body: "foo" });
+	a.deep(t.call(eval("((elo, bar) => foo())")), { args: "elo, bar", body: "foo()" });
 };

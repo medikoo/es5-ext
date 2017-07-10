@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var from = require('./from')
+var from = require("./from")
 
   , isArray = Array.isArray;
 

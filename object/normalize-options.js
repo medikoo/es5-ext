@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var forEach = Array.prototype.forEach, create = Object.create;
 

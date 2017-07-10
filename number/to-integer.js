@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var sign = require('../math/sign')
+var sign = require("../math/sign")
 
   , abs = Math.abs, floor = Math.floor;
 
