@@ -1,3 +1,5 @@
+/* eslint no-eval: "off" */
+
 "use strict";
 
 module.exports = function (t, a) {
@@ -8,6 +10,7 @@ module.exports = function (t, a) {
 		{ args: "a, b", body: "\n\t\t\treturn this[a] + this[b];\n\t\t" }
 	);
 	a.deep(t.call(function () {}), { args: "", body: "" });
+	// eslint-disable-next-line no-unused-vars
 	a.deep(t.call(function (raz) {}), { args: "raz", body: "" });
 	a.deep(
 		t.call(function () {

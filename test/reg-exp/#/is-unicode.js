@@ -5,8 +5,9 @@ module.exports = function (t, a) {
 	a(t.call(/raz/), false, "Normal");
 	a(t.call(/raz/g), false, "Global");
 	try {
- re = new RegExp("raz", "u");
-} catch (ignore) {}
+		// eslint-disable-next-line no-invalid-regexp
+		re = new RegExp("raz", "u");
+	} catch (ignore) {}
 	if (!re) return;
 	a(t.call(re), true, "Unicode");
 };

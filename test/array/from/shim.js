@@ -112,7 +112,7 @@ module.exports = function (t, a) {
 		"Non callable for map"
 	);
 
-	a.deep(t.call(null, { length: 1, 0: "a" }), ["a"], "Null context");
+	a.deep(t({ length: 1, 0: "a" }), ["a"], "Null context");
 
 	a(t({ __proto__: { 0: "abc", length: 1 } })[0], "abc", "Values on prototype");
 
