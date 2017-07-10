@@ -988,6 +988,6 @@ Whether strings starts with given string
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype-@@iterator).  
 Returns iterator object which traverses all string characters (with respect to unicode symbols)
 
-### Tests [![Build Status](https://travis-ci.org/medikoo/es5-ext.png)](https://travis-ci.org/medikoo/es5-ext)
+### Tests [![Build Status](https://img.shields.io/circleci/project/github/medikoo/es5-ext.svg)](https://circleci.com/gh/medikoo/es5-ext)
 
 	$ npm test
