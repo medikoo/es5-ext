@@ -1,10 +1,11 @@
 "use strict";
 
 var iteratorSymbol = require("es6-symbol").iterator
+  , isValue        = require("../object/is-value")
   , isArrayLike    = require("../object/is-array-like");
 
-module.exports = function (x) {
-	if (x == null) return false;
-	if (typeof x[iteratorSymbol] === "function") return true;
-	return isArrayLike(x);
+module.exports = function (value) {
+	if (!isValue(value)) return false;
+	if (typeof value[iteratorSymbol] === "function") return true;
+	return isArrayLike(value);
 };

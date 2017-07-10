@@ -1,5 +1,7 @@
 "use strict";
 
+var isValue = require("./is-value");
+
 var forEach = Array.prototype.forEach, create = Object.create;
 
 var process = function (src, obj) {
@@ -7,10 +9,11 @@ var process = function (src, obj) {
 	for (key in src) obj[key] = src[key];
 };
 
-module.exports = function (options/*, …options*/) {
+// eslint-disable-next-line no-unused-vars
+module.exports = function (opts1 /*, …options*/) {
 	var result = create(null);
 	forEach.call(arguments, function (options) {
-		if (options == null) return;
+		if (!isValue(options)) return;
 		process(Object(options), result);
 	});
 	return result;

@@ -2,12 +2,11 @@
 
 var validFunction = require("../valid-function");
 
-var re1 = /^\s*function[\0-\'\)-\uffff]*\(([\0-\(\*-\uffff]*)\)\s*\{([\0-\uffff]*)\}\s*$/
-  , re2 = /^\s*\(?([\0-\'\*-\uffff]*)\)?\s*=>\s*(\{?[\0-\uffff]*\}?)\s*$/;
+var re1 = /^\s*function[\0-')-\uffff]*\(([\0-(*-\uffff]*)\)\s*\{([\0-\uffff]*)\}\s*$/
+  , re2 = /^\s*\(?([\0-'*-\uffff]*)\)?\s*=>\s*(\{?[\0-\uffff]*\}?)\s*$/;
 
 module.exports = function () {
-	var str = String(validFunction(this))
-	  , data = str.match(re1);
+	var str = String(validFunction(this)), data = str.match(re1);
 	if (!data) {
 		data = str.match(re2);
 		if (!data) throw new Error("Unrecognized string format");

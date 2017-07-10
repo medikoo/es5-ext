@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function (t, a) {
-	var x = [4, 5, 6], y = { length: 8 }, w = {}, z = { length: 1 };
+	var arr = [4, 5, 6], obj1 = { length: 8 }, obj2 = {}, obj3 = { length: 1 };
 
-	a.deep([x, y, w, z].sort(t), [w, z, x, y]);
+	a.deep([arr, obj1, obj2, obj3].sort(t), [obj2, obj3, arr, obj1]);
 };

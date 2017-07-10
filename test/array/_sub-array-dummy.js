@@ -2,6 +2,6 @@
 
 var isArray = Array.isArray;
 
-module.exports = function (t, a) {
-	t((t === null) || isArray(t.prototype), true);
+module.exports = function (t) {
+	t(t === null || isArray(t.prototype), true);
 };

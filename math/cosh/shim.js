@@ -2,10 +2,10 @@
 
 var exp = Math.exp;
 
-module.exports = function (x) {
-	if (isNaN(x)) return NaN;
-	x = Number(x);
-	if (x === 0) return 1;
-	if (!isFinite(x)) return Infinity;
-	return (exp(x) + exp(-x)) / 2;
+module.exports = function (value) {
+	if (isNaN(value)) return NaN;
+	value = Number(value);
+	if (value === 0) return 1;
+	if (!isFinite(value)) return Infinity;
+	return (exp(value) + exp(-value)) / 2;
 };

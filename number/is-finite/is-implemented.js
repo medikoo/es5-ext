@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function () {
-	var isFinite = Number.isFinite;
-	if (typeof isFinite !== "function") return false;
-	return !isFinite("23") && isFinite(34) && !isFinite(Infinity);
+	var numberIsFinite = Number.isFinite;
+	if (typeof numberIsFinite !== "function") return false;
+	return !numberIsFinite("23") && numberIsFinite(34) && !numberIsFinite(Infinity);
 };

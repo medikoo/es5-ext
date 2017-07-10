@@ -2,14 +2,17 @@
 
 var callable = require("./valid-callable")
   , forEach  = require("./for-each")
+  , call     = Function.prototype.call;
 
-  , call = Function.prototype.call;
-
-module.exports = function (obj, cb/*, thisArg*/) {
-	var o = {}, thisArg = arguments[2];
+module.exports = function (obj, cb /*, thisArg*/) {
+	var result = {}, thisArg = arguments[2];
 	callable(cb);
-	forEach(obj, function (value, key, obj, index) {
-		o[call.call(cb, thisArg, key, value, this, index)] = value;
-	}, obj);
-	return o;
+	forEach(
+		obj,
+		function (value, key, targetObj, index) {
+			result[call.call(cb, thisArg, key, value, this, index)] = value;
+		},
+		obj
+	);
+	return result;
 };

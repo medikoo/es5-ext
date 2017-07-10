@@ -1,9 +1,9 @@
 "use strict";
 
-var value   = require("../object/valid-value");
+var value = require("../object/valid-value");
 
 module.exports = function (name) {
-	return function (o) {
- return value(o)[name];
-};
+	return function (obj) {
+		return value(obj)[name];
+	};
 };

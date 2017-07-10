@@ -1,10 +1,13 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString, id = objToString.call("");
 
-  , id = toString.call("");
-
-module.exports = function (x) {
-	return (typeof x === "string") || (x && (typeof x === "object") &&
-		((x instanceof String) || (toString.call(x) === id))) || false;
+module.exports = function (value) {
+	return (
+		typeof value === "string" ||
+		(value &&
+			typeof value === "object" &&
+			(value instanceof String || objToString.call(value) === id)) ||
+		false
+	);
 };

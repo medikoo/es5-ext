@@ -1,9 +1,7 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString, id = objToString.call(/a/);
 
-  , id = toString.call(/a/);
-
-module.exports = function (x) {
-	return (x && (x instanceof RegExp || (toString.call(x) === id))) || false;
+module.exports = function (value) {
+	return (value && (value instanceof RegExp || objToString.call(value) === id)) || false;
 };

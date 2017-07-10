@@ -1,24 +1,23 @@
 "use strict";
 
-var eq     = require("./eq")
-  , value  = require("./valid-value")
+var eq                      = require("./eq")
+  , value                   = require("./valid-value")
+  , keys                    = Object.keys
+  , objPropertyIsEnumerable = Object.prototype.propertyIsEnumerable;
 
-  , keys = Object.keys
-  , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-module.exports = function (a, b) {
+module.exports = function (val1, val2) {
 	var k1, k2;
 
-	if (eq(value(a), value(b))) return true;
+	if (eq(value(val1), value(val2))) return true;
 
-	a = Object(a);
-	b = Object(b);
+	val1 = Object(val1);
+	val2 = Object(val2);
 
-	k1 = keys(a);
-	k2 = keys(b);
+	k1 = keys(val1);
+	k2 = keys(val2);
 	if (k1.length !== k2.length) return false;
 	return k1.every(function (key) {
-		if (!propertyIsEnumerable.call(b, key)) return false;
-		return eq(a[key], b[key]);
+		if (!objPropertyIsEnumerable.call(val2, key)) return false;
+		return eq(val1[key], val2[key]);
 	});
 };

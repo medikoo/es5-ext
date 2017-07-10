@@ -1,7 +1,7 @@
 "use strict";
 
-module.exports = function (x) {
+module.exports = function (value) {
 	return function () {
- return x;
-};
+		return value;
+	};
 };

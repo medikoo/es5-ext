@@ -1,5 +1,6 @@
 "use strict";
 
 module.exports = function (value) {
- return value !== value;
-}; // Jslint: ignore
+	// eslint-disable-next-line no-self-compare
+	return value !== value;
+};

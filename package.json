@@ -36,7 +36,10 @@
 	},
 	"eslintConfig": {
 		"extends": "medikoo-es5",
-		"root": true
+		"root": true,
+		"rules": {
+			"no-extend-native": "off"
+		}
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",

@@ -1,9 +1,7 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString, id = objToString.call(new Error());
 
-  , id = toString.call(new Error());
-
-module.exports = function (x) {
-	return (x && ((x instanceof Error) || toString.call(x) === id)) || false;
+module.exports = function (value) {
+	return (value && (value instanceof Error || objToString.call(value) === id)) || false;
 };

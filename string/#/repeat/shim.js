@@ -1,3 +1,5 @@
+/* eslint no-bitwise: "off" */
+
 // Thanks: http://www.2ality.com/2014/01/efficient-string-repeat.html
 
 "use strict";
@@ -10,13 +12,11 @@ module.exports = function (count) {
 	count = toInteger(count);
 	if (count < 0) throw new RangeError("Count must be >= 0");
 	if (!isFinite(count)) throw new RangeError("Count must be < ∞");
+	if (!count) return "";
+	if (count === 1) return str;
+
 	result = "";
-	if (!count) return result;
-	while (true) {
-		if (count & 1) result += str;
-		count >>>= 1;
-		if (count <= 0) break;
-		str += str;
-	}
-	return result;
+	if (count & 1) result += str;
+	while ((count >>>= 1)) str += str;
+	return result + str;
 };

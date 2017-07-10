@@ -1,5 +1,6 @@
 "use strict";
 
 module.exports = function (value) {
- return value >>> 0;
+	// eslint-disable-next-line no-bitwise
+	return value >>> 0;
 };

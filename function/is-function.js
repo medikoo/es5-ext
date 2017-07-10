@@ -1,9 +1,7 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString, id = objToString.call(require("./noop"));
 
-  , id = toString.call(require("./noop"));
-
-module.exports = function (f) {
-	return (typeof f === "function") && (toString.call(f) === id);
+module.exports = function (value) {
+	return typeof value === "function" && objToString.call(value) === id;
 };

@@ -1,6 +1,8 @@
 "use strict";
 
+var isValue = require("./is-value");
+
 module.exports = function (value) {
-	if (value == null) throw new TypeError("Cannot use null or undefined");
+	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
 	return value;
 };

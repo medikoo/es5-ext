@@ -2,7 +2,7 @@
 
 var isRegExp = require("./is-reg-exp");
 
-module.exports = function (x) {
-	if (!isRegExp(x)) throw new TypeError(x + " is not a RegExp object");
-	return x;
+module.exports = function (value) {
+	if (!isRegExp(value)) throw new TypeError(value + " is not a RegExp object");
+	return value;
 };

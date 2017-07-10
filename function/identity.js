@@ -1,5 +1,5 @@
 "use strict";
 
-module.exports = function (x) {
- return x;
+module.exports = function (value) {
+	return value;
 };

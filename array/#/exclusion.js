@@ -5,8 +5,8 @@ var value    = require("../../object/valid-value")
   , toArray  = require("../to-array")
   , contains = require("./contains")
   , byLength = require("./_compare-by-length")
-
-  , filter = Array.prototype.filter, push = Array.prototype.push;
+  , filter   = Array.prototype.filter
+  , push     = Array.prototype.push;
 
 module.exports = function (/* …lists*/) {
 	var lists, seen, result;
@@ -16,11 +16,15 @@ module.exports = function (/* …lists*/) {
 	seen = [];
 	result = [];
 	lists.sort(byLength).forEach(function (list) {
-		result = result.filter(function (item) {
-			return !contains.call(list, item);
-		}).concat(filter.call(list, function (x) {
-			return !contains.call(seen, x);
-		}));
+		result = result
+			.filter(function (item) {
+				return !contains.call(list, item);
+			})
+			.concat(
+				filter.call(list, function (item) {
+					return !contains.call(seen, item);
+				})
+			);
 		push.apply(seen, toArray(list));
 	});
 	return result;

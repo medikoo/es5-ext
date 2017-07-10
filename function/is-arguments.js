@@ -1,11 +1,12 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString
+  , id = objToString.call(
+	(function () {
+		return arguments;
+	})()
+);
 
-  , id = toString.call((function () {
- return arguments;
-}()));
-
-module.exports = function (x) {
- return toString.call(x) === id;
+module.exports = function (value) {
+	return objToString.call(value) === id;
 };

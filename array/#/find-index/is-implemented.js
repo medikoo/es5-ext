@@ -1,7 +1,7 @@
 "use strict";
 
-var fn = function (x) {
- return x > 3;
+var fn = function (value) {
+	return value > 3;
 };
 
 module.exports = function () {

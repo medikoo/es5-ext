@@ -2,35 +2,38 @@
 
 "use strict";
 
-var some = Array.prototype.some, abs = Math.abs, sqrt = Math.sqrt
-
-  , compare = function (a, b) {
- return b - a;
+var some = Array.prototype.some
+  , abs = Math.abs
+  , sqrt = Math.sqrt
+  , compare = function (val1, val2) {
+	return val2 - val1;
 }
-  , divide = function (x) {
- return x / this;
+  , divide = function (value) {
+	return value / this;
 }
   , add = function (sum, number) {
- return sum + number * number;
+	return sum + number * number;
 };
 
-module.exports = function (val1, val2/*, …valn*/) {
+// eslint-disable-next-line no-unused-vars
+module.exports = function (val1, val2 /*, …valn*/) {
 	var result, numbers;
 	if (!arguments.length) return 0;
 	some.call(arguments, function (val) {
 		if (isNaN(val)) {
 			result = NaN;
-			return;
+			return false;
 		}
 		if (!isFinite(val)) {
 			result = Infinity;
 			return true;
 		}
-		if (result !== undefined) return;
+		if (result !== undefined) return false;
 		val = Number(val);
-		if (val === 0) return;
-		if (!numbers) numbers = [abs(val)];
-		else numbers.push(abs(val));
+		if (val === 0) return false;
+		if (numbers) numbers.push(abs(val));
+		else numbers = [abs(val)];
+		return false;
 	});
 	if (result !== undefined) return result;
 	if (!numbers) return 0;

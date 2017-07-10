@@ -9,32 +9,38 @@ if (!require("./set-prototype-of/is-implemented")()) {
 }
 
 module.exports = (function () {
-	var nullObject, props, desc;
+	var nullObject, polyProps, desc;
 	if (!shim) return create;
 	if (shim.level !== 1) return create;
 
 	nullObject = {};
-	props = {};
-	desc = { configurable: false,
-enumerable: false,
-writable: true,
-		value: undefined };
+	polyProps = {};
+	desc = {
+		configurable: false,
+		enumerable: false,
+		writable: true,
+		value: undefined
+	};
 	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
 		if (name === "__proto__") {
-			props[name] = { configurable: true,
-enumerable: false,
-writable: true,
-				value: undefined };
+			polyProps[name] = {
+				configurable: true,
+				enumerable: false,
+				writable: true,
+				value: undefined
+			};
 			return;
 		}
-		props[name] = desc;
+		polyProps[name] = desc;
 	});
-	Object.defineProperties(nullObject, props);
+	Object.defineProperties(nullObject, polyProps);
 
-	Object.defineProperty(shim, "nullPolyfill", { configurable: false,
+	Object.defineProperty(shim, "nullPolyfill", {
+		configurable: false,
 		enumerable: false,
-writable: false,
-value: nullObject });
+		writable: false,
+		value: nullObject
+	});
 
 	return function (prototype, props) {
 		return create(prototype === null ? nullObject : prototype, props);

@@ -19,31 +19,44 @@ module.exports = {
 	},
 	"": function (t, a) {
 		var x = {}, y, count;
-		t.call([1], function () {
- y = this;
-}, x);
+		t.call(
+			[1],
+			function () {
+				y = this;
+			},
+			x
+		);
 		a(y, x, "Scope");
 		y = 0;
 		t.call([3, 4, 4], function (a, i) {
- y += i;
-});
+			y += i;
+		});
 		a(y, 3, "Indexes");
 
 		x = [1, 3];
 		x[5] = "x";
 		y = 0;
 		count = 0;
-		a(t.call(x, function (a, i) {
- ++count; y += i;
-}), false, "Return");
+		a(
+			t.call(x, function (a, i) {
+				++count;
+				y += i;
+			}),
+			false,
+			"Return"
+		);
 		a(y, 6, "Misssing Indexes");
 		a(count, 3, "Misssing Indexes, count");
 
 		count = 0;
-		a(t.call([-2, -3, -4, 2, -5], function (item) {
-			++count;
-			return item > 0;
-		}), true, "Return");
+		a(
+			t.call([-2, -3, -4, 2, -5], function (item) {
+				++count;
+				return item > 0;
+			}),
+			true,
+			"Return"
+		);
 		a(count, 2, "Break after true is returned");
 	}
 };

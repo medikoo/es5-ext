@@ -2,7 +2,7 @@
 
 var isDate = require("./is-date");
 
-module.exports = function (x) {
-	if (!isDate(x) || isNaN(x)) throw new TypeError(x + " is not valid Date object");
-	return x;
+module.exports = function (value) {
+	if (!isDate(value) || isNaN(value)) throw new TypeError(value + " is not valid Date object");
+	return value;
 };

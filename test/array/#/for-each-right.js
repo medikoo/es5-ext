@@ -19,14 +19,18 @@ module.exports = {
 	},
 	"": function (t, a) {
 		var x = {}, y, count;
-		t.call([1], function () {
- y = this;
-}, x);
+		t.call(
+			[1],
+			function () {
+				y = this;
+			},
+			x
+		);
 		a(y, x, "Scope");
 		y = 0;
 		t.call([3, 4, 4], function (a, i) {
- y += i;
-});
+			y += i;
+		});
 		a(y, 3, "Indexes");
 
 		x = [1, 3];
@@ -34,8 +38,9 @@ module.exports = {
 		y = 0;
 		count = 0;
 		t.call(x, function (a, i) {
- ++count; y += i;
-});
+			++count;
+			y += i;
+		});
 		a(y, 6, "Misssing Indexes");
 		a(count, 3, "Misssing Indexes, count");
 	}

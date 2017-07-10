@@ -1,15 +1,20 @@
 "use strict";
 
-var toPosInt = require("../number/to-pos-integer")
+var toPosInt = require("../number/to-pos-integer");
 
-  , test = function (a, b) {}, desc, defineProperty
-  , generate, mixin;
+var test = function (arg1, arg2) {
+	return arg2;
+};
+
+var desc, defineProperty, generate, mixin;
 
 try {
-	Object.defineProperty(test, "length", { configurable: true,
-writable: false,
+	Object.defineProperty(test, "length", {
+		configurable: true,
+		writable: false,
 		enumerable: false,
-value: 1 });
+		value: 1
+	});
 } catch (ignore) {}
 
 if (test.length === 1) {
@@ -26,13 +31,16 @@ if (test.length === 1) {
 	mixin = require("../object/mixin");
 	generate = (function () {
 		var cache = [];
-		return function (l) {
+		return function (length) {
 			var args, i = 0;
-			if (cache[l]) return cache[l];
+			if (cache[length]) return cache[length];
 			args = [];
-			while (l--) args.push("a" + (++i).toString(36));
-			return new Function("fn", "return function (" + args.join(", ") +
-				") { return fn.apply(this, arguments); };");
+			while (length--) args.push("a" + (++i).toString(36));
+			// eslint-disable-next-line no-new-func
+			return new Function(
+				"fn",
+				"return function (" + args.join(", ") + ") { return fn.apply(this, arguments); };"
+			);
 		};
 	}());
 	module.exports = function (src, length) {
@@ -41,8 +49,8 @@ if (test.length === 1) {
 		if (src.length === length) return src;
 		target = generate(length)(src);
 		try {
- mixin(target, src);
-} catch (ignore) {}
+			mixin(target, src);
+		} catch (ignore) {}
 		return target;
 	};
 }

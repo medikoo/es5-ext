@@ -2,14 +2,14 @@
 
 var log = Math.log, sqrt = Math.sqrt;
 
-module.exports = function (x) {
-	if (isNaN(x)) return NaN;
-	x = Number(x);
-	if (x === 0) return x;
-	if (!isFinite(x)) return x;
-	if (x < 0) {
-		x = -x;
-		return -log(x + sqrt(x * x + 1));
+module.exports = function (value) {
+	if (isNaN(value)) return NaN;
+	value = Number(value);
+	if (value === 0) return value;
+	if (!isFinite(value)) return value;
+	if (value < 0) {
+		value = -value;
+		return -log(value + sqrt(value * value + 1));
 	}
-	return log(x + sqrt(x * x + 1));
+	return log(value + sqrt(value * value + 1));
 };

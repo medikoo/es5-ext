@@ -2,7 +2,7 @@
 
 var isFunction = require("./is-function");
 
-module.exports = function (x) {
-	if (!isFunction(x)) throw new TypeError(x + " is not a function");
-	return x;
+module.exports = function (value) {
+	if (!isFunction(value)) throw new TypeError(value + " is not a function");
+	return value;
 };

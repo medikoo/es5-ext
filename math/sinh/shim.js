@@ -4,14 +4,15 @@
 "use strict";
 
 var expm1 = require("../expm1")
+  , abs   = Math.abs
+  , exp   = Math.exp
+  , e     = Math.E;
 
-  , abs = Math.abs, exp = Math.exp, e = Math.E;
-
-module.exports = function (x) {
-	if (isNaN(x)) return NaN;
-	x = Number(x);
-	if (x === 0) return x;
-	if (!isFinite(x)) return x;
-	if (abs(x) < 1) return (expm1(x) - expm1(-x)) / 2;
-	return (exp(x - 1) - exp(-x - 1)) * e / 2;
+module.exports = function (value) {
+	if (isNaN(value)) return NaN;
+	value = Number(value);
+	if (value === 0) return value;
+	if (!isFinite(value)) return value;
+	if (abs(value) < 1) return (expm1(value) - expm1(-value)) / 2;
+	return (exp(value - 1) - exp(-value - 1)) * e / 2;
 };

@@ -1,8 +1,10 @@
 "use strict";
 
-var findKey = require("./find-key");
+var findKey = require("./find-key")
+  , isValue = require("./is-value");
 
-module.exports = function (obj, cb/*, thisArg, compareFn*/) {
+// eslint-disable-next-line no-unused-vars
+module.exports = function (obj, cb /*, thisArg, compareFn*/) {
 	var key = findKey.apply(this, arguments);
-	return key == null ? key : obj[key];
+	return isValue(key) ? obj[key] : key;
 };

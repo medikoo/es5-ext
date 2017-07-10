@@ -1,11 +1,12 @@
 "use strict";
 
-var toInteger    = require("../../../number/to-integer")
-  , toPosInt     = require("../../../number/to-pos-integer")
-  , isPlainArray = require("../../is-plain-array")
-
-  , isArray = Array.isArray, slice = Array.prototype.slice
-  , hasOwnProperty = Object.prototype.hasOwnProperty, max = Math.max;
+var toInteger         = require("../../../number/to-integer")
+  , toPosInt          = require("../../../number/to-pos-integer")
+  , isPlainArray      = require("../../is-plain-array")
+  , isArray           = Array.isArray
+  , slice             = Array.prototype.slice
+  , objHasOwnProperty = Object.prototype.hasOwnProperty
+  , max               = Math.max;
 
 module.exports = function (start, end) {
 	var length, result, i;
@@ -27,7 +28,7 @@ module.exports = function (start, end) {
 	result = new this.constructor(end - start);
 	i = 0;
 	while (start !== end) {
-		if (hasOwnProperty.call(this, start)) result[i] = this[start];
+		if (objHasOwnProperty.call(this, start)) result[i] = this[start];
 		++i;
 		++start;
 	}

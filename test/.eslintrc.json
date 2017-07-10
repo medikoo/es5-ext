@@ -1,0 +1,7 @@
+{
+	"rules": {
+		"consistent-this": "off",
+		"id-length": "off",
+		"no-shadow": "off"
+	}
+}

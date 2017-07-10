@@ -1,16 +1,15 @@
 "use strict";
 
-var toPosInt = require("../../number/to-pos-integer")
-  , value    = require("../../object/valid-value")
-
-  , hasOwnProperty = Object.prototype.hasOwnProperty;
+var toPosInt          = require("../../number/to-pos-integer")
+  , value             = require("../../object/valid-value")
+  , objHasOwnProperty = Object.prototype.hasOwnProperty;
 
 module.exports = function () {
-	var i, l;
-	if (!(l = toPosInt(value(this).length))) return null;
+	var i, length;
+	if (!(length = toPosInt(value(this).length))) return null;
 	i = 0;
-	while (!hasOwnProperty.call(this, i)) {
-		if (++i === l) return null;
+	while (!objHasOwnProperty.call(this, i)) {
+		if (++i === length) return null;
 	}
 	return i;
 };

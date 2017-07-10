@@ -1,7 +1,9 @@
 "use strict";
 
+var isValue = require("./is-value");
+
 var map = { function: true, object: true };
 
-module.exports = function (x) {
-	return ((x != null) && map[typeof x]) || false;
+module.exports = function (value) {
+	return (isValue(value) && map[typeof value]) || false;
 };

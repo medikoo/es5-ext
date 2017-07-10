@@ -1,22 +1,25 @@
+/* eslint no-proto: "off" */
+
 // Big thanks to @WebReflection for sorting this out
 // https://gist.github.com/WebReflection/5593554
 
 "use strict";
 
-var isObject      = require("../is-object")
-  , value         = require("../valid-value")
-
-  , isPrototypeOf = Object.prototype.isPrototypeOf
-  , defineProperty = Object.defineProperty
-  , nullDesc = { configurable: true,
-enumerable: false,
-writable: true,
-		value: undefined }
+var isObject        = require("../is-object")
+  , value           = require("../valid-value")
+  , objIsPrototypOf = Object.prototype.isPrototypeOf
+  , defineProperty  = Object.defineProperty
+  , nullDesc        = {
+	configurable: true,
+	enumerable: false,
+	writable: true,
+	value: undefined
+}
   , validate;
 
 validate = function (obj, prototype) {
 	value(obj);
-	if ((prototype === null) || isObject(prototype)) return obj;
+	if (prototype === null || isObject(prototype)) return obj;
 	throw new TypeError("Prototype must be null or an object");
 };
 
@@ -40,7 +43,7 @@ module.exports = (function (status) {
 		fn = function self (obj, prototype) {
 			var isNullBase;
 			validate(obj, prototype);
-			isNullBase = isPrototypeOf.call(self.nullPolyfill, obj);
+			isNullBase = objIsPrototypOf.call(self.nullPolyfill, obj);
 			if (isNullBase) delete self.nullPolyfill.__proto__;
 			if (prototype === null) prototype = self.nullPolyfill;
 			obj.__proto__ = prototype;
@@ -48,30 +51,36 @@ module.exports = (function (status) {
 			return obj;
 		};
 	}
-	return Object.defineProperty(fn, "level", { configurable: false,
+	return Object.defineProperty(fn, "level", {
+		configurable: false,
 		enumerable: false,
-writable: false,
-value: status.level });
-}((function () {
-	var x = Object.create(null), y = {}, set
-	  , desc = Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
+		writable: false,
+		value: status.level
+	});
+}(
+	(function () {
+		var tmpObj1 = Object.create(null)
+		  , tmpObj2 = {}
+		  , set
+		  , desc = Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
 
-	if (desc) {
-		try {
-			set = desc.set; // Opera crashes at this point
-			set.call(x, y);
-		} catch (ignore) { }
-		if (Object.getPrototypeOf(x) === y) return { set: set, level: 2 };
-	}
+		if (desc) {
+			try {
+				set = desc.set; // Opera crashes at this point
+				set.call(tmpObj1, tmpObj2);
+			} catch (ignore) {}
+			if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { set: set, level: 2 };
+		}
 
-	x.__proto__ = y;
-	if (Object.getPrototypeOf(x) === y) return { level: 2 };
+		tmpObj1.__proto__ = tmpObj2;
+		if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { level: 2 };
 
-	x = {};
-	x.__proto__ = y;
-	if (Object.getPrototypeOf(x) === y) return { level: 1 };
+		tmpObj1 = {};
+		tmpObj1.__proto__ = tmpObj2;
+		if (Object.getPrototypeOf(tmpObj1) === tmpObj2) return { level: 1 };
 
-	return false;
-}())));
+		return false;
+	})()
+));
 
 require("../create");

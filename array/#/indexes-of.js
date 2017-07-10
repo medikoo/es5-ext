@@ -2,11 +2,11 @@
 
 var indexOf = require("./e-index-of");
 
-module.exports = function (value/*, fromIndex*/) {
-	var r = [], i, fromIndex = arguments[1];
+module.exports = function (value /*, fromIndex*/) {
+	var result = [], i, fromIndex = arguments[1];
 	while ((i = indexOf.call(this, value, fromIndex)) !== -1) {
-		r.push(i);
+		result.push(i);
 		fromIndex = i + 1;
 	}
-	return r;
+	return result;
 };

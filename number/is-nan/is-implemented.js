@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function () {
-	var isNaN = Number.isNaN;
-	if (typeof isNaN !== "function") return false;
-	return !isNaN({}) && isNaN(NaN) && !isNaN(34);
+	var numberIsNaN = Number.isNaN;
+	if (typeof numberIsNaN !== "function") return false;
+	return !numberIsNaN({}) && numberIsNaN(NaN) && !numberIsNaN(34);
 };

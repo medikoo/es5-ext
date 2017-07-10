@@ -4,10 +4,9 @@ var isPlainArray       = require("../../is-plain-array")
   , toPosInt           = require("../../../number/to-pos-integer")
   , isObject           = require("../../../object/is-object")
   , isConcatSpreadable = require("es6-symbol").isConcatSpreadable
-
-  , isArray = Array.isArray, concat = Array.prototype.concat
-  , forEach = Array.prototype.forEach
-
+  , isArray            = Array.isArray
+  , concat             = Array.prototype.concat
+  , forEach            = Array.prototype.forEach
   , isSpreadable;
 
 isSpreadable = function (value) {
@@ -19,7 +18,8 @@ isSpreadable = function (value) {
 	return isArray(value);
 };
 
-module.exports = function (item/*, …items*/) {
+// eslint-disable-next-line no-unused-vars
+module.exports = function (item /*, …items*/) {
 	var result;
 	if (!this || !isArray(this) || isPlainArray(this)) {
 		return concat.apply(this, arguments);
@@ -27,8 +27,8 @@ module.exports = function (item/*, …items*/) {
 	result = new this.constructor();
 	if (isSpreadable(this)) {
 		forEach.call(this, function (val, i) {
- result[i] = val;
-});
+			result[i] = val;
+		});
 	} else {
 		result[0] = this;
 	}
@@ -38,8 +38,8 @@ module.exports = function (item/*, …items*/) {
 			base = result.length;
 			result.length += toPosInt(arg.length);
 			forEach.call(arg, function (val, i) {
- result[base + i] = val;
-});
+				result[base + i] = val;
+			});
 			return;
 		}
 		result.push(arg);

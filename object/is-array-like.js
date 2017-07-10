@@ -1,14 +1,18 @@
 "use strict";
 
 var isFunction = require("../function/is-function")
-  , isObject   = require("./is-object");
+  , isObject   = require("./is-object")
+  , isValue    = require("./is-value");
 
-module.exports = function (x) {
-	return ((x != null) && (typeof x.length === "number") &&
+module.exports = function (value) {
+	return (
+		(isValue(value) &&
+			typeof value.length === "number" &&
+			// Just checking ((typeof x === 'object') && (typeof x !== 'function'))
+			// won't work right for some cases, e.g.:
+			// type of instance of NodeList in Safari is a 'function'
 
-		// Just checking ((typeof x === 'object') && (typeof x !== 'function'))
-		// won't work right for some cases, e.g.:
-		// type of instance of NodeList in Safari is a 'function'
-
-		((isObject(x) && !isFunction(x)) || (typeof x === "string"))) || false;
+			((isObject(value) && !isFunction(value)) || typeof value === "string")) ||
+		false
+	);
 };

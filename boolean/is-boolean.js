@@ -1,10 +1,10 @@
 "use strict";
 
-var toString = Object.prototype.toString
+var objToString = Object.prototype.toString, id = objToString.call(true);
 
-  , id = toString.call(true);
-
-module.exports = function (x) {
-	return (typeof x === "boolean") || ((typeof x === "object") &&
-		((x instanceof Boolean) || (toString.call(x) === id)));
+module.exports = function (value) {
+	return (
+		typeof value === "boolean" ||
+		(typeof value === "object" && (value instanceof Boolean || objToString.call(value) === id))
+	);
 };

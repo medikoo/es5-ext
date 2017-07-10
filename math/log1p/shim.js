@@ -4,14 +4,14 @@
 
 var log = Math.log;
 
-module.exports = function (x) {
-	if (isNaN(x)) return NaN;
-	x = Number(x);
-	if (x < -1) return NaN;
-	if (x === -1) return -Infinity;
-	if (x === 0) return x;
-	if (x === Infinity) return Infinity;
+module.exports = function (value) {
+	if (isNaN(value)) return NaN;
+	value = Number(value);
+	if (value < -1) return NaN;
+	if (value === -1) return -Infinity;
+	if (value === 0) return value;
+	if (value === Infinity) return Infinity;
 
-	if (x > -1.0e-8 && x < 1.0e-8) return x - x * x / 2;
-	return log(1 + x);
+	if (value > -1.0e-8 && value < 1.0e-8) return value - value * value / 2;
+	return log(1 + value);
 };

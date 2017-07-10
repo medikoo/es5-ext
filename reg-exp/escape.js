@@ -4,8 +4,8 @@
 
 "use strict";
 
-var re = /[\-\/\\\^$*+?.()|\[\]{}]/g;
+var re = /[-/\\^$*+?.()|[\]{}]/g;
 
 module.exports = function (str) {
- return String(str).replace(re, "\\$&");
+	return String(str).replace(re, "\\$&");
 };

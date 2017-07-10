@@ -7,9 +7,7 @@ module.exports = function (search) {
 
 	search = ensureString(search);
 	if (!search) throw new TypeError("Search string cannot be empty");
-	while (true) {
-		index = string.indexOf(search, index);
-		if (index === -1) break;
+	while ((index = string.indexOf(search, index)) !== -1) {
 		++count;
 		index += search.length;
 	}
