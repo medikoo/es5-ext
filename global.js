@@ -1,4 +1,5 @@
-"use strict";
+/* eslint strict: "off" */
 
-// eslint-disable-next-line no-new-func
-module.exports = new Function("return this")();
+module.exports = (function () {
+	return this;
+}());
