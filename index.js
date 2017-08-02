@@ -2,6 +2,7 @@
 
 module.exports = {
 	global: require("./global"),
+	optionalChaining: require("./optional-chaining"),
 	safeToString: require("./safe-to-string"),
 
 	array: require("./array"),
