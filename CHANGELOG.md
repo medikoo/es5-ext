@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.25"></a>
+## [0.10.25](https://github.com/medikoo/es5-ext/compare/v0.10.24...v0.10.25) (2017-08-02)
+
+
+### Features
+
+* **general:** optionalChaining utility ([26332b5](https://github.com/medikoo/es5-ext/commit/26332b5))
+
+
+
 <a name="0.10.24"></a>
 ## [0.10.24](https://github.com/medikoo/es5-ext/compare/v0.10.23...v0.10.24) (2017-07-10)
 
