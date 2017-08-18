@@ -19,5 +19,5 @@ module.exports = function (t, a) {
 	if (typeof Symbol === "function") a(t(Symbol()), "Symbol()");
 	a(t(Object.create(null)), "<non-stringifiable value>");
 	a(t(repeat.call("a", 300)), repeat.call("a", 99) + "…");
-	a(t("mar\ntoo\nfar"), "mar too far");
+	a(t("mar\ntoo\nfar"), "mar\\ntoo\\nfar");
 };

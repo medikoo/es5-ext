@@ -9,6 +9,8 @@ module.exports = function (value) {
 	// Trim if too long
 	if (string.length > 100) string = string.slice(0, 99) + "…";
 	// Replace eventual new lines
-	string = string.replace(reNewLine, " ");
+	string = string.replace(reNewLine, function (char) {
+		return JSON.stringify(char).slice(1, -1);
+	});
 	return string;
 };
