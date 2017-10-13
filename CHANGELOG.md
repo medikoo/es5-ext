@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.33"></a>
+## [0.10.33](https://github.com/medikoo/es5-ext/compare/v0.10.32...v0.10.33) (2017-10-13)
+
+
+### Bug Fixes
+
+* **Object.assignDeep:** relax input validation ([1baf57d](https://github.com/medikoo/es5-ext/commit/1baf57d))
+
+
+
 <a name="0.10.32"></a>
 ## [0.10.32](https://github.com/medikoo/es5-ext/compare/v0.10.31...v0.10.32) (2017-10-13)
 
