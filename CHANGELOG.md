@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.34"></a>
+## [0.10.34](https://github.com/medikoo/es5-ext/compare/v0.10.33...v0.10.34) (2017-10-13)
+
+
+### Features
+
+* **copyDeep:** duplicate only recursive instances ([bba529a](https://github.com/medikoo/es5-ext/commit/bba529a))
+
+
+
 <a name="0.10.33"></a>
 ## [0.10.33](https://github.com/medikoo/es5-ext/compare/v0.10.32...v0.10.33) (2017-10-13)
 
