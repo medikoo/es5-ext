@@ -31,4 +31,5 @@ module.exports = function (t, a) {
 	a.not(o["jedenaście"], no["jedenaście"]);
 	a.not(o["jedenaście"][1], no["jedenaście"][1]);
 	a.not(o["jedenaście"][1][2], no["jedenaście"][1][2]);
+	a(t(true), true);
 };

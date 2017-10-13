@@ -11,4 +11,5 @@ module.exports = function (t, a) {
 	var obj1 = { foo: { bar: 3, marko: true } }
 	  , obj2 = { foo: { elo: 12, marko: false }, miszka: [23] };
 	a.deep(t({}, obj1, obj2), { foo: { bar: 3, marko: false, elo: 12 }, miszka: [23] });
+	a(t(true), true);
 };

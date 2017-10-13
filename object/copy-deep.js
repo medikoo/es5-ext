@@ -33,7 +33,5 @@ var copyValue = function (value, ancestors, ancestorsCopy) {
 };
 
 module.exports = function (source) {
-	var obj = Object(ensureValue(source));
-	if (obj !== source) return obj;
-	return copyValue(obj, [], []);
+	return copyValue(ensureValue(source), [], []);
 };
