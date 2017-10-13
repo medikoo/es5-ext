@@ -4,7 +4,7 @@ var includes      = require("../array/#/contains")
   , uniq          = require("../array/#/uniq")
   , objForEach    = require("./for-each")
   , isPlainObject = require("./is-plain-object")
-  , ensureObject  = require("./valid-object");
+  , ensureValue   = require("./valid-value");
 
 var isArray = Array.isArray, slice = Array.prototype.slice;
 
@@ -28,6 +28,6 @@ var deepAssign = function (source, target) {
 
 module.exports = function (target /*, ...objects*/) {
 	return uniq
-		.call([ensureObject(target)].concat(slice.call(arguments, 1).map(ensureObject)))
+		.call([ensureValue(target)].concat(slice.call(arguments, 1).map(ensureValue)))
 		.reduce(deepAssign);
 };
