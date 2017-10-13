@@ -1,6 +1,6 @@
 {
   "name": "es5-ext",
-  "version": "0.10.31",
+  "version": "0.10.32",
   "description": "ECMAScript extensions and shims",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [

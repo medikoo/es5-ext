@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.32"></a>
+## [0.10.32](https://github.com/medikoo/es5-ext/compare/v0.10.31...v0.10.32) (2017-10-13)
+
+
+### Features
+
+* Object.assignDeep ([2345e0b](https://github.com/medikoo/es5-ext/commit/2345e0b))
+
+
+
 <a name="0.10.31"></a>
 ## [0.10.31](https://github.com/medikoo/es5-ext/compare/v0.10.30...v0.10.31) (2017-10-09)
 
