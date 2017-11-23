@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.36"></a>
+## [0.10.36](https://github.com/medikoo/es5-ext/compare/v0.10.35...v0.10.36) (2017-11-23)
+
+
+### Features
+
+* **date:** isTimeValue and ensureTimeValue utils ([7659dc5](https://github.com/medikoo/es5-ext/commit/7659dc5))
+
+
+
 <a name="0.10.35"></a>
 ## [0.10.35](https://github.com/medikoo/es5-ext/compare/v0.10.34...v0.10.35) (2017-10-13)
 
