@@ -1,3 +1,8 @@
+[![Build status][semaphore-image]][semaphore-url]
+[![Windows status][appveyor-image]][appveyor-url]
+![Transpilation status][transpilation-image]
+[![npm version][npm-image]][npm-url]
+
 # es5-ext
 
 ## ECMAScript 5 extensions
@@ -1000,6 +1005,14 @@ Whether strings starts with given string
 [_Introduced with ECMAScript 6_](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype-@@iterator).  
 Returns iterator object which traverses all string characters (with respect to unicode symbols)
 
-### Tests [![Build Status](https://img.shields.io/circleci/project/github/medikoo/es5-ext.svg)](https://circleci.com/gh/medikoo/es5-ext)
+### Tests
 
     $ npm test
+
+[semaphore-image]: https://semaphoreci.com/api/v1/medikoo/es5-ext/branches/master/badge.svg
+[semaphore-url]: https://semaphoreci.com/medikoo/es5-ext
+[appveyor-image]: https://img.shields.io/appveyor/ci/medikoo/es5-ext.svg
+[appveyor-url]: https://ci.appveyor.com/project/medikoo/es5-ext
+[transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
+[npm-image]: https://img.shields.io/npm/v/es5-ext.svg
+[npm-url]: https://www.npmjs.com/package/es5-ext
