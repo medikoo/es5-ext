@@ -1009,8 +1009,8 @@ Returns iterator object which traverses all string characters (with respect to u
 
     $ npm test
 
-[nix-build-image]: https://semaphoreci.com/api/v1/medikoo/es5-ext/branches/master/shields_badge.svg
-[nix-build-url]: https://semaphoreci.com/medikoo/es5-ext
+[nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/es5-ext/branches/master/shields_badge.svg
+[nix-build-url]: https://semaphoreci.com/medikoo-org/es5-ext
 [win-build-image]: https://ci.appveyor.com/api/projects/status/3jox67ksw3p8hkwh?svg=true
 [win-build-url]: https://ci.appveyor.com/project/medikoo/es5-ext
 [transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
