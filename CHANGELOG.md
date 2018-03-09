@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.40"></a>
+## [0.10.40](https://github.com/medikoo/es5-ext/compare/v0.10.39...v0.10.40) (2018-03-09)
+
+
+### Features
+
+* **math:** decimal round, floor and ceil ([39290c6](https://github.com/medikoo/es5-ext/commit/39290c6))
+* **object:** isInteger and ensureInteger ([a5f7d04](https://github.com/medikoo/es5-ext/commit/a5f7d04))
+
+
+
 <a name="0.10.39"></a>
 ## [0.10.39](https://github.com/medikoo/es5-ext/compare/v0.10.38...v0.10.39) (2018-02-16)
 
