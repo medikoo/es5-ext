@@ -15,6 +15,7 @@ module.exports = {
 	ensureInteger: require("./ensure-integer"),
 	ensureNaturalNumber: require("./ensure-natural-number"),
 	ensureNaturalNumberValue: require("./ensure-natural-number-value"),
+	ensurePlainFunction: require("./ensure-plain-function"),
 	ensurePromise: require("./ensure-promise"),
 	eq: require("./eq"),
 	every: require("./every"),
