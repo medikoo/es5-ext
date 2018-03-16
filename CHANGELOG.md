@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.41"></a>
+## [0.10.41](https://github.com/medikoo/es5-ext/compare/v0.10.40...v0.10.41) (2018-03-16)
+
+
+### Features
+
+* Add function.microtaskDelay method ([66481c0](https://github.com/medikoo/es5-ext/commit/66481c0))
+* Add Object.isThenable ([8d5a45c](https://github.com/medikoo/es5-ext/commit/8d5a45c))
+* Add promise.asCallback method ([dcc1451](https://github.com/medikoo/es5-ext/commit/dcc1451))
+* Object.ensurePlainFunction ([2682be6](https://github.com/medikoo/es5-ext/commit/2682be6))
+
+
+
 <a name="0.10.40"></a>
 ## [0.10.40](https://github.com/medikoo/es5-ext/compare/v0.10.39...v0.10.40) (2018-03-09)
 
