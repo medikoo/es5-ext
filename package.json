@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "es6-iterator": "~2.0.3",
-    "es6-symbol": "~3.1.1"
+    "es6-symbol": "~3.1.1",
+    "next-tick": "1"
   },
   "devDependencies": {
     "eslint": "^4.15",
