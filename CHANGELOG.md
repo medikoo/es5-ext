@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.44"></a>
+## [0.10.44](https://github.com/medikoo/es5-ext/compare/v0.10.43...v0.10.44) (2018-05-30)
+
+
+### Features
+
+* add Object.entries ([51d2f43](https://github.com/medikoo/es5-ext/commit/51d2f43))
+
+
+
 <a name="0.10.43"></a>
 ## [0.10.43](https://github.com/medikoo/es5-ext/compare/v0.10.42...v0.10.43) (2018-05-28)
 
