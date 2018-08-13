@@ -8,15 +8,24 @@ var includes      = require("../array/#/contains")
 
 var isArray = Array.isArray, slice = Array.prototype.slice;
 
+var assignObject = function (target, source) {
+	// eslint-disable-next-line no-use-before-define
+	objForEach(source, function (value, key) { target[key] = deepAssign(target[key], value); });
+};
+
+var assignArray = function (target, source) {
+	source.forEach(function (item) { if (!includes.call(target, item)) target.push(item); });
+};
+
 var deepAssign = function (target, source) {
 	if (isPlainObject(target)) {
 		if (!isPlainObject(source)) return source;
-		objForEach(source, function (value, key) { target[key] = deepAssign(target[key], value); });
+		assignObject(target, source);
 		return target;
 	}
 	if (isArray(target)) {
 		if (!isArray(source)) return source;
-		source.forEach(function (item) { if (!includes.call(target, item)) target.push(item); });
+		assignArray(target, source);
 		return target;
 	}
 	return source;
