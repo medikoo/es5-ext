@@ -2,32 +2,28 @@
 
 var includes      = require("../array/#/contains")
   , uniq          = require("../array/#/uniq")
+  , copyDeep      = require("./copy-deep")
   , objForEach    = require("./for-each")
   , isPlainObject = require("./is-plain-object")
   , ensureValue   = require("./valid-value");
 
 var isArray = Array.isArray, slice = Array.prototype.slice;
 
-var assignObject = function (target, source) {
-	// eslint-disable-next-line no-use-before-define
-	objForEach(source, function (value, key) { target[key] = deepAssign(target[key], value); });
-};
-
-var assignArray = function (target, source) {
-	source.forEach(function (item) { if (!includes.call(target, item)) target.push(item); });
-};
-
 var deepAssign = function (target, source) {
-	if (isPlainObject(target)) {
-		if (!isPlainObject(source)) return source;
-		assignObject(target, source);
+	if (target === source) return target;
+	if (isPlainObject(target) && isPlainObject(source)) {
+		objForEach(source, function (value, key) { target[key] = deepAssign(target[key], value); });
 		return target;
 	}
-	if (isArray(target)) {
-		if (!isArray(source)) return source;
-		assignArray(target, source);
+	if (isArray(target) && isArray(source)) {
+		source.forEach(function (item) {
+			if (includes.call(target, item)) return;
+			if (isArray(item) || isPlainObject(item)) item = copyDeep(item);
+			target.push(item);
+		});
 		return target;
 	}
+	if (isPlainObject(source) || isArray(source)) return copyDeep(source);
 	return source;
 };
 
