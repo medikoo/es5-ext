@@ -3,31 +3,23 @@
 var value = require("./valid-value")
   , mixin = require("./mixin");
 
-var defineProperty = Object.defineProperty
-  , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
-  , getOwnPropertyNames = Object.getOwnPropertyNames
-  , getPrototypeOf = Object.getPrototypeOf
-  , objHasOwnProperty = Object.prototype.hasOwnProperty;
+var getPrototypeOf = Object.getPrototypeOf;
 
 module.exports = function (target, source) {
-	var error, end, define;
 	target = Object(value(target));
 	source = Object(value(source));
 	if (target === source) return target;
-	end = getPrototypeOf(target);
-	if (source === end) return target;
-	try { mixin(target, source); }
-	catch (e) { error = e; }
-	source = getPrototypeOf(source);
-	define = function (name) {
-		if (objHasOwnProperty.call(target, name)) return;
-		try { defineProperty(target, name, getOwnPropertyDescriptor(source, name)); }
-		catch (e) { error = e; }
-	};
-	while (source && source !== end) {
-		getOwnPropertyNames(source).forEach(define);
+
+	var sources = [];
+	while (source && !isPrototypeOf.call(source, target)) {
+		sources.unshift(source);
 		source = getPrototypeOf(source);
 	}
+
+	var error;
+	sources.forEach(function (sourceProto) {
+		try { mixin(target, sourceProto); } catch (mixinError) { error = mixinError; }
+	});
 	if (error) throw error;
 	return target;
 };
