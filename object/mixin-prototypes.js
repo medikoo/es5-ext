@@ -1,12 +1,13 @@
 "use strict";
 
-var value                    = require("./valid-value")
-  , mixin                    = require("./mixin")
-  , defineProperty           = Object.defineProperty
+var value = require("./valid-value")
+  , mixin = require("./mixin");
+
+var defineProperty = Object.defineProperty
   , getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
-  , getOwnPropertyNames      = Object.getOwnPropertyNames
-  , getPrototypeOf           = Object.getPrototypeOf
-  , objHasOwnProperty        = Object.prototype.hasOwnProperty;
+  , getOwnPropertyNames = Object.getOwnPropertyNames
+  , getPrototypeOf = Object.getPrototypeOf
+  , objHasOwnProperty = Object.prototype.hasOwnProperty;
 
 module.exports = function (target, source) {
 	var error, end, define;
@@ -15,19 +16,13 @@ module.exports = function (target, source) {
 	if (target === source) return target;
 	end = getPrototypeOf(target);
 	if (source === end) return target;
-	try {
-		mixin(target, source);
-	} catch (e) {
-		error = e;
-	}
+	try { mixin(target, source); }
+	catch (e) { error = e; }
 	source = getPrototypeOf(source);
 	define = function (name) {
 		if (objHasOwnProperty.call(target, name)) return;
-		try {
-			defineProperty(target, name, getOwnPropertyDescriptor(source, name));
-		} catch (e) {
-			error = e;
-		}
+		try { defineProperty(target, name, getOwnPropertyDescriptor(source, name)); }
+		catch (e) { error = e; }
 	};
 	while (source && source !== end) {
 		getOwnPropertyNames(source).forEach(define);
