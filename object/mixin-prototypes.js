@@ -12,6 +12,7 @@ module.exports = function (target, source) {
 	var error, end, define;
 	target = Object(value(target));
 	source = Object(value(source));
+	if (target === source) return target;
 	end = getPrototypeOf(target);
 	if (source === end) return target;
 	try {
