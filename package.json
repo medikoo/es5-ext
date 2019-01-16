@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "eslint": "^5.11.1",
-    "eslint-config-medikoo-es5": "^1.7.3",
+    "eslint-config-medikoo-es5": "2",
     "plain-promise": "^0.1.1",
     "tad": "~0.2.8"
   },
@@ -41,7 +41,18 @@
     "root": true,
     "rules": {
       "no-extend-native": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "array/from/shim.js",
+          "test/**"
+        ],
+        "rules": {
+          "max-lines": "off"
+        }
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint --ignore-path=.gitignore .",
