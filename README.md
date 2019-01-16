@@ -92,6 +92,7 @@ It's about properties introduced with ES6 and those that have been updated in ne
 -   `Object.assign` -> `require('es5-ext/object/assign')`
 -   `Object.keys` -> `require('es5-ext/object/keys')`
 -   `Object.setPrototypeOf` -> `require('es5-ext/object/set-prototype-of')`
+-   `Promise.prototype.finally` -> `require('es5-ext/promise/#/finally')`
 -   `RegExp.prototype.match` -> `require('es5-ext/reg-exp/#/match')`
 -   `RegExp.prototype.replace` -> `require('es5-ext/reg-exp/#/replace')`
 -   `RegExp.prototype.search` -> `require('es5-ext/reg-exp/#/search')`
@@ -841,6 +842,12 @@ Throws error if given value is not an object, otherwise it is returned.
 #### validValue(x) _(es5-ext/object/valid-value)_
 
 Throws error if given value is `null` or `undefined`, otherwise returns value.
+
+### Promise Prototype extensions
+
+#### promise.finally(onFinally) _(es5-ext/promise/#/finally)_
+
+[_Introduced with ECMAScript 2018_](https://tc39.github.io/ecma262/#sec-promise.prototype.finally).
 
 ### RegExp Constructor extensions
 
