@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.47"></a>
+## [0.10.47](https://github.com/medikoo/es5-ext/compare/v0.10.46...v0.10.47) (2019-01-16)
+
+
+### Features
+
+* Promise.prototype.finally shim ([4dadbc7](https://github.com/medikoo/es5-ext/commit/4dadbc7))
+
+
+
 <a name="0.10.46"></a>
 ## [0.10.46](https://github.com/medikoo/es5-ext/compare/v0.10.45...v0.10.46) (2018-08-13)
 
