@@ -58,18 +58,7 @@
 		"root": true,
 		"rules": {
 			"no-extend-native": "off"
-		},
-		"overrides": [
-			{
-				"files": [
-					"array/from/shim.js",
-					"test/**"
-				],
-				"rules": {
-					"max-lines": "off"
-				}
-			}
-		]
+		}
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
