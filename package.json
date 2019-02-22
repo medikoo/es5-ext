@@ -33,6 +33,7 @@
 	"devDependencies": {
 		"eslint": "^5.14.1",
 		"eslint-config-medikoo-es5": "2",
+		"git-list-updated": "^1.1.2",
 		"plain-promise": "^0.1.1",
 		"prettier-elastic": "^1.16.4",
 		"tad": "^0.2.8"
@@ -57,6 +58,8 @@
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
+		"lint-updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
+		"prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
 		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
 		"test": "node ./node_modules/tad/bin/tad"
 	},
