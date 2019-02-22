@@ -34,6 +34,7 @@
 		"eslint": "^5.14.1",
 		"eslint-config-medikoo-es5": "2",
 		"plain-promise": "^0.1.1",
+		"prettier-elastic": "^1.16.4",
 		"tad": "^0.2.8"
 	},
 	"eslintConfig": {
@@ -56,6 +57,7 @@
 	},
 	"scripts": {
 		"lint": "eslint --ignore-path=.gitignore .",
+		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
 		"test": "node ./node_modules/tad/bin/tad"
 	},
 	"license": "ISC"
