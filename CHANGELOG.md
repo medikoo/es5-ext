@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.49](https://github.com/medikoo/es5-ext/compare/v0.10.48...v0.10.49) (2019-03-11)
+
+### Features
+
+-   allow plain function usage of fn.compose ([2bafef7](https://github.com/medikoo/es5-ext/commit/2bafef7))
+
 ## [0.10.48](https://github.com/medikoo/es5-ext/compare/v0.10.47...v0.10.48) (2019-02-22)
 
 ### Features
