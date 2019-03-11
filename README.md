@@ -490,6 +490,10 @@ Applies the functions in reverse argument-list order.
 
 _f1.compose(f2, f3, f4)(…args) =def f1(f2(f3(f4(…arg))))_
 
+`compose` can also be used in plain function form as:
+
+_compose(f1, f2, f3, f4)(…args) =def f1(f2(f3(f4(…arg))))_
+
 #### fn.copy() _(es5-ext/function/#/copy)_
 
 Produces copy of given function

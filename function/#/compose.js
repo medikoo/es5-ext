@@ -1,6 +1,7 @@
 "use strict";
 
-var callable = require("../../object/valid-callable")
+var isValue  = require("../../object/is-value")
+  , callable = require("../../object/valid-callable")
   , aFrom    = require("../../array/from");
 
 var apply = Function.prototype.apply
@@ -9,7 +10,8 @@ var apply = Function.prototype.apply
 
 module.exports = function (fnIgnored/*, …fnn*/) {
 	var fns, first;
-	fns = [this].concat(aFrom(arguments));
+	var args = aFrom(arguments);
+	fns = isValue(this) ? [this].concat(args) : args;
 	fns.forEach(callable);
 	fns = fns.reverse();
 	first = fns[0];
