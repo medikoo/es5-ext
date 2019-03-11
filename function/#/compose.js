@@ -7,9 +7,8 @@ var apply = Function.prototype.apply
   , call = Function.prototype.call
   , callFn = function (arg, fn) { return call.call(fn, this, arg); };
 
-module.exports = function (fn/*, …fnn*/) {
+module.exports = function (fnIgnored/*, …fnn*/) {
 	var fns, first;
-	if (!fn) callable(fn);
 	fns = [this].concat(aFrom(arguments));
 	fns.forEach(callable);
 	fns = fns.reverse();
