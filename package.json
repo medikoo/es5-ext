@@ -38,7 +38,7 @@
 		"lint-staged": "^8.1.5",
 		"plain-promise": "^0.1.1",
 		"prettier-elastic": "^1.17.0",
-		"tad": "^1.0.0"
+		"tad": "^2.0.1"
 	},
 	"husky": {
 		"hooks": {
