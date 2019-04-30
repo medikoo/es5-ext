@@ -2,17 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.50](https://github.com/medikoo/es5-ext/compare/v0.10.49...v0.10.50) (2019-04-30)
+
+### Bug Fixes
+
+- maximum time value reference ([708202d](https://github.com/medikoo/es5-ext/commit/708202d))
+
+### Features
+
+- ensure global resolves in strict mode ([c6a19d7](https://github.com/medikoo/es5-ext/commit/c6a19d7)), closes [#86](https://github.com/medikoo/es5-ext/issues/86)
+
 ## [0.10.49](https://github.com/medikoo/es5-ext/compare/v0.10.48...v0.10.49) (2019-03-11)
 
 ### Features
 
--   allow plain function usage of fn.compose ([2bafef7](https://github.com/medikoo/es5-ext/commit/2bafef7))
+- allow plain function usage of fn.compose ([2bafef7](https://github.com/medikoo/es5-ext/commit/2bafef7))
 
 ## [0.10.48](https://github.com/medikoo/es5-ext/compare/v0.10.47...v0.10.48) (2019-02-22)
 
 ### Features
 
--   Object.ensurePlainObject util ([f48fbcf](https://github.com/medikoo/es5-ext/commit/f48fbcf))
+- Object.ensurePlainObject util ([f48fbcf](https://github.com/medikoo/es5-ext/commit/f48fbcf))
 
 <a name="0.10.47"></a>
 
@@ -20,7 +30,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Promise.prototype.finally shim ([4dadbc7](https://github.com/medikoo/es5-ext/commit/4dadbc7))
+- Promise.prototype.finally shim ([4dadbc7](https://github.com/medikoo/es5-ext/commit/4dadbc7))
 
 <a name="0.10.46"></a>
 
@@ -28,7 +38,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   assign-deep to not modify following arguments ([bf43d57](https://github.com/medikoo/es5-ext/commit/bf43d57))
+- assign-deep to not modify following arguments ([bf43d57](https://github.com/medikoo/es5-ext/commit/bf43d57))
 
 <a name="0.10.45"></a>
 
@@ -36,7 +46,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   improve error message readbility ([adc91b9](https://github.com/medikoo/es5-ext/commit/adc91b9))
+- improve error message readbility ([adc91b9](https://github.com/medikoo/es5-ext/commit/adc91b9))
 
 <a name="0.10.44"></a>
 
@@ -44,7 +54,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   add Object.entries ([51d2f43](https://github.com/medikoo/es5-ext/commit/51d2f43))
+- add Object.entries ([51d2f43](https://github.com/medikoo/es5-ext/commit/51d2f43))
 
 <a name="0.10.43"></a>
 
@@ -52,7 +62,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   improve patch string ([6a25b10](https://github.com/medikoo/es5-ext/commit/6a25b10))
+- improve patch string ([6a25b10](https://github.com/medikoo/es5-ext/commit/6a25b10))
 
 <a name="0.10.42"></a>
 
@@ -60,12 +70,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   Date.isDate to exclude NaN dates ([3b61bc6](https://github.com/medikoo/es5-ext/commit/3b61bc6))
+- Date.isDate to exclude NaN dates ([3b61bc6](https://github.com/medikoo/es5-ext/commit/3b61bc6))
 
 ### Features
 
--   improve non-coercible string representation ([20bfb78](https://github.com/medikoo/es5-ext/commit/20bfb78))
--   improve non-stringifiable string representation ([2e4512d](https://github.com/medikoo/es5-ext/commit/2e4512d))
+- improve non-coercible string representation ([20bfb78](https://github.com/medikoo/es5-ext/commit/20bfb78))
+- improve non-stringifiable string representation ([2e4512d](https://github.com/medikoo/es5-ext/commit/2e4512d))
 
 <a name="0.10.41"></a>
 
@@ -73,10 +83,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Add function.microtaskDelay method ([66481c0](https://github.com/medikoo/es5-ext/commit/66481c0))
--   Add Object.isThenable ([8d5a45c](https://github.com/medikoo/es5-ext/commit/8d5a45c))
--   Add promise.asCallback method ([dcc1451](https://github.com/medikoo/es5-ext/commit/dcc1451))
--   Object.ensurePlainFunction ([2682be6](https://github.com/medikoo/es5-ext/commit/2682be6))
+- Add function.microtaskDelay method ([66481c0](https://github.com/medikoo/es5-ext/commit/66481c0))
+- Add Object.isThenable ([8d5a45c](https://github.com/medikoo/es5-ext/commit/8d5a45c))
+- Add promise.asCallback method ([dcc1451](https://github.com/medikoo/es5-ext/commit/dcc1451))
+- Object.ensurePlainFunction ([2682be6](https://github.com/medikoo/es5-ext/commit/2682be6))
 
 <a name="0.10.40"></a>
 
@@ -84,8 +94,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   **math:** decimal round, floor and ceil ([39290c6](https://github.com/medikoo/es5-ext/commit/39290c6))
--   **object:** isInteger and ensureInteger ([a5f7d04](https://github.com/medikoo/es5-ext/commit/a5f7d04))
+- **math:** decimal round, floor and ceil ([39290c6](https://github.com/medikoo/es5-ext/commit/39290c6))
+- **object:** isInteger and ensureInteger ([a5f7d04](https://github.com/medikoo/es5-ext/commit/a5f7d04))
 
 <a name="0.10.39"></a>
 
@@ -93,7 +103,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Promise.lazy ([7a30a78](https://github.com/medikoo/es5-ext/commit/7a30a78))
+- Promise.lazy ([7a30a78](https://github.com/medikoo/es5-ext/commit/7a30a78))
 
 <a name="0.10.38"></a>
 
@@ -101,7 +111,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Object.isNaturalNumber an Object.isNaturalNumberValue ([66a40af](https://github.com/medikoo/es5-ext/commit/66a40af))
+- Object.isNaturalNumber an Object.isNaturalNumberValue ([66a40af](https://github.com/medikoo/es5-ext/commit/66a40af))
 
 <a name="0.10.37"></a>
 
@@ -109,7 +119,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   String.random util ([7c28739](https://github.com/medikoo/es5-ext/commit/7c28739))
+- String.random util ([7c28739](https://github.com/medikoo/es5-ext/commit/7c28739))
 
 <a name="0.10.36"></a>
 
@@ -117,7 +127,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   **date:** isTimeValue and ensureTimeValue utils ([7659dc5](https://github.com/medikoo/es5-ext/commit/7659dc5))
+- **date:** isTimeValue and ensureTimeValue utils ([7659dc5](https://github.com/medikoo/es5-ext/commit/7659dc5))
 
 <a name="0.10.35"></a>
 
@@ -125,7 +135,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   **Object.copy:** do not upgrade primitives to objects ([dd4d88f](https://github.com/medikoo/es5-ext/commit/dd4d88f))
+- **Object.copy:** do not upgrade primitives to objects ([dd4d88f](https://github.com/medikoo/es5-ext/commit/dd4d88f))
 
 <a name="0.10.34"></a>
 
@@ -133,7 +143,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   **copyDeep:** duplicate only recursive instances ([bba529a](https://github.com/medikoo/es5-ext/commit/bba529a))
+- **copyDeep:** duplicate only recursive instances ([bba529a](https://github.com/medikoo/es5-ext/commit/bba529a))
 
 <a name="0.10.33"></a>
 
@@ -141,7 +151,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   **Object.assignDeep:** relax input validation ([1baf57d](https://github.com/medikoo/es5-ext/commit/1baf57d))
+- **Object.assignDeep:** relax input validation ([1baf57d](https://github.com/medikoo/es5-ext/commit/1baf57d))
 
 <a name="0.10.32"></a>
 
@@ -149,7 +159,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Object.assignDeep ([2345e0b](https://github.com/medikoo/es5-ext/commit/2345e0b))
+- Object.assignDeep ([2345e0b](https://github.com/medikoo/es5-ext/commit/2345e0b))
 
 <a name="0.10.31"></a>
 
@@ -157,7 +167,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   Object.isPlainFunction utility ([031be0a](https://github.com/medikoo/es5-ext/commit/031be0a))
+- Object.isPlainFunction utility ([031be0a](https://github.com/medikoo/es5-ext/commit/031be0a))
 
 <a name="0.10.30"></a>
 
@@ -165,7 +175,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   value stringification for error message ([37bb96b](https://github.com/medikoo/es5-ext/commit/37bb96b))
+- value stringification for error message ([37bb96b](https://github.com/medikoo/es5-ext/commit/37bb96b))
 
 <a name="0.10.29"></a>
 
@@ -173,7 +183,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   string.repeat after recent regression ([b02fab4](https://github.com/medikoo/es5-ext/commit/b02fab4))
+- string.repeat after recent regression ([b02fab4](https://github.com/medikoo/es5-ext/commit/b02fab4))
 
 <a name="0.10.28"></a>
 
@@ -181,10 +191,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   array.isEmpty method ([b0cfbdd](https://github.com/medikoo/es5-ext/commit/b0cfbdd))
--   improve new lines representation ([860fe8b](https://github.com/medikoo/es5-ext/commit/860fe8b))
--   Object.ensureArray util ([595c341](https://github.com/medikoo/es5-ext/commit/595c341))
--   toShortStringRepresentation util ([6842d06](https://github.com/medikoo/es5-ext/commit/6842d06))
+- array.isEmpty method ([b0cfbdd](https://github.com/medikoo/es5-ext/commit/b0cfbdd))
+- improve new lines representation ([860fe8b](https://github.com/medikoo/es5-ext/commit/860fe8b))
+- Object.ensureArray util ([595c341](https://github.com/medikoo/es5-ext/commit/595c341))
+- toShortStringRepresentation util ([6842d06](https://github.com/medikoo/es5-ext/commit/6842d06))
 
 <a name="0.10.27"></a>
 
@@ -192,12 +202,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   isNumberValue should not crash on non-coercible values ([0db765e](https://github.com/medikoo/es5-ext/commit/0db765e))
+- isNumberValue should not crash on non-coercible values ([0db765e](https://github.com/medikoo/es5-ext/commit/0db765e))
 
 ### Features
 
--   add Object.ensureFiniteNumber util ([11c67f5](https://github.com/medikoo/es5-ext/commit/11c67f5))
--   add Object.isFiniteNumber util ([fe5b55a](https://github.com/medikoo/es5-ext/commit/fe5b55a))
+- add Object.ensureFiniteNumber util ([11c67f5](https://github.com/medikoo/es5-ext/commit/11c67f5))
+- add Object.isFiniteNumber util ([fe5b55a](https://github.com/medikoo/es5-ext/commit/fe5b55a))
 
 <a name="0.10.26"></a>
 
@@ -205,7 +215,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   **general:** ensure optionalChaining in index ([3df879a](https://github.com/medikoo/es5-ext/commit/3df879a))
+- **general:** ensure optionalChaining in index ([3df879a](https://github.com/medikoo/es5-ext/commit/3df879a))
 
 <a name="0.10.25"></a>
 
@@ -213,7 +223,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   **general:** optionalChaining utility ([26332b5](https://github.com/medikoo/es5-ext/commit/26332b5))
+- **general:** optionalChaining utility ([26332b5](https://github.com/medikoo/es5-ext/commit/26332b5))
 
 <a name="0.10.24"></a>
 
@@ -221,7 +231,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   resolve global with CSP safe method ([d386449](https://github.com/medikoo/es5-ext/commit/d386449))
+- resolve global with CSP safe method ([d386449](https://github.com/medikoo/es5-ext/commit/d386449))
 
 <a name="0.10.23"></a>
 
@@ -229,8 +239,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   **Error.custom:** allow non-string code ([e8db3a0](https://github.com/medikoo/es5-ext/commit/e8db3a0))
--   **Error.custom:** improve `ext` argument detection ([0edbfbc](https://github.com/medikoo/es5-ext/commit/0edbfbc))
+- **Error.custom:** allow non-string code ([e8db3a0](https://github.com/medikoo/es5-ext/commit/e8db3a0))
+- **Error.custom:** improve `ext` argument detection ([0edbfbc](https://github.com/medikoo/es5-ext/commit/0edbfbc))
 
 <a name="0.10.22"></a>
 
@@ -238,7 +248,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   ensure proper symbols stringification in early implementations ([ce51900](https://github.com/medikoo/es5-ext/commit/ce51900))
+- ensure proper symbols stringification in early implementations ([ce51900](https://github.com/medikoo/es5-ext/commit/ce51900))
 
 <a name="0.10.21"></a>
 
@@ -246,7 +256,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   support arrow functions in Function/#/to-tring-tokens.js ([ad3de1e](https://github.com/medikoo/es5-ext/commit/ad3de1e))
+- support arrow functions in Function/#/to-tring-tokens.js ([ad3de1e](https://github.com/medikoo/es5-ext/commit/ad3de1e))
 
 <a name="0.10.20"></a>
 
@@ -254,8 +264,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   if listed copy not only if own property ([d7e7cef](https://github.com/medikoo/es5-ext/commit/d7e7cef))
--   support `ensure` option in Object.copy ([295326f](https://github.com/medikoo/es5-ext/commit/295326f))
+- if listed copy not only if own property ([d7e7cef](https://github.com/medikoo/es5-ext/commit/d7e7cef))
+- support `ensure` option in Object.copy ([295326f](https://github.com/medikoo/es5-ext/commit/295326f))
 
 <a name="0.10.19"></a>
 
@@ -263,7 +273,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   support propertyNames option in Object.copy ([5442279](https://github.com/medikoo/es5-ext/commit/5442279))
+- support propertyNames option in Object.copy ([5442279](https://github.com/medikoo/es5-ext/commit/5442279))
 
 <a name="0.10.18"></a>
 
@@ -271,7 +281,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
--   take all changes in safeToString ([3c5cd12](https://github.com/medikoo/es5-ext/commit/3c5cd12))
+- take all changes in safeToString ([3c5cd12](https://github.com/medikoo/es5-ext/commit/3c5cd12))
 
 <a name="0.10.17"></a>
 
@@ -279,9 +289,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   introduce Object.ensurePromise ([46a2f45](https://github.com/medikoo/es5-ext/commit/46a2f45))
--   introduce Object.isPromise ([27aecc8](https://github.com/medikoo/es5-ext/commit/27aecc8))
--   introduce safeToString ([0cc6a7b](https://github.com/medikoo/es5-ext/commit/0cc6a7b))
+- introduce Object.ensurePromise ([46a2f45](https://github.com/medikoo/es5-ext/commit/46a2f45))
+- introduce Object.isPromise ([27aecc8](https://github.com/medikoo/es5-ext/commit/27aecc8))
+- introduce safeToString ([0cc6a7b](https://github.com/medikoo/es5-ext/commit/0cc6a7b))
 
 <a name="0.10.16"></a>
 
@@ -289,7 +299,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   add String.prototype.count ([2e53241](https://github.com/medikoo/es5-ext/commit/2e53241))
+- add String.prototype.count ([2e53241](https://github.com/medikoo/es5-ext/commit/2e53241))
 
 ## Changelog for previous versions
 
