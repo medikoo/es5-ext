@@ -30,6 +30,7 @@
 		"git-list-updated": "^1.1.2",
 		"husky": "^2.3.0",
 		"lint-staged": "^8.1.7",
+		"mocha": "^6.1.4",
 		"prettier-elastic": "^1.17.0"
 	},
 	"husky": {
@@ -47,7 +48,15 @@
 	},
 	"eslintConfig": {
 		"extends": "medikoo-es5",
-		"root": true
+		"root": true,
+		"overrides": [
+			{
+				"files": "test/**/*.js",
+				"env": {
+					"mocha": true
+				}
+			}
+		]
 	},
 	"prettier": {
 		"printWidth": 100,
@@ -65,7 +74,8 @@
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint-updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
-		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
+		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
+		"test": "mocha"
 	},
 	"license": "ISC"
 }
