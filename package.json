@@ -1,17 +1,16 @@
 {
-	"name": "es5-ext",
-	"version": "0.10.50",
-	"description": "ECMAScript extensions and shims",
+	"name": "ext",
+	"version": "1.0.0",
+	"description": "JavaScript utilities with respect to emerging standard",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
 	"keywords": [
 		"ecmascript",
-		"ecmascript5",
-		"ecmascript6",
-		"es5",
+		"es",
 		"es6",
 		"extensions",
 		"ext",
 		"addons",
+		"lodash",
 		"extras",
 		"harmony",
 		"javascript",
@@ -23,22 +22,15 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/medikoo/es5-ext.git"
-	},
-	"dependencies": {
-		"es6-iterator": "~2.0.3",
-		"es6-symbol": "~3.1.1",
-		"next-tick": "^1.0.0"
+		"url": "git://github.com/medikoo/ext.git"
 	},
 	"devDependencies": {
 		"eslint": "^5.16.0",
-		"eslint-config-medikoo-es5": "^2.0.0",
+		"eslint-config-medikoo": "^2.2.0",
 		"git-list-updated": "^1.1.2",
 		"husky": "^2.3.0",
 		"lint-staged": "^8.1.7",
-		"plain-promise": "^0.1.1",
-		"prettier-elastic": "^1.17.0",
-		"tad": "^2.0.1"
+		"prettier-elastic": "^1.17.0"
 	},
 	"husky": {
 		"hooks": {
@@ -55,21 +47,7 @@
 	},
 	"eslintConfig": {
 		"extends": "medikoo-es5",
-		"root": true,
-		"rules": {
-			"no-extend-native": "off"
-		},
-		"overrides": [
-			{
-				"files": "global.js",
-				"globals": {
-					"__global__": true
-				},
-				"rules": {
-					"strict": "off"
-				}
-			}
-		]
+		"root": true
 	},
 	"prettier": {
 		"printWidth": 100,
@@ -87,8 +65,7 @@
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint-updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
-		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
-		"test": "node ./node_modules/tad/bin/tad"
+		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
 	},
 	"license": "ISC"
 }
