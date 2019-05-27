@@ -4,4 +4,6 @@
 
 ### Installation
 
-    $ npm install ext
+```bash
+npm install ext
+```
