@@ -56,7 +56,7 @@
 		"root": true,
 		"overrides": [
 			{
-				"files": "global-this.js",
+				"files": "global-this/implementation.js",
 				"globals": {
 					"__global__": true
 				},

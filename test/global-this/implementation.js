@@ -2,7 +2,7 @@
 
 var isObject   = require("type/object/is")
   , assert     = require("chai").assert
-  , globalThis = require("../global-this");
+  , globalThis = require("../../global-this/implementation");
 
 describe("globalThis", function () {
 	it("Should be an object", function () { assert(isObject(globalThis)); });
