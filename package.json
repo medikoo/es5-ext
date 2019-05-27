@@ -66,6 +66,12 @@
 				}
 			},
 			{
+				"files": "global-this/is-implemented.js",
+				"globals": {
+					"globalThis": true
+				}
+			},
+			{
 				"files": "test/**/*.js",
 				"env": {
 					"mocha": true
