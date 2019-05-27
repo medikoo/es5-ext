@@ -25,13 +25,15 @@
 		"url": "git://github.com/medikoo/ext.git"
 	},
 	"devDependencies": {
+		"chai": "^4.2.0",
 		"eslint": "^5.16.0",
 		"eslint-config-medikoo-es3": "^2.2.0",
 		"git-list-updated": "^1.1.2",
 		"husky": "^2.3.0",
 		"lint-staged": "^8.1.7",
 		"mocha": "^6.1.4",
-		"prettier-elastic": "^1.17.0"
+		"prettier-elastic": "^1.17.0",
+		"type": "^1.0.1"
 	},
 	"husky": {
 		"hooks": {
@@ -53,6 +55,16 @@
 		"extends": "medikoo-es3",
 		"root": true,
 		"overrides": [
+			{
+				"files": "global-this.js",
+				"globals": {
+					"__global__": true
+				},
+				"rules": {
+					"no-extend-native": "off",
+					"strict": "off"
+				}
+			},
 			{
 				"files": "test/**/*.js",
 				"env": {

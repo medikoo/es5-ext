@@ -16,18 +16,7 @@
 		"root": true,
 		"rules": {
 			"no-extend-native": "off"
-		},
-		"overrides": [
-			{
-				"files": "global.js",
-				"globals": {
-					"__global__": true
-				},
-				"rules": {
-					"strict": "off"
-				}
-			}
-		]
+		}
 	},
 	"prettier": {
 		"printWidth": 100,
