@@ -26,7 +26,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^5.16.0",
-		"eslint-config-medikoo": "^2.2.0",
+		"eslint-config-medikoo-es3": "^2.2.0",
 		"git-list-updated": "^1.1.2",
 		"husky": "^2.3.0",
 		"lint-staged": "^8.1.7",
@@ -46,8 +46,11 @@
 			"prettier -c"
 		]
 	},
+	"eslintIgnore": [
+		"_es5-ext/*"
+	],
 	"eslintConfig": {
-		"extends": "medikoo-es5",
+		"extends": "medikoo-es3",
 		"root": true,
 		"overrides": [
 			{
@@ -71,7 +74,7 @@
 		]
 	},
 	"scripts": {
-		"lint": "eslint --ignore-path=.gitignore .",
+		"lint": "eslint .",
 		"lint-updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
 		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
