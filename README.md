@@ -1,6 +1,6 @@
 # ext
 
-## JavaScript standard extensions (with respect to emerging ES+ features)
+## JavaScript standard extensions (with respect to evolving standard)
 
 Non-standard or soon to be standard language utilities in a future proof, non-invasive form.
 
