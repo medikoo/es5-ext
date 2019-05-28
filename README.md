@@ -2,7 +2,7 @@
 
 ## JavaScript standard extensions (with respect to emerging ES+ features)
 
-Provides missing, non-standard or soon to be standard language features in future proof and non-invasive form.
+Non-standard or soon to be standard language utilities in a future proof, non-invasive form.
 
 Doesn't enforce transpilation step. Where it's applicable utilities/extensions are safe to use in all ES3+ implementations.
 
