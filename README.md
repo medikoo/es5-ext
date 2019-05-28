@@ -23,7 +23,19 @@ Returns global object. Resolve native [globalThis](https://github.com/tc39/propo
 ```javascript
 const globalThis = require("ext/global-this");
 
-console.log(globalThis.Array === Array); // true
+globalThis.Array === Array; // true
+```
+
+#### Function
+
+##### `Function.identity` _(ext/function/identity)_
+
+Returns input argument.
+
+```javascript
+const identity = require("ext/function/identity");
+
+identity("foo"); // "foo"
 ```
 
 #### Thenable.prototype

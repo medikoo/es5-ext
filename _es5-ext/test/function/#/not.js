@@ -1,6 +1,6 @@
 "use strict";
 
-var identity = require("../../../function/identity")
+var identity = require("../../../../function/identity")
   , noop     = require("../../../function/noop");
 
 module.exports = function (t, a) {
