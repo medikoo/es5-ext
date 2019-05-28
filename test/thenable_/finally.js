@@ -2,10 +2,10 @@
 
 var assert        = require("chai").assert
   , sinon         = require("sinon")
+  , identity      = require("../../function/identity")
   , finallyMethod = require("../../thenable_/finally");
 
 var throwUnexpected = function () { throw new Error("Unexpected"); };
-var identity = function (value) { return value; };
 
 describe("thenable_/finally", function () {
 	describe("Successful on fulfilled", function () {
