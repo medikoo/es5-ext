@@ -1,8 +1,8 @@
 "use strict";
 
-var ensurePlainFunction = require("../../../object/ensure-plain-function")
-  , isThenable          = require("../../../object/is-thenable")
-  , ensureThenable      = require("../../../object/ensure-thenable");
+var ensurePlainFunction = require("type/plain-function/ensure")
+  , isThenable          = require("type/thenable/is")
+  , ensureThenable      = require("type/thenable/ensure");
 
 var resolveCallback = function (callback, next) {
 	var callbackResult = callback();

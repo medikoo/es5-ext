@@ -24,6 +24,9 @@
 		"type": "git",
 		"url": "git://github.com/medikoo/ext.git"
 	},
+	"dependencies": {
+		"type": "^1.0.1"
+	},
 	"devDependencies": {
 		"chai": "^4.2.0",
 		"eslint": "^5.16.0",
@@ -33,7 +36,7 @@
 		"lint-staged": "^8.1.7",
 		"mocha": "^6.1.4",
 		"prettier-elastic": "^1.17.0",
-		"type": "^1.0.1"
+		"sinon": "^7.3.2"
 	},
 	"husky": {
 		"hooks": {
@@ -78,6 +81,12 @@
 				"files": "test/**/*.js",
 				"env": {
 					"mocha": true
+				}
+			},
+			{
+				"files": "test/thenable_/finally.js",
+				"globals": {
+					"Promise": true
 				}
 			}
 		]
