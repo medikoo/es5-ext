@@ -1,10 +1,10 @@
 # ext
 
-## JavaScript standard extensions (with respect to emerging ES+ additions)
+## JavaScript standard extensions (with respect to emerging ES+ features)
 
-Provides missing non-standard or soon to be standard language features in non-invasive form.
+Provides missing, non-standard or soon to be standard language features in future proof and non-invasive form.
 
-Doesn't enforce transpilation step. Where it's applicable all utilities/extensions are safe to use in all ES3+ implementations.
+Doesn't enforce transpilation step. Where it's applicable utilities/extensions are safe to use in all ES3+ implementations.
 
 ### Installation
 
