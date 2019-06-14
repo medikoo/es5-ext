@@ -1020,6 +1020,22 @@ Returns iterator object which traverses all string characters (with respect to u
 
     $ npm test
 
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
+
+---
+
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-es5-ext?utm_source=npm-es5-ext&utm_medium=referral&utm_campaign=readme">Get professional support for d with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
+
 [nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/es5-ext/branches/master/shields_badge.svg
 [nix-build-url]: https://semaphoreci.com/medikoo-org/es5-ext
 [win-build-image]: https://ci.appveyor.com/api/projects/status/3jox67ksw3p8hkwh?svg=true
