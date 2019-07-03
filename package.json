@@ -31,11 +31,11 @@
 		"chai": "^4.2.0",
 		"eslint": "^5.16.0",
 		"eslint-config-medikoo-es3": "^2.2.0",
-		"git-list-updated": "^1.1.2",
-		"husky": "^2.3.0",
-		"lint-staged": "^8.1.7",
+		"git-list-updated": "^1.2.0",
+		"husky": "^2.7.0",
+		"lint-staged": "^8.2.1",
 		"mocha": "^6.1.4",
-		"prettier-elastic": "^1.17.0",
+		"prettier-elastic": "^1.18.2",
 		"sinon": "^7.3.2"
 	},
 	"husky": {
