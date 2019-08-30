@@ -31,7 +31,7 @@
 		"next-tick": "^1.0.0"
 	},
 	"devDependencies": {
-		"eslint": "^5.16.0",
+		"eslint": "^6.2.2",
 		"eslint-config-medikoo": "^2.5.1",
 		"git-list-updated": "^1.2.1",
 		"husky": "^2.7.0",
