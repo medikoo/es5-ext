@@ -1024,17 +1024,11 @@ Returns iterator object which traverses all string characters (with respect to u
 
 To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
----
+## es5-ext for enterprise
 
-<div align="center">
-	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-es5-ext?utm_source=npm-es5-ext&utm_medium=referral&utm_campaign=readme">Get professional support for es5-ext with a Tidelift subscription</a>
-	</b>
-	<br>
-	<sub>
-		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
-	</sub>
-</div>
+Available as part of the Tidelift Subscription
+
+The maintainers of es5-ext and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-es5-ext?utm_source=npm-es5-ext&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 [nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/es5-ext/branches/master/shields_badge.svg
 [nix-build-url]: https://semaphoreci.com/medikoo-org/es5-ext
