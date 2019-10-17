@@ -1028,7 +1028,7 @@ To report a security vulnerability, please use the [Tidelift security contact](h
 
 <div align="center">
 	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-es5-ext?utm_source=npm-es5-ext&utm_medium=referral&utm_campaign=readme">Get professional support for d with a Tidelift subscription</a>
+		<a href="https://tidelift.com/subscription/pkg/npm-es5-ext?utm_source=npm-es5-ext&utm_medium=referral&utm_campaign=readme">Get professional support for es5-ext with a Tidelift subscription</a>
 	</b>
 	<br>
 	<sub>
