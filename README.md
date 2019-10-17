@@ -115,22 +115,22 @@ It's about properties introduced with ES6 and those that have been updated in ne
 
 ```javascript
 Object.defineProperty(Function.prototype, "partial", {
-	value: require("es5-ext/function/#/partial"),
-	configurable: true,
-	enumerable: false,
-	writable: true
+  value: require("es5-ext/function/#/partial"),
+  configurable: true,
+  enumerable: false,
+  writable: true
 });
 Object.defineProperty(Array.prototype, "flatten", {
-	value: require("es5-ext/array/#/flatten"),
-	configurable: true,
-	enumerable: false,
-	writable: true
+  value: require("es5-ext/array/#/flatten"),
+  configurable: true,
+  enumerable: false,
+  writable: true
 });
 Object.defineProperty(String.prototype, "capitalize", {
-	value: require("es5-ext/string/#/capitalize"),
-	configurable: true,
-	enumerable: false,
-	writable: true
+  value: require("es5-ext/string/#/capitalize"),
+  configurable: true,
+  enumerable: false,
+  writable: true
 });
 ```
 
