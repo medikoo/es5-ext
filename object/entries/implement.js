@@ -2,7 +2,7 @@
 
 if (!require("./is-implemented")()) {
 	Object.defineProperty(Object, "entries", {
-		value: require("./shim"),
+		value: require("./implementation"),
 		configurable: true,
 		enumerable: false,
 		writable: true
