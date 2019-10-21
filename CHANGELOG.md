@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/medikoo/ext/compare/v1.0.3...v1.1.0) (2019-10-21)
+
+### Features
+
+- Object.entries implementation ([cf51e45](https://github.com/medikoo/ext/commit/cf51e45))
+
 ### [1.0.3](https://github.com/medikoo/ext/compare/v1.0.1...v1.0.3) (2019-07-03)
 
 Remove obsolete files from publication
