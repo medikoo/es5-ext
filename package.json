@@ -63,7 +63,10 @@
 			{
 				"files": "global.js",
 				"globals": {
-					"__global__": true
+					"__global__": true,
+					"globalThis": true,
+					"self": true,
+					"window": true
 				},
 				"rules": {
 					"strict": "off"
