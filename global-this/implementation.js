@@ -1,7 +1,7 @@
 module.exports = (function () {
 	if (this) return this;
 
-	// Unexpected strict mode (may happen if e.g. bundled into ESM module), be nice
+	// Unexpected strict mode (may happen if e.g. bundled into ESM module)
 
 	// Thanks @mathiasbynens -> https://mathiasbynens.be/notes/globalthis
 	// In all ES5+ engines global object inherits from Object.prototype
