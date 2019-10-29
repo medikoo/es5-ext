@@ -21,6 +21,11 @@ module.exports = (function () {
 		// Unfortunate case of Object.prototype being sealed (via preventExtensions, seal or freeze)
 		return naiveFallback();
 	}
-	try { return __global__; }
-	finally { delete Object.prototype.__global__; }
+	try {
+		// Safari case (window.__global__ is resolved with global context, but __global__ does not)
+		if (!__global__) return naiveFallback();
+		return __global__;
+	} finally {
+		delete Object.prototype.__global__;
+	}
 })();
