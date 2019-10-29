@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/medikoo/ext/compare/v1.1.0...v1.1.1) (2019-10-29)
+
+### Bug Fixes
+
+- Provide naive fallback for sealed Object.prototype case ([a8d528b](https://github.com/medikoo/ext/commit/a8d528b))
+- Workaournd Safari incompatibility case ([0b051e6](https://github.com/medikoo/ext/commit/0b051e6))
+
 ## [1.1.0](https://github.com/medikoo/ext/compare/v1.0.3...v1.1.0) (2019-10-21)
 
 ### Features
