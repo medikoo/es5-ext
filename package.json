@@ -21,10 +21,7 @@
 		"utils",
 		"utilities"
 	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/medikoo/es5-ext.git"
-	},
+	"repository": "medikoo/es5-ext",
 	"dependencies": {
 		"es6-iterator": "~2.0.3",
 		"es6-symbol": "~3.1.2",
