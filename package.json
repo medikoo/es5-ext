@@ -61,7 +61,9 @@
 			{
 				"files": "global-this/implementation.js",
 				"globals": {
-					"__global__": true
+					"__global__": true,
+					"self": true,
+					"window": true
 				},
 				"rules": {
 					"no-extend-native": "off",
