@@ -1032,7 +1032,7 @@ The maintainers of es5-ext and thousands of other packages are working with Tide
 
 [nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/es5-ext/branches/master/shields_badge.svg
 [nix-build-url]: https://semaphoreci.com/medikoo-org/es5-ext
-[win-build-image]: https://ci.appveyor.com/api/projects/status/3jox67ksw3p8hkwh?svg=true
+[win-build-image]: https://ci.appveyor.com/api/projects/status/3jox67ksw3p8hkwh/branch/master?svg=true
 [win-build-url]: https://ci.appveyor.com/project/medikoo/es5-ext
 [transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
 [npm-image]: https://img.shields.io/npm/v/es5-ext.svg
