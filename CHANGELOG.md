@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.53](https://github.com/medikoo/es5-ext/compare/v0.10.52...v0.10.53) (2019-11-21)
+
 ### [0.10.52](https://github.com/medikoo/es5-ext/compare/v0.10.51...v0.10.52) (2019-10-29)
 
 ### Bug Fixes
