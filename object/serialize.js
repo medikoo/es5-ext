@@ -9,7 +9,7 @@ var isArray = Array.isArray
   , stringify = JSON.stringify
   , objHasOwnProperty = Object.prototype.hasOwnProperty;
 var keyValueToString = function (value, key) {
-  return stringify(key) + ":" + module.exports(value);
+	return stringify(key) + ":" + module.exports(value);
 };
 
 var sparseMap = function (arr) {
