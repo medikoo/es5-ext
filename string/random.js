@@ -1,23 +1,24 @@
 "use strict";
 
-var isValue         = require("../object/is-value")
-  , toNaturalNumber = require("../number/to-pos-integer");
+var isObject            = require("type/object/is")
+  , ensureNaturalNumber = require("type/natural-number/ensure");
 
 var generated = Object.create(null), random = Math.random, uniqTryLimit = 100;
 
 var getChunk = function () { return random().toString(36).slice(2); };
 
-var getString = function (/* length */) {
-	var str = getChunk(), length = arguments[0];
-	if (!isValue(length)) return str;
+var getString = function (length) {
+	var str = getChunk();
+	if (length === null) return str;
 	while (str.length < length) str += getChunk();
 	return str.slice(0, length);
 };
 
 module.exports = function (/* options */) {
-	var options = Object(arguments[0]), length = options.length, isUnique = options.isUnique;
-
-	if (isValue(length)) length = toNaturalNumber(length);
+	var options = arguments[0];
+	if (!isObject(options)) options = {};
+	var length = ensureNaturalNumber(options.length, { "default": 10 })
+	  , isUnique = options.isUnique;
 
 	var str = getString(length);
 	if (isUnique) {
