@@ -33,7 +33,7 @@
 		"eslint-config-medikoo": "^2.7.0",
 		"git-list-updated": "^1.2.1",
 		"husky": "^3.1.0",
-		"lint-staged": "^9.4.3",
+		"lint-staged": "^9.5.0",
 		"mocha": "^6.2.2",
 		"prettier-elastic": "^1.18.2",
 		"sinon": "^7.5.0"
