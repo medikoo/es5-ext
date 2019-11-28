@@ -25,5 +25,7 @@ npm install ext
   - [`round10`](docs/math/round-10.md)
 - `Object`
   - [`entries`](docs/object/entries.md)
+- `String`
+  - [`random`](docs/string/random.md)
 - `Thenable.prototype`
   - [`finally`](docs/thenable_/finally.md)
