@@ -2,7 +2,7 @@
 
 _(Previously known as `es5-ext`)_
 
-## JavaScript standard extensions (with respect to evolving standard)
+## JavaScript language extensions (with respect to evolving standard)
 
 Non-standard or soon to be standard language utilities in a future proof, non-invasive form.
 
