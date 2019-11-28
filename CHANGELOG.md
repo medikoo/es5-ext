@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com///compare/v1.2.1...v1.3.0) (2019-11-28)
+
+### Features
+
+- `String.random` util ([5b5860a](https://github.com///commit/5b5860ac545b05f00527e00295fdb4f97e4a4e5b))
+
 ### [1.2.1](https://github.com///compare/v1.2.0...v1.2.1) (2019-11-26)
 
 ## [1.2.0](https://github.com/medikoo/ext/compare/v1.1.2...v1.2.0) (2019-11-07)
