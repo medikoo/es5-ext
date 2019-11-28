@@ -16,14 +16,14 @@ npm install ext
 
 ### Utilities
 
-- [**`globalThis`**](docs/global-this.md)
+- [`globalThis`](docs/global-this.md)
 - `Function`
-  - [**`identity`**](docs/function/identity.md)
+  - [`identity`](docs/function/identity.md)
 - `Math`
-  - [**`ceil10`**](docs/math/ceil-10.md)
-  - [**`floor10`**](docs/math/floor-10.md)
-  - [**`round10`**](docs/math/round-10.md)
+  - [`ceil10`](docs/math/ceil-10.md)
+  - [`floor10`](docs/math/floor-10.md)
+  - [`round10`](docs/math/round-10.md)
 - `Object`
-  - [**`entries`**](docs/object/entries.md)
+  - [`entries`](docs/object/entries.md)
 - `Thenable.prototype`
-  - [**`finally`**](docs/thenable_/finally.md)
+  - [`finally`](docs/thenable_/finally.md)
