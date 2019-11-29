@@ -21,3 +21,11 @@ _Note: When not applying this setting, accidental generation of same string is s
 ### `length: 10`
 
 Desired length of result string
+
+### `charset: null`
+
+Fixed list of possible characters
+
+```javascript
+random({ charset: "abc" }); // "bacbccbbac"
+```
