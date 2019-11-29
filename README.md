@@ -27,5 +27,7 @@ npm install ext
   - [`entries`](docs/object/entries.md)
 - `String`
   - [`random`](docs/string/random.md)
+- `String.prototype`
+  - [`includes`](docs/string_/includes.md)
 - `Thenable.prototype`
   - [`finally`](docs/thenable_/finally.md)
