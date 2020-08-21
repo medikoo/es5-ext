@@ -53,7 +53,7 @@
 		]
 	},
 	"eslintIgnore": [
-		"_es5-ext/*"
+		"_es5-ext"
 	],
 	"eslintConfig": {
 		"extends": "medikoo/es3",
