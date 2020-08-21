@@ -9,26 +9,11 @@ describe("array/shuffle", function () {
 	// Adopt from lodash.shuffle
 	// https://github.com/lodash/lodash/blob/master/test/shuffle.js
 	it("should throw TypeError for non array input", function () {
-		try {
-			shuffle();
-		} catch (e) {
-			assert.strictEqual(e.name, "TypeError");
-			assert.strictEqual(e.message, "input must be an Array, got undefined!");
-		}
+		try { shuffle(); } catch (e) { assert.strictEqual(e.name, "TypeError"); }
 
-		try {
-			shuffle({});
-		} catch (e) {
-			assert.strictEqual(e.name, "TypeError");
-			assert.strictEqual(e.message, "input must be an Array, got object!");
-		}
+		try { shuffle({}); } catch (e) { assert.strictEqual(e.name, "TypeError"); }
 
-		try {
-			shuffle(1);
-		} catch (e) {
-			assert.strictEqual(e.name, "TypeError");
-			assert.strictEqual(e.message, "input must be an Array, got number!");
-		}
+		try { shuffle(1); } catch (e) { assert.strictEqual(e.name, "TypeError"); }
 	});
 
 	it("should return a new array", function () { assert.notStrictEqual(shuffle(array), array); });
