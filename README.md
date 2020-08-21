@@ -17,6 +17,8 @@ npm install ext
 ### Utilities
 
 - [`globalThis`](docs/global-this.md)
+- `Array`
+  - [`shuffle`](docs/array/shuffle.md)
 - `Function`
   - [`identity`](docs/function/identity.md)
 - `Math`
