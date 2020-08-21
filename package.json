@@ -25,7 +25,7 @@
 		"url": "https://github.com/medikoo/es5-ext#ext"
 	},
 	"dependencies": {
-		"type": "^2.0.0"
+		"type": "^2.1.0"
 	},
 	"devDependencies": {
 		"chai": "^4.2.0",
@@ -36,7 +36,8 @@
 		"lint-staged": "^9.5.0",
 		"mocha": "^6.2.2",
 		"prettier-elastic": "^1.18.2",
-		"sinon": "^7.5.0"
+		"sinon": "^7.5.0",
+		"timers-ext": "^0.1.7"
 	},
 	"husky": {
 		"hooks": {
@@ -86,7 +87,10 @@
 				}
 			},
 			{
-				"files": "test/thenable_/finally.js",
+				"files": [
+					"test/promise/limit.js",
+					"test/thenable_/finally.js"
+				],
 				"globals": {
 					"Promise": true
 				}
