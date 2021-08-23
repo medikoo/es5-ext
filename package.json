@@ -25,17 +25,17 @@
 		"url": "https://github.com/medikoo/es5-ext#ext"
 	},
 	"dependencies": {
-		"type": "^2.1.0"
+		"type": "^2.5.0"
 	},
 	"devDependencies": {
-		"chai": "^4.2.0",
-		"eslint": "^7.7.0",
+		"chai": "^4.3.4",
+		"eslint": "^7.32.0",
 		"eslint-config-medikoo": "^3.1.0",
 		"git-list-updated": "^1.2.1",
-		"husky": "^4.2.5",
-		"lint-staged": "^10.2.11",
-		"mocha": "^6.2.2",
-		"prettier-elastic": "^1.18.2",
+		"husky": "^4.3.8",
+		"lint-staged": "^10.5.4",
+		"mocha": "^6.2.3",
+		"prettier-elastic": "^1.19.1",
 		"sinon": "^7.5.0",
 		"timers-ext": "^0.1.7"
 	},
