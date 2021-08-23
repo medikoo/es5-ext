@@ -36,7 +36,7 @@
 		"lint-staged": "^11.1.2",
 		"mocha": "^6.2.3",
 		"prettier-elastic": "^2.2.1",
-		"sinon": "^7.5.0",
+		"sinon": "^8.1.1",
 		"timers-ext": "^0.1.7"
 	},
 	"husky": {
