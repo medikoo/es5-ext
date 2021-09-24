@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/medikoo/es5-ext/compare/v1.5.0...v1.6.0) (2021-09-24)
+
+### Features
+
+- `Object.clear` util ([a955da4](https://github.com/medikoo/es5-ext/commit/a955da41e65a25ad87a46234bae065f096abd1d2))
+
+### Bug Fixes
+
+- Fix `Object.entries` to not return non enumerable properties ([44fb872](https://github.com/medikoo/es5-ext/commit/44fb87266617378d2f47a1a5baad6280bf6298a8))
+
 ## [1.5.0](https://github.com/medikoo/es5-ext/compare/v1.3.0...v1.5.0) (2021-08-23)
 
 ### Features
