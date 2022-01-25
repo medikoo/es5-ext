@@ -31,6 +31,7 @@ npm install ext
 - `String`
   - [`random`](docs/string/random.md)
 - `String.prototype`
+  - [`campelToHyphen`](docs/string_/camel-to-hyphen.md)
   - [`includes`](docs/string_/includes.md)
 - `Thenable.prototype`
   - [`finally`](docs/thenable_/finally.md)

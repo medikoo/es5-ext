@@ -81,6 +81,12 @@
 				}
 			},
 			{
+				"files": "string_/camel-to-hyphen.js",
+				"rules": {
+					"id-length": "off"
+				}
+			},
+			{
 				"files": "test/**/*.js",
 				"env": {
 					"mocha": true
