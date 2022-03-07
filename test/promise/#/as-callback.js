@@ -12,14 +12,14 @@ module.exports = function (t, a) {
 		},
 		Failure: function (d) {
 			var error = new Error("Rejection");
-			t.call(new Promise(function (resolve, reject) { reject(error); }), function (
-				passedError,
-				value
-			) {
-				a(passedError, error);
-				a(value, undefined);
-				d();
-			});
+			t.call(
+				new Promise(function (resolve, reject) { reject(error); }),
+				function (passedError, value) {
+					a(passedError, error);
+					a(value, undefined);
+					d();
+				}
+			);
 		}
 	};
 };

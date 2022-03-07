@@ -14,5 +14,7 @@ module.exports = function (t, a) {
 		);
 	a.deep(o2, [2, 4, 6]);
 
-	t(o).sort().forEach(function (item) { a.deep(item, [item[0], o[item[0]]], "Default"); });
+	t(o)
+		.sort()
+		.forEach(function (item) { a.deep(item, [item[0], o[item[0]]], "Default"); });
 };
