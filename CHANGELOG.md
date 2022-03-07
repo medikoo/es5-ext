@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.54](https://github.com/medikoo/es5-ext/compare/v0.10.53...v0.10.54) (2022-03-07)
+
+### Maintenance Improvements
+
+- Convert dependency ranges ([765eb8e](https://github.com/medikoo/es5-ext/commit/765eb8e897cabc76f0351443d84b4843a1187b27))
+- Give Peace a Chance ([28de285](https://github.com/medikoo/es5-ext/commit/28de285ed433b45113f01e4ce7c74e9a356b2af2))
+
 ### [0.10.53](https://github.com/medikoo/es5-ext/compare/v0.10.52...v0.10.53) (2019-11-21)
 
 _Maintenance improvements_
