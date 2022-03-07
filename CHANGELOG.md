@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.56](https://github.com/medikoo/es5-ext/compare/v0.10.55...v0.10.56) (2022-03-07)
+
+### Maintenance Improvements
+
+- Add missing shebang to postinstall script ([e423fd7](https://github.com/medikoo/es5-ext/commit/e423fd7264c4f145921e461037d571b35b6a9833))
+
 ### [0.10.55](https://github.com/medikoo/es5-ext/compare/v0.10.54...v0.10.55) (2022-03-07)
 
 ### Maintenance Improvements
