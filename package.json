@@ -34,6 +34,7 @@
 		"github-release-from-cc-changelog": "^2.2.1",
 		"husky": "^4.3.8",
 		"lint-staged": "^12.3.5",
+		"nyc": "^15.1.0",
 		"plain-promise": "^0.1.1",
 		"prettier-elastic": "^2.2.1",
 		"tad": "^3.0.1"
@@ -87,7 +88,22 @@
 			}
 		]
 	},
+	"nyc": {
+		"all": true,
+		"exclude": [
+			".github",
+			"coverage/**",
+			"test/**",
+			"*.config.js"
+		],
+		"reporter": [
+			"lcov",
+			"html",
+			"text-summary"
+		]
+	},
 	"scripts": {
+		"coverage": "nyc npm test",
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint:updated": "pipe-git-updated --base=main --ext=js -- eslint --ignore-pattern '!*'",
 		"prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
