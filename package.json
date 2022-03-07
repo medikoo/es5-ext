@@ -90,5 +90,8 @@
 		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
 		"test": "node ./node_modules/tad/bin/tad"
 	},
+	"engines": {
+		"node": ">=0.10"
+	},
 	"license": "ISC"
 }
