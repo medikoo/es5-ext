@@ -17,6 +17,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Retrieve last main commit (for `git diff` purposes)
+        run: |
+          git checkout -b pr
+          git fetch --prune --depth=30 origin +refs/heads/main:refs/remotes/origin/main
+          git checkout main
+          git checkout pr
+
       - name: Retrieve dependencies from cache
         id: cacheNpm
         uses: actions/cache@v2
