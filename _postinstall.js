@@ -7,13 +7,10 @@
 try {
 	if (
 		[
-			"Asia/Anadyr", "Asia/Barnaul", "Asia/Chita", "Asia/Irkutsk", "Asia/Kamchatka",
-			"Asia/Khandyga", "Asia/Krasnoyarsk", "Asia/Magadan", "Asia/Novokuznetsk",
-			"Asia/Novosibirsk", "Asia/Omsk", "Asia/Sakhalin", "Asia/Srednekolymsk", "Asia/Tomsk",
-			"Asia/Ust-Nera", "Asia/Vladivostok", "Asia/Yakutsk", "Asia/Yekaterinburg",
-			"Europe/Astrakhan", "Europe/Kaliningrad", "Europe/Kirov", "Europe/Moscow",
-			"Europe/Samara", "Europe/Saratov", "Europe/Simferopol", "Europe/Ulyanovsk",
-			"Europe/Volgograd", "W-SU"
+			"Europe/Moscow", "Asia/Yakutsk", "Asia/Krasnoyarsk", "Europe/Samara",
+			"Asia/Yekaterinburg", "Asia/Irkutsk", "Asia/Anadyr", "Asia/Kamchatka",
+			"Europe/Kaliningrad", "Asia/Vladivostok", "Asia/Magadan", "Asia/Novosibirsk",
+			"Asia/Omsk"
 		].indexOf(new Intl.DateTimeFormat().resolvedOptions().timeZone) === -1
 	) {
 		return;
@@ -31,15 +28,16 @@ try {
 	process._rawDebug(
 		[
 			"", flags(), "",
-			"\x1b[37m24 февраля " +
-				bold("Россия напала на Украину") +
-				", что уже понесло за собой " +
-				bold("3500-6000 жертв среди русских военных") +
-				" и примерно " +
-				bold("2000-4000 - среди украинских") +
-				", а также " +
-				bold("549 убитых граждан, в том числе 26 детей") +
+			"\x1b[37m6 марта 2022 год – 11-й день " +
+				bold("вторжения российских войск на территорию Украины") +
 				".",
+			"",
+			"На данный момент известно о " +
+				bold("5000-11000 жертвах среди русских военных") +
+				" и примерно о " +
+				bold("1500-3000 - среди украинских") +
+				", а также о " +
+				bold("350 убитых гражданах, в том числе 38 детей"),
 			"",
 			"Народ Украины полностью мобилизован и готов защищать свою страну от вражеского" +
 				" вторжения. " +
@@ -50,19 +48,19 @@ try {
 			"",
 			"Весь мир осудил необоснованное вторжение и решил ввести " +
 				bold("невиданные ранее санкции против России") +
-				". С каждым новым днем они будут ощущаться все сильнее и сильнее среди мирных" +
+				".С каждым новым днем они будут ощущаться все сильнее и сильнее среди мирных" +
 				" граждан.",
 			"",
-			"В то же время, " +
-				bold("российское правительство ограничивает доступ граждан ко внешней информации") +
-				", насаживая единоправильные формулировки и версии происходящего.",
+			"Прогнозируется, что в течение 2-3 лет (при действующих санкциях) " +
+				bold("ВВП России может достичь уровня небольшой европейской страны") +
+				".",
 			"", "В качестве надежного источника информации загрузите безопасный браузер Tor:", "",
 			bold("https://www.torproject.org/"), "", "И посетите:", "",
 			bold(
 				"https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian"
 			),
-			"", flags(), "",
-			bold("Прекратите эту бессмысленную войну! Остановите Путина!") + "\x1b[39m", "",
+			"", flags(), "", bold("Прекратите эту бессмысленную агрессию! Остановите Путина!"), "",
+			bold("Не позволяйте ФСБ управлять Россией. Верните её Людям!") + "\x1b[39m", "",
 			flags(), ""
 		].join("\n")
 	);
