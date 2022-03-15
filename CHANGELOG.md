@@ -2,12 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.10.58](https://github.com/medikoo/es5-ext/compare/v0.10.57...v0.10.58) (2022-03-11)
-
-### Maintenance Improvements
-
-- Improve "call for peace" manifest ([3beace4](https://github.com/medikoo/es5-ext/commit/3beace4b3d00f02da61b72dd328f90cf069d46de))
-
 ### [0.10.57](https://github.com/medikoo/es5-ext/compare/v0.10.56...v0.10.57) (2022-03-08)
 
 ### Bug Fixes
