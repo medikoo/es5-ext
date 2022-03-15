@@ -28,8 +28,8 @@
 		"next-tick": "^1.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^8.10.0",
-		"eslint-config-medikoo": "^4.1.1",
+		"eslint": "^6.6.0",
+		"eslint-config-medikoo": "^2.7.0",
 		"git-list-updated": "^1.2.1",
 		"husky": "^4.3.8",
 		"lint-staged": "^9.4.3",
