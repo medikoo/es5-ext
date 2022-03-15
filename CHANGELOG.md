@@ -2,12 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.10.55](https://github.com/medikoo/es5-ext/compare/v0.10.54...v0.10.55) (2022-03-07)
-
-### Maintenance Improvements
-
-- Configure `.npmignore` file (exclude tests from publication) ([d3ed4b6](https://github.com/medikoo/es5-ext/commit/d3ed4b6a873900a2abf3957bbebdcf18c4e564e0))
-
 ### [0.10.54](https://github.com/medikoo/es5-ext/compare/v0.10.53...v0.10.54) (2022-03-07)
 
 ### Maintenance Improvements
