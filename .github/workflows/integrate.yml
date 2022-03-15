@@ -71,7 +71,7 @@ jobs:
         run: npm test
 
   linuxNode17:
-    name: "[Linux] Node.js v17: Unit tests on npm package"
+    name: "[Linux] Node.js 17: Unit tests on npm package"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
