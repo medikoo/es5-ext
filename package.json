@@ -76,10 +76,7 @@
 		"tabWidth": 4,
 		"overrides": [
 			{
-				"files": [
-					"*.md",
-					"*.yml"
-				],
+				"files": "*.md",
 				"options": {
 					"tabWidth": 2
 				}
