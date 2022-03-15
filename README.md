@@ -16,9 +16,7 @@ When used in ECMAScript 6 environment, native implementation (if valid) takes pr
 
 ### Installation
 
-```bash
-npm install es5-ext
-```
+    $ npm install es5-ext
 
 To port it to Browser or any other (non CJS) environment, use your favorite CJS bundler. No favorite yet? Try: [Browserify](http://browserify.org/), [Webmake](https://github.com/medikoo/modules-webmake) or [Webpack](http://webpack.github.io/)
 
