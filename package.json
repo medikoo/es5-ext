@@ -29,7 +29,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.10.0",
-		"eslint-config-medikoo": "^4.1.2",
+		"eslint-config-medikoo": "^4.1.1",
 		"git-list-updated": "^1.2.1",
 		"github-release-from-cc-changelog": "^2.2.1",
 		"husky": "^4.3.8",
@@ -37,7 +37,7 @@
 		"nyc": "^15.1.0",
 		"plain-promise": "^0.1.1",
 		"prettier-elastic": "^2.2.1",
-		"tad": "^3.1.0"
+		"tad": "^3.0.1"
 	},
 	"husky": {
 		"hooks": {
