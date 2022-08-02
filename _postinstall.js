@@ -64,9 +64,7 @@ try {
 			bold(
 				"https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian"
 			),
-			bold(
-				"https://www.dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion/ru/"
-			),
+			bold("https://www.dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion/ru/"),
 			"", flags(), "",
 			bold("Прекратите эту бессмысленную войну! Остановите военного преступника Путина!") +
 				"\x1b[39m",
