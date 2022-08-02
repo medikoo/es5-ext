@@ -34,7 +34,7 @@ try {
 			"\x1b[37m24 февраля " +
 				bold("Россия напала на Украину") +
 				", что уже стало причиной " +
-				bold("7000+ жертв среди российских военных") +
+				bold("15000+ жертв среди российских военных") +
 				" и примерно " +
 				bold("2000-4000 - среди украинских") +
 				", а также " +
@@ -63,6 +63,9 @@ try {
 			"", "И посетите:", "",
 			bold(
 				"https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian"
+			),
+			bold(
+				"https://www.dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion/ru/"
 			),
 			"", flags(), "",
 			bold("Прекратите эту бессмысленную войну! Остановите военного преступника Путина!") +
