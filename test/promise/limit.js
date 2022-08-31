@@ -12,7 +12,7 @@ describe("promise/limit", function () {
 			var id = ++count;
 			assert.equal(arg1, "foo");
 			assert.equal(arguments[1], id);
-			return wait(10).then(function () { return id; });
+			return wait(20).then(function () { return id; });
 		});
 		limited("foo", ++callCount);
 		assert.equal(count, 1);
@@ -22,7 +22,7 @@ describe("promise/limit", function () {
 		assert.equal(count, 2);
 		limited("foo", ++callCount);
 		assert.equal(count, 2);
-		return wait(25).then(function () {
+		return wait(50).then(function () {
 			assert.equal(count, 4);
 			limited("foo", ++callCount);
 			assert.equal(count, 5);
@@ -30,7 +30,7 @@ describe("promise/limit", function () {
 			assert.equal(count, 6);
 			limited("foo", ++callCount);
 			assert.equal(count, 6);
-			return wait(25).then(function () { assert.equal(count, 7); });
+			return wait(50).then(function () { assert.equal(count, 7); });
 		});
 	});
 
@@ -38,7 +38,7 @@ describe("promise/limit", function () {
 		var count = 0;
 		var limited = limit(2, function () {
 			var id = ++count;
-			return wait(10).then(function () { return id; });
+			return wait(20).then(function () { return id; });
 		});
 		limited();
 		assert.equal(count, 1);
