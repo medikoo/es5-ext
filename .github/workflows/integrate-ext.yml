@@ -6,6 +6,8 @@ on:
   push:
     branches: [ext]
 
+permissions: read-all
+
 env:
   FORCE_COLOR: 1
 
