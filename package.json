@@ -107,10 +107,12 @@
 	"prettier": {
 		"printWidth": 100,
 		"tabWidth": 4,
-		"quoteProps": "preserve",
 		"overrides": [
 			{
-				"files": "*.md",
+				"files": [
+					"*.md",
+					"*.yml"
+				],
 				"options": {
 					"tabWidth": 2
 				}
