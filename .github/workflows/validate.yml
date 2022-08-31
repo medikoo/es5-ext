@@ -1,0 +1,14 @@
+# PR's only
+
+name: Validate [ext]
+
+on:
+  pull_request:
+    branches: [ext]
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  _:
+    uses: medikoo/github-actions-workflows/.github/workflows/6-validate.yml@main

@@ -1,0 +1,16 @@
+# main only
+
+name: Integrate [ext]
+
+on:
+  push:
+    branches: [ext]
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  _:
+    uses: medikoo/github-actions-workflows/.github/workflows/6-integrate.yml@main
+    secrets:
+      USER_GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
