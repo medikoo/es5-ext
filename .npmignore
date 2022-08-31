@@ -1,1 +1,5 @@
+/.editorconfig
+/.github
+/commitlint.config.js
 /_es5-ext
+/test
