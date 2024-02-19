@@ -1,19 +1,20 @@
 "use strict";
 
 var mixin         = require("../../object/mixin")
-  , validFunction = require("../valid-function")
-  , re            = /^\s*function\s*([\0-')-\uffff]+)*\s*\(([\0-(*-\uffff]*)\)\s*\{/;
+  , validFunction = require("../valid-function");
 
 module.exports = function () {
-	var match = String(validFunction(this)).match(re), fn;
+	validFunction(this);
 
+	var args = [];
+	for (var i = 0; i < this.length; ++i) args.push("arg" + (i + 1));
 	// eslint-disable-next-line no-new-func
-	fn = new Function(
+	var fn = new Function(
 		"fn",
 		"return function " +
-			match[1].trim() +
+			(this.name || "") +
 			"(" +
-			match[2] +
+			args.join(", ") +
 			") { return fn.apply(this, arguments); };"
 	)(this);
 	try { mixin(fn, this); }
