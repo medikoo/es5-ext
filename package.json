@@ -21,7 +21,7 @@
 		"utils",
 		"utilities"
 	],
-	"repository": "medikoo/es5-ext",
+	"repository": "https://github.com/LayerZero-Labs/es5-ext",
 	"dependencies": {
 		"es6-iterator": "^2.0.3",
 		"es6-symbol": "^3.1.3",

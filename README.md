@@ -4,6 +4,8 @@
 
 # es5-ext
 
+This fork of `es5-ext` is created to remove the code that is being flagged as malicious, until such a time that we can properly update the nested dependencies that rely on this package.
+
 ## ECMAScript 5 extensions
 
 ### (with respect to ECMAScript 6 standard)
