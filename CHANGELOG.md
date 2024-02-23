@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.63](https://github.com/medikoo/es5-ext/compare/v0.10.62...v0.10.63) (2024-02-21)
+
+### Bug Fixes
+
+- Do not rely on problematic regex ([3551cdd](https://github.com/medikoo/es5-ext/commit/3551cdd7b2db08b1632841f819d008757d28e8e2)), addresses [#201](https://github.com/medikoo/es5-ext/issues/201)
+- Support ES2015+ function definitions in `function#toStringTokens()` ([a52e957](https://github.com/medikoo/es5-ext/commit/a52e95736690ad1d465ebcd9791d54570e294602)), addresses [#021](https://github.com/medikoo/es5-ext/issues/021)
+- Ensure postinstall script does not crash on Windows, fixes [#181](https://github.com/medikoo/es5-ext/issues/181) ([bf8ed79](https://github.com/medikoo/es5-ext/commit/bf8ed799d57df53096da9d908ff577f305e1366f))
+
+### Maintenance Improvements
+
+- Simplify the manifest message ([7855319](https://github.com/medikoo/es5-ext/commit/7855319f41b9736639cf4555bd2c419f17addf55))
+
 ### [0.10.62](https://github.com/medikoo/es5-ext/compare/v0.10.61...v0.10.62) (2022-08-02)
 
 ### Maintenance Improvements
