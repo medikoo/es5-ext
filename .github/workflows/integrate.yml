@@ -4,13 +4,102 @@ name: Integrate
 
 on:
   push:
-    branches: [main]
+    branches: [tmp]
 
 env:
   FORCE_COLOR: 1
 
 jobs:
-  _:
-    uses: medikoo/github-actions-workflows/.github/workflows/0.12-integrate.yml@main
-    secrets:
-      USER_GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
+  linuxNode6:
+    name: "[Linux] Node.js v6: Unit tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Retrieve dependencies from cache
+        id: cacheNpm
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: npm-v6-${{ runner.os }}-${{ github.ref }}-${{ hashFiles('package.json') }}
+          restore-keys: npm-v6-${{ runner.os }}-${{ github.ref }}-
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: 6.x
+
+      - name: Install dependencies
+        if: steps.cacheNpm.outputs.cache-hit != 'true'
+        run: |
+          # Remove husky from package.json to avoid problematic hook
+          sed '/husky": "/d' package.json > tmp && rm package.json && mv tmp package.json
+          npm update --no-save
+          npm update --save-dev --no-save
+      - name: Unit tests
+        run: npm test
+
+  linuxNode4:
+    name: "[Linux] Node.js v4: Unit tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Retrieve dependencies from cache
+        id: cacheNpm
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: npm-v4-${{ runner.os }}-${{ github.ref }}-${{ hashFiles('package.json') }}
+          restore-keys: npm-v4-${{ runner.os }}-${{ github.ref }}-
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 4.x
+
+      - name: Install dependencies
+        if: steps.cacheNpm.outputs.cache-hit != 'true'
+        run: |
+          sed '/husky": "/d' package.json > tmp && rm package.json && mv tmp package.json
+          npm update --no-save
+          npm update --save-dev --no-save
+      - name: Unit tests
+        run: npm test
+
+  linuxNode012:
+    name: "[Linux] Node.js v0.12: Unit tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Retrieve dependencies from cache
+        id: cacheNpm
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: npm-v0.12-${{ runner.os }}-${{ github.ref }}-${{ hashFiles('package.json') }}
+          restore-keys: npm-v0.12-${{ runner.os }}-${{ github.ref }}-
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: "0.12"
+
+      - name: Install dependencies
+        if: steps.cacheNpm.outputs.cache-hit != 'true'
+        run: |
+          sed '/husky": "/d' package.json > tmp && rm package.json && mv tmp package.json
+          npm update --no-save
+          npm update --save-dev --no-save
+      - name: Unit tests
+        run: npm test
