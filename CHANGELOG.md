@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.64](https://github.com/medikoo/es5-ext/compare/v0.10.63...v0.10.64) (2024-02-27)
+
+### Bug Fixes
+
+- Revert update to postinstall script meant to fix Powershell issue, as it's a regression for some Linux terminals ([c2e2bb9](https://github.com/medikoo/es5-ext/commit/c2e2bb90c295c4c582445a6f03b2a3ad0b22550a))
+
 ### [0.10.63](https://github.com/medikoo/es5-ext/compare/v0.10.62...v0.10.63) (2024-02-23)
 
 ### Bug Fixes
