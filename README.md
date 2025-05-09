@@ -44,3 +44,7 @@ npm install ext
 [build-url]: https://github.com/medikoo/es5-ext/actions?query=workflow%3AIntegrate%20[ext]
 [npm-image]: https://img.shields.io/npm/v/ext.svg
 [npm-url]: https://www.npmjs.com/package/ext
+
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
